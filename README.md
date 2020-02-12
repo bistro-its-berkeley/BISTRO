@@ -241,7 +241,18 @@ The project should now be successfully imported into the IDE and a build should 
   
   To add a configuration for a different scenario , follow the above steps and change the folder path to point to the required scenario in program arguments
 
+## Optimization Algorithm: Hyperband
+  **Hyperband**
+  Hyperband is a principled early-stoppping method that adaptively allocates a pre- defined resource, e.g., iterations, data samples or number of features, to randomly sampled configurations. In our model with BISTRO, hyperband is implemented based on TPE and is compatible with BEAM on Sioux Faux. The pre - defined resorce is the number of iteration in BEAM.
+  See HYPERBAND: BANDIT-BASED CONFIGURATION EVALUATION FOR HYPERPARAMETER OPTIMIZATION,https://openreview.net/pdf?id=ry18Ww5ee
+Automating Model Search for Large Scale Machine Learning,https://amplab.cs.berkeley.edu/wp-content/uploads/2015/07/163-sparks.pdf
 
+  **Use Hyperband with BISTRO**
+  There are three parameters to use with hyperband and you can set them in file: bayesian_optimization.py: 
+  - budget-update: specifies the updating rule for number of iterations in BEAM. The default rule is iteration = iteration * 2
+  - MAX_EVALS: specifies the initial number of trials to evaluate. 
+  - portion: dropout rate for trials. 
+  
 
 ## Contributing
 
