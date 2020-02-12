@@ -23,6 +23,8 @@ Note that some of the provided utility scripts require a python installation wit
 Run via IntelliJ:
 - [IntelliJ](https://www.jetbrains.com/idea/).
 
+**Note:** the most recent IDE does not support current BISTRO, you can download version 2019.1
+
 You can find the instructions to install IntelliJ [here](https://www.jetbrains.com/idea/download).
 
 *Hardware Requirements and Performance Considerations*:
@@ -151,6 +153,95 @@ An example run with existing data can be run like so:
 ```
 
 *Note:* When you run the simulation again via the competition script, you will have to delete the container created via the previous `./competition.sh` run. You can do so with `sudo docker rm <container id>`, after looking up the <container id> via `sudo docker ps | grep beam-competition`
+
+## Running with IntelliJ
+
+### GIT-LFS Configuration
+The installation process for git-lfs client(v2.3.4, latest installer has some issue with node-git-lfs) is very simple. For detailed documentation please consult github guide for Mac, windows and Linux.
+
+To verify successful installation, run following command:
+
+```$ git lfs install```
+to confirm that you have installed the correct version of client run the following command:
+
+```$ git lfs env```
+will print out the installed version, and please make sure it is git-lfs/2.3.4.
+
+To update the text pointers with the actual contents of files, run the following command (if it requests credentials, use any username and leave the password empty):
+
+```$ git lfs pull```
+
+### Installing git lfs on windows :
+
+With Git LFS windows installation, it is common to have the wrong version of git-lfs installed, because in these latest git client version on windows, git lfs comes packaged with the git client.
+
+When installing the git client one needs to uncheck git lfs installation. If mistakenly you installed git lfs with the git client, the following steps are needed to correct it (uninstalling git lfs and installing the required version does not work…):
+
+* Uninstall git
+* Install the git client (uncheck lfs installation)
+* Install git lfs version 2.3.4 separately
+
+Another alternative to above is to get the old git-lfs.exe from the release archives and replace the executable found in
+
+*[INSTALL PATH]\mingw6\bin* and *[INSTALL PATH]\cmd*, where the default installation path usually is *C:\Program Files\Git*
+
+###Installing BISTRO   
+Clone the beam repository:
+
+```git clone git@github.com:<xxx>/BISTRO.git```
+
+Change directories into that repository:
+
+```cd BISTRO```
+
+Fetch the remote branches and tags: 
+
+```git fetch```
+
+###Running on IntelliJ IDE
+
+####Importing BISTRO project into IDE
+Once the IDE is successfully installed, proceed with the below steps to import BISTRO into the IDE.
+1. **Open the IDE and agree to the privacy policy and continue**
+    1. (Optional) IDEA walks you through some default configurations set up here . In case you want to skip these steps , choose “Skip and install defaults” and go to step 2
+        1. Select a UI theme of choice and go to Next: Default Plugins
+        2. Select only the required plugins (gradle , java are mandatory) and disable the others and go to Next:Feature plugins
+        3. Install scala and click “Start using Intellij IDEA”
+   
+2. In the welcome menu , select “Import Project” and provide the location of the locally cloned BISTRO project
+3. Inside the import project screen, select “Import project from external model” and choose “Gradle” from the available and click Next
+4. Click Finish.
+
+
+The project should now be successfully imported into the IDE and a build should be initiated automatically. If no build is triggered automatically , you can manually trigger one by going to Build > Build Project.
+  
+  **Installing scala plugin**
+  
+  If optional configuration in step 1 of above section was skipped , scala plugin will not be added automatically . To manually enable scala plugin go to File > Settings > Plugins. Search for scala plugin and click Install.
+  
+  **Setting up scala SDK**
+  
+  Since BEAM is built with java/scala . A scala sdk module needs to be configured to run BEAM. Check the below steps on how to add a scala module to IDEA * Go to File > Project Settings > Global Libraries * Click + and select Scala SDK * Select the required scala SDK from the list , if no SDK found click Create. * Click “Browse” and select the scala home path or click “Download” (choose 2.12.x version)
+  
+  **Running BISTRO from IDE**
+  
+  BEAM requires some arguments to be specified during run-time like the scenario configuration. These configuration settings can be added as a run configuration inside the IDE.
+  
+  Steps to add a new configuration :
+  
+  - Go to Run > Edit Configurations
+  - Click + and from the templates list and select “Application”
+  - Fill in the following values
+    - Main Class : beam.competition.run.RunCompetition
+    - VM options : -Xmx8g
+    - Program Arguments : –config test/input/beamville/beam.conf (this runs beaamville scenario, changes the folder path to run a different scenario)
+    - Working Directory : /home/BISTRO
+    - use submodule of path : competitions.main
+  - Click Ok to save the configuration.
+  
+  To add a configuration for a different scenario , follow the above steps and change the folder path to point to the required scenario in program arguments
+
+
 
 ## Contributing
 
