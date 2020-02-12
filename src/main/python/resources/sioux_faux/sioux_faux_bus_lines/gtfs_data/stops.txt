@@ -1,0 +1,393 @@
+stop_id,stop_code,platform_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,position,direction,wheelchair_boarding
+2502238,,,Marion between 32nd & Oak,,43.524035,-96.790734,,,0,,America/Chicago,,,0
+2502243,,,Cliff/26th,,43.529613,-96.711449,,,0,,America/Chicago,,,0
+2517687,,,10th at entrance to Rehab Center for the Blind,,43.545859611851,-96.763717522838,,,0,,America/Chicago,,,0
+767253,,,The Bus Stop (TBS) SAM's downtown terminal,,43.54496938,-96.72541594,,,0,,America/Chicago,,,0
+767254,,,10th (mid-block)/Dakota NE corner,,43.54606677,-96.72912283,,,0,,America/Chicago,,,0
+767255,,,10th/Spring NE corner,,43.54607065,-96.73251558,,,0,,America/Chicago,,,0
+767256,,,10th/Prairie NE corner,,43.54604258,-96.7369514,,,0,,America/Chicago,,,0
+767257,,,12th/Grange NW corner,,43.54406669,-96.74173977,,,0,,America/Chicago,,,0
+767258,,,12th/Hawthorne NE corner,,43.54403462,-96.74771244,,,0,,America/Chicago,,,0
+767259,,,Western/15th-NW Corner,,43.53921271,-96.75128456,,,0,,America/Chicago,,,0
+767260,,,Western/18th NW corner,,43.53680615,-96.75129115,,,0,,America/Chicago,,,0
+767261,,,Western/22nd NW corner,,43.53317477,-96.75129275,,,0,,America/Chicago,,,0
+767262,,,26th/Williams NE corner,,43.52944811,-96.75997144,,,0,,America/Chicago,,,0
+767263,,,Kiwanis/Oak NW corner,,43.52658183,-96.76126626,,,0,,America/Chicago,,,0
+767264,,,Kiwanis/33rd NW corner,,43.52236826,-96.76125796,,,0,,America/Chicago,,,0
+767265,,,Kiwanis/37th NW corner,,43.51859029,-96.76123251,,,0,,America/Chicago,,,0
+767266,,,Kiwanis/39th NW corner,,43.51701715,-96.76122344,,,0,,America/Chicago,,,0
+767267,,,Kiwanis/41st SW corner (mid-block ),,43.51412007,-96.76116285,,,0,,America/Chicago,,,0
+767268,,,Kiwanis/Kiwanis Circle NW corner,,43.50994121,-96.75809598,,,0,,America/Chicago,,,0
+767269,,,49th/Oxbow NE corner,,43.50768606,-96.7658296,,,0,,America/Chicago,,,0
+767270,,,Southwest Center (SWC) SAM's southwest transit hub,,43.50478562,-96.77149721,,,0,,America/Chicago,,,0
+767271,,,Technology Drive/Technology Circle SE corner,,43.50501996,-96.7740064,,,0,,America/Chicago,,,0
+767272,,,Technology Drive/Valhalla SE corner,,43.50657467,-96.77561808,,,0,,America/Chicago,,,0
+767273,,,49th/Oxbow SW corner,,43.50751297,-96.76605718,,,0,,America/Chicago,,,0
+767274,,,Kiwanis/46th SE corner,,43.5104583,-96.75796959,,,0,,America/Chicago,,,0
+767275,,,Kiwanis/Park Place SE corner,,43.51354805,-96.76008883,,,0,,America/Chicago,,,0
+767276,,,Kiwanis/39th SE corner,,43.51655886,-96.76100877,,,0,,America/Chicago,,,0
+767277,,,Kiwanis/37th SE corner,,43.51838318,-96.76101945,,,0,,America/Chicago,,,0
+767278,,,Kiwanis/33rd SE corner,,43.52199879,-96.76104273,,,0,,America/Chicago,,,0
+767279,,,Kiwanis/Oak SE corner,,43.52627647,-96.76108422,,,0,,America/Chicago,,,0
+767280,,,26th/Williams SW corner,,43.52935994,-96.76018951,,,0,,America/Chicago,,,0
+767281,,,VA Medical Center entrance northbound,,43.53110358,-96.75478842,,,0,,America/Chicago,,,0
+767282,,,Western/20th SE corner,,43.53483173,-96.75116331,,,0,,America/Chicago,,,0
+767283,,,Western/18th SE corner,,43.53661138,-96.7511264,,,0,,America/Chicago,,,0
+767284,,,Western/15th SE corner,,43.54023596,-96.75116095,,,0,,America/Chicago,,,0
+767285,,,12th/Western SE corner,,43.54387231,-96.75081225,,,0,,America/Chicago,,,0
+767286,,,12th/Glendale SE corner,,43.54387531,-96.74722796,,,0,,America/Chicago,,,0
+767287,,,11th/Menlo SW corner,,43.54438058,-96.74005947,,,0,,America/Chicago,,,0
+767288,,,11th/Prairie SW corner,,43.5445997,-96.73716008,,,0,,America/Chicago,,,0
+767289,,,11th/Spring SW corner,,43.54460437,-96.73286294,,,0,,America/Chicago,,,0
+767290,,,11th/Dakota SW corner,,43.54462516,-96.72999438,,,0,,America/Chicago,,,0
+767291,,,10th/Main SW corner,,43.54574951,-96.72837724,,,0,,America/Chicago,,,0
+767292,,,14th/Main NW corner,,43.54154689,-96.7283436,,,0,,America/Chicago,,,0
+767293,,,14th/Spring NE corner,,43.54149031,-96.73262868,,,0,,America/Chicago,,,0
+767294,,,14th/Summit NE corner,,43.54149187,-96.73545673,,,0,,America/Chicago,,,0
+767295,,,17th/Summit NW corner,,43.53779407,-96.73564574,,,0,,America/Chicago,,,0
+767296,,,Grange/18th SW corner,,43.53629734,-96.74132435,,,0,,America/Chicago,,,0
+767297,,,Grange/21st SW corner,,43.53371131,-96.7413173,,,0,,America/Chicago,,,0
+767298,,,Grange/26th NW corner,,43.52965917,-96.74132263,,,0,,America/Chicago,,,0
+767299,,,26th/Lake NE corner,,43.52948344,-96.7448504,,,0,,America/Chicago,,,0
+767300,,,26th/Glendale NE corner,,43.52948906,-96.74735111,,,0,,America/Chicago,,,0
+767301,,,26th (midblock)/Western NE corner,,43.52949822,-96.75058374,,,0,,America/Chicago,,,0
+767302,,,Western/Oak SW corner,,43.52561877,-96.75125193,,,0,,America/Chicago,,,0
+767303,,,Western/33rd NW corner,,43.52229652,-96.75119441,,,0,,America/Chicago,,,0
+767304,,,Western/37th NW corner,,43.51864636,-96.75117222,,,0,,America/Chicago,,,0
+767305,,,Western/42nd SW corner,,43.5134276,-96.7511977,,,0,,America/Chicago,,,0
+767306,,,Western/46th NW corner,,43.51065829,-96.75117382,,,0,,America/Chicago,,,0
+767307,,,46th (north side) at Active Generations,,43.51059508,-96.75512581,,,0,,America/Chicago,,,0
+767308,,,Elmwood/49th NW corner,,43.50857102,-96.75597221,,,0,,America/Chicago,,,0
+767309,,,57th/Tennis Lane SW corner,,43.50025848,-96.76844202,,,0,,America/Chicago,,,0
+767310,,,57th/Burr Oak Place SW corner,,43.50026161,-96.7629885,,,0,,America/Chicago,,,0
+767311,,,57th/Old Yankton Road SW corner,,43.5002433633973,-96.7531116510184,,,0,,America/Chicago,,,0
+767312,,,Western/51st SE corner,,43.50527957,-96.74979854,,,0,,America/Chicago,,,0
+767313,,,Western/47th NE corner,,43.50933077,-96.75093484,,,0,,America/Chicago,,,0
+767314,,,Western/45th SE corner,,43.51138948,-96.75095405,,,0,,America/Chicago,,,0
+767315,,,Western (mid-block)/41st NE corner,,43.51522748,-96.75097796,,,0,,America/Chicago,,,0
+767316,,,Western/37th SE corner,,43.51840852,-96.75105127,,,0,,America/Chicago,,,0
+767317,,,Western/33rd SE corner,,43.52198879,-96.75107412,,,0,,America/Chicago,,,0
+767318,,,33rd/West SE corner,,43.52208032,-96.74584671,,,0,,America/Chicago,,,0
+767319,,,33rd/Euclid  south side,,43.52208581,-96.7426193,,,0,,America/Chicago,,,0
+767320,,,Grange/30th NE corner,,43.52523728,-96.74115673,,,0,,America/Chicago,,,0
+767321,,,Grange/28th SE corner,,43.52720378,-96.74117794,,,0,,America/Chicago,,,0
+767322,,,Grange/26th SE corner,,43.52931316,-96.74118741,,,0,,America/Chicago,,,0
+767323,,,Grange/22nd SE corner,,43.53279905,-96.74117857,,,0,,America/Chicago,,,0
+767324,,,Grange/18th SE corner,,43.53653077,-96.74116373,,,0,,America/Chicago,,,0
+767325,,,18th/Prairie SW corner,,43.53663505,-96.73761395,,,0,,America/Chicago,,,0
+767326,,,16th/Summit SE corner,,43.53886064,-96.7355069,,,0,,America/Chicago,,,0
+767327,,,14th/Summit SE corner,,43.54137063,-96.73551603,,,0,,America/Chicago,,,0
+767328,,,14th/Spring SW corner,,43.54140602,-96.732831,,,0,,America/Chicago,,,0
+767329,,,Dakota/11th SE corner,,43.54447771,-96.72969056,,,0,,America/Chicago,,,0
+767330,,,Minnesota/11th NW corner,,43.54509636,-96.7314121,,,0,,America/Chicago,,,0
+767331,,,Minnesota/14th NW corner,,43.5416699,-96.73139858,,,0,,America/Chicago,,,0
+767332,,,Minnesota/18th NW corner,,43.5370207,-96.73140615,,,0,,America/Chicago,,,0
+767333,,,Minnesota/21st NW corner,,43.53417421,-96.73140411,,,0,,America/Chicago,,,0
+767334,,,Minnesota/26th NW corner,,43.52965438,-96.73140515,,,0,,America/Chicago,,,0
+767335,,,Minnesota/29th NW corner,,43.52613077,-96.73139652,,,0,,America/Chicago,,,0
+767336,,,Minnesota (mid-block)/33rd SW corner,,43.52180887,-96.73140022,,,0,,America/Chicago,,,0
+767337,,,Minnesota/37th NW corner,,43.51869853,-96.73138839,,,0,,America/Chicago,,,0
+767338,,,Minnesota/41st/NW corner,,43.51510752,-96.73137237,,,0,,America/Chicago,,,0
+767339,,,41st/Norton NE corner,,43.51495961,-96.73440583,,,0,,America/Chicago,,,0
+767340,,,41st/Grange NE corner,,43.51494655,-96.74085095,,,0,,America/Chicago,,,0
+767341,,,41st/West NE corner,,43.51493885,-96.74590632,,,0,,America/Chicago,,,0
+767342,,,41st/Western NE corner,,43.51493753,-96.75081132,,,0,,America/Chicago,,,0
+767343,,,41st/Holly NE corner,,43.51492909,-96.7541666,,,0,,America/Chicago,,,0
+767344,,,41st/Kiwanis NE corner,,43.5149081,-96.76084281,,,0,,America/Chicago,,,0
+767345,,,41st/O'Gorman entrance,,43.51495628,-96.76456995,,,0,,America/Chicago,,,0
+767346,,,Louise/Empire Mall entrance driveway NW corner,,43.51267821,-96.77116285,,,0,,America/Chicago,,,0
+767347,,,Louise/Hy-Vee entrance driveway SW corner,,43.50836286,-96.77115311,,,0,,America/Chicago,,,0
+767348,,,47th/Louise SE corner,,43.50924811,-96.77094331,,,0,,America/Chicago,,,0
+767349,,,Louise at Target entrance driveway NE corner,,43.51233422,-96.77094362,,,0,,America/Chicago,,,0
+767350,,,41st/Westport SW corner,,43.51472947,-96.76848768,,,0,,America/Chicago,,,0
+767351,,,41st/adjacent to (east of) Big Sioux River,,43.51471776,-96.76514478,,,0,,America/Chicago,,,0
+767352,,,41st/Kiwanis – SW Corner,,43.51471843,-96.76132772,,,0,,America/Chicago,,,0
+767353,,,41st/Elmwood SW corner,,43.51473986,-96.75629228,,,0,,America/Chicago,,,0
+767354,,,41st/Western SW corner,,43.51478666,-96.75157793,,,0,,America/Chicago,,,0
+767355,,,41st/West SW corner,,43.51476348,-96.74645253,,,0,,America/Chicago,,,0
+767356,,,41st/Grange SW corner,,43.51477503,-96.74174972,,,0,,America/Chicago,,,0
+767357,,,41st/Summit SW corner,,43.51477761,-96.73637512,,,0,,America/Chicago,,,0
+767358,,,Minnesota/40th SE corner,,43.51554674,-96.731126,,,0,,America/Chicago,,,0
+767359,,,Minnesota/37th SE corner,,43.51825936,-96.73113582,,,0,,America/Chicago,,,0
+767360,,,Minnesota (mid-block/ 33rd NE corner,,43.52288231,-96.73116238,,,0,,America/Chicago,,,0
+767361,,,Minnesota/30th SE corner,,43.52467491,-96.73116684,,,0,,America/Chicago,,,0
+767362,,,Minnesota & 26th/Minnesota at Walgreens,,43.5287745,-96.73115292,,,0,,America/Chicago,,,0
+767363,,,Minnesota/22nd SE corner,,43.53267404,-96.73115559,,,0,,America/Chicago,,,0
+767364,,,Minnesota/19th SE corner,,43.53551471,-96.73115907,,,0,,America/Chicago,,,0
+767365,,,Minnesota/16th SE corner,,43.53886462,-96.73115165,,,0,,America/Chicago,,,0
+767366,,,Minnesota/13th SE corner,,43.54235222,-96.73115345,,,0,,America/Chicago,,,0
+767367,,,10th/Indiana (State Offices),,43.54657026,-96.71608947,,,0,,America/Chicago,,,0
+767368,,,10th between Cliff and Van Eps,,43.54658173,-96.70983662,,,0,,America/Chicago,,,0
+767369,,,10th/Blauvelt SW corner,,43.54658828,-96.70690404,,,0,,America/Chicago,,,0
+767370,,,10th/Jessica SW corner,,43.54660349,-96.70305753,,,0,,America/Chicago,,,0
+767371,,,10th/St. Paul SW corner,,43.54659449,-96.69938826,,,0,,America/Chicago,,,0
+767372,,,10th/Lowell SW corner,,43.54659391,-96.69662536,,,0,,America/Chicago,,,0
+767373,,,10th/Blaine SW corner,,43.54661066,-96.69253499,,,0,,America/Chicago,,,0
+767374,,,10th/Hy-Vee/Campbell Supply SW corner,,43.54664077,-96.68780789,,,0,,America/Chicago,,,0
+767375,,,10th/Bahnson SW corner,,43.54663121,-96.68323707,,,0,,America/Chicago,,,0
+767376,,,10th/Kmart,,43.54602754,-96.6796523,,,0,,America/Chicago,,,0
+767377,,,12th/Kennedy NW corner,,43.5439822,-96.67572167,,,0,,America/Chicago,,,0
+767378,,,12th/Churchill NW corner,,43.54399192,-96.67992544,,,0,,America/Chicago,,,0
+767379,,,12th/Bahnson NE corner,,43.54399764,-96.68161025,,,0,,America/Chicago,,,0
+767380,,,12th/Sneve NE corner,,43.54399386,-96.68520037,,,0,,America/Chicago,,,0
+767381,,,12/Thompson NE corner,,43.5439943,-96.68731506,,,0,,America/Chicago,,,0
+767382,,,12th/Cleveland NE corner,,43.5439884,-96.69095724,,,0,,America/Chicago,,,0
+767383,,,10th/Cleveland NW corner,,43.54685758,-96.69189496,,,0,,America/Chicago,,,0
+767384,,,10th/Lowell NE corner,,43.54678543,-96.69610435,,,0,,America/Chicago,,,0
+767385,,,10th/Jessica NW corner,,43.54676391,-96.70319638,,,0,,America/Chicago,,,0
+767386,,,10th/Blauvelt NE corner,,43.54676473,-96.70609245,,,0,,America/Chicago,,,0
+767387,,,10th/Cliff NE corner,,43.5467665,-96.71098368,,,0,,America/Chicago,,,0
+767388,,,8th/French NE corner,,43.54869262,-96.71305501,,,0,,America/Chicago,,,0
+767389,,,8th/Indiana NW corner,,43.54868544,-96.71606619,,,0,,America/Chicago,,,0
+767390,,,2nd Ave/13th NW corner,,43.54258252,-96.72392659,,,0,,America/Chicago,,,0
+767391,,,2nd Ave/15th NW corner,,43.54054912,-96.72384495,,,0,,America/Chicago,,,0
+767392,,,18th/3rd Ave SW corner,,43.53663241,-96.7224632,,,0,,America/Chicago,,,0
+767393,,,18th/7th Ave SW corner,,43.53662224,-96.71698164,,,0,,America/Chicago,,,0
+767394,,,20th/7th Ave at Avera Clinic (mid-block),,43.53478111,-96.71596984,,,0,,America/Chicago,,,0
+767395,,,20th/Physicians Office Bldg (between driveways),,43.53477736,-96.71450953,,,0,,America/Chicago,,,0
+767396,,,20th/Cliff SW corner (McGreevy Clinic),,43.53477293,-96.71178699,,,0,,America/Chicago,,,0
+767397,,,Cliff/23rd NW corner,,43.53241515,-96.71140713,,,0,,America/Chicago,,,0
+767398,,,26th/Sherman SW corner,,43.52931501,-96.71031327,,,0,,America/Chicago,,,0
+767399,,,26th/Blauvelt SW corner,,43.52930665,-96.70665799,,,0,,America/Chicago,,,0
+767400,,,Blauvelt/Wayland NW corner,,43.52516406,-96.70634441,,,0,,America/Chicago,,,0
+767401,,,Blauvelt/33rd NW corner,,43.52224898,-96.70636581,,,0,,America/Chicago,,,0
+767402,,,Cliff/33rd SW corner (mid-block),,43.52140109,-96.7113998,,,0,,America/Chicago,,,0
+767403,,,Cliff/38th NW corner,,43.51877129,-96.71135996,,,0,,America/Chicago,,,0
+767404,,,41st/Cliff NW corner (mid-block),,43.51616474,-96.71239793,,,0,,America/Chicago,,,0
+767405,,,41st/800 address (mid-block),,43.51491487,-96.71664178,,,0,,America/Chicago,,,0
+767406,,,41st/4th Ave NE corner,,43.51493204,-96.72106813,,,0,,America/Chicago,,,0
+767407,,,41st/1st Ave NE corner,,43.51493361,-96.72468219,,,0,,America/Chicago,,,0
+767408,,,Phillips/38th SE corner,,43.51752069,-96.72618099,,,0,,America/Chicago,,,0
+767409,,,Phillips/33rd SE corner,,43.52201475,-96.72622699,,,0,,America/Chicago,,,0
+767410,,,Phillips/30th SE corner,,43.52528045,-96.72624365,,,0,,America/Chicago,,,0
+767411,,,Phillips/28th SE corner,,43.52730538,-96.72624443,,,0,,America/Chicago,,,0
+767412,,,Phillips/26th SE corner,,43.52927707,-96.72621262,,,0,,America/Chicago,,,0
+767413,,,Phillips/24th SE corner,,43.53117252,-96.72623708,,,0,,America/Chicago,,,0
+767414,,,Phillips/20th SE corner,,43.53451931,-96.72623895,,,0,,America/Chicago,,,0
+767415,,,Phillips/18th SE corner,,43.53648506,-96.72623317,,,0,,America/Chicago,,,0
+767416,,,Phillips/14th SE corner,,43.54134341,-96.72669696,,,0,,America/Chicago,,,0
+767417,,,2nd Ave/13th SE corner,,43.54230103,-96.72369353,,,0,,America/Chicago,,,0
+767418,,,8th/Dakota NW corner,,43.54872621,-96.73026341,,,0,,America/Chicago,,,0
+767419,,,8th/Spring NE corner,,43.54864729,-96.73264421,,,0,,America/Chicago,,,0
+767420,,,8th/Prairie NE corner,,43.54863378,-96.73696368,,,0,,America/Chicago,,,0
+767421,,,8th/Grange NE corner,,43.54862911,-96.74087667,,,0,,America/Chicago,,,0
+767422,,,8th/Lake NE corner,,43.54862473,-96.74528246,,,0,,America/Chicago,,,0
+767423,,,West Ave/7th SE corner,,43.54980364,-96.74672532,,,0,,America/Chicago,,,0
+767424,,,West Ave at bus pullout (midway between 6th and Madison),,43.5557627,-96.7468298,,,0,,America/Chicago,,,0
+767425,,,Madison (just south of the stadium),,43.55850645,-96.74816182,,,0,,America/Chicago,,,0
+767426,,,Western/Sanford PREMIER Center (driveway between Center & Stadium),,43.55948369,-96.75153272,,,0,,America/Chicago,,,0
+767427,,,Western/Holly (Howard Wood Field)  SE corner of driveway,,43.56173427,-96.75436027,,,0,,America/Chicago,,,0
+767428,,,Russell between West/Western (mid-block),,43.56360969,-96.75154081,,,0,,America/Chicago,,,0
+767429,,,Bailey/West SE corner,,43.56137821,-96.74646075,,,0,,America/Chicago,,,0
+767430,,,Bailey (mid-block)/Lake SE corner,,43.56138375,-96.74443322,,,0,,America/Chicago,,,0
+767431,,,Bailey (Veterens Park)  SE corner,,43.5629637,-96.74092574,,,0,,America/Chicago,,,0
+767432,,,Bailey/Walts SW corner,,43.56181547,-96.73869821,,,0,,America/Chicago,,,0
+767433,,,Brookings/Duluth SW corner,,43.56026094,-96.73451035,,,0,,America/Chicago,,,0
+767434,,,Brookings/Minnesota SW corner,,43.5602708,-96.73183221,,,0,,America/Chicago,,,0
+767435,,,Minnesota/2nd NW corner,,43.55668309,-96.73147194,,,0,,America/Chicago,,,0
+767436,,,Minnesota/5th NW corner,,43.55263028,-96.7314622,,,0,,America/Chicago,,,0
+767437,,,8th/Main SW corner,,43.54854538,-96.72855225,,,0,,America/Chicago,,,0
+767438,,,Phillips/8th SE corner,,43.54842888,-96.72674393,,,0,,America/Chicago,,,0
+767439,,,8th/Railroad,,43.54854338,-96.7229363,,,0,,America/Chicago,,,0
+767440,,,Weber/6th NE corner,,43.55143457,-96.71987319,,,0,,America/Chicago,,,0
+767441,,,Weber/4th SE corner,,43.55364436,-96.71988618,,,0,,America/Chicago,,,0
+767442,,,Weber (east side) at Falls Park Entrance,,43.55595053,-96.71987555,,,0,,America/Chicago,,,0
+767443,,,Weber (east side) at John Morrell's,,43.56114194,-96.71914477,,,0,,America/Chicago,,,0
+767444,,,Rice/Cliff SW corner,,43.56201578,-96.71200619,,,0,,America/Chicago,,,0
+767445,,,Rice/Wayland SW corner,,43.56200875,-96.70812356,,,0,,America/Chicago,,,0
+767446,,,Rice/Jessica SW corner,,43.56200405,-96.70290941,,,0,,America/Chicago,,,0
+767447,,,Rice/Lowell SW corner,,43.56233726,-96.69688231,,,0,,America/Chicago,,,0
+767448,,,Cleveland/1 blk south of Rice,,43.56286459,-96.6914997,,,0,,America/Chicago,,,0
+767449,,,Cleveland at River Ridge Apts,,43.55999338,-96.69149424,,,0,,America/Chicago,,,0
+767450,,,Cleveland/Bunker Place SW corner,,43.55640176,-96.69150906,,,0,,America/Chicago,,,0
+767451,,,Cleveland at Springbrook Estates,,43.55416965,-96.6915114,,,0,,America/Chicago,,,0
+767452,,,6th/Shephard SW corner,,43.55113893,-96.68812915,,,0,,America/Chicago,,,0
+767453,,,Bahnson (mid-block)/6th NE corner,,43.55178131,-96.68170474,,,0,,America/Chicago,,,0
+767454,,,3rd/Montgomery Court SW corner,,43.55489291,-96.67924618,,,0,,America/Chicago,,,0
+767455,,,3rd/Washington High School entrance (west of drive),,43.5548917,-96.67385786,,,0,,America/Chicago,,,0
+767456,,,6th/Sycamore (mid-block),,43.551166,-96.66919964,,,0,,America/Chicago,,,0
+767457,,,6th/Dewberry SW corner,,43.55116522,-96.6624189,,,0,,America/Chicago,,,0
+767458,,,Foss at East Ryan Place,,43.54565405,-96.66100529,,,0,,America/Chicago,,,0
+767459,,,West side of Walmart bldg,,43.54168858,-96.65974539,,,0,,America/Chicago,,,0
+767460,,,Highline Place/Tree Blvd (between Target & Kohls),,43.53970676,-96.65302248,,,0,,America/Chicago,,,0
+767461,,,Highline Place/Target Driveway  (south end of Target),,43.53805675,-96.65301448,,,0,,America/Chicago,,,0
+767462,,,Century Theaters (east side  near driveway),,43.53743202,-96.65484558,,,0,,America/Chicago,,,0
+767463,,,Arrowhead Parkway (10th)/Sycamore NE corner,,43.54428719,-96.67139334,,,0,,America/Chicago,,,0
+767464,,,Sycamore/8th NE corner near Knopf Assisted Living,,43.54857488,-96.67141481,,,0,,America/Chicago,,,0
+767465,,,6th/Washington High School driveway (west side of driveway),,43.5512759,-96.67423298,,,0,,America/Chicago,,,0
+767466,,,6th/Bahnson NE corner,,43.55127454,-96.68133931,,,0,,America/Chicago,,,0
+767467,,,6th/Shepard NW corner,,43.55127448,-96.68793526,,,0,,America/Chicago,,,0
+767468,,,6th/Cleveland NW corner,,43.55129858,-96.69195065,,,0,,America/Chicago,,,0
+767469,,,6th/Lowell NE corner,,43.55125355,-96.69551841,,,0,,America/Chicago,,,0
+767470,,,6th/St. Paul NE corner,,43.55126004,-96.69866796,,,0,,America/Chicago,,,0
+767471,,,Lewis/5th SE corner,,43.55207429,-96.70136892,,,0,,America/Chicago,,,0
+767472,,,3rd/Lewis NW corner,,43.55400956,-96.70189533,,,0,,America/Chicago,,,0
+767473,,,3rd/Wayland NE corner,,43.55475781,-96.7073342,,,0,,America/Chicago,,,0
+767474,,,3rd/Cliff NE corner,,43.55485885,-96.71108667,,,0,,America/Chicago,,,0
+767475,,,3rd/Indiana NE corner,,43.55500218,-96.71524726,,,0,,America/Chicago,,,0
+767476,,,6th/Indiana NE corner,,43.55145728,-96.71572161,,,0,,America/Chicago,,,0
+767477,,,6th/Weber NW corner,,43.55128769,-96.72022838,,,0,,America/Chicago,,,0
+767478,,,6th/Kilian College,,43.55129114,-96.72253386,,,0,,America/Chicago,,,0
+767479,,,Phillips/7th NW corner,,43.54997196,-96.72691605,,,0,,America/Chicago,,,0
+767480,,,Minnesota/5th SE corner,,43.55233198,-96.73121037,,,0,,America/Chicago,,,0
+767481,,,Minesota/1st SE corner,,43.55755673,-96.7312308,,,0,,America/Chicago,,,0
+767482,,,Minnesota/Brookings SE corner,,43.56016152,-96.73123055,,,0,,America/Chicago,,,0
+767483,,,Minnesota/Russell SE corner,,43.56380251,-96.7312169,,,0,,America/Chicago,,,0
+767484,,,North Drive/1st Ave SW corner,,43.56550528,-96.72623532,,,0,,America/Chicago,,,0
+767485,,,4th Ave/Amidon SE corner,,43.57553264,-96.7213127,,,0,,America/Chicago,,,0
+767486,,,4th Ave/Presentation NE corner,,43.57840814,-96.72130798,,,0,,America/Chicago,,,0
+767487,,,4th Ave/Wells Fargo crosswalk,,43.58031748,-96.72129574,,,0,,America/Chicago,,,0
+767488,,,4th Ave/Cumberland Apts,,43.58460441,-96.72129374,,,0,,America/Chicago,,,0
+767489,,,4th Ave/48th SE corner,,43.58892618,-96.72121239,,,0,,America/Chicago,,,0
+767490,,,4th Ave/ 50th SE corner,,43.59077338,-96.7212092,,,0,,America/Chicago,,,0
+767491,,,4th Ave/52nd SE corner,,43.59256708,-96.72120165,,,0,,America/Chicago,,,0
+767492,,,4th Ave/54th SE corner,,43.5943547,-96.7212032,,,0,,America/Chicago,,,0
+767493,,,4th Ave/58th SE corner,,43.60027144,-96.72347972,,,0,,America/Chicago,,,0
+767494,,,Citibank Building # 1,,43.600771,-96.71889535,,,0,,America/Chicago,,,0
+767495,,,Cliff (mid-block)/60th SW corner,,43.60114827,-96.71150062,,,0,,America/Chicago,,,0
+767496,,,Cliff/54th NW corner,,43.5949416,-96.71145981,,,0,,America/Chicago,,,0
+767497,,,Cliff/Benson SW corner,,43.58696066,-96.71150669,,,0,,America/Chicago,,,0
+767498,,,Cliff/Hermosa NW corner,,43.58218944,-96.71147805,,,0,,America/Chicago,,,0
+767499,,,Cliff/34th NW corner,,43.58068738,-96.71133793,,,0,,America/Chicago,,,0
+767500,,,Cliff/Amidon NW corner,,43.57702634,-96.71088723,,,0,,America/Chicago,,,0
+767501,,,Cliff/Rice SW corner,,43.56149987,-96.71157345,,,0,,America/Chicago,,,0
+767502,,,Cliff/3rd NW corner,,43.55503084,-96.71148885,,,0,,America/Chicago,,,0
+767503,,,Cliff/6th NW corner,,43.55136358,-96.71151135,,,0,,America/Chicago,,,0
+767504,,,Cliff/8th NW corner,,43.54879375,-96.71149284,,,0,,America/Chicago,,,0
+767505,,,Cliff/10th NW corner,,43.5469633,-96.7115342,,,0,,America/Chicago,,,0
+767506,,,10th/Fairfax NE corner,,43.54675365,-96.71387392,,,0,,America/Chicago,,,0
+767507,,,14th/4th Ave SW corner,,43.54139285,-96.72143327,,,0,,America/Chicago,,,0
+767508,,,14th/6th Ave SW corner,,43.54138381,-96.71823937,,,0,,America/Chicago,,,0
+767509,,,14th between 9th & Cliff Ave.,,43.54126174,-96.71278584,,,0,,America/Chicago,,,0
+767510,,,River Blvd/17th SW corner,,43.53815058,-96.7066683,,,0,,America/Chicago,,,0
+767511,,,18th/Foster Ave SW corner,,43.53659046,-96.6984501,,,0,,America/Chicago,,,0
+767512,,,18th/Blaine SE corner,,43.53662177,-96.69244306,,,0,,America/Chicago,,,0
+767513,,,18th/Gary SW corner,,43.53662421,-96.69062577,,,0,,America/Chicago,,,0
+767514,,,18th/Laurie SW corner,,43.53684007,-96.68516594,,,0,,America/Chicago,,,0
+767515,,,18th/Point SW corner,,43.53677786,-96.68206597,,,0,,America/Chicago,,,0
+767516,,,18th/Churchill SW corner,,43.53661827,-96.67954155,,,0,,America/Chicago,,,0
+767517,,,18th/Judy SW corner,,43.53660439,-96.67693686,,,0,,America/Chicago,,,0
+767518,,,18th/Sycamore/SW corner,,43.53657241,-96.67188884,,,0,,America/Chicago,,,0
+767519,,,Sycamore/23rd NW corner,,43.53330877,-96.67150544,,,0,,America/Chicago,,,0
+767520,,,Sycamore/26th NW corner,,43.52961967,-96.67152983,,,0,,America/Chicago,,,0
+767521,,,26th/Judy NE corner,,43.52941695,-96.67557168,,,0,,America/Chicago,,,0
+767522,,,26th/Bahnson NE corner,,43.52940612,-96.6808736,,,0,,America/Chicago,,,0
+767523,,,26th/Village Square Circle NW corner,,43.52939258,-96.68736919,,,0,,America/Chicago,,,0
+767524,,,26th/Cleveland NE corner,,43.52938663,-96.691162,,,0,,America/Chicago,,,0
+767525,,,Cleveland/22nd SE corner,,43.53268531,-96.69131927,,,0,,America/Chicago,,,0
+767526,,,Cleveland/19th SE corner,,43.53535661,-96.69134133,,,0,,America/Chicago,,,0
+767527,,,18th/Blaine NE corner,,43.53671821,-96.69215064,,,0,,America/Chicago,,,0
+767528,,,18th/Lowell NE corner,,43.53671178,-96.69596631,,,0,,America/Chicago,,,0
+767529,,,18th/Southeastern NE corner,,43.53670806,-96.69866844,,,0,,America/Chicago,,,0
+767530,,,18th at entrance to River Blvd Greenway Park,,43.53767102,-96.70547253,,,0,,America/Chicago,,,0
+767531,,,14th  (mid-block) /Cliff Ave NW,,43.54144919,-96.71235563,,,0,,America/Chicago,,,0
+767532,,,14th/6th Ave NE corner,,43.54150627,-96.7176993,,,0,,America/Chicago,,,0
+767533,,,14th/4th Ave NE corner,,43.54150575,-96.72064783,,,0,,America/Chicago,,,0
+767534,,,13th/3rd Ave NE corner,,43.54249095,-96.72188454,,,0,,America/Chicago,,,0
+767535,,,Tower of David Apts,,43.54440037,-96.72217131,,,0,,America/Chicago,,,0
+767536,,,12th/Western NE corner,,43.5440212,-96.75097964,,,0,,America/Chicago,,,0
+767537,,,12th/Elmwood NE corner,,43.54400663,-96.75568843,,,0,,America/Chicago,,,0
+767538,,,12th/Williams NE corner,,43.5439832,-96.75933668,,,0,,America/Chicago,,,0
+767539,,,10th/Kawanis NW corner,,43.54597094,-96.76188295,,,0,,America/Chicago,,,0
+767540,,,10th at entrance to Rehab Center for the Blind,,43.546001,-96.763719,,,0,,America/Chicago,,,0
+767541,,,12th (mid-block)/Westport NW corner,,43.54406841,-96.76693527,,,0,,America/Chicago,,,0
+767542,,,12th/Lyon Blvd NW corner,,43.54407839,-96.77465687,,,0,,America/Chicago,,,0
+767543,,,12th/Petro NE corner,,43.54403304,-96.78290611,,,0,,America/Chicago,,,0
+767544,,,12th (north side) east of Marion,,43.54402148,-96.7881524,,,0,,America/Chicago,,,0
+767545,,,9th (mid-block) /Marion NW corner,,43.54757018,-96.79217205,,,0,,America/Chicago,,,0
+767546,,,9th/Holbrook NE corner,,43.54754243,-96.79638841,,,0,,America/Chicago,,,0
+767547,,,Holbrook/Thrush Place SE corner,,43.54885765,-96.79668924,,,0,,America/Chicago,,,0
+767548,,,Holbrook/Wren Place SE corner,,43.55034152,-96.79647371,,,0,,America/Chicago,,,0
+767549,,,Holbrook/5th SE corner,,43.55239463,-96.79636722,,,0,,America/Chicago,,,0
+767550,,,5th/Valley View NE corner,,43.55280329,-96.79911785,,,0,,America/Chicago,,,0
+767551,,,Valley View/West Grove Place NW corner,,43.55015164,-96.79955993,,,0,,America/Chicago,,,0
+767552,,,Valley View/9th NW corner,,43.54768555,-96.80083252,,,0,,America/Chicago,,,0
+767553,,,Valley View/12th NW corner,,43.54459202,-96.80091539,,,0,,America/Chicago,,,0
+767554,,,Valley View (mid-block)/12th SW corner,,43.54319521,-96.80085661,,,0,,America/Chicago,,,0
+767555,,,Christopher/Silver Place NW corner,,43.53852423,-96.7991563,,,0,,America/Chicago,,,0
+767556,,,Christopher/Dardenella NW corner,,43.53743225,-96.79932786,,,0,,America/Chicago,,,0
+767557,,,Dardenella/Marion SW corner,,43.53719502,-96.7914873,,,0,,America/Chicago,,,0
+767558,,,Marion (west side) north of entrance to Dunham Park,,43.53530872,-96.79106355,,,0,,America/Chicago,,,0
+767559,,,26th/Edna SW corner,,43.52925055,-96.78872676,,,0,,America/Chicago,,,0
+767560,,,26th/Lorraine (mid-block) SE corner,,43.52835957,-96.78476958,,,0,,America/Chicago,,,0
+767561,,,"26th/Shirley (mid-block, across from existing shelter)",,43.52453608,-96.77592629,,,0,,America/Chicago,,,0
+767562,,,Shirley/34th NW corner,,43.52061271,-96.77483384,,,0,,America/Chicago,,,0
+767563,,,Shirley/38th NW corner,,43.51801445,-96.77447444,,,0,,America/Chicago,,,0
+767564,,,Shirley/West Shirley Place NW corner,,43.51602985,-96.77455355,,,0,,America/Chicago,,,0
+767565,,,41st/Terry  NE corner,,43.51490931,-96.78602489,,,0,,America/Chicago,,,0
+767566,,,41st/Marion NE corner,,43.51493482,-96.7907337,,,0,,America/Chicago,,,0
+767567,,,Marion/37th SE corner,,43.51776423,-96.79083094,,,0,,America/Chicago,,,0
+767568,,,Marion/34th SE corner,,43.52030339,-96.79081948,,,0,,America/Chicago,,,0
+767569,,,Marion/26th SE corner (south of driveway into Hy-Vee-driveway nearest to front of Hy-Vee),,43.52795569,-96.79079022,,,0,,America/Chicago,,,0
+767570,,,Marion/24th SE corner,,43.53091534,-96.79081561,,,0,,America/Chicago,,,0
+767571,,,Marion/18th SE corner,,43.53713982,-96.79082683,,,0,,America/Chicago,,,0
+767572,,,Marion/12th SE corner,,43.54332225,-96.79074789,,,0,,America/Chicago,,,0
+767573,,,12th/Ebenezer SW corner,,43.54376623,-96.7865935,,,0,,America/Chicago,,,0
+767574,,,12th/Pine Crest Place SW corner,,43.54375905,-96.78343605,,,0,,America/Chicago,,,0
+767575,,,12th/Lyons SE corner,,43.54381195,-96.77388403,,,0,,America/Chicago,,,0
+767576,,,Westport/12th (north side),,43.54422158,-96.76574238,,,0,,America/Chicago,,,0
+767577,,,12th/Williams SW corner,,43.54382915,-96.75989118,,,0,,America/Chicago,,,0
+767578,,,12th/Elmwood SW corner,,43.5438391,-96.7563615,,,0,,America/Chicago,,,0
+767579,,,57th/Broadband NE corner (entrance to Good Sams),,43.50039488,-96.78219243,,,0,,America/Chicago,,,0
+767580,,,57th/Marion NE corner,,43.50036217,-96.79038026,,,0,,America/Chicago,,,0
+767581,,,Marion/55th SW corner,,43.50302485,-96.79079423,,,0,,America/Chicago,,,0
+767582,,,Marion/St. James SE corner,,43.50632986,-96.79081984,,,0,,America/Chicago,,,0
+767583,,,49th/Meadowstone Ct. NE corner,,43.50803239,-96.79230417,,,0,,America/Chicago,,,0
+767584,,,49th/Drexel NE corner,,43.50803158,-96.79565034,,,0,,America/Chicago,,,0
+767585,,,49th/Holbrook NE corner,,43.50802919,-96.80004565,,,0,,America/Chicago,,,0
+767586,,,Essex/Mesa Pass (4200 W) NE corner,,43.50940868,-96.80490042,,,0,,America/Chicago,,,0
+767587,,,Essex/Sertoma NE corner,,43.50841859,-96.81066269,,,0,,America/Chicago,,,0
+767588,,,Sertoma/46th SE corner,,43.51194184,-96.81075632,,,0,,America/Chicago,,,0
+767589,,,Sertoma/41st SE corner,,43.51453183,-96.81073709,,,0,,America/Chicago,,,0
+767590,,,41st/Kuehn Park SW corner,,43.51473809,-96.80554256,,,0,,America/Chicago,,,0
+767591,,,41st/Holbrook SW corner,,43.51473581,-96.80130917,,,0,,America/Chicago,,,0
+767592,,,41st/Fairhall SW corner,,43.51473402,-96.79740925,,,0,,America/Chicago,,,0
+767593,,,41st/Cambridge SW corner,,43.51473422,-96.7954726,,,0,,America/Chicago,,,0
+767594,,,Marion (mid-block)/41st SW corner,,43.51330698,-96.79101317,,,0,,America/Chicago,,,0
+767595,,,Marion/46th SW corner,,43.51036889,-96.79099564,,,0,,America/Chicago,,,0
+767596,,,Cathy (mid-block)/45th SE corner,,43.51041733,-96.78916275,,,0,,America/Chicago,,,0
+767597,,,45th/Downing SW corner,,43.51114319,-96.78755081,,,0,,America/Chicago,,,0
+767598,,,Terry/Gateway SE corner,,43.51195366,-96.7858963,,,0,,America/Chicago,,,0
+767599,,,Terry/41st SE corner,,43.51439405,-96.78621348,,,0,,America/Chicago,,,0
+767600,,,41st/Gateway SW corner,,43.51473209,-96.7847349,,,0,,America/Chicago,,,0
+767601,,,Shirley/ShirleyPlace/SE corner,,43.51566145,-96.77440145,,,0,,America/Chicago,,,0
+767602,,,Shirley/38th NE corner,,43.51785955,-96.77427536,,,0,,America/Chicago,,,0
+767603,,,34th/Louise SW corner (approximately 100 ft west of intersection),,43.52054731,-96.77264943,,,0,,America/Chicago,,,0
+767604,,,Louise at Wal-Mart entrance driveway NW corner,,43.51786439,-96.77120148,,,0,,America/Chicago,,,0
+767605,,,Western/10th SE corner,,43.54539051,-96.75114629,,,0,,America/Chicago,,,0
+767606,,,Western/Sandy Creek Apts,,43.55017572,-96.75116092,,,0,,America/Chicago,,,0
+767607,,,Western/across from Children's Inn,,43.55206229,-96.75116376,,,0,,America/Chicago,,,0
+767608,,,Western/Legion  SE corner,,43.55504933,-96.75115652,,,0,,America/Chicago,,,0
+767609,,,Madison/Lyndale NE corner,,43.55848122,-96.7534294,,,0,,America/Chicago,,,0
+767610,,,Madison/Lincoln NE corner (Rosie's Cafe),,43.55846649,-96.7568328,,,0,,America/Chicago,,,0
+767611,,,Madison/Kiwanis NE corner,,43.55845799,-96.76058267,,,0,,America/Chicago,,,0
+767612,,,Kiwanis/Bailey SE corner,,43.56064427,-96.76113053,,,0,,America/Chicago,,,0
+767613,,,Russell/Westport NE corner,,43.56797691,-96.7676734,,,0,,America/Chicago,,,0
+767614,,,Ramkota Hotel,,43.57294007,-96.76844099,,,0,,America/Chicago,,,0
+767615,,,Maple/Career NE corner,,43.57303985,-96.78011257,,,0,,America/Chicago,,,0
+767616,,,Career/Innovation SE corner,,43.57619502,-96.78093058,,,0,,America/Chicago,,,0
+767617,,,Career/Cayman NE corner,,43.58601687,-96.78097873,,,0,,America/Chicago,,,0
+767618,,,University Center (parking lot west of Administration bldg.),,43.5997629,-96.78128644,,,0,,America/Chicago,,,0
+767619,,,Career/Benson SW corner,,43.58728016,-96.78115633,,,0,,America/Chicago,,,0
+767620,,,Career/Tickman SW corner,,43.58252303,-96.78111228,,,0,,America/Chicago,,,0
+767621,,,Career/Pat NW corner,,43.57846593,-96.7811047,,,0,,America/Chicago,,,0
+767622,,,Career/Northridge Apts (north side of driveway),,43.57511802,-96.78106035,,,0,,America/Chicago,,,0
+767623,,,STI in front of George S. Mickelson Education Center,,43.57087585,-96.77968977,,,0,,America/Chicago,,,0
+767624,,,Kiwanis/Brookings NW corner,,43.56036948,-96.7613233,,,0,,America/Chicago,,,0
+767625,,,Madison/Garfield SW corner,,43.55834837,-96.75904209,,,0,,America/Chicago,,,0
+767626,,,Madison/Elmwood,,43.55837766,-96.75513773,,,0,,America/Chicago,,,0
+767627,,,Madison/Western SW corner (McCart Park),,43.55839446,-96.75148573,,,0,,America/Chicago,,,0
+767628,,,Western/Children's Inn,,43.55207863,-96.75131259,,,0,,America/Chicago,,,0
+767629,,,Western/Northwestern Apts,,43.54942298,-96.75130495,,,0,,America/Chicago,,,0
+767630,,,Western/11th NW corner,,43.54511819,-96.7512765,,,0,,America/Chicago,,,0
+767634,,,VA Medical Center entrance southbound,,43.53073202,-96.75486843,,,0,,America/Chicago,,,0
+767636,,,57th/Technopolis Drive NE corner,,43.50041296,-96.77430061,,,0,,America/Chicago,,,0
+767637,,,57th/Solberg NE corner,,43.50041004,-96.77897913,,,0,,America/Chicago,,,0
+771289,,,9th/Phillips – NE Corner,,43.547366,-96.726483,,,0,,America/Chicago,,,0
+771290,,,Cliff/Chambers,,43.56951,-96.711565,,,0,,America/Chicago,,,0
+771291,,,Western/12th – SW Corner,,43.543527,-96.751303,,,0,,America/Chicago,,,0
+771292,,,Kiwanis/Hotel,,43.56285,-96.761131,,,0,,America/Chicago,,,0
+771293,,,Career/Tickman – NE Corner,,43.582859,-96.780971,,,0,,America/Chicago,,,0
+771294,,,Walmart,,43.602973,-96.787606,,,0,,America/Chicago,,,0
+771295,,,University Center,,43.600455,-96.781056,,,0,,America/Chicago,,,0
+785280,,,Russell and Louise SW Corner,,43.5666778701758,-96.7671650047546,,,0,,America/Chicago,,,0

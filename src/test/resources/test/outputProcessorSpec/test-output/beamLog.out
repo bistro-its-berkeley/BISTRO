@@ -1,0 +1,208 @@
+01:08:46.102 [main] INFO  beam.competition.run.RunCompetition$ - Starting beam on branch saf/plot_score_components_each_iteration at commit 42941c5efe18c292bbf0c8bbd8263a33a3737344.
+01:08:46.122 [main] INFO  beam.competition.run.RunCompetition$ - Config [sioux_faux-15k] copied to /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/beam.conf.
+01:08:50.064 [main] INFO  b.r.r.FrequencyAdjustingNetworkCoordinator - Initializing router by reading network from: /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/fixed-data/sioux_faux/r5/network.dat
+01:09:00.335 [ForkJoinPool.commonPool-worker-2] INFO  hsqldb.db.HSQLDB4AD417742A.ENGINE - dataFileCache open start
+01:09:03.372 [main] INFO  beam.sim.BeamWarmStart - Population successfully warm started from /var/folders/kp/rxkfk3pn6tg6cx6bv7clf7jh0000gn/T/sioux_faux-15k__warm-start/ITERS/it.100/100.plans.xml.gz
+01:09:14.992 [main] INFO  beam.utils.NetworkHelperImpl - Total number of links is 5918 and MaxLinkId is 5917.
+01:09:14.999 [main] INFO  beam.utils.NetworkHelperImpl - NetworkHelperImpl init executed in 44 ms
+01:09:21.886 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+01:09:22.584 [main] INFO  beam.router.osm.TollCalculator - tollsByLinkId size: 0
+01:09:22.588 [main] INFO  beam.router.osm.TollCalculator - tollsByWayId size: 0
+01:09:27.250 [main] INFO  b.s.p.DefaultPopulationAdjustment - Modes excluded:
+01:09:27.312 [main] INFO  b.s.p.DefaultPopulationAdjustment - car -> 3675
+01:09:29.789 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[529223590] `akka://ClusterSystem/user/router/router-worker` is ready
+01:09:29.791 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  beam.router.r5.R5RoutingWorker - Num of available processors: 4. Will use: 2
+01:09:29.855 [main] WARN  b.analysis.plots.ModeChosenAnalysis - Unable to load benchmark CSV via path ''
+01:09:29.875 [main] WARN  b.a.plots.RealizedModeAnalysis - Unable to load benchmark CSV via path ''
+01:09:35.196 [main] INFO  beam.sim.BeamMobsim - Starting Iteration
+01:09:35.198 [main] INFO  beam.sim.BeamMobsim - Preparing new Iteration (Start)
+01:09:37.329 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - QuadTreeBounds with X: [678308.519463; 687377.121479], Y: [4818895.632974, 4830338.222152]. boundingBoxBuffer: 10000
+01:09:38.282 [ClusterSystem-akka.actor.default-dispatcher-12] INFO  b.a.i.ZonalParkingManager - Zonal Parking Manager loaded with 2147448787 total stalls
+01:09:38.550 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.agentsim.agents.Population - Initialized 6225 households
+01:09:40.136 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  beam.router.TransitInitializer - [1] Initialized transit trips in 1521 ms. Keys: 131, Values: 131
+01:09:40.497 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  beam.sim.BeamMobsim$$anon$1 - Transit schedule has been initialized
+01:09:44.668 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - Initialized 2368 ride hailing shifts
+01:09:44.788 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[529223590], Path: `akka://ClusterSystem/user/router/router-worker` UpdateTravelTimeLocal. Set new travel time
+01:09:44.922 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.utils.TravelTimeCalculatorHelper - GetLinkIdToTravelTimeArray for 5918 links with maxHour = 30 executed in 131 ms
+01:09:44.927 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  beam.sim.BeamWarmStart - Travel times successfully warm started from /var/folders/kp/rxkfk3pn6tg6cx6bv7clf7jh0000gn/T/sioux_faux-15k__warm-start/ITERS/it.100/100.linkstats.csv.gz.
+01:09:44.938 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Running BEAM Mobsim
+01:09:44.939 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Preparing new Iteration (End)
+01:09:44.942 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Starting Agentsim
+01:09:44.949 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - starting scheduler at iteration 0
+01:09:58.587 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  b.a.agents.ridehail.RideHailManager - Initialized 2035 ride hailing agents
+01:10:00.117 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 0.5 completed. 0.8(GB)
+01:10:00.118 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.0 completed. 0.8(GB)
+01:10:00.118 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.5 completed. 0.8(GB)
+01:10:00.253 [ClusterSystem-akka.actor.default-dispatcher-8] INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.0 completed. 0.8(GB)
+01:10:00.261 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.5 completed. 0.8(GB)
+01:10:00.261 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.0 completed. 0.8(GB)
+01:10:00.303 [ClusterSystem-akka.actor.default-dispatcher-8] INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.5 completed. 0.8(GB)
+01:10:00.385 [ClusterSystem-akka.actor.default-dispatcher-11] INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.0 completed. 0.8(GB)
+01:10:00.472 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.5 completed. 0.8(GB)
+01:10:00.550 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.0 completed. 0.8(GB)
+01:10:00.604 [ClusterSystem-akka.actor.default-dispatcher-11] INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.5 completed. 0.8(GB)
+01:10:00.702 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.0 completed. 0.8(GB)
+01:10:00.806 [ClusterSystem-akka.actor.default-dispatcher-12] INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.5 completed. 0.9(GB)
+01:10:01.212 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.0 completed. 0.9(GB)
+01:10:01.848 [ClusterSystem-akka.actor.default-dispatcher-3] WARN  beam.sim.common.GeoUtilsImpl - [1] Coordinate does not appear to be in WGS. No conversion will happen: [x=686980.7721999995][y=4820332.4232]
+01:10:01.849 [ClusterSystem-akka.actor.default-dispatcher-3] WARN  beam.sim.common.GeoUtilsImpl - [2] Coordinate does not appear to be in WGS. No conversion will happen: [x=686980.7721999995][y=4820332.4232]
+01:10:01.995 [ClusterSystem-akka.actor.default-dispatcher-2] WARN  beam.sim.common.GeoUtilsImpl - [4] Coordinate does not appear to be in WGS. No conversion will happen: [x=681647.2126000002][y=4819254.602499999]
+01:10:02.035 [ClusterSystem-akka.actor.default-dispatcher-10] WARN  beam.sim.common.GeoUtilsImpl - [8] Coordinate does not appear to be in WGS. No conversion will happen: [x=681647.2126000002][y=4819254.602499999]
+01:10:02.800 [ClusterSystem-akka.actor.default-dispatcher-7] WARN  beam.sim.common.GeoUtilsImpl - [16] Coordinate does not appear to be in WGS. No conversion will happen: [x=678636.3556000004][y=4819991.241599999]
+01:10:02.824 [ClusterSystem-akka.actor.default-dispatcher-13] WARN  beam.sim.common.GeoUtilsImpl - [32] Coordinate does not appear to be in WGS. No conversion will happen: [x=681691.1343999999][y=4819256.623299999]
+01:10:02.858 [ClusterSystem-akka.actor.default-dispatcher-7] WARN  beam.sim.common.GeoUtilsImpl - [64] Coordinate does not appear to be in WGS. No conversion will happen: [x=678641.1744999997][y=4819389.869999999]
+01:10:02.884 [ClusterSystem-akka.actor.default-dispatcher-7] INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.5 completed. 1.1(GB)
+01:10:09.237 [ClusterSystem-akka.actor.default-dispatcher-8] WARN  beam.sim.common.GeoUtilsImpl - [128] Coordinate does not appear to be in WGS. No conversion will happen: [x=680181.1918000001][y=4820779.888800001]
+01:10:12.798 [ClusterSystem-akka.actor.default-dispatcher-7] WARN  beam.sim.common.GeoUtilsImpl - [256] Coordinate does not appear to be in WGS. No conversion will happen: [x=678634.3348000003][y=4819851.6337]
+01:10:15.805 [ClusterSystem-akka.actor.default-dispatcher-13] INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.0 completed. 1.2(GB)
+01:10:22.210 [ClusterSystem-akka.actor.default-dispatcher-3] WARN  beam.sim.common.GeoUtilsImpl - [512] Coordinate does not appear to be in WGS. No conversion will happen: [x=678636.4447999997][y=4822900.8632]
+01:10:32.970 [ClusterSystem-akka.actor.default-dispatcher-7] WARN  beam.sim.common.GeoUtilsImpl - [1024] Coordinate does not appear to be in WGS. No conversion will happen: [x=680902.4811000004][y=4824430.7996]
+01:10:34.000 [ClusterSystem-akka.actor.default-dispatcher-7] INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.5 completed. 1.4(GB)
+01:10:45.649 [ClusterSystem-akka.actor.default-dispatcher-13] INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.0 completed. 0.9(GB)
+01:10:58.077 [ClusterSystem-akka.actor.default-dispatcher-10] WARN  beam.sim.common.GeoUtilsImpl - [2048] Coordinate does not appear to be in WGS. No conversion will happen: [x=681009.6032999996][y=4823924.275900001]
+01:10:58.269 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.5 completed. 1.2(GB)
+01:11:04.564 [ClusterSystem-akka.actor.default-dispatcher-11] INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.0 completed. 2.0(GB)
+01:11:10.853 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.5 completed. 2.1(GB)
+01:11:15.545 [ClusterSystem-akka.actor.default-dispatcher-2] WARN  b.a.a.h.HouseholdFleetManager - [1] I can't release vehicle 5289-3 because I have it already
+01:11:17.011 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.0 completed. 2.2(GB)
+01:11:17.337 [ClusterSystem-akka.actor.default-dispatcher-12] WARN  b.a.a.h.HouseholdFleetManager - [2] I can't release vehicle 5752-1 because I have it already
+01:11:20.334 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.5 completed. 1.8(GB)
+01:11:21.026 [ClusterSystem-akka.actor.default-dispatcher-8] WARN  b.a.a.h.HouseholdFleetManager - [4] I can't release vehicle 1613-2 because I have it already
+01:11:23.694 [ClusterSystem-akka.actor.default-dispatcher-8] WARN  b.a.a.h.HouseholdFleetManager - [8] I can't release vehicle 6141-0 because I have it already
+01:11:24.349 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.0 completed. 1.3(GB)
+01:11:28.088 [ClusterSystem-akka.actor.default-dispatcher-3] WARN  b.a.a.h.HouseholdFleetManager - [16] I can't release vehicle 3518-1 because I have it already
+01:11:29.173 [ClusterSystem-akka.actor.default-dispatcher-13] INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.5 completed. 2.9(GB)
+01:11:32.683 [ClusterSystem-akka.actor.default-dispatcher-12] WARN  b.a.a.h.HouseholdFleetManager - [32] I can't release vehicle 4250-3 because I have it already
+01:11:33.493 [ClusterSystem-akka.actor.default-dispatcher-12] INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.0 completed. 2.5(GB)
+01:11:45.644 [ClusterSystem-akka.actor.default-dispatcher-11] INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.5 completed. 1.6(GB)
+01:11:54.476 [ClusterSystem-akka.actor.default-dispatcher-8] WARN  b.a.a.h.HouseholdFleetManager - [64] I can't release vehicle 3060-1 because I have it already
+01:11:57.914 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.0 completed. 0.9(GB)
+01:12:03.153 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.5 completed. 2.8(GB)
+01:12:06.788 [ClusterSystem-akka.actor.default-dispatcher-12] WARN  beam.sim.common.GeoUtilsImpl - [4096] Coordinate does not appear to be in WGS. No conversion will happen: [x=682594.2227205][y=4824510.354271499]
+01:12:08.012 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.0 completed. 2.1(GB)
+01:12:08.979 [ClusterSystem-akka.actor.default-dispatcher-8] WARN  b.a.a.h.HouseholdFleetManager - [128] I can't release vehicle 225-2 because I have it already
+01:12:11.760 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.5 completed. 1.0(GB)
+01:12:16.351 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.0 completed. 2.4(GB)
+01:12:20.472 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.5 completed. 3.7(GB)
+01:12:27.943 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.0 completed. 2.8(GB)
+01:12:34.963 [ClusterSystem-akka.actor.default-dispatcher-7] WARN  b.a.a.h.HouseholdFleetManager - [256] I can't release vehicle 4992-4 because I have it already
+01:12:36.653 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.5 completed. 2.4(GB)
+01:12:45.222 [ClusterSystem-akka.actor.default-dispatcher-12] INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.0 completed. 2.1(GB)
+01:12:54.724 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.5 completed. 1.3(GB)
+01:13:00.962 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.0 completed. 3.1(GB)
+01:13:07.006 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.5 completed. 1.7(GB)
+01:13:11.025 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.0 completed. 3.0(GB)
+01:13:14.345 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.5 completed. 4.1(GB)
+01:13:19.050 [ClusterSystem-akka.actor.default-dispatcher-7] INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.0 completed. 2.1(GB)
+01:13:21.606 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.5 completed. 2.8(GB)
+01:13:22.335 [ClusterSystem-akka.actor.default-dispatcher-14] WARN  b.a.a.h.HouseholdFleetManager - [512] I can't release vehicle 5717-2 because I have it already
+01:13:23.068 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.0 completed. 3.1(GB)
+01:13:23.847 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.5 completed. 3.2(GB)
+01:13:24.488 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.0 completed. 3.4(GB)
+01:13:24.753 [ClusterSystem-akka.actor.default-dispatcher-2] INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.5 completed. 3.4(GB)
+01:13:25.105 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.0 completed. 3.5(GB)
+01:13:25.357 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.5 completed. 3.5(GB)
+01:13:25.399 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.0 completed. 3.5(GB)
+01:13:25.413 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.5 completed. 3.5(GB)
+01:13:25.421 [ClusterSystem-akka.actor.default-dispatcher-7] INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.0 completed. 3.5(GB)
+01:13:25.427 [ClusterSystem-akka.actor.default-dispatcher-7] INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.5 completed. 3.5(GB)
+01:13:25.430 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.0 completed. 3.5(GB)
+01:13:25.432 [ClusterSystem-akka.actor.default-dispatcher-12] INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.5 completed. 3.5(GB)
+01:13:25.435 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.0 completed. 3.5(GB)
+01:13:25.438 [ClusterSystem-akka.actor.default-dispatcher-11] INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.5 completed. 3.5(GB)
+01:13:25.440 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.0 completed. 3.5(GB)
+01:13:25.443 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.5 completed. 3.5(GB)
+01:13:25.445 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Hour 30.0 completed. 3.5(GB)
+01:13:25.452 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  b.a.scheduler.BeamAgentScheduler - Stopping BeamAgentScheduler @ tick 108001. Iteration 0 executed in 220 seconds
+01:13:25.516 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Scheduler is finished.
+01:13:25.517 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Ending Agentsim
+01:13:25.517 [ClusterSystem-akka.actor.default-dispatcher-9] INFO  beam.sim.BeamMobsim$$anon$1 - Processing Agentsim Events (Start)
+01:13:25.943 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:25.943 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  b.a.scheduler.BeamAgentScheduler - aroundPostStop. Stopping all scheduled tasks...
+01:13:26.176 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.177 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.177 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.177 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.177 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.177 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.178 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.178 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.178 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.287 [ClusterSystem-akka.actor.default-dispatcher-6] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.294 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.294 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.294 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.295 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.295 [ClusterSystem-akka.actor.default-dispatcher-10] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.366 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.366 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.367 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.367 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.685 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (720 / 3503) or 21%
+01:13:26.872 [main] INFO  beam.sim.BeamMobsim - Agentsim finished.
+01:13:26.872 [main] INFO  beam.sim.BeamMobsim - Events drained.
+01:13:26.873 [main] INFO  beam.sim.BeamMobsim - Processing Agentsim Events (End)
+01:13:39.366 [main] INFO  beam.router.BeamSkimmer - writeObservedSkims on iteration 0 executed in 357 ms
+01:14:02.244 [main] INFO  beam.router.BeamSkimmer - writeCarSkimsForPeakNonPeakPeriods on iteration 0 executed in 22873 ms
+01:14:02.335 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - CACC disabled
+01:14:02.376 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim Start
+01:14:02.410 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 1 completed. 
+01:14:02.427 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 3 completed. 
+01:14:02.449 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 4 completed. 
+01:14:02.464 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 5 completed. 
+01:14:02.471 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 6 completed. 
+01:14:02.512 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 7 completed. 
+01:14:02.919 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 8 completed. 
+01:14:05.140 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 9 completed. 
+01:14:06.295 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 10 completed. 
+01:14:07.002 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 11 completed. 
+01:14:07.591 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 12 completed. 
+01:14:08.268 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 13 completed. 
+01:14:08.846 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 14 completed. 
+01:14:09.420 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 15 completed. 
+01:14:09.707 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 16 completed. 
+01:14:09.964 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 17 completed. 
+01:14:10.610 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 18 completed. 
+01:14:11.572 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 19 completed. 
+01:14:12.011 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 20 completed. 
+01:14:12.539 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 21 completed. 
+01:14:12.790 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 22 completed. 
+01:14:12.915 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 23 completed. 
+01:14:13.098 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 24 completed. 
+01:14:13.268 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 25 completed. 
+01:14:13.370 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 26 completed. 
+01:14:13.435 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 27 completed. 
+01:14:13.515 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 28 completed. 
+01:14:13.539 [scala-execution-context-global-112] INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 29 completed. 
+01:14:13.572 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim End
+01:14:13.716 [scala-execution-context-global-112] INFO  b.utils.TravelTimeCalculatorHelper - GetLinkIdToTravelTimeArray for 5918 links with maxHour = 30 executed in 143 ms
+01:14:13.718 [ClusterSystem-akka.actor.default-dispatcher-3] INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[529223590], Path: `akka://ClusterSystem/user/router/router-worker` UpdateTravelTimeLocal. Set new travel time
+01:14:13.866 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - Waiting started on link stats file dump.
+01:14:17.004 [scala-execution-context-global-111] INFO  b.a.a.r.RideHailIterationsStatsCollector - 1753 rideHail vehicles (out of 2368) were never moved and 0 vehicles were moved without a passenger, during whole day.
+01:14:17.028 [scala-execution-context-global-111] INFO  beam.router.RouteHistory - Overall cache hits 3925/7006 (56%)
+01:14:17.734 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - Link stats file dump completed.
+01:14:17.734 [scala-execution-context-global-112] INFO  b.p.j.AgentSimToPhysSimPlanConverter - PhysSim for iteration 0 took 15431 ms
+01:14:17.739 [main] INFO  beam.sim.BeamSim - Iteration 0 - average number of plans per agent: 4.2047334
+01:14:17.746 [main] INFO  beam.sim.BeamSim - Renaming file - 0.experienced_plans.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.experiencedPlans.xml.gz
+01:14:17.746 [main] INFO  beam.sim.BeamSim - Renaming file - 0.experienced_plans_scores.txt.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.experiencedPlansScores.txt.gz
+01:14:17.747 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_walk.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramWalk.png
+01:14:17.747 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_drive_transit.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramDriveTransit.png
+01:14:17.747 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_car.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramCar.png
+01:14:17.748 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_all.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramAll.png
+01:14:17.748 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_ride_hail.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramRideHail.png
+01:14:17.749 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_walk_transit.png to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogramWalkTransit.png
+01:14:17.749 [main] INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram.txt to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/ITERS/it.0/0.legHistogram.txt
+01:14:17.749 [main] INFO  beam.sim.BeamSim - Ending Iteration
+01:14:18.278 [main] INFO  b.c.e.IterationScoreComponentPlottingListener - 0
+01:14:24.091 [main] INFO  beam.sim.BeamSim - Generating html page to compare graphs (across all iterations)
+01:14:24.463 [main] INFO  beam.sim.BeamSim - Actor system shut down
+01:14:24.467 [main] INFO  beam.sim.BeamSim - Renaming file - output_counts.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputCounts.xml.gz
+01:14:24.470 [main] INFO  beam.sim.BeamSim - Renaming file - output_facilities.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputFacilities.xml.gz
+01:14:24.473 [main] INFO  beam.sim.BeamSim - Renaming file - output_lanes.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputLanes.xml.gz
+01:14:24.476 [main] INFO  beam.sim.BeamSim - Renaming file - output_households.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputHouseholds.xml.gz
+01:14:24.477 [main] INFO  beam.sim.BeamSim - Renaming file - output_network.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputNetwork.xml.gz
+01:14:24.478 [main] INFO  beam.sim.BeamSim - Renaming file - output_config.xml to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputConfig.xml
+01:14:24.479 [main] INFO  beam.sim.BeamSim - Renaming file - output_vehicles.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputVehicles.xml.gz
+01:14:24.479 [main] INFO  beam.sim.BeamSim - Renaming file - output_plans.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputPlans.xml.gz
+01:14:24.480 [main] INFO  beam.sim.BeamSim - Renaming file - output_personAttributes.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputPersonAttributes.xml.gz
+01:14:24.480 [main] INFO  beam.sim.BeamSim - Renaming file - output_events.xml.gz to follow camel case notation : /Users/sfeygi/current_code/scala/aicrowd/BeamCompetitions/output/sioux_faux/sioux_faux-15k__2019-04-04_01-08-45/outputEvents.xml.gz

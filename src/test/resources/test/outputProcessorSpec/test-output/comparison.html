@@ -1,0 +1,171 @@
+<html>
+      <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Graph Comparisons</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"/>
+        <link rel="stylesheet" href="gallery-clean.css"/>
+
+        <script type="text/javascript">
+          function displayAllGraphs(images){
+           var counter = 0;
+           images.map(function(i) {
+             var holder = document.getElementById('imageHolder' + counter);
+             var name = document.getElementById('imageName' + counter);
+             holder.src = i.path;
+             name.innerHTML = i.name;
+             counter++;
+           })
+           counter = 0;
+         }
+      
+        </script>
+      </head>
+      <body>
+        <div class="container">
+          <h1 class="text-center">Graph Comparisons</h1>
+          <br/>
+          <div class="row">
+            <div class="col-sm-4">
+              <ul class="list-group">
+      <li class="list-group-item" style="word-wrap: break-word;">
+          <strong>modeChoice</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.modeChoice.png&quot;,&quot;name&quot;:&quot;0.modeChoice.png&quot;}]);">modeChoice</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>energyUse</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.energyUse.png&quot;,&quot;name&quot;:&quot;0.energyUse.png&quot;}]);">energyUse</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>realizedMode</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.realizedMode.png&quot;,&quot;name&quot;:&quot;0.realizedMode.png&quot;}]);">realizedMode</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>AverageTravelTimes</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesCar.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesCar.png&quot;}]);">averageTravelTimesCar</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesDriveTransit.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesDriveTransit.png&quot;}]);">averageTravelTimesDriveTransit</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesOthers.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesOthers.png&quot;}]);">averageTravelTimesOthers</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesRideHail.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesRideHail.png&quot;}]);">averageTravelTimesRideHail</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesWalk.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesWalk.png&quot;}]);">averageTravelTimesWalk</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.averageTravelTimesWalkTransit.png&quot;,&quot;name&quot;:&quot;0.averageTravelTimesWalkTransit.png&quot;}]);">averageTravelTimesWalkTransit</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>LegHistogram</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramAll.png&quot;,&quot;name&quot;:&quot;0.legHistogramAll.png&quot;}]);">legHistogramAll</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramCar.png&quot;,&quot;name&quot;:&quot;0.legHistogramCar.png&quot;}]);">legHistogramCar</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramDriveTransit.png&quot;,&quot;name&quot;:&quot;0.legHistogramDriveTransit.png&quot;}]);">legHistogramDriveTransit</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramRideHail.png&quot;,&quot;name&quot;:&quot;0.legHistogramRideHail.png&quot;}]);">legHistogramRideHail</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramWalk.png&quot;,&quot;name&quot;:&quot;0.legHistogramWalk.png&quot;}]);">legHistogramWalk</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.legHistogramWalkTransit.png&quot;,&quot;name&quot;:&quot;0.legHistogramWalkTransit.png&quot;}]);">legHistogramWalkTransit</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>Misc</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.activityLocations.png&quot;,&quot;name&quot;:&quot;0.activityLocations.png&quot;}]);">activityLocations</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.relativeSpeeds.png&quot;,&quot;name&quot;:&quot;0.relativeSpeeds.png&quot;}]);">relativeSpeeds</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.replanningCountModeChoice.png&quot;,&quot;name&quot;:&quot;0.replanningCountModeChoice.png&quot;}]);">replanningCountModeChoice</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>Physsim</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.physsimFreeFlowSpeedDistribution.png&quot;,&quot;name&quot;:&quot;0.physsimFreeFlowSpeedDistribution.png&quot;}]);">physsimFreeFlowSpeedDistribution</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.physsimFreeFlowSpeedDistributionAsPercentage.png&quot;,&quot;name&quot;:&quot;0.physsimFreeFlowSpeedDistributionAsPercentage.png&quot;}]);">physsimFreeFlowSpeedDistributionAsPercentage</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.physsimLinkAverageSpeedPercentage.png&quot;,&quot;name&quot;:&quot;0.physsimLinkAverageSpeedPercentage.png&quot;}]);">physsimLinkAverageSpeedPercentage</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.physsimNetworkUtilization.png&quot;,&quot;name&quot;:&quot;0.physsimNetworkUtilization.png&quot;}]);">physsimNetworkUtilization</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>PassengerPerTrip</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.passengerPerTripBus.png&quot;,&quot;name&quot;:&quot;0.passengerPerTripBus.png&quot;}]);">passengerPerTripBus</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.passengerPerTripCar.png&quot;,&quot;name&quot;:&quot;0.passengerPerTripCar.png&quot;}]);">passengerPerTripCar</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.passengerPerTripRideHail.png&quot;,&quot;name&quot;:&quot;0.passengerPerTripRideHail.png&quot;}]);">passengerPerTripRideHail</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>RideHail</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailInitialLocation.png&quot;,&quot;name&quot;:&quot;0.rideHailInitialLocation.png&quot;}]);">rideHailInitialLocation</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailRevenue.png&quot;,&quot;name&quot;:&quot;0.rideHailRevenue.png&quot;}]);">rideHailRevenue</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailSurgePriceLevel.png&quot;,&quot;name&quot;:&quot;0.rideHailSurgePriceLevel.png&quot;}]);">rideHailSurgePriceLevel</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailSurgePriceLevelHistogram.png&quot;,&quot;name&quot;:&quot;0.rideHailSurgePriceLevelHistogram.png&quot;}]);">rideHailSurgePriceLevelHistogram</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailTripDistance.png&quot;,&quot;name&quot;:&quot;0.rideHailTripDistance.png&quot;}]);">rideHailTripDistance</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailWaitingHistogram.png&quot;,&quot;name&quot;:&quot;0.rideHailWaitingHistogram.png&quot;}]);">rideHailWaitingHistogram</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/0.rideHailWaitingSingleStats.png&quot;,&quot;name&quot;:&quot;0.rideHailWaitingSingleStats.png&quot;}]);">rideHailWaitingSingleStats</a></h4>
+              </li>
+          </ul>
+        </li><li class="list-group-item" style="word-wrap: break-word;">
+          <strong>TripHistogram</strong>
+          <ul>
+            <li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/tripHistogram/0.tripHistogram_body.png&quot;,&quot;name&quot;:&quot;0.tripHistogram_body.png&quot;}]);">tripHistogram_body</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/tripHistogram/0.tripHistogram_car.png&quot;,&quot;name&quot;:&quot;0.tripHistogram_car.png&quot;}]);">tripHistogram_car</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/tripHistogram/0.tripHistogram_rideHail.png&quot;,&quot;name&quot;:&quot;0.tripHistogram_rideHail.png&quot;}]);">tripHistogram_rideHail</a></h4>
+              </li><li>
+                <h4><a href="javascript:" onclick="displayAllGraphs([{&quot;path&quot;:&quot;ITERS/it.0/tripHistogram/0.tripHistogram_siouxareametro-sd-us.png&quot;,&quot;name&quot;:&quot;0.tripHistogram_siouxareametro-sd-us.png&quot;}]);">tripHistogram_siouxareametro-sd-us</a></h4>
+              </li>
+          </ul>
+        </li>
+    </ul>
+            </div>
+            <div class="col-sm-8">
+              <div class="imageholder" style="position: fixed; bottom: 0%; top: 10%">
+                <div style="overflow-y: scroll;height: 100%;">
+                  <h4 align="center" id="imageName0"></h4><img id="imageHolder0"/><br/><br/><br/><hr/><br/><h4 align="center" id="imageName1"></h4><img id="imageHolder1"/><br/><br/><br/><hr/><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>

@@ -1,0 +1,6 @@
+vehicleTypeId,seatingCapacity,standingRoomCapacity,lengthInMeter,primaryFuelType,primaryFuelConsumptionInJoulePerMeter,primaryFuelCapacityInJoule,secondaryFuelType,secondaryFuelConsumptionInJoulePerMeter,secondaryFuelCapacityInJoule,automationLevel,maxVelocity,passengerCarUnit,rechargeLevel2RateLimitInWatts,rechargeLevel3RateLimitInWatts,vehicleCategory
+CAR-TYPE-DEFAULT,4,0,4.5,gasoline,3655.98,3655980000,,,,,,,,,
+BUS-DEFAULT,37,20,12.1,diesel,20048,30000000000,,,,,,,,,
+BUS-SMALL-HD,27,10,8.901868473,diesel,18043.2,27000000000,,,,,,,,,
+BUS-STD-HD,35,20,11.86940838,diesel,20048,30000000000,,,,,,,,,
+BUS-STD-ART,54,25,18.17746661,diesel,26663.84,36000000000,,,,,,,,,

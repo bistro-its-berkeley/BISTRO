@@ -1,0 +1,11 @@
+Iteration,agencyRevenue_217,fuelConsumedInMJ_Diesel,totalIncentive_bike,totalIncentive_car,totalIncentive_drive_transit,totalIncentive_onDemandRide,totalIncentive_onDemandRide_transit,totalIncentive_walk,totalIncentive_walk_transit,vehicleHoursTraveled_BUS-DEFAULT,vehicleHoursTraveled_BUS-SMALL-HD,vehicleHoursTraveled_BUS-STD-ART,vehicleHoursTraveled_BUS-STD-HD,financialSustainability_rawScore
+random_1,2206.34,127163.21,0,0,48.62,29.08,68.66,0,65.82,58.62,47.72,48.28,53.91,3.61
+random_2,1373.95,132175.93,0,0,58.79,56.9,8.57,0,41.92,2.37,17.83,4.58,32.22,1.21
+random_3,237.18,231729.86,0,0,26.1,13.6,11.58,0,24.62,59.2,21.21,25.92,8.63,2.75
+random_4,691.41,159849.26,0,0,54.53,30.48,6.89,0,74.55,33.57,57.94,41.94,55.41,3.66
+random_5,1279.73,187528.93,0,0,7.53,78.07,51.46,0,53.1,21.28,39.81,36.81,38.64,2.79
+cost == revenue,2559.46,1245.62,0,0,489.1,0,0,0,0,7.93,1.25,8.24,4.64,0
+cost < revenue,1279.73,643.33,0,0,-405.43,0,0,0,0,4.4,4.28,1.03,7.07,-0.03
+cost << revenue,1279.73,576.51,0,0,-1174.88,0,0,0,0,8.05,8.56,1.48,2.46,-0.11
+r_sub = 2r_bau; (c_sub + i_sub)=2c_bau,1088,899.44,0,0,10409.11,0,0,0,0,0.53,7.85,4.76,3.93,2
+r_sub = 0.5r_bau; (c_sub + i_sub)=0.5c_bau,272,713.25,0,0,997.87,0,0,0,0,5.72,7.87,5.71,2.32,0.5

@@ -1,0 +1,5 @@
+fuelTypeId,priceInDollarsPerMJoule,gCO2ePerGal,pm25PerVMT
+gasoline,0.03,11405.84,0.001716086
+diesel,0.02,13718.04,0.0025936648
+electricity,0.01,378.54,-99999999.9
+biodiesel,0.01,2165.69,-99999999.9

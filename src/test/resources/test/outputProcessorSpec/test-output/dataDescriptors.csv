@@ -1,0 +1,205 @@
+ClassName,OutputFile,Field,Description
+ModeChosenAnalysisObject$,/modeChoice.csv,iterations,iteration number
+ModeChosenAnalysisObject$,/modeChoice.csv,car,Car chosen as travel mode
+ModeChosenAnalysisObject$,/modeChoice.csv,drive_transit,Drive to transit chosen as travel mode
+ModeChosenAnalysisObject$,/modeChoice.csv,ride_hail,Ride Hail chosen as travel mode
+ModeChosenAnalysisObject$,/modeChoice.csv,walk,Walk chosen as travel mode
+ModeChosenAnalysisObject$,/modeChoice.csv,walk_transit,Walk to transit chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,iterations,Bike chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,bike,iteration number
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,car,Car chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,drive_transit,Drive to transit chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,ride_hail,Ride Hail chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,ride_hail_transit,Ride Hail to transit chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,walk,Walk chosen as travel mode
+ModeChosenAnalysisObject$,/referenceModeChoice.csv,walk_transit,Walk to transit chosen as travel mode
+RealizedModeAnalysisObject$,/realizedMode.csv,car,Car chosen as travel mode
+RealizedModeAnalysisObject$,/realizedMode.csv,drive_transit,Drive to transit chosen as travel mode
+RealizedModeAnalysisObject$,/realizedMode.csv,other,Other modes of travel chosen
+RealizedModeAnalysisObject$,/realizedMode.csv,ride_hail,Ride Hail chosen as travel mode
+RealizedModeAnalysisObject$,/realizedMode.csv,walk,Walk chosen as travel mode
+RealizedModeAnalysisObject$,/realizedMode.csv,walk_transit,Walk to transit chosen as travel mode
+RideHailRevenueAnalysisObject$,/rideHailRevenue.csv,iteration #,iteration number
+RideHailRevenueAnalysisObject$,/rideHailRevenue.csv,revenue,Revenue generated from ride hail
+PersonTravelTimeAnalysisObject$,/ITERS/it.0/0.averageTravelTimes.csv,Mode,Travel mode chosen
+PersonTravelTimeAnalysisObject$,/ITERS/it.0/0.averageTravelTimes.csv,Hour,*,Average time taken to travel by the chosen mode during the given hour of the day
+FuelUsageAnalysisObject$,/ITERS/it.0/0.energyUse.png.csv,Modes,Mode of travel chosen by the passenger
+FuelUsageAnalysisObject$,/ITERS/it.0/0.energyUse.png.csv,Bin_*,Energy consumed by the vehicle while travelling by the chosen mode within the given time bin
+PhyssimCalcLinkSpeedStatsObject$,/ITERS/it.0/0.physsimLinkAverageSpeedPercentage.csv,Bin,A given time slot within a day
+PhyssimCalcLinkSpeedStatsObject$,/ITERS/it.0/0.physsimLinkAverageSpeedPercentage.csv,AverageLinkSpeed,The average speed at which a vehicle can travel across the network during the given time bin
+PhyssimCalcLinkSpeedDistributionStatsObject$,/ITERS/it.0/0.physsimFreeFlowSpeedDistribution.csv,freeSpeedInMetersPerSecond,The possible full speed at which a vehicle can drive through the given link (in m/s)
+PhyssimCalcLinkSpeedDistributionStatsObject$,/ITERS/it.0/0.physsimFreeFlowSpeedDistribution.csv,numberOfLinks,Total number of links in the network that allow vehicles to travel with speeds up to the given free speed
+PhyssimCalcLinkSpeedDistributionStatsObject$,/ITERS/it.0/0.physsimFreeFlowSpeedDistribution.csv,linkEfficiencyInPercentage,Average speed efficiency recorded by the the given network link in a day
+PhyssimCalcLinkSpeedDistributionStatsObject$,/ITERS/it.0/0.physsimFreeFlowSpeedDistribution.csv,numberOfLinks,Total number of links having the corresponding link efficiency
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailWaitingHistogram.csv,Waiting Time,The time spent by a passenger waiting for a ride hail
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailWaitingHistogram.csv,Hour,Hour of the day
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailWaitingHistogram.csv,Count,Frequencies of times spent waiting for a ride hail during the entire day
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailIndividualWaitingTimes.csv,timeOfDayInSeconds,Time of a day in seconds
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailIndividualWaitingTimes.csv,personId,Unique id of the passenger travelling by the ride hail
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailIndividualWaitingTimes.csv,rideHailVehicleId,Unique id of the ride hail vehicle
+RideHailWaitingAnalysisObject$,/ITERS/it.0/0.rideHailIndividualWaitingTimes.csv,waitingTimeInSeconds,Time spent by the given passenger waiting for the arrival of the given ride hailing vehicle
+GraphSurgePricingObject$,/ITERS/it.0/0.rideHailSurgePriceLevel.csv,PriceLevel,Travel fare charged by the ride hail in the given hour
+GraphSurgePricingObject$,/ITERS/it.0/0.rideHailSurgePriceLevel.csv,Hour,Hour of the day
+GraphSurgePricingObject$,/ITERS/it.0/0.rideHailRevenue.csv,Revenue,Revenue earned by ride hail in the given hour
+GraphSurgePricingObject$,/ITERS/it.0/0.rideHailRevenue.csv,Hour,Hour of the day
+GraphSurgePricingObject$,/ITERS/it.0/0.tazRideHailSurgePriceLevel.csv,TazId,TAZ id
+GraphSurgePricingObject$,/ITERS/it.0/0.tazRideHailSurgePriceLevel.csv,DataType,Type of data , can be "priceLevel" or "revenue"
+GraphSurgePricingObject$,/ITERS/it.0/0.tazRideHailSurgePriceLevel.csv,Value,Value of the given data type , can indicate either price Level or revenue earned by the ride hail in the given hour
+GraphSurgePricingObject$,/ITERS/it.0/0.tazRideHailSurgePriceLevel.csv,Hour,Hour of the day
+RideHailingWaitingSingleAnalysisObject$,/ITERS/it.0/0.rideHailWaitingSingleStats.csv,WaitingTime(sec),Time spent by a passenger on waiting for a ride hail
+RideHailingWaitingSingleAnalysisObject$,/ITERS/it.0/0.rideHailWaitingSingleStats.csv,Hour*,Hour of the day
+StopWatchOutputs,/stopwatch.txt,Iteration,Iteration number
+StopWatchOutputs,/stopwatch.txt,BEGIN iteration,Begin time of the iteration
+StopWatchOutputs,/stopwatch.txt,BEGIN iterationStartsListeners,Time at which the iteration start event listeners started
+StopWatchOutputs,/stopwatch.txt,END iterationStartsListeners,Time at which  the iteration start event listeners ended
+StopWatchOutputs,/stopwatch.txt,BEGIN replanning,Time at which the replanning event started
+StopWatchOutputs,/stopwatch.txt,END replanning,Time at which the replanning event ended
+StopWatchOutputs,/stopwatch.txt,BEGIN beforeMobsimListeners,Time at which the beforeMobsim event listeners started
+StopWatchOutputs,/stopwatch.txt,BEGIN dump all plans,Begin dump all plans
+StopWatchOutputs,/stopwatch.txt,END dump all plans,End dump all plans
+StopWatchOutputs,/stopwatch.txt,END beforeMobsimListeners,Time at which the beforeMobsim event listeners ended
+StopWatchOutputs,/stopwatch.txt,BEGIN mobsim,Time at which the mobsim run started
+StopWatchOutputs,/stopwatch.txt,END mobsim,Time at which the mobsim run ended
+StopWatchOutputs,/stopwatch.txt,BEGIN afterMobsimListeners,Time at which the afterMobsim event listeners started
+StopWatchOutputs,/stopwatch.txt,END afterMobsimListeners,Time at which the afterMobsim event listeners ended
+StopWatchOutputs,/stopwatch.txt,BEGIN scoring,Time at which the scoring event started
+StopWatchOutputs,/stopwatch.txt,END scoring,Time at which the scoring event ended
+StopWatchOutputs,/stopwatch.txt,BEGIN iterationEndsListeners,Time at which the iteration ends event listeners ended
+StopWatchOutputs,/stopwatch.txt,BEGIN compare with counts,Time at which compare with counts started
+StopWatchOutputs,/stopwatch.txt,END compare with counts,Time at which compare with counts ended
+StopWatchOutputs,/stopwatch.txt,END iteration,Time at which the iteration ended
+ScoreStatsOutputs,/scorestats.txt,ITERATION,Iteration number
+ScoreStatsOutputs,/scorestats.txt,avg. EXECUTED,Average of the total execution time for the given iteration
+ScoreStatsOutputs,/scorestats.txt,avg. WORST,Average of worst case time complexities for the given iteration
+ScoreStatsOutputs,/scorestats.txt,avg. AVG,Average of average case time complexities for the given iteration
+ScoreStatsOutputs,/scorestats.txt,avg. BEST,Average of best case time complexities for the given iteration
+SummaryStatsOutputs,/summaryStats.txt,Iteration,Iteration number
+SummaryStatsOutputs,/summaryStats.txt,agentHoursOnCrowdedTransit,Time taken by the agent to travel in a crowded transit
+SummaryStatsOutputs,/summaryStats.txt,fuelConsumedInMJ_Diesel,Amount of diesel consumed in megajoule
+SummaryStatsOutputs,/summaryStats.txt,fuelConsumedInMJ_Food,Amount of food consumed in megajoule
+SummaryStatsOutputs,/summaryStats.txt,fuelConsumedInMJ_Electricity,Amount of electricity consumed in megajoule
+SummaryStatsOutputs,/summaryStats.txt,fuelConsumedInMJ_Gasoline,Amount of gasoline consumed in megajoule
+SummaryStatsOutputs,/summaryStats.txt,numberOfVehicles_BEV,Time at which the beforeMobsim event listeners started
+SummaryStatsOutputs,/summaryStats.txt,numberOfVehicles_BODY-TYPE-DEFAULT,Number of vehicles of type BODY-TYPE-DEFAULT
+SummaryStatsOutputs,/summaryStats.txt,numberOfVehicles_BUS-DEFAULT,Number of vehicles of type BUS-DEFAULT
+SummaryStatsOutputs,/summaryStats.txt,numberOfVehicles_Car,Time at which the beforeMobsim event listeners ended
+SummaryStatsOutputs,/summaryStats.txt,numberOfVehicles_SUBWAY-DEFAULT,Time at which the mobsim run started
+SummaryStatsOutputs,/summaryStats.txt,personTravelTime_car,Time taken by the passenger to travel by car
+SummaryStatsOutputs,/summaryStats.txt,personTravelTime_drive_transit,Time taken by the passenger to drive to the transit
+SummaryStatsOutputs,/summaryStats.txt,personTravelTime_others,Time taken by the passenger to travel by other means
+SummaryStatsOutputs,/summaryStats.txt,personTravelTime_walk,Time taken by the passenger to travel on foot
+SummaryStatsOutputs,/summaryStats.txt,personTravelTime_walk_transit,Time taken by the passenger to walk to the transit
+SummaryStatsOutputs,/summaryStats.txt,totalCostIncludingIncentive_walk_transit,Total cost (including incentive) paid by the passenger to reach destination by walking to transit and then transit to destination
+SummaryStatsOutputs,/summaryStats.txt,totalCostIncludingIncentive_ride_hail,Total cost (including incentive) paid by the passenger to reach destination on a ride hail
+SummaryStatsOutputs,/summaryStats.txt,totalIncentive_drive_transit,Total incentive amount paid to passenger to reach destination by driving to transit and then transit to destination
+SummaryStatsOutputs,/summaryStats.txt,totalIncentive_ride_hail,Total incentive amount paid to passenger to reach destination by ride hail
+SummaryStatsOutputs,/summaryStats.txt,totalIncentive_walk_transit,Total incentive amount paid to passenger to reach destination by walking to transit and then transit to destination
+SummaryStatsOutputs,/summaryStats.txt,totalTravelTime,Total time taken by the passenger to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,totalVehicleDelay,Sum of all the delay times incurred by the vehicle during the travel
+SummaryStatsOutputs,/summaryStats.txt,vehicleHoursTraveled_BEV,Time taken (in hours) by the vehicle to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleHoursTraveled_BODY-TYPE-DEFAULT,Time taken (in hours) by the vehicle to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleHoursTraveled_BUS-DEFAULT,Time taken (in hours) by the vehicle(bus) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleHoursTraveled_Car,Time taken (in hours) by the vehicle(car) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleHoursTraveled_SUBWAY-DEFAULT,Time taken (in hours) by the vehicle (subway) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_BEV,Miles covered by the vehicle to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_BODY-TYPE-DEFAULT,Miles covered by the vehicle to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_BUS-DEFAULT,Miles covered by the vehicle(bus) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_Car,Miles covered by the vehicle(car) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_SUBWAY-DEFAULT,Miles covered by the vehicle(subway) to travel from source to destination
+SummaryStatsOutputs,/summaryStats.txt,vehicleMilesTraveled_total,Miles covered by the vehicles(all modes) to travel from source to destination
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Link Id,Iteration number
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Count,Time taken by the agent to travel in a crowded transit
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Station Id,Amount of diesel consumed in megajoule
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Hour,Amount of food consumed in megajoule
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,MATSIM volumes,Amount of electricity consumed in megajoule
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Relative Error,Amount of gasoline consumed in megajoule
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,Normalized Relative Error,Time at which the beforeMobsim event listeners started
+CountsCompareOutputs,/ITERS/it.0/0.countsCompare.txt,GEH,GEH
+EventOutputs,/ITERS/it.0/0.events.csv,person,Person(Agent) Id
+EventOutputs,/ITERS/it.0/0.events.csv,vehicle,vehicle id
+EventOutputs,/ITERS/it.0/0.events.csv,time,Start time of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,type,Type of the event
+EventOutputs,/ITERS/it.0/0.events.csv,fuel,Type of fuel used in the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,duration,Duration of the travel
+EventOutputs,/ITERS/it.0/0.events.csv,cost,Cost of travel
+EventOutputs,/ITERS/it.0/0.events.csv,location.x,X co-ordinate of the location
+EventOutputs,/ITERS/it.0/0.events.csv,location.y,Y co-ordinate of the location
+EventOutputs,/ITERS/it.0/0.events.csv,parking_type,Parking type chosen by the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,pricing_model,Pricing model
+EventOutputs,/ITERS/it.0/0.events.csv,charging_type,Charging type of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,parking_taz,Parking TAZ
+EventOutputs,/ITERS/it.0/0.events.csv,distance,Distance between source and destination
+EventOutputs,/ITERS/it.0/0.events.csv,location,Location of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,mode,Mode of travel
+EventOutputs,/ITERS/it.0/0.events.csv,currentTourMode,Current tour mode
+EventOutputs,/ITERS/it.0/0.events.csv,expectedMaximumUtility,Expected maximum utility of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,availableAlternatives,Available alternatives for travel for the passenger
+EventOutputs,/ITERS/it.0/0.events.csv,personalVehicleAvailable,Whether the passenger possesses a personal vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,tourIndex,Tour index
+EventOutputs,/ITERS/it.0/0.events.csv,facility,Facility availed by the passenger
+EventOutputs,/ITERS/it.0/0.events.csv,departTime,Time of departure of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,originX,X ordinate of the passenger origin point
+EventOutputs,/ITERS/it.0/0.events.csv,originY,Y ordinate of the passenger origin point
+EventOutputs,/ITERS/it.0/0.events.csv,destinationX,X ordinate of the passenger destination point
+EventOutputs,/ITERS/it.0/0.events.csv,destinationY,Y ordinate of the passenger destination point
+EventOutputs,/ITERS/it.0/0.events.csv,fuelType,Fuel type of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,num_passengers,Num of passengers travelling in the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,links,Number of links in the network
+EventOutputs,/ITERS/it.0/0.events.csv,departure_time,Departure time of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,arrival_time,Arrival time of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,vehicle_type,Type of vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,capacity,Total capacity of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,start.x,X ordinate of the start point
+EventOutputs,/ITERS/it.0/0.events.csv,start.y,Y ordinate of the start point
+EventOutputs,/ITERS/it.0/0.events.csv,end.x,X ordinate of the vehicle end point
+EventOutputs,/ITERS/it.0/0.events.csv,end.y,Y ordinate of the vehicle end point
+EventOutputs,/ITERS/it.0/0.events.csv,end_leg_fuel_level,Fuel level at the end of the travel
+EventOutputs,/ITERS/it.0/0.events.csv,seating_capacity,Seating capacity of the vehicle
+EventOutputs,/ITERS/it.0/0.events.csv,costType,Type of cost of travel incurred on the passenger
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,time,Time
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,time,Time
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_all,Total number of departures on all modes
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_all,Total number of arrivals on all modes
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,duration,Duration of travel
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_all,Total number of travels that got stuck on all modes
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_all,Total number of travels by all modes
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_car,Total number of departures by car
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_car,Total number of departures by car
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_car,Total number of travels that got stuck while travelling by car
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_car,Total number of travels made by car
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_drive_transit,Total number of departures by drive to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_drive_transit,Total number of arrivals by drive to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_drive_transit,Total number of travels that got stuck while travelling by drive to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_drive_transit,Total number of travels made by drive to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_ride_hail,Total number of departures by ride hail
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_ride_hail,Total number of arrivals by ride hail
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_ride_hail,Total number of travels that got stuck while travelling by ride hail
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_ride_hail,Total number of travels made by ride hail
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_walk,Total number of departures on foot
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_walk,Total number of arrivals on foot
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_walk,Total number of travels that got stuck while travelling on foot
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_walk,Total number of travels made on foot
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,departures_walk_transit,Total number of departures by walk to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,arrivals_walk_transit,Total number of arrivals by walk to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,stuck_walk_transit,Total number of travels that got stuck while travelling by walk to transit
+LegHistogramOutputs,/ITERS/it.0/0.legHistogram.txt,en-route_walk_transit,Total number of travels made by walk to transit
+RideHailTripDistanceOutputs,/ITERS/it.0/0.rideHailTripDistance.csv,hour,Hour of the day
+RideHailTripDistanceOutputs,/ITERS/it.0/0.rideHailTripDistance.csv,numPassengers,Number of passengers travelling in the ride hail
+RideHailTripDistanceOutputs,/ITERS/it.0/0.rideHailTripDistance.csv,vkt,Total number of kilometers travelled by the ride hail vehicle
+TripDurationOutputs,/ITERS/it.0/0.tripDuration.txt,pattern,Pattern
+TripDurationOutputs,/ITERS/it.0/0.tripDuration.txt,(5*i)+,Value
+BiasErrorGraphDataOutputs,/ITERS/it.0/0.biasErrorGraphData.txt,hour,Hour of the day
+BiasErrorGraphDataOutputs,/ITERS/it.0/0.biasErrorGraphData.txt,mean relative error,Mean relative error
+BiasErrorGraphDataOutputs,/ITERS/it.0/0.biasErrorGraphData.txt,mean bias,Mean bias value
+BiasNormalizedErrorGraphDataOutputs,/ITERS/it.0/0.biasNormalizedErrorGraphData.txt,hour,Hour of the day
+BiasNormalizedErrorGraphDataOutputs,/ITERS/it.0/0.biasNormalizedErrorGraphData.txt,mean normalized relative error,Mean normalized relative error
+BiasNormalizedErrorGraphDataOutputs,/ITERS/it.0/0.biasNormalizedErrorGraphData.txt,mean bias,Mean bias value
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,id,Id of the ride hail vehicle
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,rideHailManagerId,Id of the ride hail manager
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,vehicleType,Type of the beam vehicle
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,initialLocationX,X-coordinate of the initial location of the ride hail vehicle
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,initialLocationY,Y-coordinate of the initial location of the ride hail vehicle
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,shifts,Time shifts for the vehicle , usually a stringified collection of time ranges
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,geoFenceX,X-coordinate of the geo fence central point
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,geoFenceY,Y-coordinate of the geo fence central point
+RideHailFleetInitializer,/ITERS/it.0/0.rideHailFleet.csv.gz,geoFenceRadius,Radius of the geo fence
