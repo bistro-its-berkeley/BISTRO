@@ -1,0 +1,12 @@
+driveWorkAccessibility,0.972,0.045
+driveSecondaryAccessibility,0.998,0.005
+transitWorkAccessibility,1.022,0.029
+transitSecondaryAccessibility,0.998,0.003
+averageVehicleDelayPerPassengerTrip,1.054,0.101
+motorizedVehicleMilesTraveled_total,1.024,0.014
+busCrowding,1.023,0.061
+averageTravelCostBurden_Work,0.728,0.179
+averageTravelCostBurden_Secondary,1.203,0.375
+costBenefitAnalysis,1.808,1.673
+sustainability_GHG,1.005,0.040
+sustainability_PM,1.022,0.036

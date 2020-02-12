@@ -1,0 +1,408 @@
+# Created by .ignore support plugin (hsz.mobi)
+### MicrosoftOffice template
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
+### Vim template
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+### VisualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen### Scala template
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+### Vagrant template
+# General
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.logs
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Scala IDE project settings
+.project
+
+# User-specific stuff
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+!/data/sioux_faux/r5/siouxareametro-sd-us.zip
+/output/
+!/fixed-data/sioux_faux/r5/siouxareametro-sd-us.zip
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+
+
+
+# CMake
+cmake-build-debug/
+cmake-build-release/
+
+# Mongo Explorer plugin
+
+
+
+
+### Gradle template
+.gradle
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+!/fixed-data/sioux_faux/bau/warm-start/*.zip
+/tmp-inputs/
+### macOS template
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+### Archives template
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z
+*.gz
+*.tgz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.cab
+
+# Packing-only formats
+*.iso
+*.tar
+
+# Package management formats
+*.dmg
+*.xpi
+*.gem
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+/Accessibility Metrics.ipynb
+
+!/fixed-data/sioux_faux/r5/sf_gtfs.zip
+
+!/fixed-data/sioux_faux/bau/warm-start/sioux_faux-1k__2018-12-12_18-44-37.zip
+!/fixed-data/sioux_faux/bau/warm-start/sioux_faux-15k__2018-11-11_16-44-30.zip
+
+!/accessibility/data/population_15k.xml.gz
+!/fixed-data/sioux_faux/sample/1k/householdAttributes.xml.gz
+!/fixed-data/sioux_faux/sample/1k/population.csv.gz
+!/fixed-data/sioux_faux/sample/1k/population.xml.gz
+!/fixed-data/sioux_faux/sample/1k/vehicles.xml.gz
+!/fixed-data/sioux_faux/sample/1k/populationAttributes.xml.gz
+!/fixed-data/sioux_faux/sample/1k/households.xml.gz
+!/fixed-data/sioux_faux/sample/15k/populationAttributes.xml.gz
+!/fixed-data/sioux_faux/sample/15k/households.xml.gz
+!/fixed-data/sioux_faux/sample/15k/population.csv.gz
+!/fixed-data/sioux_faux/sample/15k/population.xml.gz
+!/fixed-data/sioux_faux/sample/15k/vehicles.xml.gz
+!/fixed-data/sioux_faux/sample/15k/householdAttributes.xml.gz
+!/fixed-data/sioux_faux/bau/linkstats/100.linkstats_bau_15k.csv.gz
+!/fixed-data/sioux_faux/bau/linkstats/100.linkstats_bau_1k.csv.gz
+
+.DS_Store
+/accessibility/Accessibility Metrics.ipynb
+!/fixed-data/sioux_faux/bau/linkstats/linkstats_bau-1k.csv.gz
+!/fixed-data/sioux_faux/bau/linkstats/linkstats_bau-15k.csv.gz
+
+fixed-data/sioux_faux/r5/fares.dat
+
+fixed-data/sioux_faux/r5/network.dat
+fixed-data/sioux_faux/r5/osm.mapdb
+fixed-data/sioux_faux/r5/osm.mapdb.p
+fixed-data/sioux_faux/r5/physsim-network.xml
+.settings/
+fixed-data/sioux_faux/r5/tolls.dat
+
+
+tmp-data/
+
+env.sh
+aicrowd_debug.sh
+
+!/src/main/python/post_processing/
+!/fixed-data/sioux_faux/bau/linkstats/linkstats_bau-15k-S0.csv.gz
+log-path_IS_UNDEFINED/
+!/fixed-data/sioux_faux/r5/hackathon/sf_gtfs.zip
+!/fixed-data/sioux_faux/r5/full_network/sf_gtfs.zip
+!/fixed-data/sf_light/urbansim/
+!/fixed-data/sf_light/
+!/fixed-data/sf_light/sample/1k/population.csv.gz
+!/fixed-data/sf_light/sample/1k/vehicles_CarOnly.csv.gz
+!/fixed-data/sf_light/sample/1k/householdAttributes.xml.gz
+!/fixed-data/sf_light/sample/1k/population.xml.gz
+!/fixed-data/sf_light/sample/1k/vehicles.csv.gz
+!/fixed-data/sf_light/sample/1k/populationAttributes.xml.gz
+!/fixed-data/sf_light/sample/1k/households.xml.gz
+!/fixed-data/sf_light/ind_X_hh_out_test.csv.gz
+!/fixed-data/sf_light/rideHailFleet.csv.gz
+!/fixed-data/sf_light/taz-centers.gz
+!/fixed-data/sf_light/taz-parking-limited.csv.gz
+!/fixed-data/sf_light/taz-parking.gz
+!/fixed-data/sf_light/taz-parking.csv.gz
+!/fixed-data/sf_light/urbansim/1k/units.csv.gz
+!/fixed-data/sf_light/urbansim/1k/households.csv.gz
+!/fixed-data/sf_light/urbansim/1k/parcels.csv.gz
+!/fixed-data/sf_light/urbansim/1k/plans.csv.gz
+!/fixed-data/sf_light/urbansim/1k/buildings.csv.gz
+!/fixed-data/sf_light/urbansim/1k/persons.csv.gz
+!/fixed-data/sf_light/urbansim/100k/persons.csv.gz
+!/fixed-data/sf_light/urbansim/100k/plans.csv.gz
+!/fixed-data/sf_light/urbansim/100k/households.csv.gz
+!/fixed-data/sf_light/urbansim/100k/buildings.csv.gz
+!/fixed-data/sf_light/urbansim/100k/units.csv.gz
+!/fixed-data/sf_light/urbansim/100k/parcels.csv.gz

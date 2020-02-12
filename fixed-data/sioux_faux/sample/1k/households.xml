@@ -1,0 +1,6472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<households xmlns="http://www.matsim.org/files/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.matsim.org/files/dtd http://www.matsim.org/files/dtd/households_v1.0.xsd">
+	<household id="1804-2013001049684-0">
+		<members>
+			<personId refId="1804-2013001049684-052634"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3-0"/>
+			<vehicleDefinitionId refId="3-1"/>
+		</vehicles>
+		<income period="year">
+				6837.0
+		</income>
+
+	</household>
+	<household id="10104-2016001183526-1">
+		<members>
+			<personId refId="10104-2016001183526-1150352"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="22-0"/>
+			<vehicleDefinitionId refId="22-1"/>
+		</vehicles>
+		<income period="year">
+				1463.0
+		</income>
+
+	</household>
+	<household id="10600-2012001195734-0">
+		<members>
+			<personId refId="10600-2012001195734-023909"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="31-0"/>
+			<vehicleDefinitionId refId="31-1"/>
+		</vehicles>
+		<income period="year">
+				4553.0
+		</income>
+
+	</household>
+	<household id="1700-2015001024517-0">
+		<members>
+			<personId refId="1700-2015001024517-0114590"/>
+			<personId refId="1700-2015001024517-0114546"/>
+			<personId refId="1700-2015001024517-0114634"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="42-0"/>
+			<vehicleDefinitionId refId="42-1"/>
+			<vehicleDefinitionId refId="42-2"/>
+			<vehicleDefinitionId refId="42-3"/>
+		</vehicles>
+		<income period="year">
+				133324.0
+		</income>
+
+	</household>
+	<household id="1804-2015001161098-0">
+		<members>
+			<personId refId="1804-2015001161098-0116830"/>
+			<personId refId="1804-2015001161098-0116874"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="54-0"/>
+			<vehicleDefinitionId refId="54-1"/>
+			<vehicleDefinitionId refId="54-2"/>
+		</vehicles>
+		<income period="year">
+				64861.0
+		</income>
+
+	</household>
+	<household id="407-2016000409711-0">
+		<members>
+			<personId refId="407-2016000409711-0134167"/>
+			<personId refId="407-2016000409711-0134205"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="69-0"/>
+			<vehicleDefinitionId refId="69-1"/>
+			<vehicleDefinitionId refId="69-2"/>
+		</vehicles>
+		<income period="year">
+				139845.0
+		</income>
+
+	</household>
+	<household id="406-2012000662519-0">
+		<members>
+			<personId refId="406-2012000662519-013567"/>
+			<personId refId="406-2012000662519-013533"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="89-0"/>
+			<vehicleDefinitionId refId="89-1"/>
+			<vehicleDefinitionId refId="89-2"/>
+		</vehicles>
+		<income period="year">
+				132441.0
+		</income>
+
+	</household>
+	<household id="1901-2016000313414-0">
+		<members>
+			<personId refId="1901-2016000313414-0132021"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="108-0"/>
+			<vehicleDefinitionId refId="108-1"/>
+		</vehicles>
+		<income period="year">
+				29166.0
+		</income>
+
+	</household>
+	<household id="1902-2012001307179-0">
+		<members>
+			<personId refId="1902-2012001307179-025440"/>
+			<personId refId="1902-2012001307179-025369"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="110-0"/>
+			<vehicleDefinitionId refId="110-1"/>
+			<vehicleDefinitionId refId="110-2"/>
+		</vehicles>
+		<income period="year">
+				14951.0
+		</income>
+
+	</household>
+	<household id="10104-2013001059260-1">
+		<members>
+			<personId refId="10104-2013001059260-152729"/>
+			<personId refId="10104-2013001059260-152858"/>
+			<personId refId="10104-2013001059260-152815"/>
+			<personId refId="10104-2013001059260-152772"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="117-0"/>
+			<vehicleDefinitionId refId="117-1"/>
+			<vehicleDefinitionId refId="117-2"/>
+			<vehicleDefinitionId refId="117-3"/>
+			<vehicleDefinitionId refId="117-4"/>
+		</vehicles>
+		<income period="year">
+				17585.0
+		</income>
+
+	</household>
+	<household id="1500-2014001225955-0">
+		<members>
+			<personId refId="1500-2014001225955-087933"/>
+			<personId refId="1500-2014001225955-087959"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="128-0"/>
+			<vehicleDefinitionId refId="128-1"/>
+			<vehicleDefinitionId refId="128-2"/>
+		</vehicles>
+		<income period="year">
+				916.0
+		</income>
+
+	</household>
+	<household id="1101-2013000846981-0">
+		<members>
+			<personId refId="1101-2013000846981-049063"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="136-0"/>
+			<vehicleDefinitionId refId="136-1"/>
+		</vehicles>
+		<income period="year">
+				32507.0
+		</income>
+
+	</household>
+	<household id="600-2016000970031-0">
+		<members>
+			<personId refId="600-2016000970031-0147160"/>
+			<personId refId="600-2016000970031-0147120"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="164-0"/>
+			<vehicleDefinitionId refId="164-1"/>
+			<vehicleDefinitionId refId="164-2"/>
+		</vehicles>
+		<income period="year">
+				58623.0
+		</income>
+
+	</household>
+	<household id="1101-2015001091707-0">
+		<members>
+			<personId refId="1101-2015001091707-0115875"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="218-0"/>
+			<vehicleDefinitionId refId="218-1"/>
+		</vehicles>
+		<income period="year">
+				32770.0
+		</income>
+
+	</household>
+	<household id="1200-2016001315095-0">
+		<members>
+			<personId refId="1200-2016001315095-0153731"/>
+			<personId refId="1200-2016001315095-0153797"/>
+			<personId refId="1200-2016001315095-0153830"/>
+			<personId refId="1200-2016001315095-0153764"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="244-0"/>
+			<vehicleDefinitionId refId="244-1"/>
+			<vehicleDefinitionId refId="244-2"/>
+			<vehicleDefinitionId refId="244-3"/>
+			<vehicleDefinitionId refId="244-4"/>
+		</vehicles>
+		<income period="year">
+				139409.0
+		</income>
+
+	</household>
+	<household id="1803-2013001092406-1">
+		<members>
+			<personId refId="1803-2013001092406-153273"/>
+			<personId refId="1803-2013001092406-153332"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="268-0"/>
+			<vehicleDefinitionId refId="268-1"/>
+			<vehicleDefinitionId refId="268-2"/>
+		</vehicles>
+		<income period="year">
+				75558.0
+		</income>
+
+	</household>
+	<household id="407-2016001452430-0">
+		<members>
+			<personId refId="407-2016001452430-0156066"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="278-0"/>
+			<vehicleDefinitionId refId="278-1"/>
+		</vehicles>
+		<income period="year">
+				21986.0
+		</income>
+
+	</household>
+	<household id="10600-2013000995260-0">
+		<members>
+			<personId refId="10600-2013000995260-051451"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="282-0"/>
+			<vehicleDefinitionId refId="282-1"/>
+		</vehicles>
+		<income period="year">
+				38955.0
+		</income>
+
+	</household>
+	<household id="1001-2012000826404-0">
+		<members>
+			<personId refId="1001-2012000826404-016421"/>
+			<personId refId="1001-2012000826404-016464"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="286-0"/>
+			<vehicleDefinitionId refId="286-1"/>
+			<vehicleDefinitionId refId="286-2"/>
+		</vehicles>
+		<income period="year">
+				41933.0
+		</income>
+
+	</household>
+	<household id="1803-2016001232073-0">
+		<members>
+			<personId refId="1803-2016001232073-0152330"/>
+			<personId refId="1803-2016001232073-0152365"/>
+			<personId refId="1803-2016001232073-0152295"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="292-0"/>
+			<vehicleDefinitionId refId="292-1"/>
+			<vehicleDefinitionId refId="292-2"/>
+			<vehicleDefinitionId refId="292-3"/>
+		</vehicles>
+		<income period="year">
+				31290.0
+		</income>
+
+	</household>
+	<household id="10102-2013000575117-1">
+		<members>
+			<personId refId="10102-2013000575117-143840"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="330-0"/>
+			<vehicleDefinitionId refId="330-1"/>
+		</vehicles>
+		<income period="year">
+				29097.0
+		</income>
+
+	</household>
+	<household id="401-2013000113035-0">
+		<members>
+			<personId refId="401-2013000113035-032268"/>
+			<personId refId="401-2013000113035-032230"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="346-0"/>
+			<vehicleDefinitionId refId="346-1"/>
+			<vehicleDefinitionId refId="346-2"/>
+		</vehicles>
+		<income period="year">
+				137849.0
+		</income>
+
+	</household>
+	<household id="10405-2016000772838-0">
+		<members>
+			<personId refId="10405-2016000772838-0143459"/>
+			<personId refId="10405-2016000772838-0143548"/>
+			<personId refId="10405-2016000772838-0143370"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="390-0"/>
+			<vehicleDefinitionId refId="390-1"/>
+			<vehicleDefinitionId refId="390-2"/>
+			<vehicleDefinitionId refId="390-3"/>
+		</vehicles>
+		<income period="year">
+				21677.0
+		</income>
+
+	</household>
+	<household id="10102-2015001490278-0">
+		<members>
+			<personId refId="10102-2015001490278-0123567"/>
+			<personId refId="10102-2015001490278-0123539"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="407-0"/>
+			<vehicleDefinitionId refId="407-1"/>
+			<vehicleDefinitionId refId="407-2"/>
+		</vehicles>
+		<income period="year">
+				27701.0
+		</income>
+
+	</household>
+	<household id="1105-2013001092406-0">
+		<members>
+			<personId refId="1105-2013001092406-053255"/>
+			<personId refId="1105-2013001092406-053314"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="439-0"/>
+			<vehicleDefinitionId refId="439-1"/>
+			<vehicleDefinitionId refId="439-2"/>
+		</vehicles>
+		<income period="year">
+				91850.0
+		</income>
+
+	</household>
+	<household id="1108-2015000628621-3">
+		<members>
+			<personId refId="1108-2015000628621-3102994"/>
+			<personId refId="1108-2015000628621-3103122"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="450-0"/>
+			<vehicleDefinitionId refId="450-1"/>
+			<vehicleDefinitionId refId="450-2"/>
+		</vehicles>
+		<income period="year">
+				5606.0
+		</income>
+
+	</household>
+	<household id="10405-2013000980385-0">
+		<members>
+			<personId refId="10405-2013000980385-051227"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="457-0"/>
+			<vehicleDefinitionId refId="457-1"/>
+		</vehicles>
+		<income period="year">
+				3172.0
+		</income>
+
+	</household>
+	<household id="1105-2016000166982-0">
+		<members>
+			<personId refId="1105-2016000166982-0128659"/>
+			<personId refId="1105-2016000166982-0128683"/>
+			<personId refId="1105-2016000166982-0128671"/>
+			<personId refId="1105-2016000166982-0128647"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="461-0"/>
+			<vehicleDefinitionId refId="461-1"/>
+			<vehicleDefinitionId refId="461-2"/>
+			<vehicleDefinitionId refId="461-3"/>
+			<vehicleDefinitionId refId="461-4"/>
+		</vehicles>
+		<income period="year">
+				126609.0
+		</income>
+
+	</household>
+	<household id="202-2014000550778-0">
+		<members>
+			<personId refId="202-2014000550778-073504"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="465-0"/>
+			<vehicleDefinitionId refId="465-1"/>
+		</vehicles>
+		<income period="year">
+				38394.0
+		</income>
+
+	</household>
+	<household id="401-2013000920118-0">
+		<members>
+			<personId refId="401-2013000920118-050362"/>
+			<personId refId="401-2013000920118-050405"/>
+			<personId refId="401-2013000920118-050448"/>
+			<personId refId="401-2013000920118-050491"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="476-0"/>
+			<vehicleDefinitionId refId="476-1"/>
+			<vehicleDefinitionId refId="476-2"/>
+			<vehicleDefinitionId refId="476-3"/>
+			<vehicleDefinitionId refId="476-4"/>
+		</vehicles>
+		<income period="year">
+				83046.0
+		</income>
+
+	</household>
+	<household id="1803-2013000614271-0">
+		<members>
+			<personId refId="1803-2013000614271-044984"/>
+			<personId refId="1803-2013000614271-044971"/>
+			<personId refId="1803-2013000614271-044919"/>
+			<personId refId="1803-2013000614271-044945"/>
+			<personId refId="1803-2013000614271-044932"/>
+			<personId refId="1803-2013000614271-044958"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="477-0"/>
+			<vehicleDefinitionId refId="477-1"/>
+			<vehicleDefinitionId refId="477-2"/>
+			<vehicleDefinitionId refId="477-3"/>
+			<vehicleDefinitionId refId="477-4"/>
+		</vehicles>
+		<income period="year">
+				48229.0
+		</income>
+
+	</household>
+	<household id="1106-2012000353261-0">
+		<members>
+			<personId refId="1106-2012000353261-07125"/>
+			<personId refId="1106-2012000353261-06847"/>
+			<personId refId="1106-2012000353261-06986"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="506-0"/>
+			<vehicleDefinitionId refId="506-1"/>
+			<vehicleDefinitionId refId="506-2"/>
+			<vehicleDefinitionId refId="506-3"/>
+		</vehicles>
+		<income period="year">
+				10160.0
+		</income>
+
+	</household>
+	<household id="1902-2015000296456-0">
+		<members>
+			<personId refId="1902-2015000296456-096919"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="508-0"/>
+			<vehicleDefinitionId refId="508-1"/>
+		</vehicles>
+		<income period="year">
+				35607.0
+		</income>
+
+	</household>
+	<household id="405-2014000054075-0">
+		<members>
+			<personId refId="405-2014000054075-062409"/>
+			<personId refId="405-2014000054075-062393"/>
+			<personId refId="405-2014000054075-062425"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="511-0"/>
+			<vehicleDefinitionId refId="511-1"/>
+			<vehicleDefinitionId refId="511-2"/>
+			<vehicleDefinitionId refId="511-3"/>
+		</vehicles>
+		<income period="year">
+				92860.0
+		</income>
+
+	</household>
+	<household id="1002-2013000803972-0">
+		<members>
+			<personId refId="1002-2013000803972-048564"/>
+			<personId refId="1002-2013000803972-048578"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="512-0"/>
+			<vehicleDefinitionId refId="512-1"/>
+			<vehicleDefinitionId refId="512-2"/>
+		</vehicles>
+		<income period="year">
+				6589.0
+		</income>
+
+	</household>
+	<household id="900-2016000267720-0">
+		<members>
+			<personId refId="900-2016000267720-0131202"/>
+			<personId refId="900-2016000267720-0131270"/>
+			<personId refId="900-2016000267720-0131236"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="526-0"/>
+			<vehicleDefinitionId refId="526-1"/>
+			<vehicleDefinitionId refId="526-2"/>
+			<vehicleDefinitionId refId="526-3"/>
+		</vehicles>
+		<income period="year">
+				45541.0
+		</income>
+
+	</household>
+	<household id="10401-2013000914558-0">
+		<members>
+			<personId refId="10401-2013000914558-050149"/>
+			<personId refId="10401-2013000914558-050212"/>
+			<personId refId="10401-2013000914558-050275"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="530-0"/>
+			<vehicleDefinitionId refId="530-1"/>
+			<vehicleDefinitionId refId="530-2"/>
+			<vehicleDefinitionId refId="530-3"/>
+		</vehicles>
+		<income period="year">
+				145213.0
+		</income>
+
+	</household>
+	<household id="10405-2013000668727-2">
+		<members>
+			<personId refId="10405-2013000668727-246495"/>
+			<personId refId="10405-2013000668727-246245"/>
+			<personId refId="10405-2013000668727-246370"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="538-0"/>
+			<vehicleDefinitionId refId="538-1"/>
+			<vehicleDefinitionId refId="538-2"/>
+			<vehicleDefinitionId refId="538-3"/>
+		</vehicles>
+		<income period="year">
+				122106.0
+		</income>
+
+	</household>
+	<household id="1801-2016000539927-0">
+		<members>
+			<personId refId="1801-2016000539927-0137516"/>
+			<personId refId="1801-2016000539927-0137474"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="550-0"/>
+			<vehicleDefinitionId refId="550-1"/>
+			<vehicleDefinitionId refId="550-2"/>
+		</vehicles>
+		<income period="year">
+				31853.0
+		</income>
+
+	</household>
+	<household id="1803-2012001134055-5">
+		<members>
+			<personId refId="1803-2012001134055-523162"/>
+			<personId refId="1803-2012001134055-523306"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="559-0"/>
+			<vehicleDefinitionId refId="559-1"/>
+			<vehicleDefinitionId refId="559-2"/>
+		</vehicles>
+		<income period="year">
+				79067.0
+		</income>
+
+	</household>
+	<household id="10405-2015000699624-0">
+		<members>
+			<personId refId="10405-2015000699624-0104492"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="560-0"/>
+			<vehicleDefinitionId refId="560-1"/>
+		</vehicles>
+		<income period="year">
+				4117.0
+		</income>
+
+	</household>
+	<household id="900-2016000772838-1">
+		<members>
+			<personId refId="900-2016000772838-1143412"/>
+			<personId refId="900-2016000772838-1143501"/>
+			<personId refId="900-2016000772838-1143323"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="576-0"/>
+			<vehicleDefinitionId refId="576-1"/>
+			<vehicleDefinitionId refId="576-2"/>
+			<vehicleDefinitionId refId="576-3"/>
+		</vehicles>
+		<income period="year">
+				4247.0
+		</income>
+
+	</household>
+	<household id="300-2016000715950-0">
+		<members>
+			<personId refId="300-2016000715950-0141952"/>
+			<personId refId="300-2016000715950-0141826"/>
+			<personId refId="300-2016000715950-0141868"/>
+			<personId refId="300-2016000715950-0141910"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="587-0"/>
+			<vehicleDefinitionId refId="587-1"/>
+			<vehicleDefinitionId refId="587-2"/>
+			<vehicleDefinitionId refId="587-3"/>
+			<vehicleDefinitionId refId="587-4"/>
+		</vehicles>
+		<income period="year">
+				26085.0
+		</income>
+
+	</household>
+	<household id="1500-2015000838030-3">
+		<members>
+			<personId refId="1500-2015000838030-3110192"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="592-0"/>
+			<vehicleDefinitionId refId="592-1"/>
+		</vehicles>
+		<income period="year">
+				35830.0
+		</income>
+
+	</household>
+	<household id="10103-2014000596551-0">
+		<members>
+			<personId refId="10103-2014000596551-074755"/>
+			<personId refId="10103-2014000596551-074729"/>
+			<personId refId="10103-2014000596551-074807"/>
+			<personId refId="10103-2014000596551-074781"/>
+			<personId refId="10103-2014000596551-074833"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="593-0"/>
+			<vehicleDefinitionId refId="593-1"/>
+			<vehicleDefinitionId refId="593-2"/>
+			<vehicleDefinitionId refId="593-3"/>
+			<vehicleDefinitionId refId="593-4"/>
+		</vehicles>
+		<income period="year">
+				142602.0
+		</income>
+
+	</household>
+	<household id="1500-2014001480009-0">
+		<members>
+			<personId refId="1500-2014001480009-091495"/>
+			<personId refId="1500-2014001480009-091481"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="594-0"/>
+			<vehicleDefinitionId refId="594-1"/>
+			<vehicleDefinitionId refId="594-2"/>
+		</vehicles>
+		<income period="year">
+				88831.0
+		</income>
+
+	</household>
+	<household id="1902-2014000886715-0">
+		<members>
+			<personId refId="1902-2014000886715-079273"/>
+			<personId refId="1902-2014000886715-079316"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="613-0"/>
+			<vehicleDefinitionId refId="613-1"/>
+			<vehicleDefinitionId refId="613-2"/>
+		</vehicles>
+		<income period="year">
+				5163.0
+		</income>
+
+	</household>
+	<household id="201-2012000662519-0">
+		<members>
+			<personId refId="201-2012000662519-013562"/>
+			<personId refId="201-2012000662519-013528"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="634-0"/>
+			<vehicleDefinitionId refId="634-1"/>
+			<vehicleDefinitionId refId="634-2"/>
+		</vehicles>
+		<income period="year">
+				32955.0
+		</income>
+
+	</household>
+	<household id="1500-2012000252732-0">
+		<members>
+			<personId refId="1500-2012000252732-05249"/>
+			<personId refId="1500-2012000252732-05210"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="666-0"/>
+			<vehicleDefinitionId refId="666-1"/>
+			<vehicleDefinitionId refId="666-2"/>
+		</vehicles>
+		<income period="year">
+				30509.0
+		</income>
+
+	</household>
+	<household id="10103-2016000930780-0">
+		<members>
+			<personId refId="10103-2016000930780-0146580"/>
+			<personId refId="10103-2016000930780-0146624"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="691-0"/>
+			<vehicleDefinitionId refId="691-1"/>
+			<vehicleDefinitionId refId="691-2"/>
+		</vehicles>
+		<income period="year">
+				99708.0
+		</income>
+
+	</household>
+	<household id="10405-2013001204199-1">
+		<members>
+			<personId refId="10405-2013001204199-155721"/>
+			<personId refId="10405-2013001204199-155793"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="696-0"/>
+			<vehicleDefinitionId refId="696-1"/>
+			<vehicleDefinitionId refId="696-2"/>
+		</vehicles>
+		<income period="year">
+				1380.0
+		</income>
+
+	</household>
+	<household id="600-2014000114846-0">
+		<members>
+			<personId refId="600-2014000114846-063990"/>
+			<personId refId="600-2014000114846-064028"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="712-0"/>
+			<vehicleDefinitionId refId="712-1"/>
+			<vehicleDefinitionId refId="712-2"/>
+		</vehicles>
+		<income period="year">
+				1152.0
+		</income>
+
+	</household>
+	<household id="406-2014000619200-0">
+		<members>
+			<personId refId="406-2014000619200-074990"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="730-0"/>
+			<vehicleDefinitionId refId="730-1"/>
+		</vehicles>
+		<income period="year">
+				9356.0
+		</income>
+
+	</household>
+	<household id="1108-2012000198633-0">
+		<members>
+			<personId refId="1108-2012000198633-04008"/>
+			<personId refId="1108-2012000198633-04058"/>
+			<personId refId="1108-2012000198633-04108"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="736-0"/>
+			<vehicleDefinitionId refId="736-1"/>
+			<vehicleDefinitionId refId="736-2"/>
+			<vehicleDefinitionId refId="736-3"/>
+		</vehicles>
+		<income period="year">
+				65431.0
+		</income>
+
+	</household>
+	<household id="1105-2014001160693-0">
+		<members>
+			<personId refId="1105-2014001160693-085902"/>
+			<personId refId="1105-2014001160693-085864"/>
+			<personId refId="1105-2014001160693-085940"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="737-0"/>
+			<vehicleDefinitionId refId="737-1"/>
+			<vehicleDefinitionId refId="737-2"/>
+			<vehicleDefinitionId refId="737-3"/>
+		</vehicles>
+		<income period="year">
+				16877.0
+		</income>
+
+	</household>
+	<household id="10600-2013001200076-0">
+		<members>
+			<personId refId="10600-2013001200076-055531"/>
+			<personId refId="10600-2013001200076-055571"/>
+			<personId refId="10600-2013001200076-055651"/>
+			<personId refId="10600-2013001200076-055611"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="739-0"/>
+			<vehicleDefinitionId refId="739-1"/>
+			<vehicleDefinitionId refId="739-2"/>
+			<vehicleDefinitionId refId="739-3"/>
+			<vehicleDefinitionId refId="739-4"/>
+		</vehicles>
+		<income period="year">
+				50874.0
+		</income>
+
+	</household>
+	<household id="1801-2014000679703-0">
+		<members>
+			<personId refId="1801-2014000679703-075858"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="761-0"/>
+			<vehicleDefinitionId refId="761-1"/>
+		</vehicles>
+		<income period="year">
+				9794.0
+		</income>
+
+	</household>
+	<household id="1106-2013001265598-4">
+		<members>
+			<personId refId="1106-2013001265598-456837"/>
+			<personId refId="1106-2013001265598-456763"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="789-0"/>
+			<vehicleDefinitionId refId="789-1"/>
+			<vehicleDefinitionId refId="789-2"/>
+		</vehicles>
+		<income period="year">
+				99322.0
+		</income>
+
+	</household>
+	<household id="10102-2016000171219-0">
+		<members>
+			<personId refId="10102-2016000171219-0128848"/>
+			<personId refId="10102-2016000171219-0128778"/>
+			<personId refId="10102-2016000171219-0128813"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="803-0"/>
+			<vehicleDefinitionId refId="803-1"/>
+			<vehicleDefinitionId refId="803-2"/>
+			<vehicleDefinitionId refId="803-3"/>
+		</vehicles>
+		<income period="year">
+				119239.0
+		</income>
+
+	</household>
+	<household id="1801-2012000719213-1">
+		<members>
+			<personId refId="1801-2012000719213-114310"/>
+			<personId refId="1801-2012000719213-114211"/>
+			<personId refId="1801-2012000719213-114112"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="805-0"/>
+			<vehicleDefinitionId refId="805-1"/>
+			<vehicleDefinitionId refId="805-2"/>
+			<vehicleDefinitionId refId="805-3"/>
+		</vehicles>
+		<income period="year">
+				43005.0
+		</income>
+
+	</household>
+	<household id="10405-2012001378783-0">
+		<members>
+			<personId refId="10405-2012001378783-027309"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="824-0"/>
+			<vehicleDefinitionId refId="824-1"/>
+		</vehicles>
+		<income period="year">
+				28581.0
+		</income>
+
+	</household>
+	<household id="100-2012000559396-0">
+		<members>
+			<personId refId="100-2012000559396-011108"/>
+			<personId refId="100-2012000559396-011002"/>
+			<personId refId="100-2012000559396-011161"/>
+			<personId refId="100-2012000559396-011055"/>
+			<personId refId="100-2012000559396-011214"/>
+			<personId refId="100-2012000559396-010949"/>
+			<personId refId="100-2012000559396-010896"/>
+			<personId refId="100-2012000559396-011267"/>
+			<personId refId="100-2012000559396-011320"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="829-0"/>
+			<vehicleDefinitionId refId="829-1"/>
+			<vehicleDefinitionId refId="829-2"/>
+			<vehicleDefinitionId refId="829-3"/>
+			<vehicleDefinitionId refId="829-4"/>
+		</vehicles>
+		<income period="year">
+				89469.0
+		</income>
+
+	</household>
+	<household id="1002-2014001032926-0">
+		<members>
+			<personId refId="1002-2014001032926-082715"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="883-0"/>
+			<vehicleDefinitionId refId="883-1"/>
+		</vehicles>
+		<income period="year">
+				10475.0
+		</income>
+
+	</household>
+	<household id="1001-2014000292394-0">
+		<members>
+			<personId refId="1001-2014000292394-068222"/>
+			<personId refId="1001-2014000292394-068369"/>
+			<personId refId="1001-2014000292394-068075"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="914-0"/>
+			<vehicleDefinitionId refId="914-1"/>
+			<vehicleDefinitionId refId="914-2"/>
+			<vehicleDefinitionId refId="914-3"/>
+		</vehicles>
+		<income period="year">
+				30317.0
+		</income>
+
+	</household>
+	<household id="1105-2015000712347-2">
+		<members>
+			<personId refId="1105-2015000712347-2104799"/>
+			<personId refId="1105-2015000712347-2104923"/>
+			<personId refId="1105-2015000712347-2104737"/>
+			<personId refId="1105-2015000712347-2104861"/>
+			<personId refId="1105-2015000712347-2104985"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="922-0"/>
+			<vehicleDefinitionId refId="922-1"/>
+			<vehicleDefinitionId refId="922-2"/>
+			<vehicleDefinitionId refId="922-3"/>
+			<vehicleDefinitionId refId="922-4"/>
+		</vehicles>
+		<income period="year">
+				133410.0
+		</income>
+
+	</household>
+	<household id="1500-2014001176958-2">
+		<members>
+			<personId refId="1500-2014001176958-286712"/>
+			<personId refId="1500-2014001176958-286795"/>
+			<personId refId="1500-2014001176958-286878"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="934-0"/>
+			<vehicleDefinitionId refId="934-1"/>
+			<vehicleDefinitionId refId="934-2"/>
+			<vehicleDefinitionId refId="934-3"/>
+		</vehicles>
+		<income period="year">
+				91133.0
+		</income>
+
+	</household>
+	<household id="1108-2014000961036-0">
+		<members>
+			<personId refId="1108-2014000961036-080958"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="961-0"/>
+			<vehicleDefinitionId refId="961-1"/>
+		</vehicles>
+		<income period="year">
+				1687.0
+		</income>
+
+	</household>
+	<household id="1803-2013000136970-0">
+		<members>
+			<personId refId="1803-2013000136970-032580"/>
+			<personId refId="1803-2013000136970-032598"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="975-0"/>
+			<vehicleDefinitionId refId="975-1"/>
+			<vehicleDefinitionId refId="975-2"/>
+		</vehicles>
+		<income period="year">
+				55370.0
+		</income>
+
+	</household>
+	<household id="1700-2012000925460-0">
+		<members>
+			<personId refId="1700-2012000925460-018677"/>
+			<personId refId="1700-2012000925460-018634"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="976-0"/>
+			<vehicleDefinitionId refId="976-1"/>
+			<vehicleDefinitionId refId="976-2"/>
+		</vehicles>
+		<income period="year">
+				26498.0
+		</income>
+
+	</household>
+	<household id="1106-2012001239814-1">
+		<members>
+			<personId refId="1106-2012001239814-124229"/>
+			<personId refId="1106-2012001239814-124195"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="999-0"/>
+			<vehicleDefinitionId refId="999-1"/>
+			<vehicleDefinitionId refId="999-2"/>
+		</vehicles>
+		<income period="year">
+				14913.0
+		</income>
+
+	</household>
+	<household id="1107-2016000995092-0">
+		<members>
+			<personId refId="1107-2016000995092-0147713"/>
+			<personId refId="1107-2016000995092-0147679"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1013-0"/>
+			<vehicleDefinitionId refId="1013-1"/>
+			<vehicleDefinitionId refId="1013-2"/>
+		</vehicles>
+		<income period="year">
+				63961.0
+		</income>
+
+	</household>
+	<household id="405-2015001408710-0">
+		<members>
+			<personId refId="405-2015001408710-0122645"/>
+			<personId refId="405-2015001408710-0122599"/>
+			<personId refId="405-2015001408710-0122691"/>
+			<personId refId="405-2015001408710-0122553"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1027-0"/>
+			<vehicleDefinitionId refId="1027-1"/>
+			<vehicleDefinitionId refId="1027-2"/>
+			<vehicleDefinitionId refId="1027-3"/>
+			<vehicleDefinitionId refId="1027-4"/>
+		</vehicles>
+		<income period="year">
+				116318.0
+		</income>
+
+	</household>
+	<household id="10104-2015000391765-0">
+		<members>
+			<personId refId="10104-2015000391765-098439"/>
+			<personId refId="10104-2015000391765-098396"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1031-0"/>
+			<vehicleDefinitionId refId="1031-1"/>
+			<vehicleDefinitionId refId="1031-2"/>
+		</vehicles>
+		<income period="year">
+				122078.0
+		</income>
+
+	</household>
+	<household id="1106-2013000691179-0">
+		<members>
+			<personId refId="1106-2013000691179-046911"/>
+			<personId refId="1106-2013000691179-046892"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1034-0"/>
+			<vehicleDefinitionId refId="1034-1"/>
+			<vehicleDefinitionId refId="1034-2"/>
+		</vehicles>
+		<income period="year">
+				28136.0
+		</income>
+
+	</household>
+	<household id="1002-2015000766477-0">
+		<members>
+			<personId refId="1002-2015000766477-0106285"/>
+			<personId refId="1002-2015000766477-0106252"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1043-0"/>
+			<vehicleDefinitionId refId="1043-1"/>
+			<vehicleDefinitionId refId="1043-2"/>
+		</vehicles>
+		<income period="year">
+				44205.0
+		</income>
+
+	</household>
+	<household id="700-2013000093869-0">
+		<members>
+			<personId refId="700-2013000093869-031474"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1074-0"/>
+			<vehicleDefinitionId refId="1074-1"/>
+		</vehicles>
+		<income period="year">
+				4662.0
+		</income>
+
+	</household>
+	<household id="1107-2015000794086-0">
+		<members>
+			<personId refId="1107-2015000794086-0107388"/>
+			<personId refId="1107-2015000794086-0107425"/>
+			<personId refId="1107-2015000794086-0107314"/>
+			<personId refId="1107-2015000794086-0107351"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1091-0"/>
+			<vehicleDefinitionId refId="1091-1"/>
+			<vehicleDefinitionId refId="1091-2"/>
+			<vehicleDefinitionId refId="1091-3"/>
+			<vehicleDefinitionId refId="1091-4"/>
+		</vehicles>
+		<income period="year">
+				77788.0
+		</income>
+
+	</household>
+	<household id="408-2013001042627-0">
+		<members>
+			<personId refId="408-2013001042627-052520"/>
+			<personId refId="408-2013001042627-052564"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1129-0"/>
+			<vehicleDefinitionId refId="1129-1"/>
+			<vehicleDefinitionId refId="1129-2"/>
+		</vehicles>
+		<income period="year">
+				1658.0
+		</income>
+
+	</household>
+	<household id="100-2014001404766-0">
+		<members>
+			<personId refId="100-2014001404766-090700"/>
+			<personId refId="100-2014001404766-090737"/>
+			<personId refId="100-2014001404766-090774"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1149-0"/>
+			<vehicleDefinitionId refId="1149-1"/>
+			<vehicleDefinitionId refId="1149-2"/>
+			<vehicleDefinitionId refId="1149-3"/>
+		</vehicles>
+		<income period="year">
+				82957.0
+		</income>
+
+	</household>
+	<household id="1200-2014000221274-0">
+		<members>
+			<personId refId="1200-2014000221274-066349"/>
+			<personId refId="1200-2014000221274-066336"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1157-0"/>
+			<vehicleDefinitionId refId="1157-1"/>
+			<vehicleDefinitionId refId="1157-2"/>
+		</vehicles>
+		<income period="year">
+				98830.0
+		</income>
+
+	</household>
+	<household id="1901-2016000928324-0">
+		<members>
+			<personId refId="1901-2016000928324-0146572"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1161-0"/>
+			<vehicleDefinitionId refId="1161-1"/>
+		</vehicles>
+		<income period="year">
+				4167.0
+		</income>
+
+	</household>
+	<household id="600-2013000608809-0">
+		<members>
+			<personId refId="600-2013000608809-044882"/>
+			<personId refId="600-2013000608809-044750"/>
+			<personId refId="600-2013000608809-044838"/>
+			<personId refId="600-2013000608809-044794"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1162-0"/>
+			<vehicleDefinitionId refId="1162-1"/>
+			<vehicleDefinitionId refId="1162-2"/>
+			<vehicleDefinitionId refId="1162-3"/>
+			<vehicleDefinitionId refId="1162-4"/>
+		</vehicles>
+		<income period="year">
+				78445.0
+		</income>
+
+	</household>
+	<household id="1200-2012000938214-0">
+		<members>
+			<personId refId="1200-2012000938214-018895"/>
+			<personId refId="1200-2012000938214-018928"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1171-0"/>
+			<vehicleDefinitionId refId="1171-1"/>
+			<vehicleDefinitionId refId="1171-2"/>
+		</vehicles>
+		<income period="year">
+				22866.0
+		</income>
+
+	</household>
+	<household id="405-2013001140050-0">
+		<members>
+			<personId refId="405-2013001140050-053955"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1179-0"/>
+			<vehicleDefinitionId refId="1179-1"/>
+		</vehicles>
+		<income period="year">
+				7698.0
+		</income>
+
+	</household>
+	<household id="401-2013001026468-0">
+		<members>
+			<personId refId="401-2013001026468-051956"/>
+			<personId refId="401-2013001026468-051992"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1190-0"/>
+			<vehicleDefinitionId refId="1190-1"/>
+			<vehicleDefinitionId refId="1190-2"/>
+		</vehicles>
+		<income period="year">
+				38838.0
+		</income>
+
+	</household>
+	<household id="1106-2016001295719-1">
+		<members>
+			<personId refId="1106-2016001295719-1153578"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1192-0"/>
+			<vehicleDefinitionId refId="1192-1"/>
+		</vehicles>
+		<income period="year">
+				31599.0
+		</income>
+
+	</household>
+	<household id="1803-2015001491257-0">
+		<members>
+			<personId refId="1803-2015001491257-0123733"/>
+			<personId refId="1803-2015001491257-0123697"/>
+			<personId refId="1803-2015001491257-0123625"/>
+			<personId refId="1803-2015001491257-0123661"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1203-0"/>
+			<vehicleDefinitionId refId="1203-1"/>
+			<vehicleDefinitionId refId="1203-2"/>
+			<vehicleDefinitionId refId="1203-3"/>
+			<vehicleDefinitionId refId="1203-4"/>
+		</vehicles>
+		<income period="year">
+				41667.0
+		</income>
+
+	</household>
+	<household id="10102-2016001438850-0">
+		<members>
+			<personId refId="10102-2016001438850-0155549"/>
+			<personId refId="10102-2016001438850-0155612"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1204-0"/>
+			<vehicleDefinitionId refId="1204-1"/>
+			<vehicleDefinitionId refId="1204-2"/>
+		</vehicles>
+		<income period="year">
+				38573.0
+		</income>
+
+	</household>
+	<household id="1500-2016000222604-0">
+		<members>
+			<personId refId="1500-2016000222604-0129717"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1245-0"/>
+			<vehicleDefinitionId refId="1245-1"/>
+		</vehicles>
+		<income period="year">
+				18337.0
+		</income>
+
+	</household>
+	<household id="10600-2013000532687-4">
+		<members>
+			<personId refId="10600-2013000532687-443214"/>
+			<personId refId="10600-2013000532687-442878"/>
+			<personId refId="10600-2013000532687-442710"/>
+			<personId refId="10600-2013000532687-443046"/>
+			<personId refId="10600-2013000532687-443382"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1252-0"/>
+			<vehicleDefinitionId refId="1252-1"/>
+			<vehicleDefinitionId refId="1252-2"/>
+			<vehicleDefinitionId refId="1252-3"/>
+			<vehicleDefinitionId refId="1252-4"/>
+		</vehicles>
+		<income period="year">
+				32067.0
+		</income>
+
+	</household>
+	<household id="1803-2014001358445-0">
+		<members>
+			<personId refId="1803-2014001358445-090057"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1254-0"/>
+			<vehicleDefinitionId refId="1254-1"/>
+		</vehicles>
+		<income period="year">
+				14387.0
+		</income>
+
+	</household>
+	<household id="10102-2012001253466-0">
+		<members>
+			<personId refId="10102-2012001253466-024448"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1255-0"/>
+			<vehicleDefinitionId refId="1255-1"/>
+		</vehicles>
+		<income period="year">
+				31885.0
+		</income>
+
+	</household>
+	<household id="408-2012000021280-0">
+		<members>
+			<personId refId="408-2012000021280-0201"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1262-0"/>
+			<vehicleDefinitionId refId="1262-1"/>
+		</vehicles>
+		<income period="year">
+				38987.0
+		</income>
+
+	</household>
+	<household id="1105-2013001348757-1">
+		<members>
+			<personId refId="1105-2013001348757-158070"/>
+			<personId refId="1105-2013001348757-158110"/>
+			<personId refId="1105-2013001348757-158030"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1280-0"/>
+			<vehicleDefinitionId refId="1280-1"/>
+			<vehicleDefinitionId refId="1280-2"/>
+			<vehicleDefinitionId refId="1280-3"/>
+		</vehicles>
+		<income period="year">
+				23994.0
+		</income>
+
+	</household>
+	<household id="10104-2013000894542-1">
+		<members>
+			<personId refId="10104-2013000894542-149572"/>
+			<personId refId="10104-2013000894542-149600"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1283-0"/>
+			<vehicleDefinitionId refId="1283-1"/>
+			<vehicleDefinitionId refId="1283-2"/>
+		</vehicles>
+		<income period="year">
+				4711.0
+		</income>
+
+	</household>
+	<household id="1801-2012001003893-1">
+		<members>
+			<personId refId="1801-2012001003893-120473"/>
+			<personId refId="1801-2012001003893-120517"/>
+			<personId refId="1801-2012001003893-120429"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1295-0"/>
+			<vehicleDefinitionId refId="1295-1"/>
+			<vehicleDefinitionId refId="1295-2"/>
+			<vehicleDefinitionId refId="1295-3"/>
+		</vehicles>
+		<income period="year">
+				26853.0
+		</income>
+
+	</household>
+	<household id="405-2014000843364-0">
+		<members>
+			<personId refId="405-2014000843364-078069"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1307-0"/>
+			<vehicleDefinitionId refId="1307-1"/>
+		</vehicles>
+		<income period="year">
+				10649.0
+		</income>
+
+	</household>
+	<household id="1002-2014001174412-0">
+		<members>
+			<personId refId="1002-2014001174412-086359"/>
+			<personId refId="1002-2014001174412-086403"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1321-0"/>
+			<vehicleDefinitionId refId="1321-1"/>
+			<vehicleDefinitionId refId="1321-2"/>
+		</vehicles>
+		<income period="year">
+				113966.0
+		</income>
+
+	</household>
+	<household id="1101-2016001120110-0">
+		<members>
+			<personId refId="1101-2016001120110-0149352"/>
+			<personId refId="1101-2016001120110-0149271"/>
+			<personId refId="1101-2016001120110-0149433"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1383-0"/>
+			<vehicleDefinitionId refId="1383-1"/>
+			<vehicleDefinitionId refId="1383-2"/>
+			<vehicleDefinitionId refId="1383-3"/>
+		</vehicles>
+		<income period="year">
+				78394.0
+		</income>
+
+	</household>
+	<household id="10102-2015001024517-0">
+		<members>
+			<personId refId="10102-2015001024517-0114557"/>
+			<personId refId="10102-2015001024517-0114513"/>
+			<personId refId="10102-2015001024517-0114601"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1411-0"/>
+			<vehicleDefinitionId refId="1411-1"/>
+			<vehicleDefinitionId refId="1411-2"/>
+			<vehicleDefinitionId refId="1411-3"/>
+		</vehicles>
+		<income period="year">
+				148023.0
+		</income>
+
+	</household>
+	<household id="1500-2013000871283-0">
+		<members>
+			<personId refId="1500-2013000871283-049273"/>
+			<personId refId="1500-2013000871283-049307"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1443-0"/>
+			<vehicleDefinitionId refId="1443-1"/>
+			<vehicleDefinitionId refId="1443-2"/>
+		</vehicles>
+		<income period="year">
+				113820.0
+		</income>
+
+	</household>
+	<household id="1200-2015001162246-1">
+		<members>
+			<personId refId="1200-2015001162246-1117278"/>
+			<personId refId="1200-2015001162246-1116954"/>
+			<personId refId="1200-2015001162246-1117170"/>
+			<personId refId="1200-2015001162246-1117062"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1454-0"/>
+			<vehicleDefinitionId refId="1454-1"/>
+			<vehicleDefinitionId refId="1454-2"/>
+			<vehicleDefinitionId refId="1454-3"/>
+			<vehicleDefinitionId refId="1454-4"/>
+		</vehicles>
+		<income period="year">
+				84282.0
+		</income>
+
+	</household>
+	<household id="1600-2016001518968-0">
+		<members>
+			<personId refId="1600-2016001518968-0157803"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1455-0"/>
+			<vehicleDefinitionId refId="1455-1"/>
+		</vehicles>
+		<income period="year">
+				7054.0
+		</income>
+
+	</household>
+	<household id="1804-2016000275343-0">
+		<members>
+			<personId refId="1804-2016000275343-0131487"/>
+			<personId refId="1804-2016000275343-0131407"/>
+			<personId refId="1804-2016000275343-0131527"/>
+			<personId refId="1804-2016000275343-0131447"/>
+			<personId refId="1804-2016000275343-0131567"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1504-0"/>
+			<vehicleDefinitionId refId="1504-1"/>
+			<vehicleDefinitionId refId="1504-2"/>
+			<vehicleDefinitionId refId="1504-3"/>
+			<vehicleDefinitionId refId="1504-4"/>
+		</vehicles>
+		<income period="year">
+				82932.0
+		</income>
+
+	</household>
+	<household id="1105-2013000913089-0">
+		<members>
+			<personId refId="1105-2013000913089-050080"/>
+			<personId refId="1105-2013000913089-050057"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1547-0"/>
+			<vehicleDefinitionId refId="1547-1"/>
+			<vehicleDefinitionId refId="1547-2"/>
+		</vehicles>
+		<income period="year">
+				141925.0
+		</income>
+
+	</household>
+	<household id="1200-2012001244798-0">
+		<members>
+			<personId refId="1200-2012001244798-024295"/>
+			<personId refId="1200-2012001244798-024333"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1572-0"/>
+			<vehicleDefinitionId refId="1572-1"/>
+			<vehicleDefinitionId refId="1572-2"/>
+		</vehicles>
+		<income period="year">
+				3628.0
+		</income>
+
+	</household>
+	<household id="405-2014000685903-0">
+		<members>
+			<personId refId="405-2014000685903-075867"/>
+			<personId refId="405-2014000685903-075885"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1579-0"/>
+			<vehicleDefinitionId refId="1579-1"/>
+			<vehicleDefinitionId refId="1579-2"/>
+		</vehicles>
+		<income period="year">
+				54945.0
+		</income>
+
+	</household>
+	<household id="406-2016000414635-0">
+		<members>
+			<personId refId="406-2016000414635-0134377"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1584-0"/>
+			<vehicleDefinitionId refId="1584-1"/>
+		</vehicles>
+		<income period="year">
+				25108.0
+		</income>
+
+	</household>
+	<household id="900-2016000755626-0">
+		<members>
+			<personId refId="900-2016000755626-0142610"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1610-0"/>
+			<vehicleDefinitionId refId="1610-1"/>
+		</vehicles>
+		<income period="year">
+				12347.0
+		</income>
+
+	</household>
+	<household id="405-2013000668727-0">
+		<members>
+			<personId refId="405-2013000668727-046155"/>
+			<personId refId="405-2013000668727-046280"/>
+			<personId refId="405-2013000668727-046405"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1616-0"/>
+			<vehicleDefinitionId refId="1616-1"/>
+			<vehicleDefinitionId refId="1616-2"/>
+			<vehicleDefinitionId refId="1616-3"/>
+		</vehicles>
+		<income period="year">
+				55297.0
+		</income>
+
+	</household>
+	<household id="10103-2014000584977-0">
+		<members>
+			<personId refId="10103-2014000584977-074080"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1631-0"/>
+			<vehicleDefinitionId refId="1631-1"/>
+		</vehicles>
+		<income period="year">
+				29399.0
+		</income>
+
+	</household>
+	<household id="1105-2012000963809-4">
+		<members>
+			<personId refId="1105-2012000963809-419593"/>
+			<personId refId="1105-2012000963809-419221"/>
+			<personId refId="1105-2012000963809-419035"/>
+			<personId refId="1105-2012000963809-419407"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1678-0"/>
+			<vehicleDefinitionId refId="1678-1"/>
+			<vehicleDefinitionId refId="1678-2"/>
+			<vehicleDefinitionId refId="1678-3"/>
+			<vehicleDefinitionId refId="1678-4"/>
+		</vehicles>
+		<income period="year">
+				121920.0
+		</income>
+
+	</household>
+	<household id="1500-2016001216686-0">
+		<members>
+			<personId refId="1500-2016001216686-0151247"/>
+			<personId refId="1500-2016001216686-0151284"/>
+			<personId refId="1500-2016001216686-0151321"/>
+			<personId refId="1500-2016001216686-0151395"/>
+			<personId refId="1500-2016001216686-0151358"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1691-0"/>
+			<vehicleDefinitionId refId="1691-1"/>
+			<vehicleDefinitionId refId="1691-2"/>
+			<vehicleDefinitionId refId="1691-3"/>
+			<vehicleDefinitionId refId="1691-4"/>
+		</vehicles>
+		<income period="year">
+				125596.0
+		</income>
+
+	</household>
+	<household id="1902-2015001040170-0">
+		<members>
+			<personId refId="1902-2015001040170-0114996"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1696-0"/>
+			<vehicleDefinitionId refId="1696-1"/>
+		</vehicles>
+		<income period="year">
+				31062.0
+		</income>
+
+	</household>
+	<household id="10104-2015001059501-0">
+		<members>
+			<personId refId="10104-2015001059501-0115178"/>
+			<personId refId="10104-2015001059501-0115124"/>
+			<personId refId="10104-2015001059501-0115097"/>
+			<personId refId="10104-2015001059501-0115151"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1712-0"/>
+			<vehicleDefinitionId refId="1712-1"/>
+			<vehicleDefinitionId refId="1712-2"/>
+			<vehicleDefinitionId refId="1712-3"/>
+			<vehicleDefinitionId refId="1712-4"/>
+		</vehicles>
+		<income period="year">
+				120963.0
+		</income>
+
+	</household>
+	<household id="1108-2015000133808-0">
+		<members>
+			<personId refId="1108-2015000133808-093467"/>
+			<personId refId="1108-2015000133808-093424"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1713-0"/>
+			<vehicleDefinitionId refId="1713-1"/>
+			<vehicleDefinitionId refId="1713-2"/>
+		</vehicles>
+		<income period="year">
+				37247.0
+		</income>
+
+	</household>
+	<household id="10104-2012000587835-1">
+		<members>
+			<personId refId="10104-2012000587835-111792"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1714-0"/>
+			<vehicleDefinitionId refId="1714-1"/>
+		</vehicles>
+		<income period="year">
+				27262.0
+		</income>
+
+	</household>
+	<household id="1801-2013000725483-1">
+		<members>
+			<personId refId="1801-2013000725483-147433"/>
+			<personId refId="1801-2013000725483-147477"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1729-0"/>
+			<vehicleDefinitionId refId="1729-1"/>
+			<vehicleDefinitionId refId="1729-2"/>
+		</vehicles>
+		<income period="year">
+				112618.0
+		</income>
+
+	</household>
+	<household id="1101-2013000795872-0">
+		<members>
+			<personId refId="1101-2013000795872-048301"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1760-0"/>
+			<vehicleDefinitionId refId="1760-1"/>
+		</vehicles>
+		<income period="year">
+				15827.0
+		</income>
+
+	</household>
+	<household id="1801-2016000471794-1">
+		<members>
+			<personId refId="1801-2016000471794-1135505"/>
+			<personId refId="1801-2016000471794-1135591"/>
+			<personId refId="1801-2016000471794-1135634"/>
+			<personId refId="1801-2016000471794-1135720"/>
+			<personId refId="1801-2016000471794-1135548"/>
+			<personId refId="1801-2016000471794-1135677"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1771-0"/>
+			<vehicleDefinitionId refId="1771-1"/>
+			<vehicleDefinitionId refId="1771-2"/>
+			<vehicleDefinitionId refId="1771-3"/>
+			<vehicleDefinitionId refId="1771-4"/>
+		</vehicles>
+		<income period="year">
+				68275.0
+		</income>
+
+	</household>
+	<household id="10104-2012000829853-1">
+		<members>
+			<personId refId="10104-2012000829853-116558"/>
+			<personId refId="10104-2012000829853-116622"/>
+			<personId refId="10104-2012000829853-116494"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1781-0"/>
+			<vehicleDefinitionId refId="1781-1"/>
+			<vehicleDefinitionId refId="1781-2"/>
+			<vehicleDefinitionId refId="1781-3"/>
+		</vehicles>
+		<income period="year">
+				59439.0
+		</income>
+
+	</household>
+	<household id="1107-2012000052528-0">
+		<members>
+			<personId refId="1107-2012000052528-0584"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1792-0"/>
+			<vehicleDefinitionId refId="1792-1"/>
+		</vehicles>
+		<income period="year">
+				15482.0
+		</income>
+
+	</household>
+	<household id="406-2015000242612-0">
+		<members>
+			<personId refId="406-2015000242612-095903"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1801-0"/>
+			<vehicleDefinitionId refId="1801-1"/>
+		</vehicles>
+		<income period="year">
+				34280.0
+		</income>
+
+	</household>
+	<household id="10405-2015000087715-0">
+		<members>
+			<personId refId="10405-2015000087715-092868"/>
+			<personId refId="10405-2015000087715-092802"/>
+			<personId refId="10405-2015000087715-092769"/>
+			<personId refId="10405-2015000087715-092835"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1820-0"/>
+			<vehicleDefinitionId refId="1820-1"/>
+			<vehicleDefinitionId refId="1820-2"/>
+			<vehicleDefinitionId refId="1820-3"/>
+			<vehicleDefinitionId refId="1820-4"/>
+		</vehicles>
+		<income period="year">
+				105883.0
+		</income>
+
+	</household>
+	<household id="300-2012001254838-1">
+		<members>
+			<personId refId="300-2012001254838-124896"/>
+			<personId refId="300-2012001254838-124516"/>
+			<personId refId="300-2012001254838-124706"/>
+			<personId refId="300-2012001254838-124611"/>
+			<personId refId="300-2012001254838-124801"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1827-0"/>
+			<vehicleDefinitionId refId="1827-1"/>
+			<vehicleDefinitionId refId="1827-2"/>
+			<vehicleDefinitionId refId="1827-3"/>
+			<vehicleDefinitionId refId="1827-4"/>
+		</vehicles>
+		<income period="year">
+				90300.0
+		</income>
+
+	</household>
+	<household id="408-2014001441988-0">
+		<members>
+			<personId refId="408-2014001441988-091291"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1860-0"/>
+			<vehicleDefinitionId refId="1860-1"/>
+		</vehicles>
+		<income period="year">
+				2204.0
+		</income>
+
+	</household>
+	<household id="1902-2014000738078-0">
+		<members>
+			<personId refId="1902-2014000738078-076424"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1899-0"/>
+			<vehicleDefinitionId refId="1899-1"/>
+		</vehicles>
+		<income period="year">
+				11523.0
+		</income>
+
+	</household>
+	<household id="1902-2013000056397-0">
+		<members>
+			<personId refId="1902-2013000056397-030782"/>
+			<personId refId="1902-2013000056397-030576"/>
+			<personId refId="1902-2013000056397-030679"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1910-0"/>
+			<vehicleDefinitionId refId="1910-1"/>
+			<vehicleDefinitionId refId="1910-2"/>
+			<vehicleDefinitionId refId="1910-3"/>
+		</vehicles>
+		<income period="year">
+				1309.0
+		</income>
+
+	</household>
+	<household id="700-2012000970914-0">
+		<members>
+			<personId refId="700-2012000970914-020035"/>
+			<personId refId="700-2012000970914-020058"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1925-0"/>
+			<vehicleDefinitionId refId="1925-1"/>
+			<vehicleDefinitionId refId="1925-2"/>
+		</vehicles>
+		<income period="year">
+				71184.0
+		</income>
+
+	</household>
+	<household id="202-2013000258802-0">
+		<members>
+			<personId refId="202-2013000258802-035840"/>
+			<personId refId="202-2013000258802-035711"/>
+			<personId refId="202-2013000258802-035797"/>
+			<personId refId="202-2013000258802-035754"/>
+			<personId refId="202-2013000258802-035625"/>
+			<personId refId="202-2013000258802-035668"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1947-0"/>
+			<vehicleDefinitionId refId="1947-1"/>
+			<vehicleDefinitionId refId="1947-2"/>
+			<vehicleDefinitionId refId="1947-3"/>
+			<vehicleDefinitionId refId="1947-4"/>
+		</vehicles>
+		<income period="year">
+				9449.0
+		</income>
+
+	</household>
+	<household id="10104-2013001355501-2">
+		<members>
+			<personId refId="10104-2013001355501-258221"/>
+			<personId refId="10104-2013001355501-258265"/>
+			<personId refId="10104-2013001355501-258177"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1961-0"/>
+			<vehicleDefinitionId refId="1961-1"/>
+			<vehicleDefinitionId refId="1961-2"/>
+			<vehicleDefinitionId refId="1961-3"/>
+		</vehicles>
+		<income period="year">
+				64085.0
+		</income>
+
+	</household>
+	<household id="405-2014000582422-0">
+		<members>
+			<personId refId="405-2014000582422-074047"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1978-0"/>
+			<vehicleDefinitionId refId="1978-1"/>
+		</vehicles>
+		<income period="year">
+				1244.0
+		</income>
+
+	</household>
+	<household id="406-2013001051809-0">
+		<members>
+			<personId refId="406-2013001051809-052694"/>
+			<personId refId="406-2013001051809-052651"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="1981-0"/>
+			<vehicleDefinitionId refId="1981-1"/>
+			<vehicleDefinitionId refId="1981-2"/>
+		</vehicles>
+		<income period="year">
+				25104.0
+		</income>
+
+	</household>
+	<household id="10600-2013000168908-2">
+		<members>
+			<personId refId="10600-2013000168908-233412"/>
+			<personId refId="10600-2013000168908-233299"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2033-0"/>
+			<vehicleDefinitionId refId="2033-1"/>
+			<vehicleDefinitionId refId="2033-2"/>
+		</vehicles>
+		<income period="year">
+				125740.0
+		</income>
+
+	</household>
+	<household id="406-2014000225879-0">
+		<members>
+			<personId refId="406-2014000225879-066598"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2035-0"/>
+			<vehicleDefinitionId refId="2035-1"/>
+		</vehicles>
+		<income period="year">
+				8764.0
+		</income>
+
+	</household>
+	<household id="1801-2013000532687-3">
+		<members>
+			<personId refId="1801-2013000532687-343179"/>
+			<personId refId="1801-2013000532687-343347"/>
+			<personId refId="1801-2013000532687-343011"/>
+			<personId refId="1801-2013000532687-342675"/>
+			<personId refId="1801-2013000532687-342843"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2036-0"/>
+			<vehicleDefinitionId refId="2036-1"/>
+			<vehicleDefinitionId refId="2036-2"/>
+			<vehicleDefinitionId refId="2036-3"/>
+			<vehicleDefinitionId refId="2036-4"/>
+		</vehicles>
+		<income period="year">
+				134442.0
+		</income>
+
+	</household>
+	<household id="1105-2013000153074-0">
+		<members>
+			<personId refId="1105-2013000153074-032901"/>
+			<personId refId="1105-2013000153074-032937"/>
+			<personId refId="1105-2013000153074-032865"/>
+			<personId refId="1105-2013000153074-032829"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2040-0"/>
+			<vehicleDefinitionId refId="2040-1"/>
+			<vehicleDefinitionId refId="2040-2"/>
+			<vehicleDefinitionId refId="2040-3"/>
+			<vehicleDefinitionId refId="2040-4"/>
+		</vehicles>
+		<income period="year">
+				115041.0
+		</income>
+
+	</household>
+	<household id="1001-2012001404956-0">
+		<members>
+			<personId refId="1001-2012001404956-028057"/>
+			<personId refId="1001-2012001404956-028085"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2069-0"/>
+			<vehicleDefinitionId refId="2069-1"/>
+			<vehicleDefinitionId refId="2069-2"/>
+		</vehicles>
+		<income period="year">
+				112972.0
+		</income>
+
+	</household>
+	<household id="201-2015000653794-0">
+		<members>
+			<personId refId="201-2015000653794-0103837"/>
+			<personId refId="201-2015000653794-0103877"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2098-0"/>
+			<vehicleDefinitionId refId="2098-1"/>
+			<vehicleDefinitionId refId="2098-2"/>
+		</vehicles>
+		<income period="year">
+				89227.0
+		</income>
+
+	</household>
+	<household id="1106-2014001118901-1">
+		<members>
+			<personId refId="1106-2014001118901-184990"/>
+			<personId refId="1106-2014001118901-184946"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2100-0"/>
+			<vehicleDefinitionId refId="2100-1"/>
+			<vehicleDefinitionId refId="2100-2"/>
+		</vehicles>
+		<income period="year">
+				21601.0
+		</income>
+
+	</household>
+	<household id="1101-2016000880566-1">
+		<members>
+			<personId refId="1101-2016000880566-1145740"/>
+			<personId refId="1101-2016000880566-1145812"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2117-0"/>
+			<vehicleDefinitionId refId="2117-1"/>
+			<vehicleDefinitionId refId="2117-2"/>
+		</vehicles>
+		<income period="year">
+				107769.0
+		</income>
+
+	</household>
+	<household id="1700-2013000074702-0">
+		<members>
+			<personId refId="1700-2013000074702-031186"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2125-0"/>
+			<vehicleDefinitionId refId="2125-1"/>
+		</vehicles>
+		<income period="year">
+				39377.0
+		</income>
+
+	</household>
+	<household id="1101-2013000153074-0">
+		<members>
+			<personId refId="1101-2013000153074-032864"/>
+			<personId refId="1101-2013000153074-032828"/>
+			<personId refId="1101-2013000153074-032900"/>
+			<personId refId="1101-2013000153074-032936"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2133-0"/>
+			<vehicleDefinitionId refId="2133-1"/>
+			<vehicleDefinitionId refId="2133-2"/>
+			<vehicleDefinitionId refId="2133-3"/>
+			<vehicleDefinitionId refId="2133-4"/>
+		</vehicles>
+		<income period="year">
+				104715.0
+		</income>
+
+	</household>
+	<household id="300-2016000393167-0">
+		<members>
+			<personId refId="300-2016000393167-0133422"/>
+			<personId refId="300-2016000393167-0133450"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2143-0"/>
+			<vehicleDefinitionId refId="2143-1"/>
+			<vehicleDefinitionId refId="2143-2"/>
+		</vehicles>
+		<income period="year">
+				25223.0
+		</income>
+
+	</household>
+	<household id="202-2013000056397-0">
+		<members>
+			<personId refId="202-2013000056397-030709"/>
+			<personId refId="202-2013000056397-030503"/>
+			<personId refId="202-2013000056397-030606"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2145-0"/>
+			<vehicleDefinitionId refId="2145-1"/>
+			<vehicleDefinitionId refId="2145-2"/>
+			<vehicleDefinitionId refId="2145-3"/>
+		</vehicles>
+		<income period="year">
+				27987.0
+		</income>
+
+	</household>
+	<household id="1801-2015001314717-3">
+		<members>
+			<personId refId="1801-2015001314717-3121172"/>
+			<personId refId="1801-2015001314717-3120864"/>
+			<personId refId="1801-2015001314717-3121018"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2151-0"/>
+			<vehicleDefinitionId refId="2151-1"/>
+			<vehicleDefinitionId refId="2151-2"/>
+			<vehicleDefinitionId refId="2151-3"/>
+		</vehicles>
+		<income period="year">
+				130722.0
+		</income>
+
+	</household>
+	<household id="1108-2016000532720-1">
+		<members>
+			<personId refId="1108-2016000532720-1137374"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2155-0"/>
+			<vehicleDefinitionId refId="2155-1"/>
+		</vehicles>
+		<income period="year">
+				23421.0
+		</income>
+
+	</household>
+	<household id="1106-2012001003893-1">
+		<members>
+			<personId refId="1106-2012001003893-120420"/>
+			<personId refId="1106-2012001003893-120508"/>
+			<personId refId="1106-2012001003893-120464"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2168-0"/>
+			<vehicleDefinitionId refId="2168-1"/>
+			<vehicleDefinitionId refId="2168-2"/>
+			<vehicleDefinitionId refId="2168-3"/>
+		</vehicles>
+		<income period="year">
+				112829.0
+		</income>
+
+	</household>
+	<household id="100-2014000728802-0">
+		<members>
+			<personId refId="100-2014000728802-076263"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2190-0"/>
+			<vehicleDefinitionId refId="2190-1"/>
+		</vehicles>
+		<income period="year">
+				38157.0
+		</income>
+
+	</household>
+	<household id="10104-2013000635769-0">
+		<members>
+			<personId refId="10104-2013000635769-045290"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2224-0"/>
+			<vehicleDefinitionId refId="2224-1"/>
+		</vehicles>
+		<income period="year">
+				35609.0
+		</income>
+
+	</household>
+	<household id="1105-2012001404956-0">
+		<members>
+			<personId refId="1105-2012001404956-028088"/>
+			<personId refId="1105-2012001404956-028060"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2228-0"/>
+			<vehicleDefinitionId refId="2228-1"/>
+			<vehicleDefinitionId refId="2228-2"/>
+		</vehicles>
+		<income period="year">
+				147424.0
+		</income>
+
+	</household>
+	<household id="1803-2016000645198-1">
+		<members>
+			<personId refId="1803-2016000645198-1140248"/>
+			<personId refId="1803-2016000645198-1140291"/>
+			<personId refId="1803-2016000645198-1140334"/>
+			<personId refId="1803-2016000645198-1140205"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2248-0"/>
+			<vehicleDefinitionId refId="2248-1"/>
+			<vehicleDefinitionId refId="2248-2"/>
+			<vehicleDefinitionId refId="2248-3"/>
+			<vehicleDefinitionId refId="2248-4"/>
+		</vehicles>
+		<income period="year">
+				112094.0
+		</income>
+
+	</household>
+	<household id="405-2014001032926-1">
+		<members>
+			<personId refId="405-2014001032926-182696"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2249-0"/>
+			<vehicleDefinitionId refId="2249-1"/>
+		</vehicles>
+		<income period="year">
+				25964.0
+		</income>
+
+	</household>
+	<household id="1001-2014001422304-0">
+		<members>
+			<personId refId="1001-2014001422304-090863"/>
+			<personId refId="1001-2014001422304-090825"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2280-0"/>
+			<vehicleDefinitionId refId="2280-1"/>
+			<vehicleDefinitionId refId="2280-2"/>
+		</vehicles>
+		<income period="year">
+				88100.0
+		</income>
+
+	</household>
+	<household id="10102-2014000503327-0">
+		<members>
+			<personId refId="10102-2014000503327-072229"/>
+			<personId refId="10102-2014000503327-072183"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2313-0"/>
+			<vehicleDefinitionId refId="2313-1"/>
+			<vehicleDefinitionId refId="2313-2"/>
+		</vehicles>
+		<income period="year">
+				7465.0
+		</income>
+
+	</household>
+	<household id="1600-2013000532687-0">
+		<members>
+			<personId refId="1600-2013000532687-043338"/>
+			<personId refId="1600-2013000532687-042834"/>
+			<personId refId="1600-2013000532687-043002"/>
+			<personId refId="1600-2013000532687-042666"/>
+			<personId refId="1600-2013000532687-043170"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2324-0"/>
+			<vehicleDefinitionId refId="2324-1"/>
+			<vehicleDefinitionId refId="2324-2"/>
+			<vehicleDefinitionId refId="2324-3"/>
+			<vehicleDefinitionId refId="2324-4"/>
+		</vehicles>
+		<income period="year">
+				92532.0
+		</income>
+
+	</household>
+	<household id="10104-2012000566763-1">
+		<members>
+			<personId refId="10104-2012000566763-111371"/>
+			<personId refId="10104-2012000566763-111442"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2326-0"/>
+			<vehicleDefinitionId refId="2326-1"/>
+			<vehicleDefinitionId refId="2326-2"/>
+		</vehicles>
+		<income period="year">
+				88544.0
+		</income>
+
+	</household>
+	<household id="700-2013000377800-2">
+		<members>
+			<personId refId="700-2013000377800-238850"/>
+			<personId refId="700-2013000377800-238730"/>
+			<personId refId="700-2013000377800-238970"/>
+			<personId refId="700-2013000377800-239210"/>
+			<personId refId="700-2013000377800-239090"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2345-0"/>
+			<vehicleDefinitionId refId="2345-1"/>
+			<vehicleDefinitionId refId="2345-2"/>
+			<vehicleDefinitionId refId="2345-3"/>
+			<vehicleDefinitionId refId="2345-4"/>
+		</vehicles>
+		<income period="year">
+				120119.0
+		</income>
+
+	</household>
+	<household id="10600-2014000182092-0">
+		<members>
+			<personId refId="10600-2014000182092-065576"/>
+			<personId refId="10600-2014000182092-065625"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2363-0"/>
+			<vehicleDefinitionId refId="2363-1"/>
+			<vehicleDefinitionId refId="2363-2"/>
+		</vehicles>
+		<income period="year">
+				37540.0
+		</income>
+
+	</household>
+	<household id="1105-2015000342080-0">
+		<members>
+			<personId refId="1105-2015000342080-097717"/>
+			<personId refId="1105-2015000342080-097673"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2367-0"/>
+			<vehicleDefinitionId refId="2367-1"/>
+			<vehicleDefinitionId refId="2367-2"/>
+		</vehicles>
+		<income period="year">
+				148684.0
+		</income>
+
+	</household>
+	<household id="1902-2015000557350-0">
+		<members>
+			<personId refId="1902-2015000557350-0101347"/>
+			<personId refId="1902-2015000557350-0101248"/>
+			<personId refId="1902-2015000557350-0101149"/>
+			<personId refId="1902-2015000557350-0101446"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2373-0"/>
+			<vehicleDefinitionId refId="2373-1"/>
+			<vehicleDefinitionId refId="2373-2"/>
+			<vehicleDefinitionId refId="2373-3"/>
+			<vehicleDefinitionId refId="2373-4"/>
+		</vehicles>
+		<income period="year">
+				80056.0
+		</income>
+
+	</household>
+	<household id="1105-2016001246116-0">
+		<members>
+			<personId refId="1105-2016001246116-0152905"/>
+			<personId refId="1105-2016001246116-0152918"/>
+			<personId refId="1105-2016001246116-0152892"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2380-0"/>
+			<vehicleDefinitionId refId="2380-1"/>
+			<vehicleDefinitionId refId="2380-2"/>
+			<vehicleDefinitionId refId="2380-3"/>
+		</vehicles>
+		<income period="year">
+				121559.0
+		</income>
+
+	</household>
+	<household id="10103-2016001437406-0">
+		<members>
+			<personId refId="10103-2016001437406-0155486"/>
+			<personId refId="10103-2016001437406-0155449"/>
+			<personId refId="10103-2016001437406-0155412"/>
+			<personId refId="10103-2016001437406-0155375"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2382-0"/>
+			<vehicleDefinitionId refId="2382-1"/>
+			<vehicleDefinitionId refId="2382-2"/>
+			<vehicleDefinitionId refId="2382-3"/>
+			<vehicleDefinitionId refId="2382-4"/>
+		</vehicles>
+		<income period="year">
+				147890.0
+		</income>
+
+	</household>
+	<household id="600-2015000895578-0">
+		<members>
+			<personId refId="600-2015000895578-0112011"/>
+			<personId refId="600-2015000895578-0112079"/>
+			<personId refId="600-2015000895578-0112045"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2390-0"/>
+			<vehicleDefinitionId refId="2390-1"/>
+			<vehicleDefinitionId refId="2390-2"/>
+			<vehicleDefinitionId refId="2390-3"/>
+		</vehicles>
+		<income period="year">
+				68380.0
+		</income>
+
+	</household>
+	<household id="10102-2015000820305-0">
+		<members>
+			<personId refId="10102-2015000820305-0109278"/>
+			<personId refId="10102-2015000820305-0109244"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2392-0"/>
+			<vehicleDefinitionId refId="2392-1"/>
+			<vehicleDefinitionId refId="2392-2"/>
+		</vehicles>
+		<income period="year">
+				69224.0
+		</income>
+
+	</household>
+	<household id="10104-2014001093569-3">
+		<members>
+			<personId refId="10104-2014001093569-384711"/>
+			<personId refId="10104-2014001093569-384563"/>
+			<personId refId="10104-2014001093569-384637"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2403-0"/>
+			<vehicleDefinitionId refId="2403-1"/>
+			<vehicleDefinitionId refId="2403-2"/>
+			<vehicleDefinitionId refId="2403-3"/>
+		</vehicles>
+		<income period="year">
+				38161.0
+		</income>
+
+	</household>
+	<household id="700-2016000532720-0">
+		<members>
+			<personId refId="700-2016000532720-0137360"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2410-0"/>
+			<vehicleDefinitionId refId="2410-1"/>
+		</vehicles>
+		<income period="year">
+				19664.0
+		</income>
+
+	</household>
+	<household id="10104-2012000190101-2">
+		<members>
+			<personId refId="10104-2012000190101-23825"/>
+			<personId refId="10104-2012000190101-23658"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2416-0"/>
+			<vehicleDefinitionId refId="2416-1"/>
+			<vehicleDefinitionId refId="2416-2"/>
+		</vehicles>
+		<income period="year">
+				38516.0
+		</income>
+
+	</household>
+	<household id="1600-2014000532744-0">
+		<members>
+			<personId refId="1600-2014000532744-072737"/>
+			<personId refId="1600-2014000532744-072693"/>
+			<personId refId="1600-2014000532744-072781"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2434-0"/>
+			<vehicleDefinitionId refId="2434-1"/>
+			<vehicleDefinitionId refId="2434-2"/>
+			<vehicleDefinitionId refId="2434-3"/>
+		</vehicles>
+		<income period="year">
+				89667.0
+		</income>
+
+	</household>
+	<household id="1700-2016000294367-0">
+		<members>
+			<personId refId="1700-2016000294367-0131778"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2436-0"/>
+			<vehicleDefinitionId refId="2436-1"/>
+		</vehicles>
+		<income period="year">
+				13839.0
+		</income>
+
+	</household>
+	<household id="201-2015000134451-0">
+		<members>
+			<personId refId="201-2015000134451-093488"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2445-0"/>
+			<vehicleDefinitionId refId="2445-1"/>
+		</vehicles>
+		<income period="year">
+				22770.0
+		</income>
+
+	</household>
+	<household id="408-2015000790664-0">
+		<members>
+			<personId refId="408-2015000790664-0107215"/>
+			<personId refId="408-2015000790664-0107172"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2461-0"/>
+			<vehicleDefinitionId refId="2461-1"/>
+			<vehicleDefinitionId refId="2461-2"/>
+		</vehicles>
+		<income period="year">
+				24327.0
+		</income>
+
+	</household>
+	<household id="1002-2016001479726-0">
+		<members>
+			<personId refId="1002-2016001479726-0156541"/>
+			<personId refId="1002-2016001479726-0156578"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2574-0"/>
+			<vehicleDefinitionId refId="2574-1"/>
+			<vehicleDefinitionId refId="2574-2"/>
+		</vehicles>
+		<income period="year">
+				107426.0
+		</income>
+
+	</household>
+	<household id="407-2013000369969-0">
+		<members>
+			<personId refId="407-2013000369969-038530"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2575-0"/>
+			<vehicleDefinitionId refId="2575-1"/>
+		</vehicles>
+		<income period="year">
+				23465.0
+		</income>
+
+	</household>
+	<household id="1801-2013001447541-0">
+		<members>
+			<personId refId="1801-2013001447541-059733"/>
+			<personId refId="1801-2013001447541-059774"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2578-0"/>
+			<vehicleDefinitionId refId="2578-1"/>
+			<vehicleDefinitionId refId="2578-2"/>
+		</vehicles>
+		<income period="year">
+				148583.0
+		</income>
+
+	</household>
+	<household id="408-2013000050949-0">
+		<members>
+			<personId refId="408-2013000050949-030355"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2580-0"/>
+			<vehicleDefinitionId refId="2580-1"/>
+		</vehicles>
+		<income period="year">
+				8604.0
+		</income>
+
+	</household>
+	<household id="1804-2013000953098-0">
+		<members>
+			<personId refId="1804-2013000953098-050972"/>
+			<personId refId="1804-2013000953098-050990"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2591-0"/>
+			<vehicleDefinitionId refId="2591-1"/>
+			<vehicleDefinitionId refId="2591-2"/>
+		</vehicles>
+		<income period="year">
+				31702.0
+		</income>
+
+	</household>
+	<household id="1002-2015001440276-0">
+		<members>
+			<personId refId="1002-2015001440276-0123146"/>
+			<personId refId="1002-2015001440276-0123210"/>
+			<personId refId="1002-2015001440276-0123114"/>
+			<personId refId="1002-2015001440276-0123178"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2609-0"/>
+			<vehicleDefinitionId refId="2609-1"/>
+			<vehicleDefinitionId refId="2609-2"/>
+			<vehicleDefinitionId refId="2609-3"/>
+			<vehicleDefinitionId refId="2609-4"/>
+		</vehicles>
+		<income period="year">
+				117927.0
+		</income>
+
+	</household>
+	<household id="1105-2016000985405-0">
+		<members>
+			<personId refId="1105-2016000985405-0147407"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2623-0"/>
+			<vehicleDefinitionId refId="2623-1"/>
+		</vehicles>
+		<income period="year">
+				26589.0
+		</income>
+
+	</household>
+	<household id="405-2016000071413-0">
+		<members>
+			<personId refId="405-2016000071413-0126631"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2627-0"/>
+			<vehicleDefinitionId refId="2627-1"/>
+		</vehicles>
+		<income period="year">
+				26532.0
+		</income>
+
+	</household>
+	<household id="401-2012001304643-0">
+		<members>
+			<personId refId="401-2012001304643-025173"/>
+			<personId refId="401-2012001304643-025217"/>
+			<personId refId="401-2012001304643-025261"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2641-0"/>
+			<vehicleDefinitionId refId="2641-1"/>
+			<vehicleDefinitionId refId="2641-2"/>
+			<vehicleDefinitionId refId="2641-3"/>
+		</vehicles>
+		<income period="year">
+				58266.0
+		</income>
+
+	</household>
+	<household id="10104-2014000886715-1">
+		<members>
+			<personId refId="10104-2014000886715-179238"/>
+			<personId refId="10104-2014000886715-179281"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2688-0"/>
+			<vehicleDefinitionId refId="2688-1"/>
+			<vehicleDefinitionId refId="2688-2"/>
+		</vehicles>
+		<income period="year">
+				35366.0
+		</income>
+
+	</household>
+	<household id="1106-2015000393647-0">
+		<members>
+			<personId refId="1106-2015000393647-098733"/>
+			<personId refId="1106-2015000393647-098773"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2693-0"/>
+			<vehicleDefinitionId refId="2693-1"/>
+			<vehicleDefinitionId refId="2693-2"/>
+		</vehicles>
+		<income period="year">
+				34876.0
+		</income>
+
+	</household>
+	<household id="1108-2014001138085-0">
+		<members>
+			<personId refId="1108-2014001138085-085399"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2704-0"/>
+			<vehicleDefinitionId refId="2704-1"/>
+		</vehicles>
+		<income period="year">
+				3334.0
+		</income>
+
+	</household>
+	<household id="1101-2014000225879-0">
+		<members>
+			<personId refId="1101-2014000225879-066606"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2715-0"/>
+			<vehicleDefinitionId refId="2715-1"/>
+		</vehicles>
+		<income period="year">
+				37792.0
+		</income>
+
+	</household>
+	<household id="406-2013001196677-0">
+		<members>
+			<personId refId="406-2013001196677-055303"/>
+			<personId refId="406-2013001196677-055341"/>
+			<personId refId="406-2013001196677-055379"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2751-0"/>
+			<vehicleDefinitionId refId="2751-1"/>
+			<vehicleDefinitionId refId="2751-2"/>
+			<vehicleDefinitionId refId="2751-3"/>
+		</vehicles>
+		<income period="year">
+				127740.0
+		</income>
+
+	</household>
+	<household id="1105-2015001336921-0">
+		<members>
+			<personId refId="1105-2015001336921-0121543"/>
+			<personId refId="1105-2015001336921-0121555"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2796-0"/>
+			<vehicleDefinitionId refId="2796-1"/>
+			<vehicleDefinitionId refId="2796-2"/>
+		</vehicles>
+		<income period="year">
+				27702.0
+		</income>
+
+	</household>
+	<household id="1901-2013001265598-0">
+		<members>
+			<personId refId="1901-2013001265598-056857"/>
+			<personId refId="1901-2013001265598-056783"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2811-0"/>
+			<vehicleDefinitionId refId="2811-1"/>
+			<vehicleDefinitionId refId="2811-2"/>
+		</vehicles>
+		<income period="year">
+				12765.0
+		</income>
+
+	</household>
+	<household id="10102-2014001187605-0">
+		<members>
+			<personId refId="10102-2014001187605-087067"/>
+			<personId refId="10102-2014001187605-087055"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2818-0"/>
+			<vehicleDefinitionId refId="2818-1"/>
+			<vehicleDefinitionId refId="2818-2"/>
+		</vehicles>
+		<income period="year">
+				131460.0
+		</income>
+
+	</household>
+	<household id="700-2012000442733-0">
+		<members>
+			<personId refId="700-2012000442733-09443"/>
+			<personId refId="700-2012000442733-09410"/>
+			<personId refId="700-2012000442733-09377"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2823-0"/>
+			<vehicleDefinitionId refId="2823-1"/>
+			<vehicleDefinitionId refId="2823-2"/>
+			<vehicleDefinitionId refId="2823-3"/>
+		</vehicles>
+		<income period="year">
+				18189.0
+		</income>
+
+	</household>
+	<household id="1801-2012000658783-0">
+		<members>
+			<personId refId="1801-2012000658783-013190"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2834-0"/>
+			<vehicleDefinitionId refId="2834-1"/>
+		</vehicles>
+		<income period="year">
+				35217.0
+		</income>
+
+	</household>
+	<household id="1107-2013001292199-0">
+		<members>
+			<personId refId="1107-2013001292199-057300"/>
+			<personId refId="1107-2013001292199-057277"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2845-0"/>
+			<vehicleDefinitionId refId="2845-1"/>
+			<vehicleDefinitionId refId="2845-2"/>
+		</vehicles>
+		<income period="year">
+				79946.0
+		</income>
+
+	</household>
+	<household id="1105-2013001154369-1">
+		<members>
+			<personId refId="1105-2013001154369-154198"/>
+			<personId refId="1105-2013001154369-154278"/>
+			<personId refId="1105-2013001154369-154318"/>
+			<personId refId="1105-2013001154369-154238"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2854-0"/>
+			<vehicleDefinitionId refId="2854-1"/>
+			<vehicleDefinitionId refId="2854-2"/>
+			<vehicleDefinitionId refId="2854-3"/>
+			<vehicleDefinitionId refId="2854-4"/>
+		</vehicles>
+		<income period="year">
+				63958.0
+		</income>
+
+	</household>
+	<household id="10600-2014000053367-0">
+		<members>
+			<personId refId="10600-2014000053367-062151"/>
+			<personId refId="10600-2014000053367-062269"/>
+			<personId refId="10600-2014000053367-062387"/>
+			<personId refId="10600-2014000053367-062033"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2861-0"/>
+			<vehicleDefinitionId refId="2861-1"/>
+			<vehicleDefinitionId refId="2861-2"/>
+			<vehicleDefinitionId refId="2861-3"/>
+			<vehicleDefinitionId refId="2861-4"/>
+		</vehicles>
+		<income period="year">
+				128231.0
+		</income>
+
+	</household>
+	<household id="500-2013001157196-0">
+		<members>
+			<personId refId="500-2013001157196-054445"/>
+			<personId refId="500-2013001157196-054391"/>
+			<personId refId="500-2013001157196-054607"/>
+			<personId refId="500-2013001157196-054499"/>
+			<personId refId="500-2013001157196-054553"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2871-0"/>
+			<vehicleDefinitionId refId="2871-1"/>
+			<vehicleDefinitionId refId="2871-2"/>
+			<vehicleDefinitionId refId="2871-3"/>
+			<vehicleDefinitionId refId="2871-4"/>
+		</vehicles>
+		<income period="year">
+				139893.0
+		</income>
+
+	</household>
+	<household id="1200-2013001420823-2">
+		<members>
+			<personId refId="1200-2013001420823-259153"/>
+			<personId refId="1200-2013001420823-259258"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2888-0"/>
+			<vehicleDefinitionId refId="2888-1"/>
+			<vehicleDefinitionId refId="2888-2"/>
+		</vehicles>
+		<income period="year">
+				106232.0
+		</income>
+
+	</household>
+	<household id="10103-2012001333257-0">
+		<members>
+			<personId refId="10103-2012001333257-026060"/>
+			<personId refId="10103-2012001333257-026140"/>
+			<personId refId="10103-2012001333257-026180"/>
+			<personId refId="10103-2012001333257-026100"/>
+			<personId refId="10103-2012001333257-026220"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2897-0"/>
+			<vehicleDefinitionId refId="2897-1"/>
+			<vehicleDefinitionId refId="2897-2"/>
+			<vehicleDefinitionId refId="2897-3"/>
+			<vehicleDefinitionId refId="2897-4"/>
+		</vehicles>
+		<income period="year">
+				91190.0
+		</income>
+
+	</household>
+	<household id="100-2016000749016-0">
+		<members>
+			<personId refId="100-2016000749016-0142516"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2908-0"/>
+			<vehicleDefinitionId refId="2908-1"/>
+		</vehicles>
+		<income period="year">
+				34395.0
+		</income>
+
+	</household>
+	<household id="1500-2015001443628-0">
+		<members>
+			<personId refId="1500-2015001443628-0123256"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="2957-0"/>
+			<vehicleDefinitionId refId="2957-1"/>
+		</vehicles>
+		<income period="year">
+				19853.0
+		</income>
+
+	</household>
+	<household id="1106-2014000238225-2">
+		<members>
+			<personId refId="1106-2014000238225-266940"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3018-0"/>
+			<vehicleDefinitionId refId="3018-1"/>
+		</vehicles>
+		<income period="year">
+				29476.0
+		</income>
+
+	</household>
+	<household id="202-2016001459467-0">
+		<members>
+			<personId refId="202-2016001459467-0156153"/>
+			<personId refId="202-2016001459467-0156276"/>
+			<personId refId="202-2016001459467-0156317"/>
+			<personId refId="202-2016001459467-0156235"/>
+			<personId refId="202-2016001459467-0156194"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3019-0"/>
+			<vehicleDefinitionId refId="3019-1"/>
+			<vehicleDefinitionId refId="3019-2"/>
+			<vehicleDefinitionId refId="3019-3"/>
+			<vehicleDefinitionId refId="3019-4"/>
+		</vehicles>
+		<income period="year">
+				14999.0
+		</income>
+
+	</household>
+	<household id="100-2012000325210-0">
+		<members>
+			<personId refId="100-2012000325210-06216"/>
+			<personId refId="100-2012000325210-06178"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3033-0"/>
+			<vehicleDefinitionId refId="3033-1"/>
+			<vehicleDefinitionId refId="3033-2"/>
+		</vehicles>
+		<income period="year">
+				63412.0
+		</income>
+
+	</household>
+	<household id="300-2015001250406-0">
+		<members>
+			<personId refId="300-2015001250406-0119211"/>
+			<personId refId="300-2015001250406-0119251"/>
+			<personId refId="300-2015001250406-0119331"/>
+			<personId refId="300-2015001250406-0119291"/>
+			<personId refId="300-2015001250406-0119171"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3049-0"/>
+			<vehicleDefinitionId refId="3049-1"/>
+			<vehicleDefinitionId refId="3049-2"/>
+			<vehicleDefinitionId refId="3049-3"/>
+			<vehicleDefinitionId refId="3049-4"/>
+		</vehicles>
+		<income period="year">
+				29896.0
+		</income>
+
+	</household>
+	<household id="10102-2014000630646-1">
+		<members>
+			<personId refId="10102-2014000630646-175064"/>
+			<personId refId="10102-2014000630646-175108"/>
+			<personId refId="10102-2014000630646-175020"/>
+			<personId refId="10102-2014000630646-175152"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3066-0"/>
+			<vehicleDefinitionId refId="3066-1"/>
+			<vehicleDefinitionId refId="3066-2"/>
+			<vehicleDefinitionId refId="3066-3"/>
+			<vehicleDefinitionId refId="3066-4"/>
+		</vehicles>
+		<income period="year">
+				31201.0
+		</income>
+
+	</household>
+	<household id="1106-2013000356142-1">
+		<members>
+			<personId refId="1106-2013000356142-137795"/>
+			<personId refId="1106-2013000356142-137839"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3067-0"/>
+			<vehicleDefinitionId refId="3067-1"/>
+			<vehicleDefinitionId refId="3067-2"/>
+		</vehicles>
+		<income period="year">
+				139464.0
+		</income>
+
+	</household>
+	<household id="1600-2015000707447-0">
+		<members>
+			<personId refId="1600-2015000707447-0104580"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3069-0"/>
+			<vehicleDefinitionId refId="3069-1"/>
+		</vehicles>
+		<income period="year">
+				33559.0
+		</income>
+
+	</household>
+	<household id="10104-2016000294367-2">
+		<members>
+			<personId refId="10104-2016000294367-2131748"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3080-0"/>
+			<vehicleDefinitionId refId="3080-1"/>
+		</vehicles>
+		<income period="year">
+				20248.0
+		</income>
+
+	</household>
+	<household id="10600-2014000293639-0">
+		<members>
+			<personId refId="10600-2014000293639-068501"/>
+			<personId refId="10600-2014000293639-068589"/>
+			<personId refId="10600-2014000293639-068633"/>
+			<personId refId="10600-2014000293639-068545"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3097-0"/>
+			<vehicleDefinitionId refId="3097-1"/>
+			<vehicleDefinitionId refId="3097-2"/>
+			<vehicleDefinitionId refId="3097-3"/>
+			<vehicleDefinitionId refId="3097-4"/>
+		</vehicles>
+		<income period="year">
+				17036.0
+		</income>
+
+	</household>
+	<household id="1901-2015000762599-0">
+		<members>
+			<personId refId="1901-2015000762599-0105961"/>
+			<personId refId="1901-2015000762599-0106041"/>
+			<personId refId="1901-2015000762599-0106001"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3101-0"/>
+			<vehicleDefinitionId refId="3101-1"/>
+			<vehicleDefinitionId refId="3101-2"/>
+			<vehicleDefinitionId refId="3101-3"/>
+		</vehicles>
+		<income period="year">
+				44621.0
+		</income>
+
+	</household>
+	<household id="1600-2012000963809-3">
+		<members>
+			<personId refId="1600-2012000963809-319262"/>
+			<personId refId="1600-2012000963809-319634"/>
+			<personId refId="1600-2012000963809-319076"/>
+			<personId refId="1600-2012000963809-319448"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3102-0"/>
+			<vehicleDefinitionId refId="3102-1"/>
+			<vehicleDefinitionId refId="3102-2"/>
+			<vehicleDefinitionId refId="3102-3"/>
+			<vehicleDefinitionId refId="3102-4"/>
+		</vehicles>
+		<income period="year">
+				133343.0
+		</income>
+
+	</household>
+	<household id="1901-2014000550778-1">
+		<members>
+			<personId refId="1901-2014000550778-173596"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3143-0"/>
+			<vehicleDefinitionId refId="3143-1"/>
+		</vehicles>
+		<income period="year">
+				19828.0
+		</income>
+
+	</household>
+	<household id="1002-2016000970031-0">
+		<members>
+			<personId refId="1002-2016000970031-0147124"/>
+			<personId refId="1002-2016000970031-0147164"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3187-0"/>
+			<vehicleDefinitionId refId="3187-1"/>
+			<vehicleDefinitionId refId="3187-2"/>
+		</vehicles>
+		<income period="year">
+				32380.0
+		</income>
+
+	</household>
+	<household id="1200-2016001274365-0">
+		<members>
+			<personId refId="1200-2016001274365-0153536"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3193-0"/>
+			<vehicleDefinitionId refId="3193-1"/>
+		</vehicles>
+		<income period="year">
+				4633.0
+		</income>
+
+	</household>
+	<household id="1801-2013000634285-0">
+		<members>
+			<personId refId="1801-2013000634285-045255"/>
+			<personId refId="1801-2013000634285-045285"/>
+			<personId refId="1801-2013000634285-045279"/>
+			<personId refId="1801-2013000634285-045261"/>
+			<personId refId="1801-2013000634285-045267"/>
+			<personId refId="1801-2013000634285-045273"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3202-0"/>
+			<vehicleDefinitionId refId="3202-1"/>
+			<vehicleDefinitionId refId="3202-2"/>
+			<vehicleDefinitionId refId="3202-3"/>
+			<vehicleDefinitionId refId="3202-4"/>
+		</vehicles>
+		<income period="year">
+				149465.0
+		</income>
+
+	</household>
+	<household id="1105-2015000622201-0">
+		<members>
+			<personId refId="1105-2015000622201-0102815"/>
+			<personId refId="1105-2015000622201-0102833"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3207-0"/>
+			<vehicleDefinitionId refId="3207-1"/>
+			<vehicleDefinitionId refId="3207-2"/>
+		</vehicles>
+		<income period="year">
+				38976.0
+		</income>
+
+	</household>
+	<household id="405-2015000260882-0">
+		<members>
+			<personId refId="405-2015000260882-096102"/>
+			<personId refId="405-2015000260882-096145"/>
+			<personId refId="405-2015000260882-096059"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3241-0"/>
+			<vehicleDefinitionId refId="3241-1"/>
+			<vehicleDefinitionId refId="3241-2"/>
+			<vehicleDefinitionId refId="3241-3"/>
+		</vehicles>
+		<income period="year">
+				20422.0
+		</income>
+
+	</household>
+	<household id="1106-2014000961036-1">
+		<members>
+			<personId refId="1106-2014000961036-180956"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3244-0"/>
+			<vehicleDefinitionId refId="3244-1"/>
+		</vehicles>
+		<income period="year">
+				34588.0
+		</income>
+
+	</household>
+	<household id="401-2013000115942-0">
+		<members>
+			<personId refId="401-2013000115942-032404"/>
+			<personId refId="401-2013000115942-032308"/>
+			<personId refId="401-2013000115942-032356"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3263-0"/>
+			<vehicleDefinitionId refId="3263-1"/>
+			<vehicleDefinitionId refId="3263-2"/>
+			<vehicleDefinitionId refId="3263-3"/>
+		</vehicles>
+		<income period="year">
+				135747.0
+		</income>
+
+	</household>
+	<household id="1101-2012000065430-0">
+		<members>
+			<personId refId="1101-2012000065430-0941"/>
+			<personId refId="1101-2012000065430-0972"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3266-0"/>
+			<vehicleDefinitionId refId="3266-1"/>
+			<vehicleDefinitionId refId="3266-2"/>
+		</vehicles>
+		<income period="year">
+				26784.0
+		</income>
+
+	</household>
+	<household id="500-2013000542653-0">
+		<members>
+			<personId refId="500-2013000542653-043540"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3279-0"/>
+			<vehicleDefinitionId refId="3279-1"/>
+		</vehicles>
+		<income period="year">
+				7505.0
+		</income>
+
+	</household>
+	<household id="500-2016001048510-0">
+		<members>
+			<personId refId="500-2016001048510-0148303"/>
+			<personId refId="500-2016001048510-0148334"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3311-0"/>
+			<vehicleDefinitionId refId="3311-1"/>
+			<vehicleDefinitionId refId="3311-2"/>
+		</vehicles>
+		<income period="year">
+				123944.0
+		</income>
+
+	</household>
+	<household id="10600-2016000905283-0">
+		<members>
+			<personId refId="10600-2016000905283-0146190"/>
+			<personId refId="10600-2016000905283-0146131"/>
+			<personId refId="10600-2016000905283-0146072"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3336-0"/>
+			<vehicleDefinitionId refId="3336-1"/>
+			<vehicleDefinitionId refId="3336-2"/>
+			<vehicleDefinitionId refId="3336-3"/>
+		</vehicles>
+		<income period="year">
+				33610.0
+		</income>
+
+	</household>
+	<household id="1101-2015000810401-1">
+		<members>
+			<personId refId="1101-2015000810401-1108301"/>
+			<personId refId="1101-2015000810401-1108460"/>
+			<personId refId="1101-2015000810401-1108619"/>
+			<personId refId="1101-2015000810401-1108778"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3384-0"/>
+			<vehicleDefinitionId refId="3384-1"/>
+			<vehicleDefinitionId refId="3384-2"/>
+			<vehicleDefinitionId refId="3384-3"/>
+			<vehicleDefinitionId refId="3384-4"/>
+		</vehicles>
+		<income period="year">
+				35706.0
+		</income>
+
+	</household>
+	<household id="1105-2015001314717-2">
+		<members>
+			<personId refId="1105-2015001314717-2120824"/>
+			<personId refId="1105-2015001314717-2121132"/>
+			<personId refId="1105-2015001314717-2120978"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3387-0"/>
+			<vehicleDefinitionId refId="3387-1"/>
+			<vehicleDefinitionId refId="3387-2"/>
+			<vehicleDefinitionId refId="3387-3"/>
+		</vehicles>
+		<income period="year">
+				19347.0
+		</income>
+
+	</household>
+	<household id="1803-2014000292394-3">
+		<members>
+			<personId refId="1803-2014000292394-368133"/>
+			<personId refId="1803-2014000292394-368280"/>
+			<personId refId="1803-2014000292394-368427"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3389-0"/>
+			<vehicleDefinitionId refId="3389-1"/>
+			<vehicleDefinitionId refId="3389-2"/>
+			<vehicleDefinitionId refId="3389-3"/>
+		</vehicles>
+		<income period="year">
+				9353.0
+		</income>
+
+	</household>
+	<household id="10104-2016001442340-0">
+		<members>
+			<personId refId="10104-2016001442340-0155776"/>
+			<personId refId="10104-2016001442340-0155745"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3408-0"/>
+			<vehicleDefinitionId refId="3408-1"/>
+			<vehicleDefinitionId refId="3408-2"/>
+		</vehicles>
+		<income period="year">
+				10213.0
+		</income>
+
+	</household>
+	<household id="10104-2014000002185-1">
+		<members>
+			<personId refId="10104-2014000002185-160910"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3419-0"/>
+			<vehicleDefinitionId refId="3419-1"/>
+		</vehicles>
+		<income period="year">
+				22778.0
+		</income>
+
+	</household>
+	<household id="10104-2012000751336-0">
+		<members>
+			<personId refId="10104-2012000751336-014823"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3455-0"/>
+			<vehicleDefinitionId refId="3455-1"/>
+		</vehicles>
+		<income period="year">
+				29046.0
+		</income>
+
+	</household>
+	<household id="1801-2016000188292-0">
+		<members>
+			<personId refId="1801-2016000188292-0129031"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3494-0"/>
+			<vehicleDefinitionId refId="3494-1"/>
+		</vehicles>
+		<income period="year">
+				25631.0
+		</income>
+
+	</household>
+	<household id="405-2015001336901-0">
+		<members>
+			<personId refId="405-2015001336901-0121520"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3503-0"/>
+			<vehicleDefinitionId refId="3503-1"/>
+		</vehicles>
+		<income period="year">
+				4477.0
+		</income>
+
+	</household>
+	<household id="407-2012001415668-0">
+		<members>
+			<personId refId="407-2012001415668-028518"/>
+			<personId refId="407-2012001415668-028341"/>
+			<personId refId="407-2012001415668-028400"/>
+			<personId refId="407-2012001415668-028459"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3510-0"/>
+			<vehicleDefinitionId refId="3510-1"/>
+			<vehicleDefinitionId refId="3510-2"/>
+			<vehicleDefinitionId refId="3510-3"/>
+			<vehicleDefinitionId refId="3510-4"/>
+		</vehicles>
+		<income period="year">
+				128875.0
+		</income>
+
+	</household>
+	<household id="700-2014000174704-0">
+		<members>
+			<personId refId="700-2014000174704-065386"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3546-0"/>
+			<vehicleDefinitionId refId="3546-1"/>
+		</vehicles>
+		<income period="year">
+				30669.0
+		</income>
+
+	</household>
+	<household id="10600-2013000823352-0">
+		<members>
+			<personId refId="10600-2013000823352-048700"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3557-0"/>
+			<vehicleDefinitionId refId="3557-1"/>
+		</vehicles>
+		<income period="year">
+				14384.0
+		</income>
+
+	</household>
+	<household id="1107-2016000250854-1">
+		<members>
+			<personId refId="1107-2016000250854-1130434"/>
+			<personId refId="1107-2016000250854-1130698"/>
+			<personId refId="1107-2016000250854-1130610"/>
+			<personId refId="1107-2016000250854-1130522"/>
+			<personId refId="1107-2016000250854-1130786"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3563-0"/>
+			<vehicleDefinitionId refId="3563-1"/>
+			<vehicleDefinitionId refId="3563-2"/>
+			<vehicleDefinitionId refId="3563-3"/>
+			<vehicleDefinitionId refId="3563-4"/>
+		</vehicles>
+		<income period="year">
+				132535.0
+		</income>
+
+	</household>
+	<household id="405-2013000298655-0">
+		<members>
+			<personId refId="405-2013000298655-037373"/>
+			<personId refId="405-2013000298655-037347"/>
+			<personId refId="405-2013000298655-037295"/>
+			<personId refId="405-2013000298655-037321"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3572-0"/>
+			<vehicleDefinitionId refId="3572-1"/>
+			<vehicleDefinitionId refId="3572-2"/>
+			<vehicleDefinitionId refId="3572-3"/>
+			<vehicleDefinitionId refId="3572-4"/>
+		</vehicles>
+		<income period="year">
+				143405.0
+		</income>
+
+	</household>
+	<household id="1107-2016000554109-0">
+		<members>
+			<personId refId="1107-2016000554109-0138199"/>
+			<personId refId="1107-2016000554109-0138159"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3577-0"/>
+			<vehicleDefinitionId refId="3577-1"/>
+			<vehicleDefinitionId refId="3577-2"/>
+		</vehicles>
+		<income period="year">
+				78994.0
+		</income>
+
+	</household>
+	<household id="1001-2016000376315-0">
+		<members>
+			<personId refId="1001-2016000376315-0132845"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3579-0"/>
+			<vehicleDefinitionId refId="3579-1"/>
+		</vehicles>
+		<income period="year">
+				1672.0
+		</income>
+
+	</household>
+	<household id="700-2015000709647-0">
+		<members>
+			<personId refId="700-2015000709647-0104634"/>
+			<personId refId="700-2015000709647-0104678"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3609-0"/>
+			<vehicleDefinitionId refId="3609-1"/>
+			<vehicleDefinitionId refId="3609-2"/>
+		</vehicles>
+		<income period="year">
+				65595.0
+		</income>
+
+	</household>
+	<household id="408-2014000017712-0">
+		<members>
+			<personId refId="408-2014000017712-061026"/>
+			<personId refId="408-2014000017712-061125"/>
+			<personId refId="408-2014000017712-061059"/>
+			<personId refId="408-2014000017712-061092"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3658-0"/>
+			<vehicleDefinitionId refId="3658-1"/>
+			<vehicleDefinitionId refId="3658-2"/>
+			<vehicleDefinitionId refId="3658-3"/>
+			<vehicleDefinitionId refId="3658-4"/>
+		</vehicles>
+		<income period="year">
+				78600.0
+		</income>
+
+	</household>
+	<household id="1801-2014000488669-0">
+		<members>
+			<personId refId="1801-2014000488669-071618"/>
+			<personId refId="1801-2014000488669-071661"/>
+			<personId refId="1801-2014000488669-071704"/>
+			<personId refId="1801-2014000488669-071747"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3678-0"/>
+			<vehicleDefinitionId refId="3678-1"/>
+			<vehicleDefinitionId refId="3678-2"/>
+			<vehicleDefinitionId refId="3678-3"/>
+			<vehicleDefinitionId refId="3678-4"/>
+		</vehicles>
+		<income period="year">
+				22787.0
+		</income>
+
+	</household>
+	<household id="408-2015000895578-0">
+		<members>
+			<personId refId="408-2015000895578-0112077"/>
+			<personId refId="408-2015000895578-0112043"/>
+			<personId refId="408-2015000895578-0112009"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3682-0"/>
+			<vehicleDefinitionId refId="3682-1"/>
+			<vehicleDefinitionId refId="3682-2"/>
+			<vehicleDefinitionId refId="3682-3"/>
+		</vehicles>
+		<income period="year">
+				5764.0
+		</income>
+
+	</household>
+	<household id="1101-2015000587753-0">
+		<members>
+			<personId refId="1101-2015000587753-0102002"/>
+			<personId refId="1101-2015000587753-0101850"/>
+			<personId refId="1101-2015000587753-0101926"/>
+			<personId refId="1101-2015000587753-0101964"/>
+			<personId refId="1101-2015000587753-0101888"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3694-0"/>
+			<vehicleDefinitionId refId="3694-1"/>
+			<vehicleDefinitionId refId="3694-2"/>
+			<vehicleDefinitionId refId="3694-3"/>
+			<vehicleDefinitionId refId="3694-4"/>
+		</vehicles>
+		<income period="year">
+				56663.0
+		</income>
+
+	</household>
+	<household id="10405-2015000282851-0">
+		<members>
+			<personId refId="10405-2015000282851-096501"/>
+			<personId refId="10405-2015000282851-096549"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3705-0"/>
+			<vehicleDefinitionId refId="3705-1"/>
+			<vehicleDefinitionId refId="3705-2"/>
+		</vehicles>
+		<income period="year">
+				35410.0
+		</income>
+
+	</household>
+	<household id="405-2015001219743-1">
+		<members>
+			<personId refId="405-2015001219743-1118367"/>
+			<personId refId="405-2015001219743-1118586"/>
+			<personId refId="405-2015001219743-1118221"/>
+			<personId refId="405-2015001219743-1118513"/>
+			<personId refId="405-2015001219743-1118440"/>
+			<personId refId="405-2015001219743-1118148"/>
+			<personId refId="405-2015001219743-1118294"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3737-0"/>
+			<vehicleDefinitionId refId="3737-1"/>
+			<vehicleDefinitionId refId="3737-2"/>
+			<vehicleDefinitionId refId="3737-3"/>
+			<vehicleDefinitionId refId="3737-4"/>
+		</vehicles>
+		<income period="year">
+				14379.0
+		</income>
+
+	</household>
+	<household id="202-2012000184824-0">
+		<members>
+			<personId refId="202-2012000184824-03592"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3750-0"/>
+			<vehicleDefinitionId refId="3750-1"/>
+		</vehicles>
+		<income period="year">
+				5105.0
+		</income>
+
+	</household>
+	<household id="100-2015001265529-0">
+		<members>
+			<personId refId="100-2015001265529-0119585"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3767-0"/>
+			<vehicleDefinitionId refId="3767-1"/>
+		</vehicles>
+		<income period="year">
+				31975.0
+		</income>
+
+	</household>
+	<household id="401-2014001221401-0">
+		<members>
+			<personId refId="401-2014001221401-087850"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3781-0"/>
+			<vehicleDefinitionId refId="3781-1"/>
+		</vehicles>
+		<income period="year">
+				36779.0
+		</income>
+
+	</household>
+	<household id="1804-2013000359041-2">
+		<members>
+			<personId refId="1804-2013000359041-238059"/>
+			<personId refId="1804-2013000359041-238273"/>
+			<personId refId="1804-2013000359041-238166"/>
+			<personId refId="1804-2013000359041-237952"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3804-0"/>
+			<vehicleDefinitionId refId="3804-1"/>
+			<vehicleDefinitionId refId="3804-2"/>
+			<vehicleDefinitionId refId="3804-3"/>
+			<vehicleDefinitionId refId="3804-4"/>
+		</vehicles>
+		<income period="year">
+				47098.0
+		</income>
+
+	</household>
+	<household id="1804-2012000172183-0">
+		<members>
+			<personId refId="1804-2012000172183-03370"/>
+			<personId refId="1804-2012000172183-03414"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3809-0"/>
+			<vehicleDefinitionId refId="3809-1"/>
+			<vehicleDefinitionId refId="3809-2"/>
+		</vehicles>
+		<income period="year">
+				128130.0
+		</income>
+
+	</household>
+	<household id="10405-2016000674160-0">
+		<members>
+			<personId refId="10405-2016000674160-0140839"/>
+			<personId refId="10405-2016000674160-0140719"/>
+			<personId refId="10405-2016000674160-0140799"/>
+			<personId refId="10405-2016000674160-0140759"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3821-0"/>
+			<vehicleDefinitionId refId="3821-1"/>
+			<vehicleDefinitionId refId="3821-2"/>
+			<vehicleDefinitionId refId="3821-3"/>
+			<vehicleDefinitionId refId="3821-4"/>
+		</vehicles>
+		<income period="year">
+				132567.0
+		</income>
+
+	</household>
+	<household id="1101-2014000479678-0">
+		<members>
+			<personId refId="1101-2014000479678-071278"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3845-0"/>
+			<vehicleDefinitionId refId="3845-1"/>
+		</vehicles>
+		<income period="year">
+				18031.0
+		</income>
+
+	</household>
+	<household id="1001-2015000973216-0">
+		<members>
+			<personId refId="1001-2015000973216-0113481"/>
+			<personId refId="1001-2015000973216-0113519"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3855-0"/>
+			<vehicleDefinitionId refId="3855-1"/>
+			<vehicleDefinitionId refId="3855-2"/>
+		</vehicles>
+		<income period="year">
+				139464.0
+		</income>
+
+	</household>
+	<household id="1002-2013000606389-2">
+		<members>
+			<personId refId="1002-2013000606389-244425"/>
+			<personId refId="1002-2013000606389-244546"/>
+			<personId refId="1002-2013000606389-244667"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3869-0"/>
+			<vehicleDefinitionId refId="3869-1"/>
+			<vehicleDefinitionId refId="3869-2"/>
+			<vehicleDefinitionId refId="3869-3"/>
+		</vehicles>
+		<income period="year">
+				25461.0
+		</income>
+
+	</household>
+	<household id="1901-2015001314717-0">
+		<members>
+			<personId refId="1901-2015001314717-0121187"/>
+			<personId refId="1901-2015001314717-0121033"/>
+			<personId refId="1901-2015001314717-0120879"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3901-0"/>
+			<vehicleDefinitionId refId="3901-1"/>
+			<vehicleDefinitionId refId="3901-2"/>
+			<vehicleDefinitionId refId="3901-3"/>
+		</vehicles>
+		<income period="year">
+				129003.0
+		</income>
+
+	</household>
+	<household id="1108-2012000829853-1">
+		<members>
+			<personId refId="1108-2012000829853-116657"/>
+			<personId refId="1108-2012000829853-116529"/>
+			<personId refId="1108-2012000829853-116593"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3911-0"/>
+			<vehicleDefinitionId refId="3911-1"/>
+			<vehicleDefinitionId refId="3911-2"/>
+			<vehicleDefinitionId refId="3911-3"/>
+		</vehicles>
+		<income period="year">
+				5887.0
+		</income>
+
+	</household>
+	<household id="600-2013000895447-0">
+		<members>
+			<personId refId="600-2013000895447-049656"/>
+			<personId refId="600-2013000895447-049740"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3915-0"/>
+			<vehicleDefinitionId refId="3915-1"/>
+			<vehicleDefinitionId refId="3915-2"/>
+		</vehicles>
+		<income period="year">
+				22506.0
+		</income>
+
+	</household>
+	<household id="406-2016000719185-0">
+		<members>
+			<personId refId="406-2016000719185-0142073"/>
+			<personId refId="406-2016000719185-0142042"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3946-0"/>
+			<vehicleDefinitionId refId="3946-1"/>
+			<vehicleDefinitionId refId="3946-2"/>
+		</vehicles>
+		<income period="year">
+				78761.0
+		</income>
+
+	</household>
+	<household id="900-2015000401067-0">
+		<members>
+			<personId refId="900-2015000401067-099301"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3958-0"/>
+			<vehicleDefinitionId refId="3958-1"/>
+		</vehicles>
+		<income period="year">
+				37833.0
+		</income>
+
+	</household>
+	<household id="10104-2012001404956-1">
+		<members>
+			<personId refId="10104-2012001404956-128077"/>
+			<personId refId="10104-2012001404956-128049"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3969-0"/>
+			<vehicleDefinitionId refId="3969-1"/>
+			<vehicleDefinitionId refId="3969-2"/>
+		</vehicles>
+		<income period="year">
+				127187.0
+		</income>
+
+	</household>
+	<household id="300-2016000833173-0">
+		<members>
+			<personId refId="300-2016000833173-0144604"/>
+			<personId refId="300-2016000833173-0144672"/>
+			<personId refId="300-2016000833173-0144638"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3970-0"/>
+			<vehicleDefinitionId refId="3970-1"/>
+			<vehicleDefinitionId refId="3970-2"/>
+			<vehicleDefinitionId refId="3970-3"/>
+		</vehicles>
+		<income period="year">
+				144267.0
+		</income>
+
+	</household>
+	<household id="10102-2014000093856-1">
+		<members>
+			<personId refId="10102-2014000093856-163144"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3987-0"/>
+			<vehicleDefinitionId refId="3987-1"/>
+		</vehicles>
+		<income period="year">
+				23440.0
+		</income>
+
+	</household>
+	<household id="408-2013000056397-0">
+		<members>
+			<personId refId="408-2013000056397-030516"/>
+			<personId refId="408-2013000056397-030619"/>
+			<personId refId="408-2013000056397-030722"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="3990-0"/>
+			<vehicleDefinitionId refId="3990-1"/>
+			<vehicleDefinitionId refId="3990-2"/>
+			<vehicleDefinitionId refId="3990-3"/>
+		</vehicles>
+		<income period="year">
+				27391.0
+		</income>
+
+	</household>
+	<household id="10401-2016000333866-0">
+		<members>
+			<personId refId="10401-2016000333866-0132259"/>
+			<personId refId="10401-2016000333866-0132216"/>
+			<personId refId="10401-2016000333866-0132173"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4002-0"/>
+			<vehicleDefinitionId refId="4002-1"/>
+			<vehicleDefinitionId refId="4002-2"/>
+			<vehicleDefinitionId refId="4002-3"/>
+		</vehicles>
+		<income period="year">
+				357.0
+		</income>
+
+	</household>
+	<household id="405-2015000084908-0">
+		<members>
+			<personId refId="405-2015000084908-092677"/>
+			<personId refId="405-2015000084908-092712"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4017-0"/>
+			<vehicleDefinitionId refId="4017-1"/>
+			<vehicleDefinitionId refId="4017-2"/>
+		</vehicles>
+		<income period="year">
+				139893.0
+		</income>
+
+	</household>
+	<household id="1200-2016000699058-0">
+		<members>
+			<personId refId="1200-2016000699058-0141684"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4036-0"/>
+			<vehicleDefinitionId refId="4036-1"/>
+		</vehicles>
+		<income period="year">
+				32090.0
+		</income>
+
+	</household>
+	<household id="10104-2012001097565-2">
+		<members>
+			<personId refId="10104-2012001097565-222109"/>
+			<personId refId="10104-2012001097565-222036"/>
+			<personId refId="10104-2012001097565-221963"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4038-0"/>
+			<vehicleDefinitionId refId="4038-1"/>
+			<vehicleDefinitionId refId="4038-2"/>
+			<vehicleDefinitionId refId="4038-3"/>
+		</vehicles>
+		<income period="year">
+				129189.0
+		</income>
+
+	</household>
+	<household id="1106-2015000810401-3">
+		<members>
+			<personId refId="1106-2015000810401-3108631"/>
+			<personId refId="1106-2015000810401-3108313"/>
+			<personId refId="1106-2015000810401-3108790"/>
+			<personId refId="1106-2015000810401-3108472"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4054-0"/>
+			<vehicleDefinitionId refId="4054-1"/>
+			<vehicleDefinitionId refId="4054-2"/>
+			<vehicleDefinitionId refId="4054-3"/>
+			<vehicleDefinitionId refId="4054-4"/>
+		</vehicles>
+		<income period="year">
+				39617.0
+		</income>
+
+	</household>
+	<household id="405-2014000896918-0">
+		<members>
+			<personId refId="405-2014000896918-079505"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4064-0"/>
+			<vehicleDefinitionId refId="4064-1"/>
+		</vehicles>
+		<income period="year">
+				8812.0
+		</income>
+
+	</household>
+	<household id="201-2016001254527-0">
+		<members>
+			<personId refId="201-2016001254527-0152972"/>
+			<personId refId="201-2016001254527-0152931"/>
+			<personId refId="201-2016001254527-0153013"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4078-0"/>
+			<vehicleDefinitionId refId="4078-1"/>
+			<vehicleDefinitionId refId="4078-2"/>
+			<vehicleDefinitionId refId="4078-3"/>
+		</vehicles>
+		<income period="year">
+				26608.0
+		</income>
+
+	</household>
+	<household id="1106-2012000329684-0">
+		<members>
+			<personId refId="1106-2012000329684-06291"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4097-0"/>
+			<vehicleDefinitionId refId="4097-1"/>
+		</vehicles>
+		<income period="year">
+				34577.0
+		</income>
+
+	</household>
+	<household id="401-2014001049514-0">
+		<members>
+			<personId refId="401-2014001049514-083332"/>
+			<personId refId="401-2014001049514-083292"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4103-0"/>
+			<vehicleDefinitionId refId="4103-1"/>
+			<vehicleDefinitionId refId="4103-2"/>
+		</vehicles>
+		<income period="year">
+				97858.0
+		</income>
+
+	</household>
+	<household id="1108-2012001394863-0">
+		<members>
+			<personId refId="1108-2012001394863-027711"/>
+			<personId refId="1108-2012001394863-027744"/>
+			<personId refId="1108-2012001394863-027678"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4108-0"/>
+			<vehicleDefinitionId refId="4108-1"/>
+			<vehicleDefinitionId refId="4108-2"/>
+			<vehicleDefinitionId refId="4108-3"/>
+		</vehicles>
+		<income period="year">
+				139403.0
+		</income>
+
+	</household>
+	<household id="1106-2014001130104-1">
+		<members>
+			<personId refId="1106-2014001130104-185349"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4122-0"/>
+			<vehicleDefinitionId refId="4122-1"/>
+		</vehicles>
+		<income period="year">
+				21529.0
+		</income>
+
+	</household>
+	<household id="202-2014000053367-0">
+		<members>
+			<personId refId="202-2014000053367-062059"/>
+			<personId refId="202-2014000053367-061941"/>
+			<personId refId="202-2014000053367-062295"/>
+			<personId refId="202-2014000053367-062177"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4150-0"/>
+			<vehicleDefinitionId refId="4150-1"/>
+			<vehicleDefinitionId refId="4150-2"/>
+			<vehicleDefinitionId refId="4150-3"/>
+			<vehicleDefinitionId refId="4150-4"/>
+		</vehicles>
+		<income period="year">
+				113848.0
+		</income>
+
+	</household>
+	<household id="600-2016000984772-0">
+		<members>
+			<personId refId="600-2016000984772-0147364"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4164-0"/>
+			<vehicleDefinitionId refId="4164-1"/>
+		</vehicles>
+		<income period="year">
+				9658.0
+		</income>
+
+	</household>
+	<household id="1002-2016001487612-0">
+		<members>
+			<personId refId="1002-2016001487612-0157323"/>
+			<personId refId="1002-2016001487612-0157134"/>
+			<personId refId="1002-2016001487612-0156756"/>
+			<personId refId="1002-2016001487612-0157071"/>
+			<personId refId="1002-2016001487612-0156882"/>
+			<personId refId="1002-2016001487612-0156945"/>
+			<personId refId="1002-2016001487612-0157197"/>
+			<personId refId="1002-2016001487612-0156819"/>
+			<personId refId="1002-2016001487612-0157008"/>
+			<personId refId="1002-2016001487612-0157260"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4168-0"/>
+			<vehicleDefinitionId refId="4168-1"/>
+			<vehicleDefinitionId refId="4168-2"/>
+			<vehicleDefinitionId refId="4168-3"/>
+			<vehicleDefinitionId refId="4168-4"/>
+		</vehicles>
+		<income period="year">
+				93381.0
+		</income>
+
+	</household>
+	<household id="1200-2016001227839-0">
+		<members>
+			<personId refId="1200-2016001227839-0152181"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4197-0"/>
+			<vehicleDefinitionId refId="4197-1"/>
+		</vehicles>
+		<income period="year">
+				24466.0
+		</income>
+
+	</household>
+	<household id="1801-2013001484884-0">
+		<members>
+			<personId refId="1801-2013001484884-060519"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4204-0"/>
+			<vehicleDefinitionId refId="4204-1"/>
+		</vehicles>
+		<income period="year">
+				24861.0
+		</income>
+
+	</household>
+	<household id="1600-2012000539363-0">
+		<members>
+			<personId refId="1600-2012000539363-010570"/>
+			<personId refId="1600-2012000539363-010527"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4231-0"/>
+			<vehicleDefinitionId refId="4231-1"/>
+			<vehicleDefinitionId refId="4231-2"/>
+		</vehicles>
+		<income period="year">
+				47441.0
+		</income>
+
+	</household>
+	<household id="1500-2016000262140-0">
+		<members>
+			<personId refId="1500-2016000262140-0130896"/>
+			<personId refId="1500-2016000262140-0130936"/>
+			<personId refId="1500-2016000262140-0130956"/>
+			<personId refId="1500-2016000262140-0130916"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4239-0"/>
+			<vehicleDefinitionId refId="4239-1"/>
+			<vehicleDefinitionId refId="4239-2"/>
+			<vehicleDefinitionId refId="4239-3"/>
+			<vehicleDefinitionId refId="4239-4"/>
+		</vehicles>
+		<income period="year">
+				94617.0
+		</income>
+
+	</household>
+	<household id="1200-2013001097023-0">
+		<members>
+			<personId refId="1200-2013001097023-053518"/>
+			<personId refId="1200-2013001097023-053481"/>
+			<personId refId="1200-2013001097023-053444"/>
+			<personId refId="1200-2013001097023-053370"/>
+			<personId refId="1200-2013001097023-053407"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4271-0"/>
+			<vehicleDefinitionId refId="4271-1"/>
+			<vehicleDefinitionId refId="4271-2"/>
+			<vehicleDefinitionId refId="4271-3"/>
+			<vehicleDefinitionId refId="4271-4"/>
+		</vehicles>
+		<income period="year">
+				104955.0
+		</income>
+
+	</household>
+	<household id="900-2015000102574-0">
+		<members>
+			<personId refId="900-2015000102574-093027"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4272-0"/>
+			<vehicleDefinitionId refId="4272-1"/>
+		</vehicles>
+		<income period="year">
+				3751.0
+		</income>
+
+	</household>
+	<household id="1500-2015000187968-0">
+		<members>
+			<personId refId="1500-2015000187968-094497"/>
+			<personId refId="1500-2015000187968-094573"/>
+			<personId refId="1500-2015000187968-094611"/>
+			<personId refId="1500-2015000187968-094535"/>
+			<personId refId="1500-2015000187968-094649"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4273-0"/>
+			<vehicleDefinitionId refId="4273-1"/>
+			<vehicleDefinitionId refId="4273-2"/>
+			<vehicleDefinitionId refId="4273-3"/>
+			<vehicleDefinitionId refId="4273-4"/>
+		</vehicles>
+		<income period="year">
+				41068.0
+		</income>
+
+	</household>
+	<household id="1200-2013000606389-0">
+		<members>
+			<personId refId="1200-2013000606389-044451"/>
+			<personId refId="1200-2013000606389-044572"/>
+			<personId refId="1200-2013000606389-044693"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4289-0"/>
+			<vehicleDefinitionId refId="4289-1"/>
+			<vehicleDefinitionId refId="4289-2"/>
+			<vehicleDefinitionId refId="4289-3"/>
+		</vehicles>
+		<income period="year">
+				76134.0
+		</income>
+
+	</household>
+	<household id="1803-2012000606353-0">
+		<members>
+			<personId refId="1803-2012000606353-011971"/>
+			<personId refId="1803-2012000606353-012019"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4299-0"/>
+			<vehicleDefinitionId refId="4299-1"/>
+			<vehicleDefinitionId refId="4299-2"/>
+		</vehicles>
+		<income period="year">
+				126928.0
+		</income>
+
+	</household>
+	<household id="1106-2015000542370-2">
+		<members>
+			<personId refId="1106-2015000542370-2100851"/>
+			<personId refId="1106-2015000542370-2100895"/>
+			<personId refId="1106-2015000542370-2100939"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4317-0"/>
+			<vehicleDefinitionId refId="4317-1"/>
+			<vehicleDefinitionId refId="4317-2"/>
+			<vehicleDefinitionId refId="4317-3"/>
+		</vehicles>
+		<income period="year">
+				78509.0
+		</income>
+
+	</household>
+	<household id="100-2015000392807-1">
+		<members>
+			<personId refId="100-2015000392807-198606"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4325-0"/>
+			<vehicleDefinitionId refId="4325-1"/>
+		</vehicles>
+		<income period="year">
+				18500.0
+		</income>
+
+	</household>
+	<household id="1001-2014001213505-0">
+		<members>
+			<personId refId="1001-2014001213505-087573"/>
+			<personId refId="1001-2014001213505-087705"/>
+			<personId refId="1001-2014001213505-087661"/>
+			<personId refId="1001-2014001213505-087749"/>
+			<personId refId="1001-2014001213505-087617"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4336-0"/>
+			<vehicleDefinitionId refId="4336-1"/>
+			<vehicleDefinitionId refId="4336-2"/>
+			<vehicleDefinitionId refId="4336-3"/>
+			<vehicleDefinitionId refId="4336-4"/>
+		</vehicles>
+		<income period="year">
+				27704.0
+		</income>
+
+	</household>
+	<household id="1106-2014000520011-1">
+		<members>
+			<personId refId="1106-2014000520011-172643"/>
+			<personId refId="1106-2014000520011-172600"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4339-0"/>
+			<vehicleDefinitionId refId="4339-1"/>
+			<vehicleDefinitionId refId="4339-2"/>
+		</vehicles>
+		<income period="year">
+				135310.0
+		</income>
+
+	</household>
+	<household id="10102-2014000130010-0">
+		<members>
+			<personId refId="10102-2014000130010-064545"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4342-0"/>
+			<vehicleDefinitionId refId="4342-1"/>
+		</vehicles>
+		<income period="year">
+				6778.0
+		</income>
+
+	</household>
+	<household id="10104-2015000935346-1">
+		<members>
+			<personId refId="10104-2015000935346-1112596"/>
+			<personId refId="10104-2015000935346-1112641"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4349-0"/>
+			<vehicleDefinitionId refId="4349-1"/>
+			<vehicleDefinitionId refId="4349-2"/>
+		</vehicles>
+		<income period="year">
+				4033.0
+		</income>
+
+	</household>
+	<household id="900-2013000378836-0">
+		<members>
+			<personId refId="900-2013000378836-039298"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4350-0"/>
+			<vehicleDefinitionId refId="4350-1"/>
+		</vehicles>
+		<income period="year">
+				8188.0
+		</income>
+
+	</household>
+	<household id="1902-2016000837646-0">
+		<members>
+			<personId refId="1902-2016000837646-0144999"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4359-0"/>
+			<vehicleDefinitionId refId="4359-1"/>
+		</vehicles>
+		<income period="year">
+				1185.0
+		</income>
+
+	</household>
+	<household id="1106-2015001275570-1">
+		<members>
+			<personId refId="1106-2015001275570-1119955"/>
+			<personId refId="1106-2015001275570-1119906"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4369-0"/>
+			<vehicleDefinitionId refId="4369-1"/>
+			<vehicleDefinitionId refId="4369-2"/>
+		</vehicles>
+		<income period="year">
+				82248.0
+		</income>
+
+	</household>
+	<household id="10102-2016000471794-1">
+		<members>
+			<personId refId="10102-2016000471794-1135515"/>
+			<personId refId="10102-2016000471794-1135601"/>
+			<personId refId="10102-2016000471794-1135558"/>
+			<personId refId="10102-2016000471794-1135687"/>
+			<personId refId="10102-2016000471794-1135472"/>
+			<personId refId="10102-2016000471794-1135644"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4370-0"/>
+			<vehicleDefinitionId refId="4370-1"/>
+			<vehicleDefinitionId refId="4370-2"/>
+			<vehicleDefinitionId refId="4370-3"/>
+			<vehicleDefinitionId refId="4370-4"/>
+		</vehicles>
+		<income period="year">
+				44368.0
+		</income>
+
+	</household>
+	<household id="1200-2014001122037-0">
+		<members>
+			<personId refId="1200-2014001122037-085191"/>
+			<personId refId="1200-2014001122037-085265"/>
+			<personId refId="1200-2014001122037-085117"/>
+			<personId refId="1200-2014001122037-085080"/>
+			<personId refId="1200-2014001122037-085154"/>
+			<personId refId="1200-2014001122037-085228"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4382-0"/>
+			<vehicleDefinitionId refId="4382-1"/>
+			<vehicleDefinitionId refId="4382-2"/>
+			<vehicleDefinitionId refId="4382-3"/>
+			<vehicleDefinitionId refId="4382-4"/>
+		</vehicles>
+		<income period="year">
+				63694.0
+		</income>
+
+	</household>
+	<household id="10405-2013001328389-0">
+		<members>
+			<personId refId="10405-2013001328389-057921"/>
+			<personId refId="10405-2013001328389-057963"/>
+			<personId refId="10405-2013001328389-057900"/>
+			<personId refId="10405-2013001328389-057942"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4385-0"/>
+			<vehicleDefinitionId refId="4385-1"/>
+			<vehicleDefinitionId refId="4385-2"/>
+			<vehicleDefinitionId refId="4385-3"/>
+			<vehicleDefinitionId refId="4385-4"/>
+		</vehicles>
+		<income period="year">
+				536.0
+		</income>
+
+	</household>
+	<household id="10600-2012001236897-0">
+		<members>
+			<personId refId="10600-2012001236897-024169"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4388-0"/>
+			<vehicleDefinitionId refId="4388-1"/>
+		</vehicles>
+		<income period="year">
+				14263.0
+		</income>
+
+	</household>
+	<household id="1105-2014000946857-1">
+		<members>
+			<personId refId="1105-2014000946857-180305"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4394-0"/>
+			<vehicleDefinitionId refId="4394-1"/>
+		</vehicles>
+		<income period="year">
+				4609.0
+		</income>
+
+	</household>
+	<household id="1902-2016001217429-1">
+		<members>
+			<personId refId="1902-2016001217429-1151456"/>
+			<personId refId="1902-2016001217429-1151511"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4404-0"/>
+			<vehicleDefinitionId refId="4404-1"/>
+			<vehicleDefinitionId refId="4404-2"/>
+		</vehicles>
+		<income period="year">
+				74869.0
+		</income>
+
+	</household>
+	<household id="1804-2015000242580-0">
+		<members>
+			<personId refId="1804-2015000242580-095889"/>
+			<personId refId="1804-2015000242580-095863"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4421-0"/>
+			<vehicleDefinitionId refId="4421-1"/>
+			<vehicleDefinitionId refId="4421-2"/>
+		</vehicles>
+		<income period="year">
+				27299.0
+		</income>
+
+	</household>
+	<household id="1107-2016000905283-0">
+		<members>
+			<personId refId="1107-2016000905283-0146050"/>
+			<personId refId="1107-2016000905283-0146109"/>
+			<personId refId="1107-2016000905283-0146168"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4423-0"/>
+			<vehicleDefinitionId refId="4423-1"/>
+			<vehicleDefinitionId refId="4423-2"/>
+			<vehicleDefinitionId refId="4423-3"/>
+		</vehicles>
+		<income period="year">
+				100333.0
+		</income>
+
+	</household>
+	<household id="1803-2014000813815-0">
+		<members>
+			<personId refId="1803-2014000813815-077500"/>
+			<personId refId="1803-2014000813815-077424"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4425-0"/>
+			<vehicleDefinitionId refId="4425-1"/>
+			<vehicleDefinitionId refId="4425-2"/>
+		</vehicles>
+		<income period="year">
+				16327.0
+		</income>
+
+	</household>
+	<household id="1804-2014001449864-0">
+		<members>
+			<personId refId="1804-2014001449864-091348"/>
+			<personId refId="1804-2014001449864-091365"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4429-0"/>
+			<vehicleDefinitionId refId="4429-1"/>
+			<vehicleDefinitionId refId="4429-2"/>
+		</vehicles>
+		<income period="year">
+				75515.0
+		</income>
+
+	</household>
+	<household id="900-2012000963809-0">
+		<members>
+			<personId refId="900-2012000963809-019571"/>
+			<personId refId="900-2012000963809-019013"/>
+			<personId refId="900-2012000963809-019385"/>
+			<personId refId="900-2012000963809-019199"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4450-0"/>
+			<vehicleDefinitionId refId="4450-1"/>
+			<vehicleDefinitionId refId="4450-2"/>
+			<vehicleDefinitionId refId="4450-3"/>
+			<vehicleDefinitionId refId="4450-4"/>
+		</vehicles>
+		<income period="year">
+				94402.0
+		</income>
+
+	</household>
+	<household id="1105-2013001123049-0">
+		<members>
+			<personId refId="1105-2013001123049-053784"/>
+			<personId refId="1105-2013001123049-053797"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4459-0"/>
+			<vehicleDefinitionId refId="4459-1"/>
+			<vehicleDefinitionId refId="4459-2"/>
+		</vehicles>
+		<income period="year">
+				78191.0
+		</income>
+
+	</household>
+	<household id="1804-2016001105674-0">
+		<members>
+			<personId refId="1804-2016001105674-0149138"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4488-0"/>
+			<vehicleDefinitionId refId="4488-1"/>
+		</vehicles>
+		<income period="year">
+				33263.0
+		</income>
+
+	</household>
+	<household id="1200-2015000732389-1">
+		<members>
+			<personId refId="1200-2015000732389-1105746"/>
+			<personId refId="1200-2015000732389-1105685"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4510-0"/>
+			<vehicleDefinitionId refId="4510-1"/>
+			<vehicleDefinitionId refId="4510-2"/>
+		</vehicles>
+		<income period="year">
+				39786.0
+		</income>
+
+	</household>
+	<household id="600-2016000880566-0">
+		<members>
+			<personId refId="600-2016000880566-0145730"/>
+			<personId refId="600-2016000880566-0145802"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4516-0"/>
+			<vehicleDefinitionId refId="4516-1"/>
+			<vehicleDefinitionId refId="4516-2"/>
+		</vehicles>
+		<income period="year">
+				39349.0
+		</income>
+
+	</household>
+	<household id="10102-2014000947834-1">
+		<members>
+			<personId refId="10102-2014000947834-180428"/>
+			<personId refId="10102-2014000947834-180326"/>
+			<personId refId="10102-2014000947834-180377"/>
+			<personId refId="10102-2014000947834-180530"/>
+			<personId refId="10102-2014000947834-180479"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4522-0"/>
+			<vehicleDefinitionId refId="4522-1"/>
+			<vehicleDefinitionId refId="4522-2"/>
+			<vehicleDefinitionId refId="4522-3"/>
+			<vehicleDefinitionId refId="4522-4"/>
+		</vehicles>
+		<income period="year">
+				51084.0
+		</income>
+
+	</household>
+	<household id="1108-2012001357312-1">
+		<members>
+			<personId refId="1108-2012001357312-126580"/>
+			<personId refId="1108-2012001357312-126639"/>
+			<personId refId="1108-2012001357312-126698"/>
+			<personId refId="1108-2012001357312-126757"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4534-0"/>
+			<vehicleDefinitionId refId="4534-1"/>
+			<vehicleDefinitionId refId="4534-2"/>
+			<vehicleDefinitionId refId="4534-3"/>
+			<vehicleDefinitionId refId="4534-4"/>
+		</vehicles>
+		<income period="year">
+				43664.0
+		</income>
+
+	</household>
+	<household id="10600-2015001427751-0">
+		<members>
+			<personId refId="10600-2015001427751-0123011"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4548-0"/>
+			<vehicleDefinitionId refId="4548-1"/>
+		</vehicles>
+		<income period="year">
+				12019.0
+		</income>
+
+	</household>
+	<household id="10405-2015000134451-0">
+		<members>
+			<personId refId="10405-2015000134451-093520"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4555-0"/>
+			<vehicleDefinitionId refId="4555-1"/>
+		</vehicles>
+		<income period="year">
+				9106.0
+		</income>
+
+	</household>
+	<household id="10405-2015000391769-0">
+		<members>
+			<personId refId="10405-2015000391769-098495"/>
+			<personId refId="10405-2015000391769-098549"/>
+			<personId refId="10405-2015000391769-098513"/>
+			<personId refId="10405-2015000391769-098531"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4571-0"/>
+			<vehicleDefinitionId refId="4571-1"/>
+			<vehicleDefinitionId refId="4571-2"/>
+			<vehicleDefinitionId refId="4571-3"/>
+			<vehicleDefinitionId refId="4571-4"/>
+		</vehicles>
+		<income period="year">
+				82151.0
+		</income>
+
+	</household>
+	<household id="1902-2016000327234-0">
+		<members>
+			<personId refId="1902-2016000327234-0132088"/>
+			<personId refId="1902-2016000327234-0132055"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4586-0"/>
+			<vehicleDefinitionId refId="4586-1"/>
+			<vehicleDefinitionId refId="4586-2"/>
+		</vehicles>
+		<income period="year">
+				1087.0
+		</income>
+
+	</household>
+	<household id="300-2013000499891-0">
+		<members>
+			<personId refId="300-2013000499891-041980"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4606-0"/>
+			<vehicleDefinitionId refId="4606-1"/>
+		</vehicles>
+		<income period="year">
+				1351.0
+		</income>
+
+	</household>
+	<household id="202-2012000397841-0">
+		<members>
+			<personId refId="202-2012000397841-07947"/>
+			<personId refId="202-2012000397841-07903"/>
+			<personId refId="202-2012000397841-07859"/>
+			<personId refId="202-2012000397841-07815"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4610-0"/>
+			<vehicleDefinitionId refId="4610-1"/>
+			<vehicleDefinitionId refId="4610-2"/>
+			<vehicleDefinitionId refId="4610-3"/>
+			<vehicleDefinitionId refId="4610-4"/>
+		</vehicles>
+		<income period="year">
+				91577.0
+		</income>
+
+	</household>
+	<household id="1803-2013000190262-3">
+		<members>
+			<personId refId="1803-2013000190262-333881"/>
+			<personId refId="1803-2013000190262-334025"/>
+			<personId refId="1803-2013000190262-334169"/>
+			<personId refId="1803-2013000190262-334241"/>
+			<personId refId="1803-2013000190262-333809"/>
+			<personId refId="1803-2013000190262-333953"/>
+			<personId refId="1803-2013000190262-334097"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4616-0"/>
+			<vehicleDefinitionId refId="4616-1"/>
+			<vehicleDefinitionId refId="4616-2"/>
+			<vehicleDefinitionId refId="4616-3"/>
+			<vehicleDefinitionId refId="4616-4"/>
+		</vehicles>
+		<income period="year">
+				130315.0
+		</income>
+
+	</household>
+	<household id="1803-2014001176555-1">
+		<members>
+			<personId refId="1803-2014001176555-186604"/>
+			<personId refId="1803-2014001176555-186644"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4625-0"/>
+			<vehicleDefinitionId refId="4625-1"/>
+			<vehicleDefinitionId refId="4625-2"/>
+		</vehicles>
+		<income period="year">
+				106211.0
+		</income>
+
+	</household>
+	<household id="10104-2016001407958-2">
+		<members>
+			<personId refId="10104-2016001407958-2154413"/>
+			<personId refId="10104-2016001407958-2154539"/>
+			<personId refId="10104-2016001407958-2154476"/>
+			<personId refId="10104-2016001407958-2154602"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4647-0"/>
+			<vehicleDefinitionId refId="4647-1"/>
+			<vehicleDefinitionId refId="4647-2"/>
+			<vehicleDefinitionId refId="4647-3"/>
+			<vehicleDefinitionId refId="4647-4"/>
+		</vehicles>
+		<income period="year">
+				120383.0
+		</income>
+
+	</household>
+	<household id="407-2016000837646-0">
+		<members>
+			<personId refId="407-2016000837646-0144970"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4650-0"/>
+			<vehicleDefinitionId refId="4650-1"/>
+		</vehicles>
+		<income period="year">
+				21603.0
+		</income>
+
+	</household>
+	<household id="10600-2016001216686-0">
+		<members>
+			<personId refId="10600-2016001216686-0151256"/>
+			<personId refId="10600-2016001216686-0151293"/>
+			<personId refId="10600-2016001216686-0151330"/>
+			<personId refId="10600-2016001216686-0151404"/>
+			<personId refId="10600-2016001216686-0151367"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4658-0"/>
+			<vehicleDefinitionId refId="4658-1"/>
+			<vehicleDefinitionId refId="4658-2"/>
+			<vehicleDefinitionId refId="4658-3"/>
+			<vehicleDefinitionId refId="4658-4"/>
+		</vehicles>
+		<income period="year">
+				101925.0
+		</income>
+
+	</household>
+	<household id="1200-2016001217429-1">
+		<members>
+			<personId refId="1200-2016001217429-1151443"/>
+			<personId refId="1200-2016001217429-1151498"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4705-0"/>
+			<vehicleDefinitionId refId="4705-1"/>
+			<vehicleDefinitionId refId="4705-2"/>
+		</vehicles>
+		<income period="year">
+				21386.0
+		</income>
+
+	</household>
+	<household id="500-2014000641447-0">
+		<members>
+			<personId refId="500-2014000641447-075319"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4706-0"/>
+			<vehicleDefinitionId refId="4706-1"/>
+		</vehicles>
+		<income period="year">
+				8803.0
+		</income>
+
+	</household>
+	<household id="406-2013000239390-0">
+		<members>
+			<personId refId="406-2013000239390-035522"/>
+			<personId refId="406-2013000239390-035566"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4719-0"/>
+			<vehicleDefinitionId refId="4719-1"/>
+			<vehicleDefinitionId refId="4719-2"/>
+		</vehicles>
+		<income period="year">
+				47024.0
+		</income>
+
+	</household>
+	<household id="1803-2015000630216-4">
+		<members>
+			<personId refId="1803-2015000630216-4103247"/>
+			<personId refId="1803-2015000630216-4103441"/>
+			<personId refId="1803-2015000630216-4103344"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4735-0"/>
+			<vehicleDefinitionId refId="4735-1"/>
+			<vehicleDefinitionId refId="4735-2"/>
+			<vehicleDefinitionId refId="4735-3"/>
+		</vehicles>
+		<income period="year">
+				135853.0
+		</income>
+
+	</household>
+	<household id="1804-2016001442009-0">
+		<members>
+			<personId refId="1804-2016001442009-0155739"/>
+			<personId refId="1804-2016001442009-0155705"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4745-0"/>
+			<vehicleDefinitionId refId="4745-1"/>
+			<vehicleDefinitionId refId="4745-2"/>
+		</vehicles>
+		<income period="year">
+				8481.0
+		</income>
+
+	</household>
+	<household id="1101-2015000364742-1">
+		<members>
+			<personId refId="1101-2015000364742-198025"/>
+			<personId refId="1101-2015000364742-197963"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4761-0"/>
+			<vehicleDefinitionId refId="4761-1"/>
+			<vehicleDefinitionId refId="4761-2"/>
+		</vehicles>
+		<income period="year">
+				1256.0
+		</income>
+
+	</household>
+	<household id="10600-2014000685903-0">
+		<members>
+			<personId refId="10600-2014000685903-075899"/>
+			<personId refId="10600-2014000685903-075881"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4806-0"/>
+			<vehicleDefinitionId refId="4806-1"/>
+			<vehicleDefinitionId refId="4806-2"/>
+		</vehicles>
+		<income period="year">
+				32552.0
+		</income>
+
+	</household>
+	<household id="1106-2013001307359-1">
+		<members>
+			<personId refId="1106-2013001307359-157505"/>
+			<personId refId="1106-2013001307359-157391"/>
+			<personId refId="1106-2013001307359-157467"/>
+			<personId refId="1106-2013001307359-157353"/>
+			<personId refId="1106-2013001307359-157429"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4810-0"/>
+			<vehicleDefinitionId refId="4810-1"/>
+			<vehicleDefinitionId refId="4810-2"/>
+			<vehicleDefinitionId refId="4810-3"/>
+			<vehicleDefinitionId refId="4810-4"/>
+		</vehicles>
+		<income period="year">
+				9016.0
+		</income>
+
+	</household>
+	<household id="600-2012000584680-0">
+		<members>
+			<personId refId="600-2012000584680-011730"/>
+			<personId refId="600-2012000584680-011693"/>
+			<personId refId="600-2012000584680-011767"/>
+			<personId refId="600-2012000584680-011656"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4838-0"/>
+			<vehicleDefinitionId refId="4838-1"/>
+			<vehicleDefinitionId refId="4838-2"/>
+			<vehicleDefinitionId refId="4838-3"/>
+			<vehicleDefinitionId refId="4838-4"/>
+		</vehicles>
+		<income period="year">
+				931.0
+		</income>
+
+	</household>
+	<household id="1600-2012000612699-1">
+		<members>
+			<personId refId="1600-2012000612699-112159"/>
+			<personId refId="1600-2012000612699-112232"/>
+			<personId refId="1600-2012000612699-112305"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4859-0"/>
+			<vehicleDefinitionId refId="4859-1"/>
+			<vehicleDefinitionId refId="4859-2"/>
+			<vehicleDefinitionId refId="4859-3"/>
+		</vehicles>
+		<income period="year">
+				28286.0
+		</income>
+
+	</household>
+	<household id="10104-2012000251540-0">
+		<members>
+			<personId refId="10104-2012000251540-05027"/>
+			<personId refId="10104-2012000251540-05108"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4874-0"/>
+			<vehicleDefinitionId refId="4874-1"/>
+			<vehicleDefinitionId refId="4874-2"/>
+		</vehicles>
+		<income period="year">
+				21342.0
+		</income>
+
+	</household>
+	<household id="401-2013000532687-0">
+		<members>
+			<personId refId="401-2013000532687-043254"/>
+			<personId refId="401-2013000532687-043086"/>
+			<personId refId="401-2013000532687-042582"/>
+			<personId refId="401-2013000532687-042750"/>
+			<personId refId="401-2013000532687-042918"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4883-0"/>
+			<vehicleDefinitionId refId="4883-1"/>
+			<vehicleDefinitionId refId="4883-2"/>
+			<vehicleDefinitionId refId="4883-3"/>
+			<vehicleDefinitionId refId="4883-4"/>
+		</vehicles>
+		<income period="year">
+				122103.0
+		</income>
+
+	</household>
+	<household id="700-2014000331589-0">
+		<members>
+			<personId refId="700-2014000331589-069010"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4885-0"/>
+			<vehicleDefinitionId refId="4885-1"/>
+		</vehicles>
+		<income period="year">
+				37652.0
+		</income>
+
+	</household>
+	<household id="1101-2012000633457-0">
+		<members>
+			<personId refId="1101-2012000633457-012564"/>
+			<personId refId="1101-2012000633457-012618"/>
+			<personId refId="1101-2012000633457-012645"/>
+			<personId refId="1101-2012000633457-012591"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4887-0"/>
+			<vehicleDefinitionId refId="4887-1"/>
+			<vehicleDefinitionId refId="4887-2"/>
+			<vehicleDefinitionId refId="4887-3"/>
+			<vehicleDefinitionId refId="4887-4"/>
+		</vehicles>
+		<income period="year">
+				16065.0
+		</income>
+
+	</household>
+	<household id="405-2015001345452-0">
+		<members>
+			<personId refId="405-2015001345452-0121612"/>
+			<personId refId="405-2015001345452-0121572"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4901-0"/>
+			<vehicleDefinitionId refId="4901-1"/>
+			<vehicleDefinitionId refId="4901-2"/>
+		</vehicles>
+		<income period="year">
+				117654.0
+		</income>
+
+	</household>
+	<household id="500-2016001459467-0">
+		<members>
+			<personId refId="500-2016001459467-0156242"/>
+			<personId refId="500-2016001459467-0156324"/>
+			<personId refId="500-2016001459467-0156160"/>
+			<personId refId="500-2016001459467-0156283"/>
+			<personId refId="500-2016001459467-0156201"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4916-0"/>
+			<vehicleDefinitionId refId="4916-1"/>
+			<vehicleDefinitionId refId="4916-2"/>
+			<vehicleDefinitionId refId="4916-3"/>
+			<vehicleDefinitionId refId="4916-4"/>
+		</vehicles>
+		<income period="year">
+				136373.0
+		</income>
+
+	</household>
+	<household id="1106-2016001185478-0">
+		<members>
+			<personId refId="1106-2016001185478-0150410"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4944-0"/>
+			<vehicleDefinitionId refId="4944-1"/>
+		</vehicles>
+		<income period="year">
+				36167.0
+		</income>
+
+	</household>
+	<household id="1902-2015000814269-0">
+		<members>
+			<personId refId="1902-2015000814269-0108937"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4959-0"/>
+			<vehicleDefinitionId refId="4959-1"/>
+		</vehicles>
+		<income period="year">
+				9032.0
+		</income>
+
+	</household>
+	<household id="1101-2016000047389-0">
+		<members>
+			<personId refId="1101-2016000047389-0125789"/>
+			<personId refId="1101-2016000047389-0125749"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="4986-0"/>
+			<vehicleDefinitionId refId="4986-1"/>
+			<vehicleDefinitionId refId="4986-2"/>
+		</vehicles>
+		<income period="year">
+				83292.0
+		</income>
+
+	</household>
+	<household id="1101-2015001270029-0">
+		<members>
+			<personId refId="1101-2015001270029-0119825"/>
+			<personId refId="1101-2015001270029-0119707"/>
+			<personId refId="1101-2015001270029-0119766"/>
+			<personId refId="1101-2015001270029-0119648"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5040-0"/>
+			<vehicleDefinitionId refId="5040-1"/>
+			<vehicleDefinitionId refId="5040-2"/>
+			<vehicleDefinitionId refId="5040-3"/>
+			<vehicleDefinitionId refId="5040-4"/>
+		</vehicles>
+		<income period="year">
+				116210.0
+		</income>
+
+	</household>
+	<household id="1500-2014001249091-0">
+		<members>
+			<personId refId="1500-2014001249091-088289"/>
+			<personId refId="1500-2014001249091-088377"/>
+			<personId refId="1500-2014001249091-088333"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5043-0"/>
+			<vehicleDefinitionId refId="5043-1"/>
+			<vehicleDefinitionId refId="5043-2"/>
+			<vehicleDefinitionId refId="5043-3"/>
+		</vehicles>
+		<income period="year">
+				11536.0
+		</income>
+
+	</household>
+	<household id="1902-2013000263579-0">
+		<members>
+			<personId refId="1902-2013000263579-036183"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5092-0"/>
+			<vehicleDefinitionId refId="5092-1"/>
+		</vehicles>
+		<income period="year">
+				20447.0
+		</income>
+
+	</household>
+	<household id="500-2012001464904-0">
+		<members>
+			<personId refId="500-2012001464904-029270"/>
+			<personId refId="500-2012001464904-029184"/>
+			<personId refId="500-2012001464904-029227"/>
+			<personId refId="500-2012001464904-029141"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5096-0"/>
+			<vehicleDefinitionId refId="5096-1"/>
+			<vehicleDefinitionId refId="5096-2"/>
+			<vehicleDefinitionId refId="5096-3"/>
+			<vehicleDefinitionId refId="5096-4"/>
+		</vehicles>
+		<income period="year">
+				10825.0
+		</income>
+
+	</household>
+	<household id="1101-2012001173951-0">
+		<members>
+			<personId refId="1101-2012001173951-023612"/>
+			<personId refId="1101-2012001173951-023651"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5112-0"/>
+			<vehicleDefinitionId refId="5112-1"/>
+			<vehicleDefinitionId refId="5112-2"/>
+		</vehicles>
+		<income period="year">
+				17341.0
+		</income>
+
+	</household>
+	<household id="10600-2015000432050-0">
+		<members>
+			<personId refId="10600-2015000432050-099548"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5119-0"/>
+			<vehicleDefinitionId refId="5119-1"/>
+		</vehicles>
+		<income period="year">
+				3443.0
+		</income>
+
+	</household>
+	<household id="500-2012001048206-0">
+		<members>
+			<personId refId="500-2012001048206-021013"/>
+			<personId refId="500-2012001048206-021041"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5122-0"/>
+			<vehicleDefinitionId refId="5122-1"/>
+			<vehicleDefinitionId refId="5122-2"/>
+		</vehicles>
+		<income period="year">
+				26876.0
+		</income>
+
+	</household>
+	<household id="407-2014000053367-0">
+		<members>
+			<personId refId="407-2014000053367-062307"/>
+			<personId refId="407-2014000053367-062071"/>
+			<personId refId="407-2014000053367-061953"/>
+			<personId refId="407-2014000053367-062189"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5151-0"/>
+			<vehicleDefinitionId refId="5151-1"/>
+			<vehicleDefinitionId refId="5151-2"/>
+			<vehicleDefinitionId refId="5151-3"/>
+			<vehicleDefinitionId refId="5151-4"/>
+		</vehicles>
+		<income period="year">
+				87124.0
+		</income>
+
+	</household>
+	<household id="100-2015000189392-1">
+		<members>
+			<personId refId="100-2015000189392-194673"/>
+			<personId refId="100-2015000189392-194755"/>
+			<personId refId="100-2015000189392-194837"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5153-0"/>
+			<vehicleDefinitionId refId="5153-1"/>
+			<vehicleDefinitionId refId="5153-2"/>
+			<vehicleDefinitionId refId="5153-3"/>
+		</vehicles>
+		<income period="year">
+				71954.0
+		</income>
+
+	</household>
+	<household id="1105-2013001364203-0">
+		<members>
+			<personId refId="1105-2013001364203-058568"/>
+			<personId refId="1105-2013001364203-058540"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5154-0"/>
+			<vehicleDefinitionId refId="5154-1"/>
+			<vehicleDefinitionId refId="5154-2"/>
+		</vehicles>
+		<income period="year">
+				21296.0
+		</income>
+
+	</household>
+	<household id="1200-2015000242612-0">
+		<members>
+			<personId refId="1200-2015000242612-095918"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5161-0"/>
+			<vehicleDefinitionId refId="5161-1"/>
+		</vehicles>
+		<income period="year">
+				36794.0
+		</income>
+
+	</household>
+	<household id="1804-2014000119219-0">
+		<members>
+			<personId refId="1804-2014000119219-064131"/>
+			<personId refId="1804-2014000119219-064088"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5164-0"/>
+			<vehicleDefinitionId refId="5164-1"/>
+			<vehicleDefinitionId refId="5164-2"/>
+		</vehicles>
+		<income period="year">
+				53625.0
+		</income>
+
+	</household>
+	<household id="1108-2016000547749-0">
+		<members>
+			<personId refId="1108-2016000547749-0137817"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5175-0"/>
+			<vehicleDefinitionId refId="5175-1"/>
+		</vehicles>
+		<income period="year">
+				29561.0
+		</income>
+
+	</household>
+	<household id="10102-2016001200571-5">
+		<members>
+			<personId refId="10102-2016001200571-5150570"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5195-0"/>
+			<vehicleDefinitionId refId="5195-1"/>
+		</vehicles>
+		<income period="year">
+				16351.0
+		</income>
+
+	</household>
+	<household id="1500-2016000268296-0">
+		<members>
+			<personId refId="1500-2016000268296-0131333"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5203-0"/>
+			<vehicleDefinitionId refId="5203-1"/>
+		</vehicles>
+		<income period="year">
+				24394.0
+		</income>
+
+	</household>
+	<household id="10103-2013001287092-1">
+		<members>
+			<personId refId="10103-2013001287092-157169"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5208-0"/>
+			<vehicleDefinitionId refId="5208-1"/>
+		</vehicles>
+		<income period="year">
+				22139.0
+		</income>
+
+	</household>
+	<household id="401-2015000542370-0">
+		<members>
+			<personId refId="401-2015000542370-0100879"/>
+			<personId refId="401-2015000542370-0100923"/>
+			<personId refId="401-2015000542370-0100835"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5235-0"/>
+			<vehicleDefinitionId refId="5235-1"/>
+			<vehicleDefinitionId refId="5235-2"/>
+			<vehicleDefinitionId refId="5235-3"/>
+		</vehicles>
+		<income period="year">
+				42108.0
+		</income>
+
+	</household>
+	<household id="405-2013000539556-0">
+		<members>
+			<personId refId="405-2013000539556-043401"/>
+			<personId refId="405-2013000539556-043463"/>
+			<personId refId="405-2013000539556-043494"/>
+			<personId refId="405-2013000539556-043432"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5243-0"/>
+			<vehicleDefinitionId refId="5243-1"/>
+			<vehicleDefinitionId refId="5243-2"/>
+			<vehicleDefinitionId refId="5243-3"/>
+			<vehicleDefinitionId refId="5243-4"/>
+		</vehicles>
+		<income period="year">
+				139900.0
+		</income>
+
+	</household>
+	<household id="10405-2014000261631-0">
+		<members>
+			<personId refId="10405-2014000261631-067266"/>
+			<personId refId="10405-2014000261631-067304"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5270-0"/>
+			<vehicleDefinitionId refId="5270-1"/>
+			<vehicleDefinitionId refId="5270-2"/>
+		</vehicles>
+		<income period="year">
+				74224.0
+		</income>
+
+	</household>
+	<household id="1500-2016000778294-0">
+		<members>
+			<personId refId="1500-2016000778294-0143708"/>
+			<personId refId="1500-2016000778294-0143760"/>
+			<personId refId="1500-2016000778294-0143656"/>
+			<personId refId="1500-2016000778294-0143734"/>
+			<personId refId="1500-2016000778294-0143682"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5309-0"/>
+			<vehicleDefinitionId refId="5309-1"/>
+			<vehicleDefinitionId refId="5309-2"/>
+			<vehicleDefinitionId refId="5309-3"/>
+			<vehicleDefinitionId refId="5309-4"/>
+		</vehicles>
+		<income period="year">
+				32655.0
+		</income>
+
+	</household>
+	<household id="1600-2016001200571-1">
+		<members>
+			<personId refId="1600-2016001200571-1150654"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5344-0"/>
+			<vehicleDefinitionId refId="5344-1"/>
+		</vehicles>
+		<income period="year">
+				4202.0
+		</income>
+
+	</household>
+	<household id="201-2013001480820-0">
+		<members>
+			<personId refId="201-2013001480820-060474"/>
+			<personId refId="201-2013001480820-060412"/>
+			<personId refId="201-2013001480820-060443"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5372-0"/>
+			<vehicleDefinitionId refId="5372-1"/>
+			<vehicleDefinitionId refId="5372-2"/>
+			<vehicleDefinitionId refId="5372-3"/>
+		</vehicles>
+		<income period="year">
+				70112.0
+		</income>
+
+	</household>
+	<household id="1902-2016000674160-0">
+		<members>
+			<personId refId="1902-2016000674160-0140797"/>
+			<personId refId="1902-2016000674160-0140757"/>
+			<personId refId="1902-2016000674160-0140717"/>
+			<personId refId="1902-2016000674160-0140837"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5447-0"/>
+			<vehicleDefinitionId refId="5447-1"/>
+			<vehicleDefinitionId refId="5447-2"/>
+			<vehicleDefinitionId refId="5447-3"/>
+			<vehicleDefinitionId refId="5447-4"/>
+		</vehicles>
+		<income period="year">
+				94678.0
+		</income>
+
+	</household>
+	<household id="900-2014000730190-0">
+		<members>
+			<personId refId="900-2014000730190-076338"/>
+			<personId refId="900-2014000730190-076308"/>
+			<personId refId="900-2014000730190-076368"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5452-0"/>
+			<vehicleDefinitionId refId="5452-1"/>
+			<vehicleDefinitionId refId="5452-2"/>
+			<vehicleDefinitionId refId="5452-3"/>
+		</vehicles>
+		<income period="year">
+				111686.0
+		</income>
+
+	</household>
+	<household id="201-2014001139730-0">
+		<members>
+			<personId refId="201-2014001139730-085494"/>
+			<personId refId="201-2014001139730-085423"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5526-0"/>
+			<vehicleDefinitionId refId="5526-1"/>
+			<vehicleDefinitionId refId="5526-2"/>
+		</vehicles>
+		<income period="year">
+				64317.0
+		</income>
+
+	</household>
+	<household id="1106-2015001431732-1">
+		<members>
+			<personId refId="1106-2015001431732-1123037"/>
+			<personId refId="1106-2015001431732-1123080"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5546-0"/>
+			<vehicleDefinitionId refId="5546-1"/>
+			<vehicleDefinitionId refId="5546-2"/>
+		</vehicles>
+		<income period="year">
+				146088.0
+		</income>
+
+	</household>
+	<household id="500-2012001111971-0">
+		<members>
+			<personId refId="500-2012001111971-022503"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5555-0"/>
+			<vehicleDefinitionId refId="5555-1"/>
+		</vehicles>
+		<income period="year">
+				2034.0
+		</income>
+
+	</household>
+	<household id="407-2013000407259-0">
+		<members>
+			<personId refId="407-2013000407259-039707"/>
+			<personId refId="407-2013000407259-039644"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5562-0"/>
+			<vehicleDefinitionId refId="5562-1"/>
+			<vehicleDefinitionId refId="5562-2"/>
+		</vehicles>
+		<income period="year">
+				31087.0
+		</income>
+
+	</household>
+	<household id="1200-2016001449574-0">
+		<members>
+			<personId refId="1200-2016001449574-0155869"/>
+			<personId refId="1200-2016001449574-0155882"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5612-0"/>
+			<vehicleDefinitionId refId="5612-1"/>
+			<vehicleDefinitionId refId="5612-2"/>
+		</vehicles>
+		<income period="year">
+				90061.0
+		</income>
+
+	</household>
+	<household id="10103-2014000101683-1">
+		<members>
+			<personId refId="10103-2014000101683-163285"/>
+			<personId refId="10103-2014000101683-163330"/>
+			<personId refId="10103-2014000101683-163375"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5625-0"/>
+			<vehicleDefinitionId refId="5625-1"/>
+			<vehicleDefinitionId refId="5625-2"/>
+			<vehicleDefinitionId refId="5625-3"/>
+		</vehicles>
+		<income period="year">
+				117853.0
+		</income>
+
+	</household>
+	<household id="1106-2016000161596-1">
+		<members>
+			<personId refId="1106-2016000161596-1128599"/>
+			<personId refId="1106-2016000161596-1128630"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5638-0"/>
+			<vehicleDefinitionId refId="5638-1"/>
+			<vehicleDefinitionId refId="5638-2"/>
+		</vehicles>
+		<income period="year">
+				123598.0
+		</income>
+
+	</household>
+	<household id="1801-2012000172183-0">
+		<members>
+			<personId refId="1801-2012000172183-03410"/>
+			<personId refId="1801-2012000172183-03366"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5639-0"/>
+			<vehicleDefinitionId refId="5639-1"/>
+			<vehicleDefinitionId refId="5639-2"/>
+		</vehicles>
+		<income period="year">
+				128284.0
+		</income>
+
+	</household>
+	<household id="700-2012001287756-0">
+		<members>
+			<personId refId="700-2012001287756-025025"/>
+			<personId refId="700-2012001287756-025065"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5640-0"/>
+			<vehicleDefinitionId refId="5640-1"/>
+			<vehicleDefinitionId refId="5640-2"/>
+		</vehicles>
+		<income period="year">
+				120440.0
+		</income>
+
+	</household>
+	<household id="10103-2016000754575-0">
+		<members>
+			<personId refId="10103-2016000754575-0142554"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5652-0"/>
+			<vehicleDefinitionId refId="5652-1"/>
+		</vehicles>
+		<income period="year">
+				33787.0
+		</income>
+
+	</household>
+	<household id="1107-2014001093569-0">
+		<members>
+			<personId refId="1107-2014001093569-084674"/>
+			<personId refId="1107-2014001093569-084600"/>
+			<personId refId="1107-2014001093569-084748"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5662-0"/>
+			<vehicleDefinitionId refId="5662-1"/>
+			<vehicleDefinitionId refId="5662-2"/>
+			<vehicleDefinitionId refId="5662-3"/>
+		</vehicles>
+		<income period="year">
+				40996.0
+		</income>
+
+	</household>
+	<household id="201-2015000050024-0">
+		<members>
+			<personId refId="201-2015000050024-092330"/>
+			<personId refId="201-2015000050024-092430"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5674-0"/>
+			<vehicleDefinitionId refId="5674-1"/>
+			<vehicleDefinitionId refId="5674-2"/>
+		</vehicles>
+		<income period="year">
+				12417.0
+		</income>
+
+	</household>
+	<household id="1106-2014000391579-2">
+		<members>
+			<personId refId="1106-2014000391579-269895"/>
+			<personId refId="1106-2014000391579-269848"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5690-0"/>
+			<vehicleDefinitionId refId="5690-1"/>
+			<vehicleDefinitionId refId="5690-2"/>
+		</vehicles>
+		<income period="year">
+				12484.0
+		</income>
+
+	</household>
+	<household id="10405-2013000377800-1">
+		<members>
+			<personId refId="10405-2013000377800-139278"/>
+			<personId refId="10405-2013000377800-139038"/>
+			<personId refId="10405-2013000377800-138918"/>
+			<personId refId="10405-2013000377800-139158"/>
+			<personId refId="10405-2013000377800-138798"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5707-0"/>
+			<vehicleDefinitionId refId="5707-1"/>
+			<vehicleDefinitionId refId="5707-2"/>
+			<vehicleDefinitionId refId="5707-3"/>
+			<vehicleDefinitionId refId="5707-4"/>
+		</vehicles>
+		<income period="year">
+				135150.0
+		</income>
+
+	</household>
+	<household id="1200-2014001169422-0">
+		<members>
+			<personId refId="1200-2014001169422-086204"/>
+			<personId refId="1200-2014001169422-086241"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5751-0"/>
+			<vehicleDefinitionId refId="5751-1"/>
+			<vehicleDefinitionId refId="5751-2"/>
+		</vehicles>
+		<income period="year">
+				130682.0
+		</income>
+
+	</household>
+	<household id="700-2013000636360-0">
+		<members>
+			<personId refId="700-2013000636360-045389"/>
+			<personId refId="700-2013000636360-045349"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5804-0"/>
+			<vehicleDefinitionId refId="5804-1"/>
+			<vehicleDefinitionId refId="5804-2"/>
+		</vehicles>
+		<income period="year">
+				126249.0
+		</income>
+
+	</household>
+	<household id="201-2013001269612-0">
+		<members>
+			<personId refId="201-2013001269612-056872"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5811-0"/>
+			<vehicleDefinitionId refId="5811-1"/>
+		</vehicles>
+		<income period="year">
+				23008.0
+		</income>
+
+	</household>
+	<household id="500-2015000391765-0">
+		<members>
+			<personId refId="500-2015000391765-098408"/>
+			<personId refId="500-2015000391765-098451"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5856-0"/>
+			<vehicleDefinitionId refId="5856-1"/>
+			<vehicleDefinitionId refId="5856-2"/>
+		</vehicles>
+		<income period="year">
+				40351.0
+		</income>
+
+	</household>
+	<household id="1101-2013000128353-0">
+		<members>
+			<personId refId="1101-2013000128353-032461"/>
+			<personId refId="1101-2013000128353-032545"/>
+			<personId refId="1101-2013000128353-032503"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5863-0"/>
+			<vehicleDefinitionId refId="5863-1"/>
+			<vehicleDefinitionId refId="5863-2"/>
+			<vehicleDefinitionId refId="5863-3"/>
+		</vehicles>
+		<income period="year">
+				85182.0
+		</income>
+
+	</household>
+	<household id="10102-2015001146120-1">
+		<members>
+			<personId refId="10102-2015001146120-1116675"/>
+			<personId refId="10102-2015001146120-1116632"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5895-0"/>
+			<vehicleDefinitionId refId="5895-1"/>
+			<vehicleDefinitionId refId="5895-2"/>
+		</vehicles>
+		<income period="year">
+				39854.0
+		</income>
+
+	</household>
+	<household id="1700-2013000196126-0">
+		<members>
+			<personId refId="1700-2013000196126-034415"/>
+			<personId refId="1700-2013000196126-034372"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5904-0"/>
+			<vehicleDefinitionId refId="5904-1"/>
+			<vehicleDefinitionId refId="5904-2"/>
+		</vehicles>
+		<income period="year">
+				39197.0
+		</income>
+
+	</household>
+	<household id="10104-2016000116811-2">
+		<members>
+			<personId refId="10104-2016000116811-2127664"/>
+			<personId refId="10104-2016000116811-2127791"/>
+			<personId refId="10104-2016000116811-2127537"/>
+			<personId refId="10104-2016000116811-2127918"/>
+			<personId refId="10104-2016000116811-2127410"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5905-0"/>
+			<vehicleDefinitionId refId="5905-1"/>
+			<vehicleDefinitionId refId="5905-2"/>
+			<vehicleDefinitionId refId="5905-3"/>
+			<vehicleDefinitionId refId="5905-4"/>
+		</vehicles>
+		<income period="year">
+				8988.0
+		</income>
+
+	</household>
+	<household id="1902-2015000392807-2">
+		<members>
+			<personId refId="1902-2015000392807-298701"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5910-0"/>
+			<vehicleDefinitionId refId="5910-1"/>
+		</vehicles>
+		<income period="year">
+				18228.0
+		</income>
+
+	</household>
+	<household id="1101-2016001200571-0">
+		<members>
+			<personId refId="1101-2016001200571-0150622"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5921-0"/>
+			<vehicleDefinitionId refId="5921-1"/>
+		</vehicles>
+		<income period="year">
+				21484.0
+		</income>
+
+	</household>
+	<household id="408-2013000895447-0">
+		<members>
+			<personId refId="408-2013000895447-049652"/>
+			<personId refId="408-2013000895447-049736"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5924-0"/>
+			<vehicleDefinitionId refId="5924-1"/>
+			<vehicleDefinitionId refId="5924-2"/>
+		</vehicles>
+		<income period="year">
+				38880.0
+		</income>
+
+	</household>
+	<household id="1801-2014000747832-0">
+		<members>
+			<personId refId="1801-2014000747832-076537"/>
+			<personId refId="1801-2014000747832-076491"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5952-0"/>
+			<vehicleDefinitionId refId="5952-1"/>
+			<vehicleDefinitionId refId="5952-2"/>
+		</vehicles>
+		<income period="year">
+				56444.0
+		</income>
+
+	</household>
+	<household id="1801-2014000029774-0">
+		<members>
+			<personId refId="1801-2014000029774-061344"/>
+			<personId refId="1801-2014000029774-061321"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5961-0"/>
+			<vehicleDefinitionId refId="5961-1"/>
+			<vehicleDefinitionId refId="5961-2"/>
+		</vehicles>
+		<income period="year">
+				16934.0
+		</income>
+
+	</household>
+	<household id="600-2015000628621-0">
+		<members>
+			<personId refId="600-2015000628621-0103083"/>
+			<personId refId="600-2015000628621-0102955"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5974-0"/>
+			<vehicleDefinitionId refId="5974-1"/>
+			<vehicleDefinitionId refId="5974-2"/>
+		</vehicles>
+		<income period="year">
+				2606.0
+		</income>
+
+	</household>
+	<household id="10103-2014000874813-0">
+		<members>
+			<personId refId="10103-2014000874813-079083"/>
+			<personId refId="10103-2014000874813-079051"/>
+			<personId refId="10103-2014000874813-079067"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="5990-0"/>
+			<vehicleDefinitionId refId="5990-1"/>
+			<vehicleDefinitionId refId="5990-2"/>
+			<vehicleDefinitionId refId="5990-3"/>
+		</vehicles>
+		<income period="year">
+				114476.0
+		</income>
+
+	</household>
+	<household id="1105-2012000840641-0">
+		<members>
+			<personId refId="1105-2012000840641-016971"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6025-0"/>
+			<vehicleDefinitionId refId="6025-1"/>
+		</vehicles>
+		<income period="year">
+				33313.0
+		</income>
+
+	</household>
+	<household id="1105-2014000951716-0">
+		<members>
+			<personId refId="1105-2014000951716-080643"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6030-0"/>
+			<vehicleDefinitionId refId="6030-1"/>
+		</vehicles>
+		<income period="year">
+				29651.0
+		</income>
+
+	</household>
+	<household id="1105-2013000366905-0">
+		<members>
+			<personId refId="1105-2013000366905-038418"/>
+			<personId refId="1105-2013000366905-038436"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6033-0"/>
+			<vehicleDefinitionId refId="6033-1"/>
+			<vehicleDefinitionId refId="6033-2"/>
+		</vehicles>
+		<income period="year">
+				12031.0
+		</income>
+
+	</household>
+	<household id="100-2014001217922-0">
+		<members>
+			<personId refId="100-2014001217922-087811"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6047-0"/>
+			<vehicleDefinitionId refId="6047-1"/>
+		</vehicles>
+		<income period="year">
+				16687.0
+		</income>
+
+	</household>
+	<household id="10102-2016000029416-4">
+		<members>
+			<personId refId="10102-2016000029416-4124955"/>
+			<personId refId="10102-2016000029416-4124864"/>
+			<personId refId="10102-2016000029416-4125046"/>
+			<personId refId="10102-2016000029416-4125137"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6055-0"/>
+			<vehicleDefinitionId refId="6055-1"/>
+			<vehicleDefinitionId refId="6055-2"/>
+			<vehicleDefinitionId refId="6055-3"/>
+			<vehicleDefinitionId refId="6055-4"/>
+		</vehicles>
+		<income period="year">
+				5026.0
+		</income>
+
+	</household>
+	<household id="10102-2015001491257-0">
+		<members>
+			<personId refId="10102-2015001491257-0123595"/>
+			<personId refId="10102-2015001491257-0123631"/>
+			<personId refId="10102-2015001491257-0123703"/>
+			<personId refId="10102-2015001491257-0123667"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6059-0"/>
+			<vehicleDefinitionId refId="6059-1"/>
+			<vehicleDefinitionId refId="6059-2"/>
+			<vehicleDefinitionId refId="6059-3"/>
+			<vehicleDefinitionId refId="6059-4"/>
+		</vehicles>
+		<income period="year">
+				142533.0
+		</income>
+
+	</household>
+	<household id="1801-2014001249779-0">
+		<members>
+			<personId refId="1801-2014001249779-088461"/>
+			<personId refId="1801-2014001249779-088421"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6060-0"/>
+			<vehicleDefinitionId refId="6060-1"/>
+			<vehicleDefinitionId refId="6060-2"/>
+		</vehicles>
+		<income period="year">
+				10738.0
+		</income>
+
+	</household>
+	<household id="1108-2015000999068-1">
+		<members>
+			<personId refId="1108-2015000999068-1113875"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6081-0"/>
+			<vehicleDefinitionId refId="6081-1"/>
+		</vehicles>
+		<income period="year">
+				9855.0
+		</income>
+
+	</household>
+	<household id="1108-2013000378836-0">
+		<members>
+			<personId refId="1108-2013000378836-039306"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6097-0"/>
+			<vehicleDefinitionId refId="6097-1"/>
+		</vehicles>
+		<income period="year">
+				30233.0
+		</income>
+
+	</household>
+	<household id="10102-2014001049077-0">
+		<members>
+			<personId refId="10102-2014001049077-083222"/>
+			<personId refId="10102-2014001049077-083188"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6117-0"/>
+			<vehicleDefinitionId refId="6117-1"/>
+			<vehicleDefinitionId refId="6117-2"/>
+		</vehicles>
+		<income period="year">
+				67614.0
+		</income>
+
+	</household>
+	<household id="408-2015000136494-0">
+		<members>
+			<personId refId="408-2015000136494-093699"/>
+			<personId refId="408-2015000136494-093731"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6130-0"/>
+			<vehicleDefinitionId refId="6130-1"/>
+			<vehicleDefinitionId refId="6130-2"/>
+		</vehicles>
+		<income period="year">
+				145081.0
+		</income>
+
+	</household>
+	<household id="1801-2013000481572-0">
+		<members>
+			<personId refId="1801-2013000481572-041524"/>
+			<personId refId="1801-2013000481572-041549"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6133-0"/>
+			<vehicleDefinitionId refId="6133-1"/>
+			<vehicleDefinitionId refId="6133-2"/>
+		</vehicles>
+		<income period="year">
+				76851.0
+		</income>
+
+	</household>
+	<household id="1902-2013000377800-1">
+		<members>
+			<personId refId="1902-2013000377800-139272"/>
+			<personId refId="1902-2013000377800-138792"/>
+			<personId refId="1902-2013000377800-138912"/>
+			<personId refId="1902-2013000377800-139152"/>
+			<personId refId="1902-2013000377800-139032"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6150-0"/>
+			<vehicleDefinitionId refId="6150-1"/>
+			<vehicleDefinitionId refId="6150-2"/>
+			<vehicleDefinitionId refId="6150-3"/>
+			<vehicleDefinitionId refId="6150-4"/>
+		</vehicles>
+		<income period="year">
+				109627.0
+		</income>
+
+	</household>
+	<household id="1105-2015000107452-0">
+		<members>
+			<personId refId="1105-2015000107452-093100"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6166-0"/>
+			<vehicleDefinitionId refId="6166-1"/>
+		</vehicles>
+		<income period="year">
+				11274.0
+		</income>
+
+	</household>
+	<household id="10102-2015000816977-3">
+		<members>
+			<personId refId="10102-2015000816977-3109029"/>
+			<personId refId="10102-2015000816977-3109138"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6185-0"/>
+			<vehicleDefinitionId refId="6185-1"/>
+			<vehicleDefinitionId refId="6185-2"/>
+		</vehicles>
+		<income period="year">
+				62296.0
+		</income>
+
+	</household>
+	<household id="1107-2015000459678-0">
+		<members>
+			<personId refId="1107-2015000459678-099872"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6195-0"/>
+			<vehicleDefinitionId refId="6195-1"/>
+		</vehicles>
+		<income period="year">
+				4260.0
+		</income>
+
+	</household>
+	<household id="10103-2013000509270-0">
+		<members>
+			<personId refId="10103-2013000509270-042019"/>
+			<personId refId="10103-2013000509270-042052"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6207-0"/>
+			<vehicleDefinitionId refId="6207-1"/>
+			<vehicleDefinitionId refId="6207-2"/>
+		</vehicles>
+		<income period="year">
+				108381.0
+		</income>
+
+	</household>
+	<household id="1105-2013001470432-0">
+		<members>
+			<personId refId="1105-2013001470432-060225"/>
+		</members>
+		<vehicles>
+			<vehicleDefinitionId refId="6209-0"/>
+			<vehicleDefinitionId refId="6209-1"/>
+		</vehicles>
+		<income period="year">
+				16546.0
+		</income>
+
+	</household>
+</households>

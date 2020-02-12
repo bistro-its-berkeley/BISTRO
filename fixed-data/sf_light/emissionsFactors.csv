@@ -1,0 +1,5 @@
+fuelTypeId,gCO2ePerGal,pm25PerVMT
+gasoline,11405.84,0.001716086
+diesel,13718.04,0.0025936648
+electric,378.54,-99999999.9
+biodiesel,2165.69,-99999999.9

@@ -1,0 +1,13 @@
+agency_id,route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order,min_headway_minutes,eligibility_restricted
+217,1340,1,South Kiwanis Avenue/VA Medical Center,,3,http://www.siouxfalls.org/sam/fixed-routes/route-1.aspx,fbae00,ffffff,0,30,0
+217,1341,2,S. Western/Sanford,,3,http://www.siouxfalls.org/sam/fixed-routes/route-2,ba00f4,ffffff,1,30,0
+217,1350,11,Louise Avenue/Empire Mall,,3,http://www.siouxfalls.org/sam/fixed-routes/route-11,e4e600,000000,10,30,0
+217,1351,19,Southeast Technical Institute (STI),,3,http://www.siouxfalls.org/sam/fixed-routes/route-19,ad0000,ffffff,11,60,0
+217,1342,3,Downtown/Southwest Connector,,3,http://www.siouxfalls.org/sam/fixed-routes/route-3,73dfff,000000,2,30,0
+217,1343,4,East 10th Street/East 12th Street,,3,http://www.siouxfalls.org/sam/fixed-routes/route-4,fe5400,ffffff,3,30,0
+217,1344,5,South Phillips Avenue/Avera McKennan Hospital,,3,http://www.siouxfalls.org/sam/fixed-routes/route-5,53ff00,ffffff,4,30,0
+217,1345,6,North Prairie Avenue,,3,http://www.siouxfalls.org/sam/fixed-routes/route-6,0070fd,ffffff,5,30,0
+217,1346,7,North Cleveland/East 6th Street/Arrowhead Parkway,,3,http://www.siouxfalls.org/sam/fixed-routes/route-7,ff73dc,ffffff,6,30,0
+217,1347,8,North Industrial,,3,http://www.siouxfalls.org/sam/fixed-routes/route-8,a06c00,ffffff,7,35,0
+217,1348,9,South Sycamore/East 26th Street,,3,http://www.siouxfalls.org/sam/fixed-routes/route-9,01fec5,ffffff,8,35,0
+217,1349,10,Hayward/West Side,,3,http://www.siouxfalls.org/sam/fixed-routes/route-10,38a700,ffffff,9,30,0

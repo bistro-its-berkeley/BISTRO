@@ -1,0 +1,7 @@
+service_id,date,holiday_name,exception_type
+c_676_b_219_d_31,20200101,New Years Day,2
+c_676_b_219_d_31,20191225,Christmas Day,2
+c_676_b_219_d_31,20191128,Thanksgiving Day,2
+c_676_b_219_d_31,20190902,Labor Day,2
+c_676_b_219_d_31,20190704,Independence Day,2
+c_676_b_219_d_31,20190527,Memorial Day,2

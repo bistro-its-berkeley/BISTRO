@@ -68,15 +68,15 @@ submission outputs, taking the weighted (according to the corresponding field in
 
 ## [Docker](https://www.docker.com/) Container Management and Execution
 
-The wrapper around `BeamCompetitions` has a Docker image on [Docker Hub](https://hub.docker.com/) with tag `beammodel/beam-competition:0.0.3-SNAPSHOT` (sioux faux specific), `beammodel/beam-competition:0.0.4.1-SNAPSHOT` (no accessibility enabled) and `beammodel/beam-competition:0.0.4.2-SNAPSHOT` (accessibility enabled).
+The wrapper around `BISTRO` has a Docker image on [Docker Hub](https://hub.docker.com/) with tag `beammodel/beam-competition:0.0.3-SNAPSHOT` (sioux faux specific), `beammodel/beam-competition:0.0.4.1-SNAPSHOT` (no accessibility enabled) and `beammodel/beam-competition:0.0.4.2-SNAPSHOT` (accessibility enabled).
 
 This section details how administrators can manage and execute this image via the Docker toolkit.
 
 ### Build and Deploying
 
-Updating the BeamCompetitions image requires collaborator access to the `beammodel` DockerHub repository. Please contact sid.feygin@berkeley.edu to inquire about getting credentials.
+Updating the BISTRO image requires collaborator access to the `beammodel` DockerHub repository. Please contact sid.feygin@berkeley.edu to inquire about getting credentials.
 
-To re-create the `BeamCompetitions` image from the latest version of `BeamCompetitions`, use the
+To re-create the `BISTRO` image from the latest version of `BISTRO`, use the
 [`gradle-docker-plugin`](https://github.com/bmuschko/gradle-docker-plugin) as follows:
 
     > gradle dockerBuildImage
@@ -104,15 +104,15 @@ Once built and pushed, the container is ready to be executed.
 - You will need to execute the following from PowerShell.
 - If you get a file not found exception, then you may need to add a shared folder
   1. `docker-machine stop`
-  2. `VBoxManage sharedfolder add default --name /BeamCompetitions --hostpath <absolute_path_to>\BeamCompetitions --automount`
+  2. `VBoxManage sharedfolder add default --name /BISTRO --hostpath <absolute_path_to>\BISTRO --automount`
      - Or add from the VirtualBox UI from the VM's Settings
      - `--readonly` can be added if desired
   3. `docker-machine start`
-  4. Now instead of using the absolute path you can use `/BeamCompetitions` as the starting point in the below `-v` argument
+  4. Now instead of using the absolute path you can use `/BISTRO` as the starting point in the below `-v` argument
 
 To run a container based on the image containing the BISTRO framework, users need to specify the submission folder and output folder and then run the following command (subsititute <x> as appropriate, keeping in mind that there are sample submission inputs in the root of this repo i.e., `/submission-inputs`). For example, you may run
 
-`docker run -v <absolute_path_to_submission_inputs>:/submission-inputs:ro -v /home/ubuntu/BeamCompetitions/fixed-data:/fixed-data:rw -v <path_to_output_root>:/output:rw beammodel/beam-competition:0.0.4.2-SNAPSHOT --config fixed-data/sf_light/urbansim-25k.conf`
+`docker run -v <absolute_path_to_submission_inputs>:/submission-inputs:ro -v /home/ubuntu/BISTRO/fixed-data:/fixed-data:rw -v <path_to_output_root>:/output:rw beammodel/beam-competition:0.0.4.2-SNAPSHOT --config fixed-data/sf_light/urbansim-25k.conf`
 
 to execute the sf light scenario with accessibility KPI enabled based on urbansim-25k.conf file. You can change your basic inputs such as number of iterations through conf files. 
 
@@ -154,5 +154,5 @@ An example run with existing data can be run like so:
 
 ## Contributing
 
-We always welcome bug reports and enhancement requests from both competitors as well as developers on the Uber Prize-Berkeley Working Group team and elsewhere. Guidelines and suggestions on how to contribute code to this repository may be found in [./github/CONTRIBUTING.md](./github/CONTRIBUTING.md].
+We always welcome bug reports and enhancement requests from both competitors as well as developers on the BISTRO team and elsewhere. Guidelines and suggestions on how to contribute code to this repository may be found in [./github/CONTRIBUTING.md](./github/CONTRIBUTING.md].
 

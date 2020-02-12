@@ -1,0 +1,6 @@
+mode,age,income,amount
+transit,[0:10],,2.0
+transit,(50:75],[0:20000],2.3
+ride_hail,,[0:40000],3.2
+ride_hail,,(40000:50000],2.2
+ride_hail,,(50000:60000],1.1

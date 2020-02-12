@@ -1,0 +1,4 @@
+mode,age,income,amount
+OnDemand_ride,[1:120],[0:49999],3.30
+OnDemand_ride,[6:120],[50000:99999],2.20
+OnDemand_ride,[6:120],[100000:150000],1.10
