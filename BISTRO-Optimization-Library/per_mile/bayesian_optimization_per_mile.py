@@ -80,7 +80,7 @@ def os_setup():
     #In order to run mongodb and hyperopt, some file compying is necessary
     copyfile("optimizer_per_mile.py", CONFIG["HYPEROPT_PATH"]+"optimizer_per_mile.py")
     copyfile("convert_to_input_per_mile.py", CONFIG["HYPEROPT_PATH"]+"convert_to_input_per_mile.py")
-    copyfile("../../utilities/optimization_utils.py", CONFIG["HYPEROPT_PATH"]+"optimization_utils.py")
+    copyfile("../utilities/optimization_utils.py", CONFIG["HYPEROPT_PATH"]+"optimization_utils.py")
     copyfile("settings.yaml", CONFIG["HYPEROPT_PATH"]+"settings.yaml")
     copyfile("optimization_kpi.py", CONFIG["HYPEROPT_PATH"]+"optimization_kpi.py")
     print("Copied optimizers to hyperopt local direcotry")     
