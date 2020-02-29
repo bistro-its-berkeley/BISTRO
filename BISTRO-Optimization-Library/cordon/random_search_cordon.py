@@ -15,6 +15,7 @@ from hyperopt import hp
 from hyperopt.mongoexp import MongoTrials
 from hyperopt import fmin
 from hyperopt import tpe
+from hyperopt import rand
 from optimizer_cordon import *
 
 #Logging and settings import
