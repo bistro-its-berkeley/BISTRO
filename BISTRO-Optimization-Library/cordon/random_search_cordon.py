@@ -15,7 +15,7 @@ from hyperopt import hp
 from hyperopt.mongoexp import MongoTrials
 from hyperopt import fmin
 from hyperopt import tpe
-from optimizer_per_mile import *
+from optimizer_cordon import *
 
 #Logging and settings import
 import csv
@@ -45,7 +45,7 @@ MAX_X = 689624
 MIN_Y = 4818750
 MAX_Y = 4832294
 
-MAX_PRICE_PER_MILE = CONFIG["MAX_PRICE_PER_MILE"]
+MAX_TOLL = CONFIG["MAX_TOLL"]
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +69,7 @@ space = {
     'centerx': hp.quniform('centerx', MIN_X, MAX_X, (MAX_X - MIN_X)/50),
     'centery': hp.quniform('centery', MIN_Y, MAX_Y, (MAX_Y - MIN_Y)/50),
     'cradius':  hp.quniform('cradius',  0 , MAX_Y - MIN_Y, (MAX_Y - MIN_Y)/50),
-    'ctoll': hp.quniform('ctoll', 0, MAX_PRICE_PER_MILE, 0.1)
+    'ctoll': hp.quniform('ctoll', 0, MAX_TOLL, 0.1)
 
 }
 

@@ -51,4 +51,4 @@ NUMBER_OF_SAMPLES: 500
 OPTIMIZATION_KPI_FILE: "optimization_kpi.py"
 
 #Maxmimum price per mile (in $) that can be applied as toll
-MAX_PRICE_PER_MILE: 10
+MAX_TOLL: 10
