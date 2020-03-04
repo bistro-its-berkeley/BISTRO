@@ -103,8 +103,8 @@ if __name__ == '__main__':
 	FREQUENCY_ADJUSTMENT_PATH = "submission-inputs/FrequencyAdjustment.csv"
 	TARGET_DIRECTORY = "tmp-data"
 	frequencies = pd.read_csv(FREQUENCY_ADJUSTMENT_PATH)
-	frequencies['start_time'], frequencies['end_time'] = pd.TimedeltaIndex(frequencies['start_time']).seconds, pd.TimedeltaIndex(
-		frequencies['end_time']).seconds
+	# frequencies['start_time'], frequencies['end_time'] = pd.TimedeltaIndex(frequencies['start_time']).seconds, pd.TimedeltaIndex(
+	# 	frequencies['end_time']).seconds
 	frequencies.set_index(['route_id','start_time'], inplace=True)
 	copy_gtfs(GTFS_ZIP_PATH, TARGET_DIRECTORY)
 
@@ -171,6 +171,8 @@ if __name__ == '__main__':
 						start_time += freq.headway_secs
 						service_trip_idx += 1
 
+						# print("LLLLLLLLLL    ",new_trip_data_dict)
+
 					# Combine data along routes
 					try:
 						new_route_data = pd.concat(new_trip_data_dict[route_id], axis=0).sort_values(['trip_id', 'ats'])
@@ -185,13 +187,13 @@ if __name__ == '__main__':
 						route_data.append(new_route_data)
 						if route_id not in route_ids_used:
 							route_ids_used.append(route_id)
+						print("route_data     ", route_data)
 					except ValueError:
 						print("No need to modify new route data")
 
 				# Update stop_times and write to file
 				stop_times.drop(sorted(route_ids_used))
-				if len(route_data) != 0:
-					final = pd.concat(route_data, axis=0)
+				final = pd.concat(route_data, axis=0)
 				final = final.drop(['ats', 'dts', 'shape_dist_diff'], axis=1).reset_index().set_index(
 					['route_id', 'trip_id', 'stop_sequence'])
 				mod_stop_times = pd.concat([final, stop_times], sort=False).reset_index()
