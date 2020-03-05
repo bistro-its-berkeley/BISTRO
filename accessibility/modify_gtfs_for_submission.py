@@ -7,24 +7,7 @@ import os
 
 import numpy as np
 import pandas as pd
-#from urbanaccess import log
 import logging
-
-class FA:
-
-	def __init__(self,stop_times,trips):
-		self.new_trip_data_dict = defaultdict(list)
-		self.route_ids_used = []
-		self.route_data = []
-		self.stop_times = stop_times
-		self.trips = trips
-		self.trips_update = pd.DataFrame({}, columns=trips.columns)
-
-	def get_items():
-		
-		return self.stop_times, self.trips, self.new_trip_data_dict, self.route_ids_used, self.route_data, self.trips_update
-
-
 
 TIME_FORMAT = '%H:%M:%S'  # strftime compatible format code
 
@@ -95,21 +78,6 @@ def copy_gtfs(source_path, target_directory):
 	print("Done copying gtfs to {}".format(target_directory))
 
 
-# def copy_gtfs(source_path, target_directory):
-#     """Copies GTFS zip file from source path to target directory and unzips it there.
-#     """
-#     target_path = Path(target_directory) / "gtfs"
-
-#     shutil.copyfile(source_path, Path(target_directory) / "gtfs.zip")
-
-#     if not target_path.exists():
-#         target_path.mkdir()
-#     with ZipFile(Path(target_directory) / "gtfs.zip") as z:
-#         for file in z.namelist():
-#             (target_path / file).write_bytes(z.open(file).read())
-#     print("Done copying gtfs to {}".format(target_directory))
-
-
 
 def load_stop_times_and_trips_from_zip(gtfs_zip_path):
 	"""Loads disk-backed gtfs data for urbanaccess
@@ -124,6 +92,7 @@ def load_stop_times_and_trips_from_zip(gtfs_zip_path):
 					stop_times = pd.read_csv(z.open(file))
 				elif 'trips' in file:
 					trips = pd.read_csv(z.open(file), index_col='trip_id')
+					trips['route_id'] = trips['route_id'].astype(str)
 		return stop_times, trips
 
 
@@ -133,19 +102,23 @@ if __name__ == '__main__':
 
 	FREQUENCY_ADJUSTMENT_PATH = "submission-inputs/FrequencyAdjustment.csv"
 	TARGET_DIRECTORY = "tmp-data"
-	frequencies = pd.read_csv(FREQUENCY_ADJUSTMENT_PATH, index_col=['trip_id', 'start_time'])
+	frequencies = pd.read_csv(FREQUENCY_ADJUSTMENT_PATH)
+	# frequencies['start_time'], frequencies['end_time'] = pd.TimedeltaIndex(frequencies['start_time']).seconds, pd.TimedeltaIndex(
+	# 	frequencies['end_time']).seconds
+	frequencies.set_index(['route_id','start_time'], inplace=True)
 	copy_gtfs(GTFS_ZIP_PATH, TARGET_DIRECTORY)
-
 
 	if frequencies.empty:
 		print("FrequencyAdjustment is empty. Nothing to be updated.")
 	else:
 		file_dict = dict()
+		count = 0
 		for file in os.listdir(GTFS_ZIP_PATH):
+			count += 1
 			if file.endswith(".zip"):
 				stop_times, trips = load_stop_times_and_trips_from_zip(GTFS_ZIP_PATH+"/"+file)
 				stop_times['route_id'] = stop_times.trip_id.apply(lambda x: trips.loc[x] if x in trips.index else 0)['route_id']
-				stop_times = stop_times.set_index(['trip_id', 'route_id',  'stop_sequence'])
+				stop_times = stop_times.set_index(['route_id', 'trip_id',   'stop_sequence'])
 				stop_times['ats'], stop_times['dts'] = pd.TimedeltaIndex(stop_times['arrival_time']).seconds, pd.TimedeltaIndex(
 			stop_times['departure_time']).seconds
 
@@ -156,21 +129,16 @@ if __name__ == '__main__':
 				trips_update = pd.DataFrame({}, columns=trips.columns)
 
 				new_freq = frequencies[frequencies.file_name.str.contains(file)]
-				print(new_freq)
 
 				for i, freq in enumerate(new_freq.itertuples()):
 
 					route_id, start_time = freq.Index
-					print("start_time type    ",type(start_time))
 
 					service_trip_idx = 0
-					print("route_id  start_time  ",route_id,start_time,type(route_id))
-					pos_trips = stop_times.xs(int(route_id))
-					print("!!!!pos_trips   ",pos_trips)
+					pos_trips = stop_times.xs(route_id)
 					try:
 						# Of trips on route w/ departure time greater than or equal to start_time take the one w/ the earliest arrival time
-						print(type(pos_trips.ats))
-						service_trip_template = pos_trips[(pos_trips.ats >= '9:00:00')].iloc[0]
+						service_trip_template = pos_trips[(pos_trips.ats >= start_time)].iloc[0]
 					except IndexError as e:
 						service_trip_template = pos_trips.iloc[-1]
 						log(f"No possible arrival time found greater than or equal to {start_time}; Using last trip of day {service_trip_template.name[0]} on Route {route_id} as trip template", name=__name__, level=logging.ERROR,filename='./gtfs_mod')
@@ -203,24 +171,30 @@ if __name__ == '__main__':
 						start_time += freq.headway_secs
 						service_trip_idx += 1
 
+						# print("LLLLLLLLLL    ",new_trip_data_dict)
+
 					# Combine data along routes
-					new_route_data = pd.concat(new_trip_data_dict[route_id], axis=0).sort_values(['trip_id', 'ats'])
-					new_route_data.arrival_time = new_route_data.ats.apply(lambda x: to_time(int(x)).strftime(TIME_FORMAT))
-					new_route_data.departure_time = new_route_data.arrival_time
-					new_route_data = new_route_data.reset_index().set_index('trip_id')
-					new_route_data.loc[:, 'route_id'] = route_id
+					try:
+						new_route_data = pd.concat(new_trip_data_dict[route_id], axis=0).sort_values(['trip_id', 'ats'])
+						new_route_data.arrival_time = new_route_data.ats.apply(lambda x: to_time(int(x)).strftime(TIME_FORMAT))
+						new_route_data.departure_time = new_route_data.arrival_time
+						new_route_data = new_route_data.reset_index().set_index('trip_id')
+						new_route_data.loc[:, 'route_id'] = route_id
 
-					# Concat new trip data to update DF
-					trips_update = pd.concat([trips_update, pd.DataFrame(new_trips)], sort=False)
+						# Concat new trip data to update DF
+						trips_update = pd.concat([trips_update, pd.DataFrame(new_trips)], sort=False)
 
-					route_data.append(new_route_data)
-					if route_id not in route_ids_used:
-						route_ids_used.append(route_id)
+						route_data.append(new_route_data)
+						if route_id not in route_ids_used:
+							route_ids_used.append(route_id)
+						print("route_data     ", route_data)
+					except ValueError:
+						print("No need to modify new route data")
 
 				# Update stop_times and write to file
 				stop_times.drop(sorted(route_ids_used))
 				final = pd.concat(route_data, axis=0)
-				final = final.drop(['ats', 'dts', 'shape_dist_diff', 'time_diff'], axis=1).reset_index().set_index(
+				final = final.drop(['ats', 'dts', 'shape_dist_diff'], axis=1).reset_index().set_index(
 					['route_id', 'trip_id', 'stop_sequence'])
 				mod_stop_times = pd.concat([final, stop_times], sort=False).reset_index()
 				mod_stop_times.to_csv(Path(TARGET_DIRECTORY) / "gtfs" / file.split(".")[0] / "stop_times.txt", index=False)
