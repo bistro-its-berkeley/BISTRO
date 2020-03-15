@@ -15,7 +15,7 @@
 ###################### BASIC CONFIGURATION #####################
 
 #BISTRO Installation directory
-BEAM_PATH: "/home/ubuntu/BeamCompetitions/"
+BEAM_PATH: "/home/ubuntu/BISTRO/"
 
 #Hyperopt installation path - Default : ~/.local/bin
 HYPEROPT_PATH: "/home/ubuntu/.local/bin/"

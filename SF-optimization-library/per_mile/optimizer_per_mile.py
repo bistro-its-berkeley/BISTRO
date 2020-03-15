@@ -68,7 +68,7 @@ SUBMISSION = "Submission Score"
 
 #Beam parameters
 DOCKER_IMAGE = "beammodel/beam-competition:0.0.4.2-SNAPSHOT"
-CMD_TEMPLATE = "--config \"/fixed-data/sf_light/urbansim-25k.conf\""
+CMD_TEMPLATE = "--config /fixed-data/sf_light/urbansim-25k.conf"
 SCENARIO_NAME = "sf_light"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"
