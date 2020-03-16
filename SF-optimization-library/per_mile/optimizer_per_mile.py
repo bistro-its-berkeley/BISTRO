@@ -178,6 +178,15 @@ def read_raw_scores(output_dir):
 def read_toll_revenue(output_dir):
 
     output_dir = only_subdir(only_subdir(output_dir))
+    path = os.path.join(output_dir, 'summaryStats.csv')
+    with open(path) as csvfile:
+        df = pd.read_csv(csvfile, index_col = 0)
+        tr = list(df['tollRevenue'])[-1]
+        return tr
+
+
+    #Old parsing using outputEvents
+    output_dir = only_subdir(only_subdir(output_dir))
     f = gzip.open(os.path.join(output_dir,'outputEvents.xml.gz'), 'rb')
     print("Loading events")
     doc = xmltodict.parse(f.read())
