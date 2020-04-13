@@ -15,7 +15,7 @@ lxml==4.2.5
 matplotlib==3.0.2
 munch==2.3.2
 numexpr==2.6.9
-pandana==0.4.1
+pandana==0.4.4
 pyparsing==2.3.0
 pyproj==1.9.6
 python-dateutil==2.7.5

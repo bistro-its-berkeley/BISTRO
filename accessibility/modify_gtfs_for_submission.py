@@ -187,7 +187,7 @@ if __name__ == '__main__':
 						route_data.append(new_route_data)
 						if route_id not in route_ids_used:
 							route_ids_used.append(route_id)
-						print("route_data     ", route_data)
+
 					except ValueError:
 						print("No need to modify new route data")
 
