@@ -1,0 +1,54 @@
+################################################################
+#                                                              #
+#            BISTRO TPE OPTIMIZER/RS SETTINGS                  #
+#                                                              #
+#    This file contains all parameters for BISTRO scenarios    #
+#                        evaluation                            #
+#                                                              #
+#                                                              #
+################################################################
+
+# Before running any optimization, please refer to this folder's
+# README file to properly install and configure BISTRO, Hyperopt
+# and Mongodb
+
+###################### BASIC CONFIGURATION #####################
+
+#BISTRO Installation directory
+BEAM_PATH: "/home/ubuntu/BISTRO/"
+
+#Hyperopt installation path - Default : ~/.local/bin
+HYPEROPT_PATH: "/usr/local/bin/"
+
+#Experiment key: each experiment must have a unique identification
+#key. It can be any string that you MUST define here:
+UNIQUE_KEY: "My_key_1"
+
+################## EXPERIMENT I-O FOLDERS ######################
+
+#Samples output folder
+RESULTS_PATH: "/home/ubuntu/EXP_RESULTS/"
+
+#Folder containing Sioux Fall's network.csv file
+NETWORK_PATH: "/home/ubuntu/BISTRO/BISTRO-Optimization-Library/fixed_data/network.csv"
+
+#Results standardization file, used for optimization only - not RS -
+STANDARDS: "/home/ubuntu/BISTRO/BISTRO-Optimization-Library/per_mile/per_mile_stds.csv"
+
+
+################# OPTIMIZATION SETTINGS #######################
+
+#Number of individual agents in the simulation; currently only 15k works
+SAMPLE_SIZE: "15k"
+
+#Number of iterations per sample. 30 is usually enough to converge
+SIMULATION_ITERS: 30
+
+#Number of optimization samples to get 
+NUMBER_OF_SAMPLES: 30
+
+#This file contains the the definition of the optimization KPI
+OPTIMIZATION_KPI_FILE: "optimization_kpi.py"
+
+#Maxmimum price per mile (in $) that can be applied as toll
+MAX_PRICE_PER_MILE: 10
