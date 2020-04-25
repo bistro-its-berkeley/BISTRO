@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo docker rm bistro-competition
+
 POSITIONAL=()
 while [[ $# -gt 0 ]]
 do
