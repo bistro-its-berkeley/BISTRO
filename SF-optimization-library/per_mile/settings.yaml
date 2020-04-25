@@ -22,7 +22,7 @@ HYPEROPT_PATH: "/home/ubuntu/.local/bin/"
 
 #Experiment key: each experiment must have a unique identification
 #key. It can be any string that you MUST define here:
-UNIQUE_KEY: "sf_test"
+UNIQUE_KEY: "sf_pm_test"
 
 ################## EXPERIMENT I-O FOLDERS ######################
 
