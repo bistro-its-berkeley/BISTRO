@@ -8,7 +8,7 @@ For more information about HyperBand, see:
 Li, Lisha, et al. "Hyperband: A novel bandit-based approach to hyperparameter optimization." The Journal of Machine Learning Research 18.1 (2017): 6765-6816.
 Falkner, Stefan, Aaron Klein, and Frank Hutter. "Combining hyperband and bayesian optimization." Proceedings of the 31st Conference on Neural Information Processing Systems (NIPS), Bayesian Optimization Workshop. 2017.
 Below is the basic logic of the HyperBand we have implemented:
-![image](https://github.com/bistro-its-berkeley/BISTRO/blob/TPE_optim/BISTRO-Optimization-Library/Hyperband/HyperBand.jpg)
+![image](https://github.com/bistro-its-berkeley/BISTRO/blob/TPE_optim/BISTRO-Optimization-Library/Hyperband/HyperBand.png)
 ## Running HyperBand
 Running HyperBand is similar to running Bayesian optimization(TPE) with per-mile. For HyperBand, there are several special parameters to tune.
 * `portion` defines the portion of trials to discard after every iteration. This parameter is written in bayesian_optimization_hyperband.py
