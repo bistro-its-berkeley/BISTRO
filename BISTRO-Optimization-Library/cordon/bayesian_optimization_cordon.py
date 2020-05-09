@@ -15,7 +15,7 @@ from hyperopt import hp
 from hyperopt.mongoexp import MongoTrials
 from hyperopt import fmin
 from hyperopt import tpe
-from optimizer_per_mile import *
+from optimizer_cordon import *
 
 #Logging and settings import
 import csv
@@ -44,8 +44,7 @@ MAX_X = 689624
 
 MIN_Y = 4818750
 MAX_Y = 4832294
-
-MAX_PRICE_PER_MILE = CONFIG["MAX_PRICE_PER_MILE"]
+MAX_PRICE_PER_MILE = CONFIG["MAX_TOLL"]
 
 logger = logging.getLogger(__name__)
 
