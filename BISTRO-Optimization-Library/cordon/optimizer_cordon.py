@@ -161,7 +161,8 @@ def read_raw_scores(output_dir):
     path = only_subdir(only_subdir(output_dir))
 
     #Copy outevents
-    shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
+    if not os.path.isfile(os.path.join(path, "outputEvents.xml.gz")):
+        shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
 
 
     path = os.path.join(path, "competition/rawScores.csv")
