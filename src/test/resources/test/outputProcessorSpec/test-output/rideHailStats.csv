@@ -1,2 +1,3 @@
-Iteration,onDemandRideRevenue,averageOnDemandRideWaitingTimeInSeconds,totalOnDemandRideWaitingTimeInSeconds,passengerVKT,repositioningVKT,deadHeadingVKT,averageSurgePriceLevel,maxSurgePriceLevel,reservationCount
-0,8621.433167874102,6.928665383381459,7198.883333333336,3390.9612549999997,0.0,719.467391,1.0,1.0,1039
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeaf107568d8b87c24bcb64ea664b624dc168e98ba9a1529d0e9ab4376d858dc
+size 315

@@ -98,7 +98,7 @@ def load_stop_times_and_trips_from_zip(gtfs_zip_path):
 
 if __name__ == '__main__':
 	import sys
-	GTFS_ZIP_PATH = f"fixed-data/sf_light/r5/{sys.argv[1]}"
+	GTFS_ZIP_PATH = f"fixed-data/sf_light/r5"
 
 	FREQUENCY_ADJUSTMENT_PATH = "submission-inputs/FrequencyAdjustment.csv"
 	TARGET_DIRECTORY = "tmp-data"

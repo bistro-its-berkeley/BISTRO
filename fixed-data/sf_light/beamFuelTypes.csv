@@ -1,5 +1,3 @@
-fuelTypeId,priceInDollarsPerMJoule,gCO2ePerGal,pm25PerVMT
-gasoline,0.03,11405.84,0.001716086
-diesel,0.02,13718.04,0.0025936648
-electricity,0.01,378.54,-99999999.9
-biodiesel,0.01,2165.69,-99999999.9
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d8a716676580847646326384c0a21154bb79e8a7bc551167c9c55fd591bb9ee
+size 198

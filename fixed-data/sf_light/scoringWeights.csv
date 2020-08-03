@@ -1,2 +1,3 @@
-averageVehicleDelayPerPassengerTrip,motorizedVehicleMilesTraveled_total,averageTravelCostBurden_Work,busCrowding,costBenefitAnalysis,driveWorkAccessibility,driveSecondaryAccessibility,transitWorkAccessibility,transitSecondaryAccessibility,sustainability_GHG,sustainability_PM,averageTravelCostBurden_Secondary,driveCommuteAccessibility,transitCommuteAccessibility
-1,1,1,1,1,1,1,1,1,1,1,1,1,1
+version https://git-lfs.github.com/spec/v1
+oid sha256:016114eecb53a4aadbf7a246954a52ef0d436a72d2dad660afe6bc0a68969167
+size 392

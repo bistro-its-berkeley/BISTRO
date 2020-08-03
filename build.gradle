@@ -1,5 +1,8 @@
 import com.amazonaws.services.lambda.model.InvocationType
 import jp.classmethod.aws.gradle.lambda.AWSLambdaInvokeTask
+import java.time.Instant
+import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
 
 buildscript {
     repositories {
@@ -7,7 +10,7 @@ buildscript {
         mavenLocal()
         mavenCentral()
 
-        maven { url "https://jitpack.io" }
+        // maven { url "https://jitpack.io" }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
@@ -16,22 +19,26 @@ buildscript {
         classpath "com.github.viswaramamoorthy:gradle-util-plugins:0.1.0-RELEASE"
         classpath 'cz.alenkacz:gradle-scalafmt:1.7.0'
         classpath 'com.bmuschko:gradle-docker-plugin:3.6.1'
-        classpath 'org.json4s:json4s-core_2.9.1-1:3.1.0'
-        classpath 'com.github.debasishg:scala-redis:3.9'
-        classpath 'com.github.seratch:awscala:0.7.2'
+        //classpath 'org.json4s:json4s-core_2.9.1-1:3.1.0'
+        //classpath 'com.github.debasishg:scala-redis:3.9'
+        //classpath 'com.github.seratch:awscala:0.7.2'
     }
 }
 
 plugins {
     id "net.ltgt.apt" version "0.5"
-//    id "org.scoverage" version "2.5.0"
+    id "org.scoverage" version "2.5.0"
     id "de.undercouch.download" version "3.2.0"
+    id 'maven-publish'
+    // new
+    //id "me.champeau.gradle.jmh" version "0.5.0"
 }
 
 // Plugins
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 apply plugin: 'idea'
 apply plugin: 'kr.motd.sphinx'
 apply plugin: 'application'
@@ -39,10 +46,11 @@ apply plugin: 'ManifestClasspath'
 apply plugin: 'scalafmt'
 apply plugin: 'com.bmuschko.docker-java-application'
 
+
 // Project info
 
 group 'beam'
-version '0.0.4.2-SNAPSHOT'
+version '0.0.4.4-SNAPSHOT'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -50,6 +58,12 @@ targetCompatibility = 1.8
 // Version Vars
 compileScala.options.encoding = 'UTF-8'
 def scalaBinaryVersion = "2.12"
+// new
+def akkaBinaryVersion = "2.6.6"
+def circeBinaryVersion = "0.7.1"
+def slf4jVersion = "1.7.25"
+def kamonVersion = "2.0.3"
+def tscfgVersion = "0.9.4"
 
 sourceSets.main.scala.srcDirs = ["src/main/scala", "src/main/java"]
 sourceSets.main.java.srcDirs = []
@@ -57,40 +71,53 @@ sourceSets.main.java.srcDirs = []
 sourceSets.test.java.srcDirs = []
 sourceSets.test.scala.srcDirs = ["src/test/scala", "src/test/java"]
 
+
+sourceSets {
+    main {
+        resources {
+            srcDir "src/main/resources"
+        }
+    }
+    test {
+        resources {
+            srcDir "src/test/resources"
+        }
+    }
+}
+
 if (project.hasProperty('env')) {
     sourceSets {
         main {
             resources {
-                srcDirs "src/main/resources", "test/input/" + project.getProperty('env')
+                srcDirs "test/input/" + project.getProperty('env')
             }
         }
     }
 }
 
-
 allprojects {
     repositories {
-        maven { url "http://download.osgeo.org/webdav/geotools" }
+        maven { url "https://repo.osgeo.org/repository/release/" }
+        maven { url "https://download.osgeo.org/webdav/geotools" }
+        // maven { url "http://maven.icm.edu.pl/artifactory/repo/" }
+        // maven { url "https://maven.geotoolkit.org/" }
         maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
-        maven { url "https://central.maven.org/maven2" }
         maven { url "https://repo.maven.apache.org/maven2" }
-        maven { url "http://dl.bintray.com/matsim/matsim" }
+        maven { url "https://dl.bintray.com/matsim/matsim" }
         maven { url "https://maven.conveyal.com/" }
         maven { url "https://repo1.maven.org/maven2" }
-        maven { url "http://download.java.net/maven/2/" }
-        maven { url "http://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
-        maven { url "http://dl.bintray.com/andimarek/graphql-java" }
-        maven { url "http://maven.geo-solutions.it" }
-        maven { url "http://dl.bintray.com/scalaz/releases" }
-        maven { url "http://nexus.onebusaway.org/content/groups/public/" }
-        maven { url "https://dl.bintray.com/cibotech/public" }
+        maven { url "https://download.java.net/maven/2/" }
+        maven { url "https://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
+        maven { url "https://dl.bintray.com/andimarek/graphql-java" }
+        maven { url "https://maven.geo-solutions.it" }
+        maven { url "https://dl.bintray.com/scalaz/releases" }
+        mavenLocal()
         mavenCentral()
         jcenter()
+        maven { url "http://nexus.onebusaway.org/content/groups/public/" }
         maven { url "https://jitpack.io" }
-        mavenLocal()
     }
 }
-
 
 dependencies {
 
@@ -99,14 +126,18 @@ dependencies {
     /////////////////////////////////
 
     // CORE Scala //
-    compile "org.scala-lang:scala-library:${scalaBinaryVersion}.7"
+    //compile "org.scala-lang:scala-library:${scalaBinaryVersion}.7"
+    compile "org.scala-lang:scala-library:2.12.11"
     compile group: 'org.scala-lang.modules', name: "scala-xml_${scalaBinaryVersion}", version: '1.0.6'
 
     // Needed for using repl
-    compile "org.scala-lang:scala-compiler:2.12.7"
+    //compile "org.scala-lang:scala-compiler:2.12.7"
+    compile "org.scala-lang:scala-compiler:2.12.11"
 
     // BEAM
-    compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge-SNAPSHOT'
+    // compile 'com.github.lbnl-ucb-sti:beam/jl/production-sfbay-develop'
+    // compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge_anyi'
+    // compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge-SNAPSHOT'
     // compile project(":beam")
     // compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge_modify-SNAPSHOT'
 
@@ -136,12 +167,13 @@ dependencies {
     compile "com.github.seratch:awscala:0.7.2"
 
     compile group: 'org.codehaus.janino', name: 'janino', version: '3.0.7'
+    compile group: 'beam', name: 'beam', version: '0.8.0'
 
     //better-files
     compile "com.github.pathikrit:better-files:3.6.0"
 
     // evilplot
-    compile "com.cibo:evilplot_${scalaBinaryVersion}:0.6.3"
+    // compile "com.cibo:evilplot_${scalaBinaryVersion}:0.6.3"
 
     ////////////////////////////////
     // Test compile dependencies
@@ -154,7 +186,7 @@ dependencies {
     testCompile group: 'org.scalacheck', name: 'scalacheck_2.12', version: '1.14+'
 
     // Coverage
-//    scoverage "org.scoverage:scalac-scoverage-plugin_${scalaBinaryVersion}:1.3.1", "org.scoverage:scalac-scoverage-runtime_${scalaBinaryVersion}:1.3.1"
+    scoverage "org.scoverage:scalac-scoverage-plugin_${scalaBinaryVersion}:1.3.1", "org.scoverage:scalac-scoverage-runtime_${scalaBinaryVersion}:1.3.1"
 
 
 }

@@ -104,9 +104,32 @@ class AccessibilityScoreComputation(currentIteration: Int, lastIteration: Int)(i
   def runAccessibilityComputation(): ListBuffer[Map[String, Map[String, Double]]] = {
 
     if (currentIteration == 1) {
-      bauAccessibilityScores = computeAccessibilityForTravelTimes(bauTravelTimeName)
+      // try {
+      //   bauAccessibilityScores = computeAccessibilityForTravelTimes(bauTravelTimeName)
+      // } catch {
+      //   case e: FileNotFoundException => println("Couldn't find BAU accessibility file. Using all zeroes.")
+      // } finally{
+      //   bauAccessibilityScores = Map(
+      //   "secondary" ->
+      //     Map("drive" -> 0.0, "transit" -> 0.0),
+      //   "work" ->
+      //     Map("drive" -> 0.0, "transit" -> 0.0)
+      //   )
+      // }
+      bauAccessibilityScores = Map(
+        "secondary" ->
+          Map("drive" -> 0.0, "transit" -> 0.0),
+        "work" ->
+          Map("drive" -> 0.0, "transit" -> 0.0)
+        )
     } else {
-      bauAccessibilityScores = readAccessibilityOutputFile("bau")
+      bauAccessibilityScores = Map(
+        "secondary" ->
+          Map("drive" -> 0.0, "transit" -> 0.0),
+        "work" ->
+          Map("drive" -> 0.0, "transit" -> 0.0)
+        )
+      /* bauAccessibilityScores = readAccessibilityOutputFile("bau") */
     }
 
     val submissionAccessibilityScores = computeAccessibilityForTravelTimes(submissionTravelTimeName, numOfIters)

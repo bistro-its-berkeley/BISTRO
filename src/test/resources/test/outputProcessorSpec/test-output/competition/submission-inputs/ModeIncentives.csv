@@ -1,3 +1,3 @@
-mode,age,income,amount
-OnDemand_ride,[61:70],[40000:44999],25.0
-OnDemand_ride,[66:100],[50000:79999],12.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:260883e4de1718a317323bf78afd70fd4b67987066d17f166346830379d06789
+size 106

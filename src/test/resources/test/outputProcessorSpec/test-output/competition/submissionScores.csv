@@ -1,9 +1,3 @@
-Component Name,Weight,Z-Mean,Z-StdDev,Raw Score,Weighted Score
-Level of service: costs and benefits,1.0,1.013603,0.151173,1.8296938861760448,5.398390494175843
-Sustainability: Total PM 2.5 Emissions,1.0,1.012,0.022,0.9632020319952679,-2.2180894547605514
-Congestion: average vehicle delay per passenger trip,1.0,1.044,0.107,0.9181149390823761,-1.1764958964263923
-Level of service: average trip expenditure - work,1.0,0.935,0.089,0.9092402899375951,-0.28943494452140406
-Level of service: average bus crowding experienced,1.0,0.936,0.091,0.9843223243965228,0.5310145538079422
-Congestion: total vehicle miles traveled,1.0,1.015,0.017,0.9803711966019888,-2.036988435177124
-Level of service: average trip expenditure - secondary,1.0,1.178,0.239,1.4389800133231787,1.0919665829421707
-Submission Score,,,,,0.1444847666711649044444444444444444
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5030dd5cd0ffb68a7091fd69999cb040eace31a1bf5841b7281e052387a019a
+size 834

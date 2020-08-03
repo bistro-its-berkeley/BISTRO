@@ -165,13 +165,12 @@ trait CompetitionHelper extends BeamHelper {
     runStateMonitor.uploadOutputDump(Paths.get(competitionServices.SUBMISSION_OUTPUT_ROOT_NAME, CompetitionServices.COMPETITION_ROOT, "rawScores.csv").toString)
     runStateMonitor.uploadOutputDump(Paths.get(competitionServices.SUBMISSION_OUTPUT_ROOT_NAME, "summaryStats.csv").toString)
     val lastIter = competitionServices.lastIteration
-    val lastIterEvents = Paths.get(s"${competitionServices.SUBMISSION_OUTPUT_ROOT_NAME}", "ITERS", s"it.$lastIter", s"$lastIter.events.xml.gz")
+    val lastIterEvents = Paths.get(s"${competitionServices.SUBMISSION_OUTPUT_ROOT_NAME}", "ITERS", s"it.$lastIter", s"$lastIter.events.csv.gz")
     runStateMonitor.uploadOutputDump(lastIterEvents.toString)
   }
 
   private def parseArgs(args: Array[String]): TypesafeConfig = {
     val parsedArgs = argsParser.parse(args, init = Arguments()) match {
-      case Some(pArgs) => pArgs
       case Some(pArgs) => pArgs
       case None =>
         throw new IllegalArgumentException(
@@ -267,7 +266,7 @@ trait CompetitionHelper extends BeamHelper {
 
     val beamServices = injector.getInstance(classOf[BeamServices])
 
-    implicit val competitionServices: CompetitionServices = CompetitionServices(beamServices, networkCoordinator)
+    implicit val competitionServices: CompetitionServices = CompetitionServices(beamServices, networkCoordinator,beamExecutionConfig.outputDirectory)
 
 //    warmStart(beamExecutionConfig.beamConfig, beamExecutionConfig.matsimConfig)
 
@@ -276,19 +275,24 @@ trait CompetitionHelper extends BeamHelper {
 
     val childInjector = injector.createChildInjector(new SubmissionEvaluatorModule())
 
-    val mainEvaluator = childInjector.instance[SubmissionEvaluatorFactory].getEvaluatorForIteration(competitionServices.lastIteration)
+    val mainEvaluator = childInjector.instance[SubmissionEvaluatorFactory].getEvaluatorForIteration(competitionServices.lastIteration )
 
     val controlerListenerManager = childInjector.getInstance(classOf[ControlerListenerManagerImpl])
 
     controlerListenerManager.addControlerListener(childInjector.instance[IterationScoreComponentPlottingListener])
 
     // Move input data to destination w/in submission output directory
+
+
+
     MiscUtils.moveInputs(Paths.get(CompetitionServices.INPUT_ROOT),
       competitionServices.INPUT_DEST)
 
     InputProcessor().processInputs()
 
     scenario.setNetwork(networkCoordinator.network)
+    println("THE OUTPUT DIRECTORY IS:")
+    print(beamExecutionConfig.outputDirectory)
 
     runBeam(beamServices, scenario, beamScenario, beamExecutionConfig.outputDirectory)
 

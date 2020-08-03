@@ -28,7 +28,7 @@ import scala.collection.immutable
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
-case class CompetitionServices(beamServices: BeamServices, networkCoordinator: NetworkCoordinator) extends LazyLogging {
+case class CompetitionServices(beamServices: BeamServices, networkCoordinator: NetworkCoordinator, outputDir: String) extends LazyLogging {
 
 
   import CompetitionServices._
@@ -43,13 +43,13 @@ case class CompetitionServices(beamServices: BeamServices, networkCoordinator: N
 
   final val SAMPLE_NAME: String = simNameParts(1)
 
-  final val SUBMISSION_OUTPUT_ROOT_NAME: String = s"${
+  final val SUBMISSION_OUTPUT_ROOT_NAME: String = if(Files.exists(Paths.get(outputDir))) {outputDir} else{s"${
     FileUtils.getConfigOutputFile(
       beamConfig.beam.outputs.baseOutputDirectory,
       beamConfig.beam.agentsim.simulationName,
       beamConfig.beam.outputs.addTimestampToOutputDirectory,
     )
-  }"
+  }"}
 
   final val SCORING_WEIGHTS_PATH = Paths.get(FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "scoringWeights.csv")
 

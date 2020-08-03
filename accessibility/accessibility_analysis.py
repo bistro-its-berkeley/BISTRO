@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 	network_file = "tmp-data/physsim-network.xml"
 	population_file = "tmp-data/population.xml" if Path(
-		"tmp-data/population.xml").exists() else "tmp-data/population.xml.gz"
+		"tmp-data/population.xml").exists() else "fixed-data/sf_light/sample/population2.xml"
 	frequency_file = "submission-inputs/FrequencyAdjustment.csv"
 	#bbox = (-96.840732, 43.465438, -96.651134, 43.616366)
 	bbox = (-122.544380,37.616035,-122.251793,37.87404)

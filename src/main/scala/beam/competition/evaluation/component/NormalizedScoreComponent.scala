@@ -12,14 +12,20 @@ class NormalizedScoreComponent(val scoreComponentWeightIdentifier: ScoreComponen
 
   override def evaluate(bauScore: Double, submissionScore: Double): ScoreComponent = {
     // Catch problem-cases here:
-
+    println(s"SCORE ID: ${scoreComponentWeightIdentifier.shortName}")
+    println("BAU SCORE")
+    println(bauScore)
+    println("SUB SCORE")
+    println(submissionScore)
     // 1. Possible divide by 0
     if (bauScore == 0.0) {
       // 2. 0/0: 0(bau)->0(sub) => No change, then rawScore = 1.0
       if (submissionScore == 0.0) {
         rawScore = 1.0
       } else {
-        throw new ArithmeticException(s"Zero BAU score for ${scoreComponentWeightIdentifier.shortName}!")
+        println(s"Zero BAU score for ${scoreComponentWeightIdentifier.shortName}!")
+        //throw new ArithmeticException(s"Zero BAU score for ${scoreComponentWeightIdentifier.shortName}!")
+        rawScore = submissionScore
       }
     } else {
       rawScore = scoreComponentWeightIdentifier.tau * submissionScore / bauScore

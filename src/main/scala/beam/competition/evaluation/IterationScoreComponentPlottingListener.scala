@@ -103,7 +103,6 @@ case class IterationScoreComponentPlottingListener @Inject()(submissionEvaluator
       header,
       "iteration",
       header,
-      path,
       false
     )
 

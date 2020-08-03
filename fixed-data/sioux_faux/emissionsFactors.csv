@@ -1,5 +1,3 @@
-fuelTypeId,gCO2ePerGal,pm25PerVMT
-gasoline,11405.84,0.001716086
-diesel,13718.04,0.0025936648
-electric,378.54,-99999999.9
-biodiesel,2165.69,-99999999.9
+version https://git-lfs.github.com/spec/v1
+oid sha256:862e5b6594247475b3b74877ad0e2811da51ba11dec3b30ea3cfd7aa9e8162eb
+size 151
