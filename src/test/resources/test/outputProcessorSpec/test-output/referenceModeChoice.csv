@@ -1,3 +1,3 @@
-iterations,car,drive_transit,ride_hail,walk,walk_transit
-benchmark,0,0,0,0,0
-0,60.04008993146789,4.5155348484438065,2.841509331744183,11.463553376493214,21.13931251185091
+version https://git-lfs.github.com/spec/v1
+oid sha256:559b6b8f04b0c09e3821e2b741a10811eb49c1ff9c24425c615bc13dbbadc2ab
+size 171

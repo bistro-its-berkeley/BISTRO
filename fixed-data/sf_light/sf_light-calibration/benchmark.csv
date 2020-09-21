@@ -1,2 +1,3 @@
-mode,car,walk,bike,ride_hail,ride_hail_transit,walk_transit,drive_transit,ride_hail_pooled,cav,bike_transit
-share,0.645,0.069,0,0.052,0.0595,0.0595,0.0595,0.05,0,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:484e959275434282a11b706174b98b71514c0e5d3674128768da0c82c6c64ecc
+size 164

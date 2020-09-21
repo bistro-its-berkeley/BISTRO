@@ -1,5 +1,3 @@
-fuelTypeId,priceInDollarsPerMJoule
-gasoline,0.03
-diesel,0.02
-electricity,0.01
-biodiesel,0.01
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fb0d17ffaf7c7d8308591ba50bb78c498413b842dedd1c3a86b5368cbe09c53
+size 93

@@ -1,5 +1,3 @@
-﻿vehicleTypeId,purchaseCost,opAndMaintCost
-BUS-SMALL-HD,295000,90.18
-BUS-DEFAULT,350000,89.88
-BUS-STD-HD,425000,90.18
-BUS-STD-ART,665000,97.26
+version https://git-lfs.github.com/spec/v1
+oid sha256:9df554d251adfdefeba1291f1c811b3899c09c31c214483e7c334fd311a28179
+size 145

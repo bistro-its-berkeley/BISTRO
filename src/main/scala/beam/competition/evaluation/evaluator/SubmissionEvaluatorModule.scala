@@ -25,7 +25,8 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     override def transformation(vehicleType: String, source: DataTable): Double = {
       vehicleType match {
         case vt if vt.contains("BUS") => source.columns.get(FuelConsumedInMJ.withColumnPrefix("Diesel")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Diesel).gramsGHGePerGallon }.getOrElse(0.0)
-        case vt if vt.contains("CAR") => source.columns.get(FuelConsumedInMJ.withColumnPrefix("Gasoline")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).gramsGHGePerGallon }.getOrElse(0.0)
+        case vt if vt.equals("Car") => source.columns.get(FuelConsumedInMJ.withColumnPrefix("Gasoline")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).gramsGHGePerGallon }.getOrElse(0.0)
+        //        case vt if vt.contains("CAR") => source.columns.get(FuelConsumedInMJ.withColumnPrefix("Gasoline")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).gramsGHGePerGallon }.getOrElse(0.0)
         case _=> 0.0
       }
     }
@@ -36,7 +37,7 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     override def transformation(vehicleType: String, source: DataTable): Double = {
       vehicleType match {
         case vt if vt.contains("BUS") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Diesel).pm25PerVMT  }.getOrElse(0.0)
-        case vt if vt.contains("CAR") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+        case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
         case _=> 0.0
       }
     }
@@ -77,16 +78,24 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     }
   }
 
+  val motorizedVehicleMilesTraveledComponent: CompoundScoreComponent = new CompoundScoreComponent(MotorizedVehicleMilesTraveled_total,getMapTypeStrings(competitionServices.vehicleTypes))(competitionServices) {
+    override def transformation(vehicleType: String, source: DataTable): Double = {
+      vehicleType match {
+        case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+        case _=> 0.0
+      }
+    }
+  }
 
   override def configure(): Unit = {
 
     // Bind simple score components here
     val simpleScoreComponentSetBinder = ScalaMultibinder.newSetBinder[ScoreComponentWeightIdentifier](binder)
     simpleScoreComponentSetBinder.addBinding.toInstance(AverageTravelCostBurden_Work)
-    simpleScoreComponentSetBinder.addBinding.toInstance(AverageTravelCostBurden_Secondary)
+    //simpleScoreComponentSetBinder.addBinding.toInstance(AverageTravelCostBurden_Secondary)
     simpleScoreComponentSetBinder.addBinding.toInstance(BusCrowding)
     // FIXME: fix motorized vehicle miles traveled SAF 9/19
-//    simpleScoreComponentSetBinder.addBinding.toInstance(MotorizedVehicleMilesTraveled_total)
+    // simpleScoreComponentSetBinder.addBinding.toInstance(MotorizedVehicleMilesTraveled_total)
     simpleScoreComponentSetBinder.addBinding.toInstance(AverageVehicleDelayPerPassengerTrip)
 
     // Bind compound score components here
@@ -98,6 +107,8 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     compoundScoreComponentMapBinder.addBinding(Sustainability_PM).toInstance(pmEmissionsSustainabilityComponent)
 
     compoundScoreComponentMapBinder.addBinding(CostBenefitAnalysis).toInstance(costBenefitAnalysisComponent)
+
+    compoundScoreComponentMapBinder.addBinding(MotorizedVehicleMilesTraveled_total).toInstance(motorizedVehicleMilesTraveledComponent)
 
     bind[CompetitionServices].toInstance(competitionServices)
 

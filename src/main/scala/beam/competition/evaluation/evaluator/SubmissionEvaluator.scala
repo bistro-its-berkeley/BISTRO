@@ -29,9 +29,12 @@ case class SubmissionEvaluator @Inject()(simpleStatFields: Set[ScoreComponentWei
 
   private val summaryTable = SummaryTable()
 
-  val submissionScoreMSAOverNumberOfIters: Int = BeamConfigUtils.parseFileSubstitutingInputDirectory(  competitionServices.SUBMISSION_OUTPUT_ROOT_NAME + "/beam.conf").getInt("beam.competition.submissionScoreMSAOverNumberOfIters")
+  val submissionScoreMSAOverNumberOfIters: Int = if (Paths.get(competitionServices.SUBMISSION_OUTPUT_ROOT_NAME + "/beam.conf").toFile.exists()) { BeamConfigUtils.parseFileSubstitutingInputDirectory(  competitionServices.SUBMISSION_OUTPUT_ROOT_NAME + "/beam.conf").getInt("beam.competition.submissionScoreMSAOverNumberOfIters")
+  }  else { 1}
+  // val submissionScoreMSAOverNumberOfIters: Int = BeamConfigUtils.parseFileSubstitutingInputDirectory(  competitionServices.SUBMISSION_OUTPUT_ROOT_NAME + "/beam.conf").getInt("beam.competition.submissionScoreMSAOverNumberOfIters")
 
   private lazy val bauDataTable: DataTable = SubmissionEvaluator.loadDataTable("bauDf", competitionServices.BAU_STATS_PATH, submissionScoreMSAOverNumberOfIters)
+
 
   private lazy val submissionDataTable: DataTable = SubmissionEvaluator.loadDataTable("submissionDf", competitionServices.SUBMISSION_STATS_PATH, submissionScoreMSAOverNumberOfIters)
 
@@ -44,10 +47,7 @@ case class SubmissionEvaluator @Inject()(simpleStatFields: Set[ScoreComponentWei
   def accessibilityScores: BigDecimal = {
 
     val accessibilityScoreMap: ListBuffer[Map[String, Map[String, Double]]]
-    = if (currentIteration == 1 || currentIteration == competitionServices.lastIteration) {
-      new AccessibilityScoreComputation(currentIteration,competitionServices.lastIteration).runAccessibilityComputation()
-    } else {
-      ListBuffer(Map(
+    = ListBuffer(Map(
         "secondary" ->
           Map("drive" -> 0.0, "transit" -> 0.0),
         "commute" ->
@@ -58,7 +58,21 @@ case class SubmissionEvaluator @Inject()(simpleStatFields: Set[ScoreComponentWei
         "commute" ->
           Map("drive" -> 0.0, "transit" -> 0.0)
       ))
-    }
+//    = if (currentIteration == 1 || currentIteration == competitionServices.lastIteration) {
+//      new AccessibilityScoreComputation(currentIteration,competitionServices.lastIteration).runAccessibilityComputation()
+//    } else {
+//      ListBuffer(Map(
+//        "secondary" ->
+//          Map("drive" -> 0.0, "transit" -> 0.0),
+//        "commute" ->
+//          Map("drive" -> 0.0, "transit" -> 0.0)
+//      ),Map(
+//        "secondary" ->
+//          Map("drive" -> 0.0, "transit" -> 0.0),
+//        "commute" ->
+//          Map("drive" -> 0.0, "transit" -> 0.0)
+//      ))
+//    }
     val driveWorkValues = Seq(accessibilityScoreMap.head("commute")("drive"),accessibilityScoreMap(1)("commute")("drive"))
     val transitWorkValues= Seq(accessibilityScoreMap.head("commute")("transit"),accessibilityScoreMap(1)("commute")("transit"))
     val driveSecondaryValues = Seq(accessibilityScoreMap.head("secondary")("drive"),accessibilityScoreMap(1)("secondary")("drive"))

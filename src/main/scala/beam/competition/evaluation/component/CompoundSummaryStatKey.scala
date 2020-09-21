@@ -45,7 +45,7 @@ object CompoundSummaryStatKey extends Enum[CompoundSummaryStatKey] {
   }
 
   case object MotorizedVehicleMilesTraveled extends CompoundSummaryStatKey {
-    override val columnPrefix: String = "motorizedVehicleMilesTraveled"
+    override val columnPrefix: String = "vehicleMilesTraveled"
   }
 
 }

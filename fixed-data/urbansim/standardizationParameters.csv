@@ -1,14 +1,3 @@
-driveWorkAccessibility,0.972,0.045
-driveSecondaryAccessibility,0.998,0.005
-transitWorkAccessibility,1.022,0.029
-transitSecondaryAccessibility,0.998,0.003
-averageVehicleDelayPerPassengerTrip,1.054,0.101
-motorizedVehicleMilesTraveled_total,1.024,0.014
-busCrowding,1.023,0.061
-averageTravelCostBurden_Work,0.728,0.179
-averageTravelCostBurden_Secondary,1.203,0.375
-costBenefitAnalysis,1.808,1.673
-sustainability_GHG,1.005,0.04
-sustainability_PM,1.022,0.036
-driveCommuteAccessibility,0.972,0.045
-transitCommuteAccessibility,1.022,0.029
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d6f8827115543967f14b6b2090369b77fc0a6606534f897b3a87a2785a253cf
+size 543
