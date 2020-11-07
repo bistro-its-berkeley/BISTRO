@@ -23,7 +23,15 @@ def abspath2(path):
 
 
 def only_subdir(path):
-    subdir, = os.listdir(path)  # Validates only returned element
+    # 1104 added - debug
+    print("only_subdir path:")
+    print(path)
+    print(os.listdir(path))
+    for item in os.listdir(path): # should just be the subdir and .DS_store on mac OS
+        if not item.startswith('.'):
+            subdir = os.listdir(path)
+    # added above 1104
+    # subdir, = os.listdir(path)  # Validates only returned element
     path = os.path.join(path, subdir)
     return path
 

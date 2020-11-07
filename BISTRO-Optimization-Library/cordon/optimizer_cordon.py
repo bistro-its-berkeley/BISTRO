@@ -5,7 +5,11 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 hyperopt_path = os.path.abspath(os.path.dirname(__file__));
+# hyperopt_path = config["HYPEROPT_PATH"]
+# sys.path.append(hyperopt_path)
 sys.path.append(os.path.abspath("../"))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
+
 
 try:
     from optimization_utils import *
@@ -67,8 +71,10 @@ TOLL_REVENUE = "TollRevenue"
 SUBMISSION = "Submission Score"
 
 #Beam parameters
-DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
+DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-noacc-SNAPSHOT"
+# DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
 CMD_TEMPLATE = "--scenario {0} --sample-size {1} --iters {2} --config {3}"
+# CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-1k.conf"
 CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
 SCENARIO_NAME = "sioux_faux"
 SCORES_PATH = ("competition", "submissionScores.csv")
@@ -112,6 +118,10 @@ def objective(params):
 
     output_suffix = uuid.uuid4()
     output_dir = os.path.abspath(f"./output/{output_suffix}")
+
+    # 1103 added
+    # os.system("chmod -R 775 ${PWD}/*")
+    # print("${PWD}/*")
 
     cmd = f"docker run -it -v {output_dir}:/output -v {input_dir}:/submission-inputs -v {BEAM_PATH}fixed-data:/fixed-data:rw {DOCKER_IMAGE} {docker_cmd}"
     cmd = cmd + " > log.txt"
@@ -160,9 +170,11 @@ def compute_weighted_scores(raw_scores, standards):
 def read_raw_scores(output_dir):
     path = only_subdir(only_subdir(output_dir))
 
+
     #Copy outevents
     if not os.path.isfile(os.path.join(path, "outputEvents.xml.gz")):
-        shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
+        shutil.copy(os.path.join(path, "ITERS/it.0/0.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
+        # shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
 
 
     path = os.path.join(path, "competition/rawScores.csv")

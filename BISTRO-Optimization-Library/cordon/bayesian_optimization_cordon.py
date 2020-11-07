@@ -20,7 +20,7 @@ from optimizer_cordon import *
 #Logging and settings import
 import csv
 import yaml 
-
+import stat
 
 
 #Load config
@@ -82,6 +82,18 @@ def os_setup():
     copyfile("../utilities/optimization_utils.py", CONFIG["HYPEROPT_PATH"]+"optimization_utils.py")
     copyfile("settings.yaml", CONFIG["HYPEROPT_PATH"]+"settings.yaml")
     copyfile("optimization_kpi.py", CONFIG["HYPEROPT_PATH"]+"optimization_kpi.py")
+
+    # 11_03 update - also copy to hyperopt_mongo_worker directory
+    # not fully sure this is necessary
+    print("path:")
+    print(CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimizer_cordon.py")
+    print()
+    copyfile("optimizer_cordon.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimizer_cordon.py")
+    copyfile("convert_to_input_cordon.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"convert_to_input_cordon.py")
+    copyfile("../utilities/optimization_utils.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimization_utils.py")
+    copyfile("settings.yaml", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"settings.yaml")
+    copyfile("optimization_kpi.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimization_kpi.py")
+
     print("Copied optimizers to hyperopt local direcotry")     
     return
 
@@ -95,8 +107,10 @@ def main():
     input_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/bayesian-input"))
     output_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/bayesian-output"))
 
-    os.makedirs(input_root, exist_ok=True)
-    os.makedirs(output_root, exist_ok=True)
+    # had to skip makedirs because of read-only permission errors from iOS Catalina upgrade (?)
+    # ran with sudo and still had these issues
+    # os.makedirs(input_root, stat.S_IWUSR, exist_ok=True)
+    # os.makedirs(output_root, exist_ok=True)
 
     seed = 123
     # TODO also consider setting pyseed
