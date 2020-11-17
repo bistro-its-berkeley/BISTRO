@@ -38,7 +38,7 @@ RESULTS_PATH: "/Users/makenaschwinn/Desktop/bistro/CORDON_1103_v5/"
 NETWORK_PATH: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Library/fixed_data/network.csv"
 
 #Results standardization file, used for optimization only - not RS -
-STANDARDS: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Library/per_mile/per_mile_stds.csv"
+STANDARDS: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Library/cordon/cordon_stds.csv"
 
 
 ################# OPTIMIZATION SETTINGS #######################
@@ -57,3 +57,6 @@ OPTIMIZATION_KPI_FILE: "optimization_kpi.py"
 
 #Maxmimum price per mile (in $) that can be applied as toll
 MAX_TOLL: 10
+
+# Toggle Hypervolume optimization on/off
+HYPERVOLUME: True
