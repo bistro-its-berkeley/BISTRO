@@ -62,6 +62,8 @@ def hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter):
 	# standardize raw scores,
 	for k in raw_scores.keys():
 		# raw_scores[k] = (raw_scores[k] - standards[k][0]) / standards[k][1]
+		if ("Accessibility" in k) or (k == "costBenefitAnalysis"):
+			raw_scores[k] = -1 * raw_scores[k]
 		print(k)
 		raw_scores[k] = (raw_scores[k] - standards.get(k, (0,1))[0]) / standards.get(k, (0,1))[1]
 
