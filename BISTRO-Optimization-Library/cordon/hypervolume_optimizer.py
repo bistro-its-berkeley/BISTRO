@@ -50,7 +50,7 @@ SCORING_WEIGHTS_RAW_PATH = BEAM_PATH + "BISTRO-Optimization-Library/fixed_data/s
 BAU_STATS_PATH = CONFIG["BEAM_PATH"] + "BISTRO-Optimization-Library/fixed_data/" + SCENARIO_NAME + "/bau/stats/summaryStats-" + CONFIG["SAMPLE_SIZE"] +".csv"
 OBJECTIVE_VAL_FILENAME = "objective_value.csv"
 
-def hypervolume_score(raw_scores, standards, output_dir):
+def hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter):
 	# make reference point
 	ref = make_reference_point(output_dir)
 
@@ -65,21 +65,23 @@ def hypervolume_score(raw_scores, standards, output_dir):
 		print(k)
 		raw_scores[k] = (raw_scores[k] - standards.get(k, (0,1))[0]) / standards.get(k, (0,1))[1]
 
-	print(raw_scores)
-
 	# get pareto front
 	# prev_pareto = get_pareto()
 
 	# compute pareto front
-	curr_pareto, ordered_kpi_names = pareto_front(raw_scores)
+	curr_pareto, ordered_kpi_names = pareto_front(raw_scores, curr_bistro_iter, samples_dir=RESULTS_PATH)
+
+	# write pareto front
+	# record_pareto()
 
 	# calculate hv score with pygmo utility
 	hv = hypervolume(curr_pareto)
 	score = -1 * hv.compute(ref)
 	print(score)
+	write_hv_score(score, curr_bistro_iter)
 
 	# update best-seen KPI values
-	update_best_kpis()
+	update_best_kpis(curr_pareto, ordered_kpi_names, curr_bistro_iter, output_dir, samples_dir=RESULTS_PATH)
 
 	return score
 
@@ -117,7 +119,7 @@ def get_raw_bau_scores(output_dir, bau_output_dir=BAU_STATS_PATH, scoring_std_pa
         # bau_dic: {'driveSecondaryAccessibility': 1.0, ...}
 
     print(f"bau_dic: {bau_dic}")
-    # logger.info(f"bau_dic: {bau_dic}")
+    logger.info(f"bau_dic: {bau_dic}")
     return bau_dic
 
 def dominates(row, candidateRow):
@@ -126,7 +128,7 @@ def dominates(row, candidateRow):
     # candidateRow dominates row if candidate_kpi_x <= row_kpi_x for all kpis x and at least one ineq is strict
     return (sum([row[x] >= candidateRow[x] for x in range(len(row))]) == len(row)) and (sum([row[x] > candidateRow[x] for x in range(len(row))]) >= 1)
 
-def pareto_front(raw_scores, samples_dir=RESULTS_PATH):
+def pareto_front(raw_scores, curr_bistro_iter, samples_dir):
     logger.info("pareto_front")
     print("pareto_front")
     csvfile = f"{samples_dir}/pareto_front.csv"
@@ -139,11 +141,18 @@ def pareto_front(raw_scores, samples_dir=RESULTS_PATH):
         print(f"make file: {csvfile}")
         logger.info(f"kpi_colnames: {kpi_colnames}")
         logger.info(f"current_iter_kpis: {current_iter_kpis}")
-        df = pd.DataFrame(data=np.array([current_iter_kpis]), columns=kpi_colnames)
-        df.to_csv(csvfile)
+        cols = ["BISTRO Iteration"] + kpi_colnames
+        data = [1] + list(current_iter_kpis) # first column to track pareto front at each iteration
+        with open(csvfile, "w") as f:
+        	csvwriter = csv.writer(f)
+        	csvwriter.writerow(cols)
+        	csvwriter.writerow(data)
+        	f.close()
+        # df = pd.DataFrame(data=np.array([data]), columns=cols)
+        # df.to_csv(csvfile)
         return np.array([current_iter_kpis]), kpi_colnames
     else:
-        pareto_df = pd.read_csv(csvfile, index_col=0)
+        pareto_df = pd.read_csv(csvfile).drop("BISTRO Iteration", axis=1) # don't use BISTRO Iteration column in pareto calc
         pareto_2d_arr = pareto_df.to_numpy()
         logger.info(f"pareto_2d_arr from csvfile: {pareto_2d_arr}")
         print(isinstance(pareto_2d_arr[0], np.ndarray))
@@ -174,6 +183,62 @@ def pareto_front(raw_scores, samples_dir=RESULTS_PATH):
             print(f"pareto_2d_arr is 1d")
             pareto_2d_arr = np.array([pareto_2d_arr])
         logger.info(f"pareto_2d_arr for df: {pareto_2d_arr}")
-        pareto_df = pd.DataFrame(data=pareto_2d_arr, columns=kpi_colnames)
-        pareto_df.to_csv(csvfile)
+
+        # open file for appending/reading
+        # switch from "a+" to "w" if filesize with appending is becoming too large - this will overwrite previous iterations' pareto fronts
+        # and remove column writer line
+        with open(csvfile, 'w') as f: 
+        	csvwriter = csv.writer(f)
+        	cols = ["BISTRO Iteration"] + kpi_colnames
+        	csvwriter.writerow(cols)
+	        for row in pareto_2d_arr:
+	        	# write data with current iteration as first column
+	        	csvwriter.writerow([curr_bistro_iter] + list(row))
+	        f.close()
+        # pareto_df = pd.DataFrame(data=pareto_2d_arr, columns=kpi_colnames)
+        # pareto_df.to_csv(csvfile)
         return pareto_2d_arr, kpi_colnames
+
+def write_hv_score(score, iteration, samples_dir=RESULTS_PATH, filename=OBJECTIVE_VAL_FILENAME):
+    csvfile  = f"{samples_dir}/{OBJECTIVE_VAL_FILENAME}"
+    with open(csvfile, 'a') as obj_csvfile:
+        csvwriter = csv.writer(obj_csvfile)
+        csvwriter.writerow([iteration, score]) 
+
+def update_best_kpis(pareto_2d_arr, kpi_colnames, bistro_iter, output_dir, samples_dir, filename=None):
+    """
+    Update the last row of best_achieved_kpis.csv
+    Return the current BISTRO iteration #
+    """
+    csvfile  = f"{samples_dir}/best_achieved_KPIS.csv"
+    logger.info(f"curr_bistro_iter: {bistro_iter}")
+
+    if not os.path.exists(csvfile):
+    	logger.info(f"Creating best_achieved_kpis file in {samples_dir}")
+    	bau_dic = get_raw_bau_scores(output_dir) # kpi:value
+    	kpi_colnames = sorted(list(bau_dic.keys()))
+    	bau_kpis_values = np.array([bau_dic[kpi] for kpi in kpi_colnames]) # ordered
+
+    	kpi_colnames = ["BISTRO Iteration"] + kpi_colnames
+    	bau_kpis_values = [1] + list(bau_kpis_values)
+
+    	logger.info(f"kpi_colnames: {kpi_colnames}")
+    	logger.info(f"bau_kpis_values: {bau_kpis_values}")
+
+    	with open(csvfile, 'a') as best_kpis_csv:
+    		csvwriter = csv.writer(best_kpis_csv)
+    		csvwriter.writerow(kpi_colnames)
+    		csvwriter.writerow(bau_kpis_values) 
+    		best_kpis_csv.close()
+    else:
+    	best_kpis_df = pd.read_csv(csvfile)
+    	pareto_df = pd.DataFrame(data=pareto_2d_arr, columns=kpi_colnames) # already ordered
+    	min_values = [pareto_df[colname].min() for colname in pareto_df.columns]
+    	logger.info(f"min_values: {min_values}")
+
+    	curr_data = [bistro_iter] + min_values # create row of df: BISTRO ITERATION, KPI1, KPI2, ...
+
+    	with open(csvfile, 'a') as best_kpis_csv:
+    		csvwriter = csv.writer(best_kpis_csv)
+    		csvwriter.writerow(curr_data) 
+    		best_kpis_csv.close()
