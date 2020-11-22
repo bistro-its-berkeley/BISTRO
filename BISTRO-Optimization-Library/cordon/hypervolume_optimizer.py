@@ -46,7 +46,7 @@ RESULTS_PATH = "/Users/makenaschwinn/Desktop/bistro/AWS_samples/"
 
 SCENARIO_NAME = "sioux_faux"
 
-SCORING_WEIGHTS_RAW_PATH = BEAM_PATH + "BISTRO-Optimization-Library/fixed_data/scoringWeights.csv" 
+SCORING_WEIGHTS_RAW_PATH = CONFIG["BEAM_PATH"] + "BISTRO-Optimization-Library/fixed_data/scoringWeights.csv" 
 BAU_STATS_PATH = CONFIG["BEAM_PATH"] + "BISTRO-Optimization-Library/fixed_data/" + SCENARIO_NAME + "/bau/stats/summaryStats-" + CONFIG["SAMPLE_SIZE"] +".csv"
 OBJECTIVE_VAL_FILENAME = "objective_value.csv"
 

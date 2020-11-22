@@ -15,15 +15,15 @@
 ###################### BASIC CONFIGURATION #####################
 
 #BISTRO Installation directory
-BEAM_PATH: "/Users/makenaschwinn/Desktop/bistro/BISTRO/"
+BEAM_PATH: "/home/ubuntu/BISTRO/"
 
 #Hyperopt installation path - Default : ~/.local/bin
-# HYPEROPT_PATH: "/Users/makenaschwinn/anaconda3/lib/python3.7/site-packages/hyperopt/"
-# HYPEROPT_PATH: "/Users/makenaschwinn/anaconda3/bin/"
-HYPEROPT_PATH: "/Users/makenaschwinn/anaconda3/envs/bistro/lib/python3.7/site-packages/hyperopt/"
-# HYPEROPT_PATH: "/Users/makenaschwinn/anaconda3/envs/bistro/lib/python3.7/"
+HYPEROPT_PATH: "/home/ubuntu/.local/lib/python3.6/site-packages/hyperopt/"
+# HYPEROPT_PATH: "/home/ubuntu/.local/bin/"
 
-HYPEROPT_MONGO_WORKER_PATH: "/Users/makenaschwinn/anaconda3/envs/bistro/bin/"
+# hyperopt-mongo-worker executable is actually here
+HYPEROPT_MONGO_WORKER_PATH: "/home/ubuntu/.local/bin/"
+
 
 #Experiment key: each experiment must have a unique identification
 #key. It can be any string that you MUST define here:
@@ -32,13 +32,13 @@ UNIQUE_KEY: "Optim_cordon"
 ################## EXPERIMENT I-O FOLDERS ######################
 
 #Samples output folder
-RESULTS_PATH: "/Users/makenaschwinn/Desktop/bistro/CORDON_1103_v5/"
+RESULTS_PATH: "/home/ubuntu/HV_TEST/"
 
 #Folder containing Sioux Fall's network.csv file
-NETWORK_PATH: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Library/fixed_data/network.csv"
+NETWORK_PATH: "/home/ubuntu/BISTRO/BISTRO-Optimization-Library/fixed_data/network.csv"
 
 #Results standardization file, used for optimization only - not RS -
-STANDARDS: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Library/cordon/cordon_stds.csv"
+STANDARDS: "/home/ubuntu/BISTRO/BISTRO-Optimization-Library/per_mile/per_mile_stds.csv"
 
 
 ################# OPTIMIZATION SETTINGS #######################
@@ -47,7 +47,7 @@ STANDARDS: "/Users/makenaschwinn/Desktop/bistro/BISTRO/BISTRO-Optimization-Libra
 SAMPLE_SIZE: "15k" # 1k
 
 #Number of iterations per sample. 30 is usually enough to converge
-SIMULATION_ITERS: 10
+SIMULATION_ITERS: 30
 
 #Number of optimization samples to get 
 NUMBER_OF_SAMPLES: 20

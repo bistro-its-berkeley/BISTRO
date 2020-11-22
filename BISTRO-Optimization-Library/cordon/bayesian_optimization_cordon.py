@@ -78,6 +78,7 @@ space = {
 def os_setup():
     #In order to run mongodb and hyperopt, some file compying is necessary
     copyfile("optimizer_cordon.py", CONFIG["HYPEROPT_PATH"]+"optimizer_cordon.py")
+    copyfile("hypervolume_optimizer.py", CONFIG["HYPEROPT_PATH"]+"hypervolume_optimizer.py")
     copyfile("convert_to_input_cordon.py", CONFIG["HYPEROPT_PATH"]+"convert_to_input_cordon.py")
     copyfile("../utilities/optimization_utils.py", CONFIG["HYPEROPT_PATH"]+"optimization_utils.py")
     copyfile("settings.yaml", CONFIG["HYPEROPT_PATH"]+"settings.yaml")
@@ -89,6 +90,7 @@ def os_setup():
     print(CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimizer_cordon.py")
     print()
     copyfile("optimizer_cordon.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimizer_cordon.py")
+    copyfile("hypervolume_optimizer.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"hypervolume_optimizer.py")
     copyfile("convert_to_input_cordon.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"convert_to_input_cordon.py")
     copyfile("../utilities/optimization_utils.py", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"optimization_utils.py")
     copyfile("settings.yaml", CONFIG["HYPEROPT_MONGO_WORKER_PATH"]+"settings.yaml")

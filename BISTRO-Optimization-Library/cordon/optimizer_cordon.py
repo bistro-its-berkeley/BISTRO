@@ -10,6 +10,8 @@ hyperopt_path = os.path.abspath(os.path.dirname(__file__));
 sys.path.append(os.path.abspath("../"))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
 
+print(os.path.abspath("../"))
+print(os.path.abspath("."))
 
 try:
     from optimization_utils import *
@@ -27,6 +29,8 @@ import csv
 from convert_to_input_cordon import *
 from hyperopt import STATUS_OK
 from optimization_kpi import optim_KPI
+from hypervolume_optimizer import *
+print("imported things")
 
 #Load config
 CONFIG = {}
@@ -87,11 +91,10 @@ OUT_PATH = CONFIG["RESULTS_PATH"]
 logger = logging.getLogger(__name__)
 
 
-
-
 def objective(params):
     """Objective function for Calling the Simulator"""
     # Keep track of evals
+    print("objective")
 
     start = timer()
 
@@ -118,6 +121,8 @@ def objective(params):
 
     output_suffix = uuid.uuid4()
     output_dir = os.path.abspath(f"./output/{output_suffix}")
+    print(f"output_dir: {output_dir}")
+    logger.info(f"output_dir: {output_dir}")
 
     # 1103 added
     # os.system("chmod -R 775 ${PWD}/*")
@@ -130,7 +135,11 @@ def objective(params):
     os.system(cmd)
     print("BISTRO finished")
     
-    score = get_score(output_dir)
+    logger.info(f"current working directory: {os.getcwd()}")
+    curr_bistro_iter = len(next(os.walk(os.getcwd()))[1])
+    logger.info(f"curr_bistro_iter: {curr_bistro_iter}")
+
+    score = get_score(output_dir, curr_bistro_iter, hv_method=CONFIG["HYPERVOLUME"])
     print("SCORE :", score)
 
     output_dir = only_subdir(only_subdir(output_dir))
@@ -150,10 +159,13 @@ def objective(params):
 
 
 
-def get_score(output_dir):
+def get_score(output_dir, curr_bistro_iter, hv_method=False):
     standards = load_standards()
     raw_scores = read_raw_scores(output_dir)
-    return compute_weighted_scores(raw_scores, standards)
+    if hv_method:
+        return hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter)
+    else:
+        return compute_weighted_scores(raw_scores, standards)
 
 
 #KPI is hard coded for now
@@ -173,8 +185,7 @@ def read_raw_scores(output_dir):
 
     #Copy outevents
     if not os.path.isfile(os.path.join(path, "outputEvents.xml.gz")):
-        shutil.copy(os.path.join(path, "ITERS/it.0/0.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
-        # shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
+        shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
 
 
     path = os.path.join(path, "competition/rawScores.csv")

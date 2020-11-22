@@ -1,0 +1,3 @@
+INFO (optimizer_per_mile): !!! execute simulator cmd: sudo docker run -it -v /home/ubuntu/BISTRO/SF-optimization-library/per_mile/5e84b4ca948d912de0f9ded3/output/bdc8194c-735c-47e8-b730-29beadb30eef:/output -v /home/ubuntu/BISTRO/SF-optimization-library/per_mile/5e84b4ca948d912de0f9ded3/submission-inputs/103c6deb-f0e6-48a1-87d0-4ce50139958e:/submission-inputs -v /home/ubuntu/BISTRO/fixed-data:/fixed-data:rw beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT --config /fixed-data/sf_light/urbansim-25k.conf > log.txt
+INFO (hyperopt.mongoexp): Caught signal 15, shutting down.
+INFO (hyperopt.mongoexp): job exception: 15
