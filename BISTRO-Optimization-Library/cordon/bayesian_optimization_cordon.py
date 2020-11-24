@@ -111,8 +111,8 @@ def main():
 
     # had to skip makedirs because of read-only permission errors from iOS Catalina upgrade (?)
     # ran with sudo and still had these issues
-    # os.makedirs(input_root, stat.S_IWUSR, exist_ok=True)
-    # os.makedirs(output_root, exist_ok=True)
+    os.makedirs(input_root, stat.S_IWUSR, exist_ok=True)
+    os.makedirs(output_root, exist_ok=True)
 
     seed = 123
     # TODO also consider setting pyseed

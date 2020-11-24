@@ -128,6 +128,10 @@ def objective(params):
     # os.system("chmod -R 775 ${PWD}/*")
     # print("${PWD}/*")
 
+    samples_path = os.path.abspath("..")
+    logger.info(f"current working directory: {os.getcwd()}")
+    logger.info(f"samples directoy? {samples_path}")
+
     cmd = f"docker run -it -v {output_dir}:/output -v {input_dir}:/submission-inputs -v {BEAM_PATH}fixed-data:/fixed-data:rw {DOCKER_IMAGE} {docker_cmd}"
     cmd = cmd + " > log.txt"
     logger.info("!!! execute simulator cmd: %s" % cmd)
@@ -135,8 +139,7 @@ def objective(params):
     os.system(cmd)
     print("BISTRO finished")
     
-    logger.info(f"current working directory: {os.getcwd()}")
-    curr_bistro_iter = len(next(os.walk(os.getcwd()))[1])
+    curr_bistro_iter = len(next(os.walk(os.path.abspath("..")))[1])
     logger.info(f"curr_bistro_iter: {curr_bistro_iter}")
 
     score = get_score(output_dir, curr_bistro_iter, hv_method=CONFIG["HYPERVOLUME"])
@@ -163,7 +166,9 @@ def get_score(output_dir, curr_bistro_iter, hv_method=False):
     standards = load_standards()
     raw_scores = read_raw_scores(output_dir)
     if hv_method:
-        return hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter)
+        samples_path = os.path.abspath("..")
+        logger.info(f"PARENT (SAMPLES DIR) PATH: {samples_path}")
+        return hypervolume_score(raw_scores, standards, output_dir, samples_path, curr_bistro_iter)
     else:
         return compute_weighted_scores(raw_scores, standards)
 

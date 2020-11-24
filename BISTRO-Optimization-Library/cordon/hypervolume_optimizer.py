@@ -18,7 +18,7 @@ except:
 
 from convert_to_input_cordon import *
 from optimization_kpi import optim_KPI
-from optimizer_cordon import *
+# from optimizer_cordon import * # didn't work - read_raw_scores is not defined" - circular dependency
 
 import uuid
 from timeit import default_timer as timer
@@ -39,10 +39,30 @@ with open(os.path.join(hyperopt_path,"settings.yaml")) as stream:
 
 sys.path.append(CONFIG["BEAM_PATH"])
 
-logger = logging.getLogger(__name__)
+#Score translations
+trans_dict = {
 
-# pre-existing results path - BEAM has already generated this data
-RESULTS_PATH = "/Users/makenaschwinn/Desktop/bistro/AWS_samples/"
+    'Iteration':'Iteration',
+
+    'Accessibility: number of secondary locations accessible by car within 15 minutes':'driveSecondaryAccessibility',
+    'Accessibility: number of secondary locations accessible by transit within 15 minutes':'transitSecondaryAccessibility',
+    'Accessibility: number of work locations accessible by car within 15 minutes':'driveWorkAccessibility',
+    'Accessibility: number of work locations accessible by transit within 15 minutes':'transitWorkAccessibility',
+
+    'Congestion: average vehicle delay per passenger trip':'averageVehicleDelayPerPassengerTrip',
+    'Congestion: total vehicle miles traveled':'motorizedVehicleMilesTraveled_total',
+    'Equity: average travel cost burden -  secondary':'averageTravelCostBurden_Secondary',
+    'Equity: average travel cost burden - work':'averageTravelCostBurden_Work',
+    'Level of service: average bus crowding experienced':'busCrowding',
+    'Level of service: costs and benefits':'costBenefitAnalysis',
+
+    'Sustainability: Total grams GHGe Emissions':'sustainability_GHG',
+    'Sustainability: Total grams PM 2.5 Emitted':'sustainability_PM',
+    'TollRevenue':'TollRevenue',
+    'VMT':'VMT'
+}
+
+logger = logging.getLogger(__name__)
 
 SCENARIO_NAME = "sioux_faux"
 
@@ -50,7 +70,7 @@ SCORING_WEIGHTS_RAW_PATH = CONFIG["BEAM_PATH"] + "BISTRO-Optimization-Library/fi
 BAU_STATS_PATH = CONFIG["BEAM_PATH"] + "BISTRO-Optimization-Library/fixed_data/" + SCENARIO_NAME + "/bau/stats/summaryStats-" + CONFIG["SAMPLE_SIZE"] +".csv"
 OBJECTIVE_VAL_FILENAME = "objective_value.csv"
 
-def hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter):
+def hypervolume_score(raw_scores, standards, output_dir, samples_dir, curr_bistro_iter):
 	# make reference point
 	ref = make_reference_point(output_dir)
 
@@ -71,7 +91,7 @@ def hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter):
 	# prev_pareto = get_pareto()
 
 	# compute pareto front
-	curr_pareto, ordered_kpi_names = pareto_front(raw_scores, curr_bistro_iter, samples_dir=RESULTS_PATH)
+	curr_pareto, ordered_kpi_names = pareto_front(raw_scores, curr_bistro_iter, samples_dir)
 
 	# write pareto front
 	# record_pareto()
@@ -80,10 +100,10 @@ def hypervolume_score(raw_scores, standards, output_dir, curr_bistro_iter):
 	hv = hypervolume(curr_pareto)
 	score = -1 * hv.compute(ref)
 	print(score)
-	write_hv_score(score, curr_bistro_iter)
+	write_hv_score(score, curr_bistro_iter, samples_dir)
 
 	# update best-seen KPI values
-	update_best_kpis(curr_pareto, ordered_kpi_names, curr_bistro_iter, output_dir, samples_dir=RESULTS_PATH)
+	update_best_kpis(curr_pareto, ordered_kpi_names, curr_bistro_iter, output_dir, samples_dir)
 
 	return score
 
@@ -201,7 +221,7 @@ def pareto_front(raw_scores, curr_bistro_iter, samples_dir):
         # pareto_df.to_csv(csvfile)
         return pareto_2d_arr, kpi_colnames
 
-def write_hv_score(score, iteration, samples_dir=RESULTS_PATH, filename=OBJECTIVE_VAL_FILENAME):
+def write_hv_score(score, iteration, samples_dir, filename=OBJECTIVE_VAL_FILENAME):
     csvfile  = f"{samples_dir}/{OBJECTIVE_VAL_FILENAME}"
     with open(csvfile, 'a') as obj_csvfile:
         csvwriter = csv.writer(obj_csvfile)
@@ -244,3 +264,38 @@ def update_best_kpis(pareto_2d_arr, kpi_colnames, bistro_iter, output_dir, sampl
     		csvwriter = csv.writer(best_kpis_csv)
     		csvwriter.writerow(curr_data) 
     		best_kpis_csv.close()
+
+def read_raw_scores(output_dir):
+    path = only_subdir(only_subdir(output_dir))
+
+
+    #Copy outevents
+    if not os.path.isfile(os.path.join(path, "outputEvents.xml.gz")):
+        shutil.copy(os.path.join(path, "ITERS/it.30/30.events.xml.gz"), os.path.join(path, "outputEvents.xml.gz"))
+
+
+    path = os.path.join(path, "competition/rawScores.csv")
+    dic = {}
+
+    with open(path) as csvfile:
+        df = pd.read_csv(csvfile)
+        kpi_names = list(df.columns)
+        for name in kpi_names:
+            dic[trans_dict[name]] = list(df[name])[-1]
+
+    dic['TollRevenue'] = read_toll_revenue(output_dir)
+    return dic
+
+def read_toll_revenue(output_dir):
+
+    output_dir = only_subdir(only_subdir(output_dir))
+    f = gzip.open(os.path.join(output_dir,'outputEvents.xml.gz'), 'rb')
+    print("Loading events")
+    doc = xmltodict.parse(f.read())
+    print("Parsing tolls paid")
+    totalTolls = 0
+    for event in doc['events']['event']:
+        if '@tollPaid' in event.keys():
+            totalTolls += float(event['@tollPaid'])
+
+    return totalTolls
