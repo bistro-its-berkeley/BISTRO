@@ -26,7 +26,7 @@ class AccessibilityScoreComputation(currentIteration: Int, lastIteration: Int)(i
 
   private val bauTravelTimeName = s"linkstats_bau-${competitionServices.SAMPLE_NAME}.csv.gz"
 
-  val dataPath: file.Path = Paths.get("tmp-data").toAbsolutePath
+  val dataPath: file.Path = Paths.get("output/tmp-data").toAbsolutePath
   var bauAccessibilityScores: Map[String, Map[String, Double]] = Map.empty
   val bauTransitNetRootName = "bau_transit_net.h5"
   val osmWalkLinksRootName = "bau_osm_walk_data"
@@ -38,7 +38,7 @@ class AccessibilityScoreComputation(currentIteration: Int, lastIteration: Int)(i
 
   private def computeAccessibilityForTravelTimes(travelTimeFile: String, numOfIters: Int = 1): Map[String, Map[String, Double]] = {
     val prefix = if (travelTimeFile contains "bau") "bau" else "sub"
-    s"python3 accessibility/accessibility_analysis.py tmp-data/$travelTimeFile " +
+    s"python3 accessibility/accessibility_analysis.py output/tmp-data/$travelTimeFile " +
       s"$numOfIters $r5SubDirectory" ! ProcessLogger(stderr append _)
     val dataOutput: Map[String, Map[String, Double]] = readAccessibilityOutputFile(prefix)
     dataOutput

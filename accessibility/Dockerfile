@@ -90,6 +90,6 @@ RUN pip install -r /provisioning/requirements.txt
 
 RUN mkdir -p /accessibility
 RUN echo "Installing accessibility metrics..."
-RUN mkdir -p /tmp-data
+RUN mkdir -p output/tmp-data
 COPY . /accessibility
 WORKDIR /

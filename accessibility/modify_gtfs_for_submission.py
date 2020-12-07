@@ -101,7 +101,7 @@ if __name__ == '__main__':
 	GTFS_ZIP_PATH = f"fixed-data/sf_light/r5"
 
 	FREQUENCY_ADJUSTMENT_PATH = "submission-inputs/FrequencyAdjustment.csv"
-	TARGET_DIRECTORY = "tmp-data"
+	TARGET_DIRECTORY = "output/tmp-data"
 	frequencies = pd.read_csv(FREQUENCY_ADJUSTMENT_PATH)
 	# frequencies['start_time'], frequencies['end_time'] = pd.TimedeltaIndex(frequencies['start_time']).seconds, pd.TimedeltaIndex(
 	# 	frequencies['end_time']).seconds

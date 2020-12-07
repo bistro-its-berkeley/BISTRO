@@ -10,7 +10,7 @@ from urbanaccess.gtfs.gtfsfeeds_dataframe import gtfsfeeds_dfs
 
 TIME_RANGES = {'morning_peak': (7, 10), "midday": (10, 17)}
 TIME_FORMAT = '%H:%M:%S'
-DATA_ROOT = Path("tmp-data/")
+DATA_ROOT = Path("output/tmp-data/")
 SUB_GTFS_PATH = DATA_ROOT / "gtfs"
 
 

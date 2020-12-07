@@ -72,9 +72,9 @@ if __name__ == '__main__':
 
 	import sys
 
-	network_file = "tmp-data/physsim-network.xml"
-	population_file = "tmp-data/population.xml" if Path(
-		"tmp-data/population.xml").exists() else "fixed-data/sf_light/sample/population2.xml"
+	network_file = "output/tmp-data/physsim-network.xml"
+	population_file = "output/tmp-data/population.xml" if Path(
+		"output/tmp-data/population.xml").exists() else "fixed-data/sf_light/sample/population2.xml"
 	frequency_file = "submission-inputs/FrequencyAdjustment.csv"
 	#bbox = (-96.840732, 43.465438, -96.651134, 43.616366)
 	bbox = (-122.544380,37.616035,-122.251793,37.87404)
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
 	prefix = "bau" if "bau" in linkstats_file else "sub"
 
-	if prefix == "bau" and Path('tmp-data/bau_accessibility_output.csv').exists():
+	if prefix == "bau" and Path('output/tmp-data/bau_accessibility_output.csv').exists():
 		exit(1)
 
 	noOfIters = int(sys.argv[2])
@@ -109,31 +109,31 @@ if __name__ == '__main__':
 															r5_subpath=r5_subpath)
 	else:
 		mode_types = ['drive']
-		transit_data = pd.read_csv('tmp-data/sub_accessibility_output.csv', index_col=0)
+		transit_data = pd.read_csv('output/tmp-data/sub_accessibility_output.csv', index_col=0)
 
 	for mode in mode_types:
 		aggs = analyze_accessibility_for_mode(mode, daa, taas, drive_net, aggs)
 		if transit_data is not None:
 			aggs['transit'] = transit_data['transit']
 
-	pd.DataFrame(aggs).to_csv(str(DATA_ROOT.parent / f"tmp-data/{prefix}_accessibility_output.csv"))
+	pd.DataFrame(aggs).to_csv(str(DATA_ROOT.parent / f"output/tmp-data/{prefix}_accessibility_output.csv"))
 
 	# keep record for debug purposes:
-	if prefix == 'sub' and Path('tmp-data/bau_accessibility_output.csv').exists():
+	if prefix == 'sub' and Path('output/tmp-data/bau_accessibility_output.csv').exists():
 		current_iter = int(Path(linkstats_file).name.split('.')[0])
-		sub_iter_file = pd.read_csv("tmp-data/sub_accessibility_output.csv", index_col=0)
-		bau_iter_file = pd.read_csv("tmp-data/bau_accessibility_output.csv", index_col=0)
+		sub_iter_file = pd.read_csv("output/tmp-data/sub_accessibility_output.csv", index_col=0)
+		bau_iter_file = pd.read_csv("output/tmp-data/bau_accessibility_output.csv", index_col=0)
 		data_set = pd.concat([sub_iter_file, bau_iter_file], axis=1, keys=['bau', 'sub']).T.reset_index()
 		data_set['iteration'] = current_iter
 		data_set.rename(columns={'level_0': 'bau_or_sub', 'level_1': 'mode'}, inplace=True)
 		data_set = data_set.melt(id_vars=['bau_or_sub', 'mode', 'iteration'], value_vars=['secondary','commute'],
 								 var_name='poi_type', value_name='accessibility')
-		iteration_data_path = Path('tmp-data/iteration_data.csv')
+		iteration_data_path = Path('output/tmp-data/iteration_data.csv')
 		if iteration_data_path.exists():
-			existing_data = pd.read_csv('tmp-data/iteration_data.csv', index_col=0)
+			existing_data = pd.read_csv('output/tmp-data/iteration_data.csv', index_col=0)
 			data_set = pd.concat([existing_data, data_set])
-		data_set.to_csv('tmp-data/iteration_data.csv')
+		data_set.to_csv('output/tmp-data/iteration_data.csv')
 
-	with open('tmp-data/aggregate.csv', 'w') as f:
+	with open('output/tmp-data/aggregate.csv', 'w') as f:
 	    for key in a_net.keys():
 	        f.write("%s,%s\n"%(key,a_net[key]))
