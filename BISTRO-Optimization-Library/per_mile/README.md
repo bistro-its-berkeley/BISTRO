@@ -69,5 +69,5 @@ To generate graphs of the experiment's output, see the analysis folder.
 
 # Free form 
 
-the per_mile free form optimization is based on per_mile and it is still in development
-run bayesian_optimization_per_mile_free_form.py to run the free form experiment 
+* the per_mile free form optimization is based on per_mile and it is still in development
+* run bayesian_optimization_per_mile_free_form.py to run the free form experiment 
