@@ -131,7 +131,58 @@ def objective(params):
 
     output_dir = only_subdir(only_subdir(output_dir))
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
+    
+    # Start: Clean output folder
+    clean_dir = str(output_dir)
 
+    # Set folder paths
+    iters_folder = clean_dir + "/ITERS"
+    competition_folder = clean_dir + "/competition"
+    summary_folder = clean_dir + "/summaryStats"
+
+    # Remove excess root folder files
+    file_list = [f for f in listdir(clean_dir) if isfile(join(clean_dir, f))]
+    keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv"]
+    for file in file_list:
+        if file not in keep_files:
+            if os.path.exists(clean_dir + "/" + file):
+                file_path = clean_dir + "/" + file
+                os.remove(file_path)
+
+    # Remove excess competition files
+    if os.path.exists(competition_folder + "/submission-inputs"):
+        shutil.rmtree(competition_folder + "/submission-inputs")
+    if os.path.exists(competition_folder + "/submissionScores.csv"):
+        os.remove(competition_folder + "/submissionScores.csv")
+    if os.path.exists(competition_folder + "/validation-errors.out"):
+        os.remove(competition_folder + "/validation-errors.out")
+
+    # Remove files in competition/viz folder
+    viz_folder = competition_folder + "/viz"
+    file_list = [f for f in listdir(clean_dir) if isfile(join(viz_folder, f))]
+    keep_files = ["link_stats.csv"]
+    for file in file_list:
+        if file not in keep_files:
+            if os.path.exists(clean_dir + "/" + file):
+                file_path = viz_folder + "/" + file
+                os.remove(file_path)
+
+    # Remove summary stats directory
+    if os.path.exists(summary_folder):
+        shutil.rmtree(summary_folder)
+
+    # Remove excess iter files
+    iter_list = os.listdir(iters_folder)
+    for folder in iter_list:
+        folder_path = iters_folder + "/" + folder
+        if os.path.exists(folder_path + "/tripHistogram"):
+            shutil.rmtree(folder_path + "/tripHistogram")
+        file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
+        for file in file_list:
+            if file.endswith('events.xml.gz') == False:
+                os.remove(folder_path + "/" + file)
+    # End: Clean output files
+    
     paths = (input_dir, output_dir)
 
     loss = score
