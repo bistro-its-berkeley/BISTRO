@@ -66,3 +66,7 @@ To generate graphs of the experiment's output, see the analysis folder.
 * Disk memory: Optimization samples are very memory heavy (About 1.6 GBs for a 30 iterations sample). This is due to BISTRO saving a lot of intermediate information. For most purposes, this information is not needed and can be safely discarded. In the output folder of each sample, there is an `ITERS` directory. The contents of this directory can be deleted and will considerably the space taken by one iteration (to about 50MB)
 
 * Workers have access permission problems: this can happen on some systems, we're working on fixing that bug. Starting your *hyperopt-mongo-worker* in another folder should solver the problem.
+
+### Free form 
+
+the per_mile free form optimization is based on per_mile and it is still in development
