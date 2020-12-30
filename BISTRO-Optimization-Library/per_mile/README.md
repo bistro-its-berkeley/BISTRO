@@ -67,6 +67,6 @@ To generate graphs of the experiment's output, see the analysis folder.
 
 * Workers have access permission problems: this can happen on some systems, we're working on fixing that bug. Starting your *hyperopt-mongo-worker* in another folder should solver the problem.
 
-### Free form 
+# Free form 
 
 the per_mile free form optimization is based on per_mile and it is still in development
