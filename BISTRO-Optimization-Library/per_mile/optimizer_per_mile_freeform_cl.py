@@ -9,16 +9,16 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 hyperopt_path = os.path.abspath(os.path.dirname(__file__));
 sys.path.append(os.path.abspath("../"))
 sys.path.append(os.path.abspath("../../"))
+sys.path.append(os.path.abspath("../../../"))
+sys.path.append(os.path.abspath("../../../../"))
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
-
+from utilities.simulation_to_db import parse_and_store_data_to_db
 try:
     from optimization_utils import *
-    from simulation_to_db import parse_and_store_data_to_db
 
 except:
     from utilities.optimization_utils import *
-    from utilities.simulation_to_db import parse_and_store_data_to_db
 
 import uuid
 from timeit import default_timer as timer
@@ -142,9 +142,10 @@ def objective(params):
 
     # Upload data
     fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
+    name='sioux_faux_upload_test'
     parse_and_store_data_to_db(output_dir, fixed_data, SCENARIO_NAME, sample_size, n_sim_iters, 
-                           name='sioux_faux_BAU_1234') #can update name
-
+                           name=name) #can update name
+    logger.info("upload to db as name "+name)
 
     paths = (input_dir, output_dir)
 

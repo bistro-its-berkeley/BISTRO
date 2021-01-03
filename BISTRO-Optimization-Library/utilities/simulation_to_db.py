@@ -1,4 +1,5 @@
 import os
+from os.path import join
 import re
 import uuid
 import zipfile
@@ -6,11 +7,14 @@ from datetime import datetime as dt
 
 import pandas as pd
 import utm
-
-from bistro_connect_db import BistroDB, parse_credential
-from bistro_dbschema import TABLES, TABLES_LIST
-from data_parsing import open_xml
-from plans_parser import (
+import sys
+sys.path.append(os.path.abspath("../"))
+sys.path.append(os.path.abspath("../../"))
+sys.path.append(os.path.abspath("./"))
+from utilities.bistro_connect_db import BistroDB, parse_credential
+from utilities.bistro_dbschema import TABLES, TABLES_LIST
+from utilities.data_parsing import open_xml
+from utilities.plans_parser import (
     calc_fuel_costs,
     get_nodes_list,
     get_links_list,
@@ -26,7 +30,10 @@ from plans_parser import (
     parse_bus_fare_input,
     parse_incentive_input
 )
-from event_parser import get_trips_legs_pathtraversals_vehicles_list
+from utilities.event_parser import get_trips_legs_pathtraversals_vehicles_list
+
+# new import
+from utilities.event_parser import get_trips_legs_pathtraversals_vehicles_list_express
 
 
 max_age = 120
@@ -69,7 +76,11 @@ def get_r5_df(fixed_data, city, file_name):
                 return pd.read_csv(f)
 
     elif city == 'sf_light':
-        return pd.read_csv(path+'/r5/'+file_name)
+        # manually added SF.zip as the GTFS feed for sf_light ~/r5/SF.zip
+        with zipfile.ZipFile(path + '/r5/SF.zip') as z:
+            with z.open(file_name) as f:
+        #return pd.read_csv(path+'/r5/'+file_name)
+                return pd.read_csv(f)
 
 
 def convert_utm(easting, northing, city):
@@ -145,8 +156,16 @@ def store_household_person_data_to_db(
     persons_attributes_df['scenario'] = scenario
 
     for col in ['Age', 'income', 'Household_num_vehicles', 'Home_X', 'Home_Y', 
-                'Household_income [$]', 'rank', 'valueOfTime']:
-        persons_attributes_df[col] = pd.to_numeric(persons_attributes_df[col])
+                'Household_income [$]', 'rank', 'valueOfTime', 'excluded-modes']:
+                # added 'excluded-modes'
+        # added conditional statement
+        # as of 06/28/2020, the sf_light BAU doesn't have the attribute 'valueOfTime'
+
+        if col not in persons_attributes_df.columns:
+        	# set to a default if column not found in the outputs
+            persons_attributes_df[col] = 0
+        else:
+            persons_attributes_df[col] = pd.to_numeric(persons_attributes_df[col])
 
     household_list = persons_attributes_df.groupby('Household_ID').first().\
         reset_index()[[
@@ -157,6 +176,7 @@ def store_household_person_data_to_db(
     for household in household_list:
         household[3], household[4] = convert_utm(
             household[3], household[4], city)
+    #ipdb.set_trace()
     bistro_db.insert('household', household_list, skip_existing=True)
 
     # person_list will have values in order of (person_id, house_id, age, sex, income)
@@ -171,10 +191,20 @@ def store_household_person_data_to_db(
 
 def store_activity_data_to_db(output_path, scenario, iteration, bistro_db):
     """"""
-    activities_list = get_activities_list(
-        open_xml(output_path +
+    # 07/07: current BEAM output doesn't have the experiencedPlans.xml.gz generated in iteration folders
+    # replacing with outout_plans.xml.gz
+    #print(scenario)
+    if 'sf_light' in scenario:
+        activities_list = get_activities_list(
+            open_xml(output_path +
+                 '/output_plans.xml.gz'.format(iteration)),
+            scenario)
+    else:
+        activities_list = get_activities_list(
+            open_xml(output_path +
                  '/ITERS/it.{0}/{0}.experiencedPlans.xml.gz'.format(iteration)),
-        scenario)
+            scenario)
+
     bistro_db.insert('activity', activities_list, skip_existing=True)
 
 
@@ -240,75 +270,91 @@ def store_vehicle_type_data_to_db(
 
 
 def store_input_fleet_mix_data_to_db(output_path, simulation_id, bistro_db):
-    fleet_mix_data = pd.read_csv(
-        output_path + '/competition/submission-inputs/VehicleFleetMix.csv')
+    if os.path.isfile(output_path + '/competition/submission-inputs/VehicleFleetMix.csv'):
+        fleet_mix_data = pd.read_csv(
+            output_path + '/competition/submission-inputs/VehicleFleetMix.csv')
 
-    bus_frequency_data = pd.read_csv(
-        output_path + '/competition/submission-inputs/FrequencyAdjustment.csv')
+        bus_frequency_data = pd.read_csv(
+            output_path + '/competition/submission-inputs/FrequencyAdjustment.csv')
 
-    fleet_mix_df = get_fleet_mix_df(fleet_mix_data, bus_frequency_data)
-    if len(fleet_mix_df) > 0:
-        fleet_mix_df['run_id'] = simulation_id
-        bistro_db.insert(
-            'fleetmix',
-            fleet_mix_df[
-                ['run_id','agencyId','route_id','start_time',
-                'end_time','headway_secs','vehicleTypeId']
-            ].values.tolist()
-        )
+        fleet_mix_df = get_fleet_mix_df(fleet_mix_data, bus_frequency_data)
+        if len(fleet_mix_df) > 0:
+            fleet_mix_df['run_id'] = simulation_id
+            bistro_db.insert(
+                'fleetmix',
+                fleet_mix_df[
+                    ['run_id','agencyId','route_id','start_time',
+                    'end_time','headway_secs','vehicleTypeId']
+                ].values.tolist()
+            )
+    else:
+        print(output_path, '/competition/VehicleFleetMix.csv file not found, skipped prasing and storing.')
+
 
 
 def store_input_bus_fare_data_to_db(
         output_path, simulation_id, route_ids, bistro_db):
-    bus_fares_data = pd.read_csv(
-        output_path + '/competition/submission-inputs/MassTransitFares.csv')
-    routes = get_r5_df(fixed_data, city, 'routes.txt')
+    if os.path.isfile(output_path + '/competition/submission-inputs/MassTransitFares.csv'):
 
-    bus_fares_df = get_bus_fares_df(bus_fares_data, routes)
-    if len(bus_fares_df) > 0:
-        bus_fares_df['run_id'] = simulation_id
-        bistro_db.insert(
-            'transitfare',
-            bus_fares_df[
-                ['run_id','route_id','age_min','age_max','amount']
-            ].values.tolist()
-        )
-    # construct detail bus fare data for event parsing
-    return parse_bus_fare_input(bus_fares_data, route_ids, max_age)
+        bus_fares_data = pd.read_csv(
+            output_path + '/competition/submission-inputs/MassTransitFares.csv')
+        routes = get_r5_df(fixed_data, city, 'routes.txt')
+
+        bus_fares_df = get_bus_fares_df(bus_fares_data, routes)
+        if len(bus_fares_df) > 0:
+            bus_fares_df['run_id'] = simulation_id
+            bistro_db.insert(
+                'transitfare',
+                bus_fares_df[
+                    ['run_id','route_id','age_min','age_max','amount']
+                ].values.tolist()
+            )
+        # construct detail bus fare data for event parsing
+        return parse_bus_fare_input(bus_fares_data, route_ids, max_age)
+    else:
+        print(output_path, '/competition/MassTransitFares.csv file not found, skipped prasing and storing.')
 
 
 def store_input_incentive_data_to_db(output_path, simulation_id, bistro_db):
-    incentive_data = pd.read_csv(
-        output_path + '/competition/submission-inputs/ModeIncentives.csv')
 
-    incentive_df = get_incentive_df(incentive_data)
-    if len(incentive_df) > 0:
-        incentive_df['run_id'] = simulation_id
-        bistro_db.insert(
-            'incentive',
-            incentive_df[
-                ['run_id','mode','age_min','age_max',
-                 'income_min','income_max','amount']
-            ].values.tolist()
-        )
+    if os.path.isfile(output_path + '/competition/submission-inputs/ModeIncentives.csv'):
+        incentive_data = pd.read_csv(
+            output_path + '/competition/submission-inputs/ModeIncentives.csv')
 
+        incentive_df = get_incentive_df(incentive_data)
+        if len(incentive_df) > 0:
+            incentive_df['run_id'] = simulation_id
+            bistro_db.insert(
+                'incentive',
+                incentive_df[
+                    ['run_id','mode','age_min','age_max',
+                     'income_min','income_max','amount']
+                ].values.tolist()
+            )
     # this will be used to calculate incentive for trip
-    return parse_incentive_input(incentive_data, max_age, max_income)
+        return parse_incentive_input(incentive_data, max_age, max_income)
+    else:
+        print(output_path, '/competition/ModeIncentives.csv file not found, skipped prasing and storing.')
+
 
 
 def store_input_road_pricing_data_to_db(output_path, simulation_id, bistro_db):
-    pricing_data = pd.read_csv(
-        output_path + '/competition/submission-inputs/RoadPricing.csv')
 
-    pricing_df = get_road_pricing_df(pricing_data)
-    if len(pricing_df) > 0:
-        pricing_df['run_id'] = simulation_id
-        bistro_db.insert(
-            'roadpricing',
-            pricing_df[
-                ['run_id', 'link_id', 'toll', 'start_time', 'end_time']
-            ].values.tolist()
-        )
+    if os.path.isfile(output_path + '/competition/submission-inputs/RoadPricing.csv'):
+        pricing_data = pd.read_csv(
+            output_path + '/competition/submission-inputs/RoadPricing.csv')
+
+        pricing_df = get_road_pricing_df(pricing_data)
+        if len(pricing_df) > 0:
+            pricing_df['run_id'] = simulation_id
+            bistro_db.insert(
+                'roadpricing',
+                pricing_df[
+                    ['run_id', 'link_id', 'toll', 'start_time', 'end_time']
+                ].values.tolist()
+            )
+    else:
+        print(output_path, '/competition/RoadPricing.csv file not found, skipped prasing and storing.')
 
 
 def store_toll_circle_to_db(output_path, simulation_id, city, scenario_n_size, bistro_db):
@@ -375,66 +421,120 @@ def store_realized_mode_choice_stats_to_db(
         df[['run_id','iterations','level_1',0]].values.tolist())
 
 
-def store_simulation_scores_to_db(output_path, simulation_id, bistro_db):
-    df = pd.read_csv(
-        output_path + '/competition/submissionScores.csv').fillna(0.0)
-    df['run_id'] = simulation_id
-    bistro_db.insert(
-        'score',
-        df[['run_id', 'Component Name', 'Weight', 'Z-Mean', 'Z-StdDev',
-            'Raw Score', 'Weighted Score']].values.tolist()
-    )
+def store_simulation_scores_to_db(output_path, simulation_id, bistro_db):    
+
+    if os.path.isfile(output_path + '/competition/submissionScores.csv'):
+        df = pd.read_csv(
+            output_path + '/competition/submissionScores.csv').fillna(0.0)
+        df['run_id'] = simulation_id
+        bistro_db.insert(
+            'score',
+            df[['run_id', 'Component Name', 'Weight', 'Z-Mean', 'Z-StdDev',
+                'Raw Score', 'Weighted Score']].values.tolist()
+        )
+    # added default handling for missing the submissionScores.csv file for BEAM outputs 
+    else:
+        print(output_path, '/competition/submissionScores.csv file not found, skipped prasing and storing.')
 
 
 def store_raw_scores_to_db(output_path, simulation_id, iteration, bistro_db):
-    score_df = pd.read_csv(output_path + '/competition/rawScores.csv',index_col='Iteration').fillna(0.0).loc[iteration,:]
-    standard = pd.read_csv('standardizationParameters.csv',index_col='KPI').fillna(0.0)
-    res = []
-    for idx, score in score_df.items():
-        # The simulation raw score used to have VMT score, but this score disappeared
-        # after a BEAM update.
-        if idx == 'Congestion: total vehicle miles traveled':
-            continue
 
-        if idx == 'TollRevenue':
-            kpi = 'Toll Revenue'
-        elif idx == 'VMT':
-            kpi = 'Congestion: total vehicle miles traveled'
-        else:
-            kpi = idx
-        mean = standard['MEAN'][idx]
-        std = standard['STD'][idx]
-        norm_score = score if std == 0 else (score-mean)/std
-        res.append([simulation_id, kpi, 1.0, mean, std, score, norm_score])
-    bistro_db.insert('score', res)
+    if os.path.isfile(output_path + '/competition/rawScores.csv'):
+    # and os.path.isfile('standardizationParameters'):
+
+        score_df = pd.read_csv(output_path + '/competition/rawScores.csv',index_col='Iteration').fillna(0.0).loc[iteration,:]
+        standard = pd.read_csv('standardizationParameters.csv',index_col='KPI').fillna(0.0)
+        res = []
+        for idx, score in score_df.items():
+            # The simulation raw score used to have VMT score, but this score disappeared
+            # after a BEAM update.
+            if idx == 'Congestion: total vehicle miles traveled':
+                continue
+
+            if idx == 'TollRevenue':
+                kpi = 'Toll Revenue'
+            elif idx == 'VMT':
+                kpi = 'Congestion: total vehicle miles traveled'
+            else:
+                kpi = idx
+            mean = standard['MEAN'][idx]
+            std = standard['STD'][idx]
+            norm_score = score if std == 0 else (score-mean)/std
+            res.append([simulation_id, kpi, 1.0, mean, std, score, norm_score])
+        bistro_db.insert('score', res)
+    else:
+        print(output_path, '/competition/rawScores.csv file not found, skipped prasing and storing.')
 
 
 def store_event_data_to_db(
         output_path, iteration, simulation_id, scenario, fuel_cost,
         detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
         trip_to_route, bistro_db):
-    events_path = (output_path +
+    if os.path.isfile(output_path +
+                   '/ITERS/it.{0}/{0}.events.xml.gz'.format(iteration)):
+
+        events_path = (output_path +
                    '/ITERS/it.{0}/{0}.events.xml.gz'.format(iteration))
+        f = 'xml'
+    else:
+        # BEAM output as a csv rather than xml
+        print('Found events.csv.gz instead')
+        f = 'csv'
+        events_path = (output_path +
+                   '/ITERS/it.{0}/{0}.events.csv.gz'.format(iteration))
     (trips_list, legs_list, leg_links_list, leg_pathtraversals_list,
      pathtraversals_list, pathtraversal_links_list, vehicles_list) = \
         get_trips_legs_pathtraversals_vehicles_list(
             events_path, simulation_id, scenario, fuel_cost,
             detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
-            trip_to_route)
+            trip_to_route, f)
 
     bistro_db.insert('vehicle', vehicles_list, skip_existing=True)
     
     bistro_db.insert('trip', trips_list)
     bistro_db.insert('leg', legs_list)
     bistro_db.insert('pathtraversal', pathtraversals_list)
+
+    try:
+        pathtraversal_links_list.head()
+    except:
+        print(type(pathtraversal_links_list))
     bistro_db.insert('pathtraversal_link', pathtraversal_links_list, skip_existing=True)
     bistro_db.insert('leg_pathtraversal', leg_pathtraversals_list)
     bistro_db.insert('leg_link', leg_links_list, skip_existing=True)
 
+    print('Finished storing event data to database')
+
+#############################################################################
+def return_event_data(
+        output_path, iteration, simulation_id, scenario, fuel_cost,
+        detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
+        trip_to_route, bistro_db):
+    if os.path.isfile(output_path +
+                   '/ITERS/it.{0}/{0}.events.xml.gz'.format(iteration)):
+
+        events_path = (output_path +
+                   '/ITERS/it.{0}/{0}.events.xml.gz'.format(iteration))
+        f = 'xml'
+    else:
+        # BEAM output as a csv rather than xml
+        print('Found events.csv.gz instead')
+        f = 'csv'
+        events_path = (output_path +
+                   '/ITERS/it.{0}/{0}.events.csv.gz'.format(iteration))
+    (trips_list, legs_list, leg_links_list, leg_pathtraversals_list,
+     pathtraversals_list, pathtraversal_links_list, vehicles_list) = \
+        get_trips_legs_pathtraversals_vehicles_list_express(
+            events_path, simulation_id, scenario, fuel_cost,
+            detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
+            trip_to_route, f)
+    # changed to express function here
+    return trips_list, legs_list, pathtraversals_list, vehicles_list
+#############################################################################
 
 def parse_and_store_data_to_db(
         output_path, fixed_data, city, sample_size, iteration, name='test',
-        cordon=False, standardize_score=False):
+        cordon=False, standardize_score=False, local=False, db_name='bistro'):
 
     datetime_pattern = r"__(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)"
 
@@ -449,9 +549,7 @@ def parse_and_store_data_to_db(
 
     scenario_n_size = city + '-' + sample_size
 
-    bistro_db = BistroDB(
-        *parse_credential(join(dirname(__file__),'dashboard_profile.ini')
-    ))
+    bistro_db = parse_credential(join(dirname(__file__),'dashboard_profile.ini'))
 
     for table in TABLES_LIST:
         bistro_db.create_table(table, TABLES[table])
@@ -539,15 +637,24 @@ def parse_and_store_data_to_db(
 
     # this will store all trip, leg, pathtraversal, and vehicle data from the
     # simulation to the database
-    store_event_data_to_db(
-        output_path, iteration, simulation_id, scenario_n_size, fuel_cost,
-        detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
-        trip_to_route, bistro_db)
+    if not local:
+        store_event_data_to_db(
+            output_path, iteration, simulation_id, scenario_n_size, fuel_cost,
+            detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
+            trip_to_route, bistro_db)
 
-    # commit after all data had been added to DB.
-    bistro_db.connection.commit()
+        # commit after all data had been added to DB.
+        bistro_db.connection.commit()
+        return simulation_id
+    if local:
+        (trips_list, legs_list, pathtraversals_list, vehicles_list) = \
+        return_event_data(
+            output_path, iteration, simulation_id, scenario_n_size, fuel_cost,
+            detail_incentive_df, detail_bus_fares_df, persons_attributes_df,
+            trip_to_route, bistro_db)
+        return (trips_list, legs_list, pathtraversals_list, vehicles_list)
+    
     return simulation_id
-
 
 def tpe_path(root, name):
     import glob

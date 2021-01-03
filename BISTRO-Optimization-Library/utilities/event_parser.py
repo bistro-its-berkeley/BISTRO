@@ -1,10 +1,11 @@
 from collections import defaultdict
 
 import pandas as pd
+import numpy as np
 import progressbar
 
-from data_parsing import extract_dataframe
-from plans_parser import (
+from utilities.data_parsing import extract_dataframe
+from utilities.plans_parser import (
     label_trip_mode, calc_transit_fares, calc_ride_hail_fares, find_incentive)
 
 class Trip():
@@ -95,7 +96,7 @@ def search_vehicle_path(events_df, vehicle_path, vehicle, start, end):
             fuel_cost += float(path['fuel_cost'])
             toll += float(path['tollPaid'])
             for link in path_links:
-                if link == '':
+                if link == '' or link == 'None': # some will be having values None for BEAM output
                     continue
                 link = int(link)
                 if link not in link_set:
@@ -149,14 +150,14 @@ def parse_person_events(run_id, events_df, person, vehicle_path):
             trip = person.trips[-1]
             leg = Leg(run_id, person.person_id, trip.trip_num, len(trip.legs)+1)
             leg.path.append(walk_path_num)
-            if e['links'] != '':
+            if e['links'] != '' and e['links'] != 'None':
                 links = [int(link) for link in e['links'].split(',') if link]
                 leg.orig_link = links[0]
                 leg.dest_link = links[-1]
                 leg.links = links
-            leg.leg_start = int(e['departureTime'])
-            leg.leg_end = int(e['arrivalTime'])
-            leg.distance = float(e['length'])
+            leg.leg_start = int(float(e['departureTime'])) # first convert to float from str then to int
+            leg.leg_end = int(float(e['arrivalTime']))
+            leg.distance = int(float(e['length']))
             leg.leg_mode = e['mode']
             leg.vehicle = e['vehicle']
             trip.legs.append(leg)
@@ -201,12 +202,23 @@ def parse_person_events(run_id, events_df, person, vehicle_path):
             last_trip.distance = sum([leg.distance for leg in last_trip.legs])
             last_trip.realized_mode = label_trip_mode([leg.leg_mode for leg in last_trip.legs])
 
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 def get_trips_legs_pathtraversals_vehicles_list(
         events_path, run_id, scenario, fuel_cost, incentive_df, bus_fares_df,
-        person_df, trip_to_route):
+        person_df, trip_to_route, f):
     """"""
-    events_df = extract_dataframe(events_path)
+
+    if f == 'csv':
+        events_df = pd.read_csv(events_path)
+        events_df = events_df.where(events_df.notnull(), None).astype(str)
+    else:
+        events_df = extract_dataframe(events_path)
 
     # calculate fuel_cost for pathtraversals events
     events_df['fuel_cost'] = 0
@@ -231,7 +243,10 @@ def get_trips_legs_pathtraversals_vehicles_list(
             pid = e['driver']
         else:
             pid = e['person']
-        
+
+        if is_number(pid):
+            pid = str(int(float(pid)))
+
         if not pid or 'Agent' in pid:
             continue
 
@@ -268,18 +283,18 @@ def get_trips_legs_pathtraversals_vehicles_list(
         vehicles_list.append([v_id, e['vehicleType'], scenario])
         for i, index in enumerate(indices):
             path = events_df.loc[index, :]
-            if path['links'] is not None and path['links'] != '':
+            if path['links'] is not None and path['links'] != '' and path['links'] != 'None': # added check None
                 for link in path['links'].split(','):
                     pathtraversal_links_list.append(
-                        [run_id, v_id, i+1, int(link), scenario]
+                        [run_id, v_id, i+1, int(float(link)), scenario]
                     )
             # BEAM was not very consistent on its output names
             # different version has different format.
             fuel_level = path['primaryFuelLevel'] if 'primaryFuelLevel' in path else path['endLegPrimaryFuelLevel']
             pathtraversals_list.append(
                 [run_id, v_id, i+1, path['driver'], path['mode'],
-                 float(path['length']), int(path['departureTime']),
-                 int(path['arrivalTime']), int(path['numPassengers']),
+                 float(path['length']), int(float(path['departureTime'])),
+                 int(float(path['arrivalTime'])), int(float(path['numPassengers'])),
                  float(path['primaryFuel']),
                  float(fuel_level),
                  path['primaryFuelType'],
@@ -316,10 +331,162 @@ def get_trips_legs_pathtraversals_vehicles_list(
 
             if trip.realized_mode in {
                     "ride_hail", "drive_transit", "walk_transit"}:
-                trip.incentives = find_incentive(
-                    {'PID':person.person_id}, incentive_df[trip.realized_mode], 
+                    
+                try:
+                    trip.incentives = find_incentive(
+                        {'PID':person.person_id}, incentive_df[trip.realized_mode], 
+                        person_df
+                    )
+                except:
+                    trip.incentives = find_incentive(
+                    {'PID':person.person_id}, 0, # 0 for default trip incentives
                     person_df
-                )
+                    )
+            for leg in trip.legs:
+                trip.fare += leg.fare
+                trip.toll += leg.toll
+                if leg.leg_mode == 'car':
+                    trip.fuel_cost += leg.fuel_cost
+            trips_list.append(trip.to_list())            
+
+    return (trips_list, legs_list, leg_links_list, leg_pathtraversals_list,
+            pathtraversals_list, pathtraversal_links_list, vehicles_list)
+
+def get_trips_legs_pathtraversals_vehicles_list_express(
+        events_path, run_id, scenario, fuel_cost, incentive_df, bus_fares_df,
+        person_df, trip_to_route, f):
+    """"""
+
+    if f == 'csv':
+        events_df = pd.read_csv(events_path)
+        events_df = events_df.where(events_df.notnull(), None).astype(str)
+    else:
+        events_df = extract_dataframe(events_path)
+
+    # calculate fuel_cost for pathtraversals events
+    events_df['fuel_cost'] = 0
+    for f in fuel_cost.keys():
+        index = ((events_df['type']=='PathTraversal') &
+                 (events_df["primaryFuelType"] == f.capitalize()))
+        events_df.loc[index, 'fuel_cost'] = (
+            pd.to_numeric(
+                events_df.loc[index, 'primaryFuel']) * float(fuel_cost[f])
+        ) / 1000000
+
+    vehicle_path = defaultdict(list)
+    # keep all PathTraversal events in a dict for future use
+    for index, e in events_df.iterrows():
+        if e['type'] == 'PathTraversal':
+            vehicle_path[e['vehicle']].append(index)
+
+    # group all events by person (ignore the bus/ridehail agent)
+    persons = {}
+    for index, e in events_df.iterrows():
+        if e['mode'] == 'walk':
+            pid = e['driver']
+        else:
+            pid = e['person']
+
+        if is_number(pid):
+            pid = str(int(float(pid)))
+
+        if not pid or 'Agent' in pid:
+            continue
+
+        if pid not in persons:
+            person = Person(pid)
+            persons[pid] = person
+        else:
+            person = persons[pid]
+
+        # for a person, event indices contains root indices of events that
+        # relate to this person, include the walk PathTraversal, but not include
+        # any other PathTraversal
+        person.event_indices.append(index)
+
+    bar = progressbar.ProgressBar(
+        maxval=20,
+        widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+
+    bar.start()
+    i = 0
+    frac = len(persons.keys()) // 20
+    for pid in persons:
+        parse_person_events(run_id, events_df, persons[pid], vehicle_path)
+        i += 1
+        if i % frac == 0:
+            bar.update(i // frac)
+    bar.finish()
+
+    vehicles_list = []
+    pathtraversals_list = []
+    pathtraversal_links_list = []
+    for v_id, indices in vehicle_path.items():
+        e = events_df.loc[indices[0], :]
+        vehicles_list.append([v_id, e['vehicleType'], scenario])
+        for i, index in enumerate(indices):
+            path = events_df.loc[index, :]
+            if path['links'] is not None and path['links'] != '' and path['links'] != 'None': # added check None
+                link_array = []
+                for link in path['links'].split(','):
+                    link_array.append(int(float(link)))
+                pathtraversal_links_list.append(
+                        [run_id, v_id, i, link_array, scenario])
+
+            # BEAM was not very consistent on its output names
+            # different version has different format.
+            fuel_level = path['primaryFuelLevel'] if 'primaryFuelLevel' in path else path['endLegPrimaryFuelLevel']
+            pathtraversals_list.append(
+                [run_id, v_id, i+1, path['driver'], path['mode'],
+                 float(path['length']), int(float(path['departureTime'])),
+                 int(float(path['arrivalTime'])), int(float(path['numPassengers'])),
+                 float(path['primaryFuel']),
+                 float(fuel_level),
+                 path['primaryFuelType'],
+                 path['fuel_cost'],
+                 float(path['startX']),
+                 float(path['startY']),
+                 float(path['endX']),
+                 float(path['endY'])
+                ]
+            )
+
+
+    trips_list = []
+    legs_list = []
+    leg_links_list = []
+    leg_pathtraversals_list = []
+    ride_hail_fares = {'base': 0.0, 'distance': 1.0, 'duration': 0.5}
+
+    for person in persons.values():
+        for trip in person.trips:
+            for leg in trip.legs:
+                if leg.leg_mode in ['bus','tram','subway','cable_car']:
+                    leg.fare = calc_transit_fares(
+                        {'PID': person.person_id,'Veh':leg.vehicle},
+                        bus_fares_df, person_df, trip_to_route)
+                elif leg.leg_mode == 'ride_hail':
+                    leg.fare = calc_ride_hail_fares(
+                        {'Duration_sec':leg.leg_end-leg.leg_start,
+                         'Distance_m':leg.distance},
+                        ride_hail_fares)
+                legs_list.append(leg.to_list())
+                leg_links_list += leg.leg_links_list(scenario)
+                leg_pathtraversals_list += leg.leg_pathtraversals_list(scenario)
+
+            if trip.realized_mode in {
+                    "ride_hail", "drive_transit", "walk_transit"}:
+                    
+                try:
+                    trip.incentives = find_incentive(
+                        {'PID':person.person_id}, incentive_df[trip.realized_mode], 
+                        person_df
+                    )
+                except:
+                    trip.incentives = find_incentive(
+                    {'PID':person.person_id}, 0, # 0 for default trip incentives
+                    person_df
+                    )
             for leg in trip.legs:
                 trip.fare += leg.fare
                 trip.toll += leg.toll

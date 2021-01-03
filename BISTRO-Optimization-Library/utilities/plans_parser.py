@@ -7,20 +7,23 @@ import dask.dataframe as dd
 import numpy as np
 import pandas as pd
 
-from data_parsing import extract_dataframe, open_xml
+from utilities.data_parsing import extract_dataframe, open_xml
 
 
 # ########### 1. INTERMEDIARY FUNCTIONS ###########
 
 def unzip_file(path: Path):
     """ Unzips a file ending with .gz
+
     Parameters
     ----------
     path: pathlib.Path object or os.path object
+
     Returns
     -------
     path: string
         Path of the unzipped folder or file
+
     """
 
     if Path(path).suffix == ".gz":
@@ -114,6 +117,7 @@ def get_road_pricing_df(pricing_data):
 
 def parse_bus_fare_input(bus_fare_data_df, route_ids, max_age):
     """Processes the `MassTransitFares.csv` input file into a dataframe with rows = ages and columns = routes
+
     Parameters
     ----------
     bus_fare_data_df: pandas DataFrame
@@ -122,6 +126,7 @@ def parse_bus_fare_input(bus_fare_data_df, route_ids, max_age):
         All routes ids where buses operate (from `routes.txt` file in the GTFS data)
     max_age: int
         maximum age
+
     Returns
     -------
     bus_fare_per_route_df: pandas DataFrame
@@ -159,6 +164,7 @@ def parse_bus_fare_input(bus_fare_data_df, route_ids, max_age):
 
 def parse_incentive_input(incentive_data, max_age, max_income):
     """Processes the `MassTransitFares.csv` input file into a dataframe with rows = ages and columns = routes
+
     Parameters
     ----------
     incentive_data: pandas DataFrame
@@ -167,6 +173,7 @@ def parse_incentive_input(incentive_data, max_age, max_income):
         maximum age
     max_income: int
         maximum income
+
     Returns
     -------
     incentive_dict: Dictionaries of pandas DataFrames {mode: incentive_per_age_income}
@@ -224,7 +231,11 @@ def find_incentive(row, incentive_df, person_df):
     age = person_df.loc[pid, 'Age']
     income = person_df.loc[pid, 'income']
 
-    incentive = incentive_df.loc[int(float(age)), int(float(income))]
+    try:
+        incentive = incentive_df.loc[int(float(age)), int(float(income))]
+    except:
+        incentive = 0 # default incentive incase incentive_df is invalid
+
     return incentive
 
 
@@ -259,8 +270,14 @@ def calc_transit_fares(row, bus_fare_dict, person_df, trip_to_route):
     pid = row['PID']
     age = person_df.loc[pid, 'Age']
     vehicle = row['Veh']
-    route = trip_to_route[vehicle.split(':')[1].split('-')[0]]
-    fare = bus_fare_dict.loc[age, route]
+    try:
+        route = trip_to_route[vehicle.split(':')[1].split('-')[0]]
+    except KeyError:
+        route = ''
+    try:
+        fare = bus_fare_dict.loc[age, route]
+    except:
+        fare = 0
     return fare
 
 
@@ -517,8 +534,10 @@ def label_trip_mode(modes):
         return 'ride_hail'
     elif ('walk' == modes or all('walk' == mode for mode in modes)):
         return 'walk'
-    else:
-        print(modes)
+    elif ('bike' in modes):
+        return 'bike'
+        # print(modes)
+        # not very sure what to do here
 
 
 def merge_legs_trips(legs_df, trips_df):
@@ -558,10 +577,12 @@ def get_person_output_from_households_xml(households_xml):
     """
     - Parses the outputHouseholds file to create the households_dataframe gathering each person's household attributes
     (person id, household id, number of vehicles in the household, overall income of the household)
+
     Parameters
     ----------
     households_xml: ElementTree object
         Output of the open_xml() function for the `outputHouseholds.xml` file
+
     Returns
     -------
     households_df: pandas Dataframe
@@ -605,10 +626,12 @@ def get_person_output_from_households_xml(households_xml):
 def get_person_output_from_output_plans_xml(output_plans_xml):
     """ Parses the outputPlans file to create the person_dataframe gathering individual attributes of each person
     (person id, age, sex, home location)
+
     Parameters
     ----------
     output_plans_xml: ElementTree object
         Output of the open_xml() function for the `outputPlans.xml` file
+
     Returns
     -------
     person_df: pandas DataFrame
@@ -622,7 +645,11 @@ def get_person_output_from_output_plans_xml(output_plans_xml):
     for person in output_plans_root.findall('./person'):
         pid = person.get('id')
         attributes = person.findall('./attributes')[0]
-        age = int(attributes.findall('./attribute[@name="age"]')[0].text)
+        if attributes.findall('./attribute[@name="age"]'):
+            age = int(attributes.findall('./attribute[@name="age"]')[0].text)
+        else:
+            age = 0
+        # int(attributes.findall('./attribute[@name="age"]')[0].text)
         sex = attributes.findall('./attribute[@name="sex"]')[0].text
         plan = person.findall('./plan')[0]
         home = plan.findall('./activity')[0]
@@ -639,10 +666,12 @@ def get_person_output_from_output_person_attributes_xml(persons_xml):
     """ Parses outputPersonAttributes.xml file to create population_attributes_dataframe gathering individual attributes
     of the population (person id, excluded modes (i.e. transportation modes that the peron is not allowed to use),
     income, rank, value of time).
+
     Parameters
     ----------
     persons_xml: ElementTree object
         Output of the open_xml() function for the `outputPersonAttributes.xml` file
+
     Returns
     -------
     person_df_2: pandas DataFrame
@@ -672,16 +701,21 @@ def get_person_output_from_output_person_attributes_xml(persons_xml):
 
 def get_persons_attributes_output(output_plans_xml, persons_xml, households_xml, output_folder_path):
     """Outputs the augmented persons dataframe, including all individual and household attributes for each person
+
     Parameters
     ----------
     output_plans_xml: ElementTree object
         Output of the open_xml() function for the `outputPlans.xml` file
+
     persons_xml: ElementTree object
         Output of the open_xml() function for the `outputPersonAttributes.xml` file
+
     households_xml: ElementTree object
         Output of the open_xml() function for the `outputHouseholds.xml` file
+
     output_folder_path: pathlib.Path object
         Absolute path of the output folder of the simulation (format of the output folder name: `<scenario_name>-<sample_size>__<date and time>`)
+
     Returns
     -------
     persons_attributes_df: pandas DataFrame
@@ -737,17 +771,21 @@ def get_activities_list(experienced_plans_xml, scenario):
 def get_activities_output(experienced_plans_xml):
     """ Parses the experiencedPlans.xml file to create the activities_dataframe, gathering each person's activities' attributes
     (person id, activity id, activity type, activity start time, activity end time)
+
     Parameters
     ----------
     experienced_plans_xml: ElementTree object
         Output of the open_xml() function for the `<num_iterations>.experiencedPlans.xml` file located in
         the `/ITERS/it.<num_iterations> folder
+
     Returns
     -------
     activities_df: pandas DataFrame
         Record of each person's activities' attributes
+
     trip_purposes: list of string
         purpose of each trip, ege, "Work", "Home".etc...
+
     """
 
     # get root of experiencedPlans xml file
@@ -797,11 +835,13 @@ def get_trips_output(experienced_plans_xml_path):
     """ Parses the experiencedPlans.xml file to create the trips dataframe, gathering each person's trips' attributes
     (person id, trip id, id of the origin activity of the trip, id of the destination activity of the trip, trip purpose,
     mode used, start time of the trip, duration of the trip, distance of the trip, path of the trip)
+
     Parameters
     ----------
     experienced_plans_xml_path: str
         Output of the open_xml() function for the `<num_iterations>.experiencedPlans.xml` file located in
         the `/ITERS/it.<num_iterations> folder
+
     Returns
     -------
     trips_df: pandas DataFrame
@@ -907,15 +947,19 @@ def get_path_traversal_output(events_df):
     """ Parses the experiencedPlans.xml file to create the trips dataframe, gathering each person's trips' attributes
     (person id, trip id, id of the origin activity of the trip, id of the destination activity of the trip, trip purpose,
     mode used, start time of the trip, duration of the trip, distance of the trip, path of the trip)
+
     Parameters
     ----------
     events_df: pandas DataFrame
         DataFrame extracted from the <num_iterations>.events.xml` file: output of the extract_dataframe() function
+
     trips_df: pandas DataFrame
         Record of each person's trips' attributes: output of the  get_trips_output() function
+
     Returns
     -------
     path_traversal_events_df: pandas DataFrame
+
     """
 
     # Selecting the columns of interest
@@ -935,16 +979,20 @@ def get_legs_output(events_df, trips_df):
     """ Parses the outputEvents.xml and trips_df file to create the legs dataframe, gathering each person's trips' legs' attributes
     (PID, Trip_ID, Leg_ID, Mode, Veh, Veh_type, Start_time, End_time,
                                     Duration, Distance, Path, fuel, fuelType)
+
     Parameters
     ----------
     events_df: pandas DataFrame
         DataFrame extracted from the outputEvents.xml` file: output of the extract_dataframe() function
+
     trips_df: pandas DataFrame
         Record of each person's trips' attributes: output of the get_trips_output() function
+
     Returns
     -------
     legs_df: pandas DataFrame
         Records the legs attributes for each person's trip
+
     """
 
     # convert trip times to timedelta; calculate end time of trips
@@ -1057,20 +1105,26 @@ def get_vehicletypes_df(vehicle_type_path):
 
 def extract_person_dataframes(output_plans_path, persons_path, households_path, output_folder_path):
     """ Create a csv file from the processed person dataframe
+
     Parameters
     ----------
     output_plans_path: pathlib.Path object
         Absolute path of the the `outputPlans.xml` file
+
     persons_path: pathlib.Path object
         Absolute path of the the `outputPersonAttributes.xml` file
+
     households_path: pathlib.Path object
         Absolute path of the the `outputHouseholds.xml` file
+
     output_folder_path: pathlib.Path object
         Absolute path of the output folder of the simulation (format of the output folder name: `<scenario_name>-<sample_size>__<date and time>`)
+
     Returns
     -------
     persons_attributes_df: pandas DataFrame
         Record of all individual and household attributes for each person
+
     """
 
     # opens the xml files
@@ -1088,12 +1142,15 @@ def extract_person_dataframes(output_plans_path, persons_path, households_path, 
 
 def extract_activities_dataframes(experienced_plans_path, output_folder):
     """ Create a csv file from the processed activities dataframe
+
     Parameters
     ----------
     experienced_plans_path: pathlib.Path object
+
     output_folder_path: pathlib.Path object
         Absolute path of the output folder of the simulation
         (format of the output folder name: `<scenario_name>-<sample_size>__<date and time>`)
+
     Returns
     -------
     activities_df
@@ -1115,25 +1172,33 @@ def extract_activities_dataframes(experienced_plans_path, output_folder):
 def extract_legs_dataframes(events_path, trips_df, person_df, bus_fares_df, trip_to_route, fuel_costs,
                             output_folder_path):
     """ Create a csv file from the processes legs dataframe
+
     Parameters
     ----------
     events_path: pathlib.Path object
         Absolute path of the `ITERS/<num_iterations>.events.csv.gz` file
+
     trips_df: pandas DataFrame
         Record of each person's trips' attributes: output of the  get_trips_output() function
+
     person_df: pandas DataFrame
         Record of each person's trips' attributes: output of the  get_persons_attributes_output() function
+
     bus_fares_df: pandas DataFrame
         Dataframe with rows = ages and columns = routes: output of the parse_bus_fare_input() function
+
     trip_to_route: dictionary
         route_id / trip_id correspondence extracted from the `trips.csv` file in the
         `/reference-data/sioux_faux/sioux_faux_bus_lines/gtfs_data` folder of the Starter Kit
+
     fuel_costs: dictionary
         fuel type / fuel price correspondence extracted from the `beamFuelTypes.csv` file in the
         `/reference-data/sioux_faux/config/<SAMPLE_SIZE>` folder of the Starter Kit
+
     output_folder_path: pathlib.Path object
         Absolute path of the output folder of the simulation
         (format of the output folder name: `<scenario_name>-<sample_size>__<date and time>`)
+
     Returns
     -------
     legs_df: pandas DataFrame

@@ -20,7 +20,7 @@ from hyperopt import hp
 from hyperopt.mongoexp import MongoTrials
 from hyperopt import fmin
 from hyperopt import tpe
-from optimizer_per_mile_freeform import *
+from optimizer_per_mile_freeform_cl import *
 
 #Logging and settings import
 import csv
@@ -124,7 +124,7 @@ space = {
 
 def os_setup():
     #In order to run mongodb and hyperopt, some file compying is necessary
-    copyfile("optimizer_per_mile_freeform.py", CONFIG["HYPEROPT_PATH"]+"optimizer_per_mile_freeform.py")
+    copyfile("optimizer_per_mile_freeform_cl.py", CONFIG["HYPEROPT_PATH"]+"optimizer_per_mile_freeform_cl.py")
     copyfile("convert_to_input_per_mile_freeform.py", CONFIG["HYPEROPT_PATH"]+"convert_to_input_per_mile_freeform.py")
     copyfile("../../utilities/optimization_utils.py", CONFIG["HYPEROPT_PATH"]+"optimization_utils.py")
     copyfile("settings.yaml", CONFIG["HYPEROPT_PATH"]+"settings.yaml")

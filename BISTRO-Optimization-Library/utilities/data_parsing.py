@@ -8,6 +8,7 @@ from lxml import etree
 def open_xml(path):
     """
     Open xml and xml.gz files into ElementTree
+
     Parameters
     ----------
     path: string
@@ -24,13 +25,16 @@ def open_xml(path):
 def guess_type(s):
     """
     Cast objects to appropriate data types
+
     Parameters
     ----------
     s: object
         Object whose data type is unknown
+
     Returns
     -------
     data type
+
     """
     # test sf_light
     return str
@@ -46,13 +50,16 @@ def guess_type(s):
 def list_attributes(tree):
     """
     Find the unique attribute names of the xml file.
+
     Parameters
     ----------
     root:
+
     Returns
     -------
     columns: list
         Columns of the future DataFrame
+
     """
     root = tree.getroot()
 
@@ -69,6 +76,7 @@ def list_attributes(tree):
 def create_dataframe(tree, columns, column_types):
     """
     Collect the data and store it in a pandas DataFrame
+
     Returns
     -------
     : pandas DataFrame

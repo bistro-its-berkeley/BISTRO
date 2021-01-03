@@ -29,6 +29,7 @@ class ReferenceData(object):
 
     def __init__(self, sample_size, scenario_name="sioux_faux", transit_scale_factor=0.1):
         """
+
         Parameters
         ----------
         reference_data_path : Path
@@ -101,6 +102,7 @@ class ResultFiles:
 
     def process_all_xml_files(self):
         """ Import all xml.gz files from the output folder of the scenario, parse them and create .csv files"
+
         """
 
         self.events_path = self.path_output_folder / ITERS / "it.{0}".format(self.number_iterations) / \
