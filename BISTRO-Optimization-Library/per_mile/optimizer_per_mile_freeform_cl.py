@@ -173,7 +173,7 @@ def clean_output(output_dir):
 
     # Remove excess root folder files
     file_list = [f for f in listdir(path) if isfile(join(path, f))]
-    keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv"]
+    keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
     for file in file_list:
         if file not in keep_files:
             if os.path.exists(path + "/" + file):
@@ -204,6 +204,7 @@ def clean_output(output_dir):
 
     # Remove excess iter files
     iter_list = os.listdir(iters_folder)
+    keep_files = ["modeChoice.csv", "averageTravelTimes.csv", "experiencedPlans.xml.gz"]
     for folder in iter_list:
         folder_path = iters_folder + "/" + folder
         if os.path.exists(folder_path + "/tripHistogram"):
@@ -211,7 +212,8 @@ def clean_output(output_dir):
         file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
         for file in file_list:
             if file.endswith('events.xml.gz') == False:
-                os.remove(folder_path + "/" + file)
+                if file not in keep_files:
+                    os.remove(folder_path + "/" + file)
 
 def get_score(output_dir):
     standards = load_standards()
