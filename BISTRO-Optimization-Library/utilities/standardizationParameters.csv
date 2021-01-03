@@ -1,15 +1,12 @@
-KPI,MEAN,STD
-Accessibility: number of work locations accessible by car within 15 minutes,0.9923550089689934,0.015007766587719615
-Accessibility: number of secondary locations accessible by car within 15 minutes,0.884008052763861,0.039779762191372026
-Accessibility: number of work locations accessible by transit within 15 minutes,1.0000001223830826,3.0620237470183958e-06
-Accessibility: number of secondary locations accessible by transit within 15 minutes,1.0000001223830826,3.0620237470183958e-06
-Congestion: average vehicle delay per passenger trip,0.7258681965288385,0.33723461621581907
-motorizedVehicleMilesTraveled_total,nan,nan
-Level of service: average bus crowding experienced,1.3859179871723466,0.05427489930366743
-Equity: average travel cost burden - work,0.9146321165694865,0.3052764935126834
-Equity: average travel cost burden -  secondary,2.019350692410289,1.3006481067494575
-Level of service: costs and benefits,0.07761209474858803,0.0005965816786791501
-Sustainability: Total grams GHGe Emissions,0.5628707385114026,0.19800081251728033
-Sustainability: Total grams PM 2.5 Emitted,0.0,0.0
-TollRevenue,45377.734832535854,38314.38102559485
-VMT,51621.02768940558,21613.289149985845
+driveWorkAccessibility,0.972,0.045
+driveSecondaryAccessibility,0.998,0.005
+transitWorkAccessibility,1.022,0.029
+transitSecondaryAccessibility,0.998,0.003
+averageVehicleDelayPerPassengerTrip,1.054,0.101
+motorizedVehicleMilesTraveled_total,1.024,0.014
+busCrowding,1.023,0.061
+averageTravelCostBurden_Work,0.728,0.179
+averageTravelCostBurden_Secondary,1.203,0.375
+costBenefitAnalysis,1.808,1.673
+sustainability_GHG,1.005,0.040
+sustainability_PM,1.022,0.036
