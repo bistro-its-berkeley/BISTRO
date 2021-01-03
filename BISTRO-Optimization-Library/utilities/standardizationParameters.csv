@@ -1,0 +1,15 @@
+﻿KPI,MEAN,STD
+Accessibility: number of work locations accessible by car within 15 minutes,0.992355009,0.015007767
+Accessibility: number of secondary locations accessible by car within 15 minutes,0.884008053,0.039779762
+Accessibility: number of work locations accessible by transit within 15 minutes,1.000000122,3.06E-06
+Accessibility: number of secondary locations accessible by transit within 15 minutes,1.000000122,3.06E-06
+Congestion: average vehicle delay per passenger trip,0.725868197,0.337234616
+motorizedVehicleMilesTraveled_total,nan,nan
+Level of service: average bus crowding experienced,1.385917987,0.054274899
+Equity: average travel cost burden - work,0.914632117,0.305276494
+Equity: average travel cost burden - secondary,2.019350692,1.300648107
+Level of service: costs and benefits,0.077612095,0.000596582
+Sustainability: Total grams GHGe Emissions,0.562870739,0.198000813
+Sustainability: Total grams PM 2.5 Emitted,0,0
+TollRevenue,45377.73483,38314.38103
+VMT,51621.02769,21613.28915
