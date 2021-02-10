@@ -293,7 +293,7 @@ def store_input_fleet_mix_data_to_db(output_path, simulation_id, bistro_db):
 
 
 def store_input_bus_fare_data_to_db(
-        output_path, simulation_id, route_ids, bistro_db):
+        output_path, simulation_id, route_ids, bistro_db,fixed_data,city):
     if os.path.isfile(output_path + '/competition/submission-inputs/MassTransitFares.csv'):
 
         bus_fares_data = pd.read_csv(
@@ -549,7 +549,7 @@ def parse_and_store_data_to_db(
 
     scenario_n_size = city + '-' + sample_size
 
-    bistro_db = parse_credential(join(dirname(__file__),'dashboard_profile.ini'))
+    bistro_db = parse_credential(join(os.path.dirname(os.path.realpath(__file__)),'dashboard_profile.ini'))
 
     for table in TABLES_LIST:
         bistro_db.create_table(table, TABLES[table])
@@ -609,7 +609,7 @@ def parse_and_store_data_to_db(
     store_input_fleet_mix_data_to_db(output_path, simulation_id, bistro_db)
 
     detail_bus_fares_df = store_input_bus_fare_data_to_db(
-        output_path, simulation_id, route_ids, bistro_db)
+        output_path, simulation_id, route_ids, bistro_db,fixed_data,city)
 
     detail_incentive_df = store_input_incentive_data_to_db(
         output_path, simulation_id, bistro_db)
@@ -634,6 +634,7 @@ def parse_and_store_data_to_db(
         store_raw_scores_to_db(output_path, simulation_id, iteration, bistro_db)
     else:
         store_simulation_scores_to_db(output_path, simulation_id, bistro_db)
+    # bistro_db.connection.commit()
 
     # this will store all trip, leg, pathtraversal, and vehicle data from the
     # simulation to the database

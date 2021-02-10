@@ -213,7 +213,6 @@ def get_trips_legs_pathtraversals_vehicles_list(
         events_path, run_id, scenario, fuel_cost, incentive_df, bus_fares_df,
         person_df, trip_to_route, f):
     """"""
-
     if f == 'csv':
         events_df = pd.read_csv(events_path)
         events_df = events_df.where(events_df.notnull(), None).astype(str)
@@ -244,11 +243,11 @@ def get_trips_legs_pathtraversals_vehicles_list(
         else:
             pid = e['person']
 
-        if is_number(pid):
-            pid = str(int(float(pid)))
-
         if not pid or 'Agent' in pid:
             continue
+
+        if is_number(pid):
+            pid = str(int(float(pid)))
 
         if pid not in persons:
             person = Person(pid)

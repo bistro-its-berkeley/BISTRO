@@ -46,17 +46,28 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
     frequency_adjustment = []
     mode_incentive = []
     mass_fare = []
-    road_pricing = []
+    road_pricing = {}
+    # [[linkId,price,timeRange],[]]
 
     for key in sample:
         value = sample[key]
         
         if key.startswith('c'):
-            road_pricing = road_pricing + processC(key, value, network_path)
+            link_price=processC(key, value, network_path)
+            for item in link_price:
+                if item[0] not in road_pricing:
+                    road_pricing[item[0]]=item[1:]
+                else:
+                    road_pricing[item[0]][0]+=item[1]
             #logger.info("processC end\n")
         else:
             print("EROOR: UNKWOWN KEY; EXITING")
             exit(0);
+
+    road_pricing_list=[]
+
+    for item in road_pricing.items() :
+        road_pricing_list.append([item[0]]+item[1])
 
 
 
@@ -64,7 +75,7 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
     frequency_adjustment_d = pd.DataFrame(frequency_adjustment, columns=frequency_adjustment_columns)
     mode_incentive_d = pd.DataFrame(mode_incentive, columns=mode_incentive_columns)
     mass_fare_d = pd.DataFrame(mass_fare, columns=mass_fare_columns)
-    road_pricing_d = pd.DataFrame(road_pricing, columns=road_pricing_columns)
+    road_pricing_d = pd.DataFrame(road_pricing_list, columns=road_pricing_columns)
 
     road_pricing_d.to_csv(input_dir + '/RoadPricing.csv', sep=',', index=False)
     vehicle_fleet_d.to_csv(input_dir+'/VehicleFleetMix.csv', sep=',', index=False)

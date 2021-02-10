@@ -77,7 +77,7 @@ SUBMISSION = "Submission Score"
 #Beam parameters
 DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
 CMD_TEMPLATE = "--scenario {0} --sample-size {1} --iters {2} --config {3}"
-CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
+CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k_debugging.conf"
 SCENARIO_NAME = "sioux_faux"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"
@@ -133,19 +133,23 @@ def objective(params):
     
     score = get_score(output_dir)
     print("SCORE :", score)
-
+    logger.info("Score is "+ str(score))
     output_dir = only_subdir(only_subdir(output_dir))
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
     # Clean output folder
+    logger.info("cleaning start")
     clean_output(output_dir)
+    logger.info("clean output finished")
 
     # Upload data
     fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
-    name='sioux_faux_upload_test'
-    parse_and_store_data_to_db(output_dir, fixed_data, SCENARIO_NAME, sample_size, n_sim_iters, 
-                           name=name) #can update name
-    logger.info("upload to db as name "+name)
+    logger.info("fixed_data path is "+fixed_data)
+    # name='sioux_faux_upload_test'
+    # logger.info("Upload parameters are"+str(output_dir)+str(fixed_data)+str(SCENARIO_NAME)+str(sample_size)+str(n_sim_iters)+str(name))
+    # parse_and_store_data_to_db(output_dir, fixed_data, SCENARIO_NAME, sample_size, n_sim_iters, 
+    #                        name=name) #can update name
+    # logger.info("upload to db as name "+name)
 
     paths = (input_dir, output_dir)
 
