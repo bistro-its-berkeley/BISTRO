@@ -142,10 +142,10 @@ def objective(params):
     output_dir = only_subdir(only_subdir(output_dir))
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
-    # Clean output folder
-    # logger.info("cleaning start")
-    # clean_output(output_dir)
-    # logger.info("clean output finished")
+    Clean output folder
+    logger.info("cleaning start")
+    clean_output(output_dir)
+    logger.info("clean output finished")
 
     # Upload data
     fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
