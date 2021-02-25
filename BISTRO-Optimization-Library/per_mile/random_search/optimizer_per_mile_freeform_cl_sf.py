@@ -75,10 +75,15 @@ TOLL_REVENUE = "TollRevenue"
 SUBMISSION = "Submission Score"
 
 #Beam parameters
-DOCKER_IMAGE = "beammodel/beam-competition:0.0.4.4-SNAPSHOT"
-CMD_TEMPLATE = "--scenario {0} --sample-size {1} --iters {2} --config {3}"
-CONFIG_PATH = "/fixed-data/sf_light/surbansim-25k.conf"
+# DOCKER_IMAGE = "beammodel/bistro:0.0.4.4-SNAPSHOT"
+DOCKER_IMAGE ="beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT"
+# DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
+CMD_TEMPLATE = "--config {0}"
+# CONFIG_PATH = "/fixed-data/sf_light/urbansim-50k_Cal2_simpleNet.conf"
+CONFIG_PATH ="/fixed-data/sf_light/sf_light-25k.conf"
+# CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
 SCENARIO_NAME = "sf_light"
+# SCENARIO_NAME = "sioux_faux"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"
 BEAM_PATH = CONFIG["BEAM_PATH"]
@@ -113,7 +118,7 @@ def objective(params):
     # Run simulator, return a score
     sample_size = CONFIG["SAMPLE_SIZE"]
     n_sim_iters = CONFIG["SIMULATION_ITERS"]
-    docker_cmd = CMD_TEMPLATE.format(SCENARIO_NAME, sample_size, n_sim_iters, CONFIG_PATH)
+    docker_cmd = CMD_TEMPLATE.format(CONFIG_PATH)
 
     # Write params to input submission csv files
     convert_to_input(params, input_dir)
@@ -138,9 +143,9 @@ def objective(params):
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
     # Clean output folder
-    logger.info("cleaning start")
-    clean_output(output_dir)
-    logger.info("clean output finished")
+    # logger.info("cleaning start")
+    # clean_output(output_dir)
+    # logger.info("clean output finished")
 
     # Upload data
     fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
