@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath("../../"))
 sys.path.append(os.getcwd())
 
 from utilities.optimization_utils import *
-from ipyparallel import Client
+# from ipyparallel import Client
 
 #Utils
 import docker
@@ -236,12 +236,14 @@ def main():
 
 if __name__ == "__main__":
     # os_setup()
-    main()
-    rc = Client()
-    view = rc.load_balanced_view()
+    # main()
+    # rc = Client()
+    # view = rc.load_balanced_view()
 
-    for _ in range(200):
-        view.apply_async(main)
+    # for _ in range(200):
+    #     view.apply_async(main)
+    for _ in range(3):
+        main()
 
 # from ipyparallel import Client
 # c = Client()
