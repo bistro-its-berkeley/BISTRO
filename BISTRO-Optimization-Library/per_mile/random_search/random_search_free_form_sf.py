@@ -183,14 +183,14 @@ def main():
     # Keep track of results
     
     # File to save first results
-    out_file = CONFIG["RESULTS_PATH"]+'/bayes_trials.csv'
-    of_connection = open(out_file, 'w')
-    writer = csv.writer(of_connection)
+    # out_file = CONFIG["RESULTS_PATH"]+'/bayes_trials.csv'
+    # of_connection = open(out_file, 'w')
+    # writer = csv.writer(of_connection)
 
-    # Write the headers to the file
-    # logger.info("write row start\n")
-    # logger.debug("write row start\n")
-    writer.writerow(['loss', 'params', 'iteration', 'estimators', 'train_time'])
+    # # Write the headers to the file
+    # # logger.info("write row start\n")
+    # # logger.debug("write row start\n")
+    # writer.writerow(['loss', 'params', 'iteration', 'estimators', 'train_time'])
 
     params={}
     for i in range(len(radius)):
