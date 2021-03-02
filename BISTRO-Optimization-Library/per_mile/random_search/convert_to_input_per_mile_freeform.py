@@ -47,7 +47,7 @@ cradius=[ None for _ in range(20) ]
 
 
 def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
-    print(CONFIG["NETWORK_PATH"])
+    # print(CONFIG["NETWORK_PATH"])
     vehicle_fleet = []
     frequency_adjustment = []
     mode_incentive = []
