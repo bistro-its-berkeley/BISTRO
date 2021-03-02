@@ -224,14 +224,14 @@ def main():
     # logger.info("saving experiment result to txt")
     # logger.debug(str(bayes_trials_results))
     # logger.debug("saving experiment result to txt")
-    file = open("result.txt","w")
-    for result in bayes_trials_results:
-        # logger.info("writting result to csv")
-        writer.writerow(result)
-        file.write(str(result))
-        #of_connection.write(",".join(result))
-    # of_connection.close()
-    file.close()
+    # file = open("result.txt","w")
+    # for result in bayes_trials_results:
+    #     # logger.info("writting result to csv")
+    #     writer.writerow(result)
+    #     file.write(str(result))
+    #     #of_connection.write(",".join(result))
+    # # of_connection.close()
+    # file.close()
 
 
 if __name__ == "__main__":
