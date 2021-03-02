@@ -136,40 +136,41 @@ def objective(params):
     print("BISTRO finished")
     logger.info("BISTRO finished")
     
-    score = get_score(output_dir)
-    print("SCORE :", score)
-    logger.info("Score is "+ str(score))
-    output_dir = only_subdir(only_subdir(output_dir))
-    shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
+    # score = get_score(output_dir)
+    # print("SCORE :", score)
+    # logger.info("Score is "+ str(score))
+    # output_dir = only_subdir(only_subdir(output_dir))
+    # shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
-    Clean output folder
-    logger.info("cleaning start")
-    clean_output(output_dir)
-    logger.info("clean output finished")
+    # Clean output folder
+    # logger.info("cleaning start")
+    # clean_output(output_dir)
+    # logger.info("clean output finished")
 
     # Upload data
-    fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
-    logger.info("fixed_data path is "+fixed_data)
+    # fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
+    # logger.info("fixed_data path is "+fixed_data)
     # name='sioux_faux_upload_test'
     # logger.info("Upload parameters are"+str(output_dir)+str(fixed_data)+str(SCENARIO_NAME)+str(sample_size)+str(n_sim_iters)+str(name))
     # parse_and_store_data_to_db(output_dir, fixed_data, SCENARIO_NAME, sample_size, n_sim_iters, 
     #                        name=name) #can update name
     # logger.info("upload to db as name "+name)
 
-    paths = (input_dir, output_dir)
+    # paths = (input_dir, output_dir)
 
-    loss = score
+    # loss = score
 
-    run_time = timer() - start
+    # run_time = timer() - start
 
-    print(loss)
-    logger.info("loss is "+ str(loss))
-    file = open("loss.txt","a")
-    file.write(str(loss))
-    file.close()
+    # print(loss)
+    # logger.info("loss is "+ str(loss))
+    # file = open("loss.txt","a")
+    # file.write(str(loss))
+    # file.close()
     # Dictionary with information for evaluation
-    return {'loss': loss, 'params': params, 
-            'train_time': run_time, 'status': STATUS_OK, 'paths': paths}
+    # return {'loss': loss, 'params': params, 
+    #         'train_time': run_time, 'status': STATUS_OK, 'paths': paths}
+    return 0
 
 
 

@@ -99,7 +99,7 @@ n_sim_iters = CONFIG["SIMULATION_ITERS"]
 
 # output_suffix = "" # edit here
 # output_dir = os.path.abspath(f"./output/{output_suffix}")
-output_dir = "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/13/5fe656de1667f78ea0b62d7f/output/bc18444f-6dc3-4abe-8ad2-29b350b67074/sioux_faux/sioux_faux-15k__2020-12-25_21-24-40"
+output_dir = "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/16/5feab4de32e0981e9de9c21f/output/d8016e32-a1b5-4e91-be9c-c7108b75536b/sioux_faux/sioux_faux-15k__2020-12-29_04-53-35"
 logger.info("Output_dir: "+output_dir)
 
 # Upload data
