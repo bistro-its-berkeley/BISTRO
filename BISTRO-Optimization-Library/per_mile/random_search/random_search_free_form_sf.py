@@ -170,7 +170,7 @@ def main():
     # logging.debug('This message should go to the log file')
     # logging.basicConfig(level=logging.INFO)
 
-    data_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/reference-data"))
+    # data_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/reference-data"))
     input_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/bayesian-input"))
     output_root = abspath2(os.path.join(CONFIG["RESULTS_PATH"],"/bayesian-output"))
 
