@@ -77,6 +77,15 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     }
   }
 
+  val motorizedVehicleMilesTraveledComponent: CompoundScoreComponent = new CompoundScoreComponent(MotorizedVehicleMilesTraveled_total,getMapTypeStrings(competitionServices.vehicleTypes))(competitionServices) {
+    override def transformation(vehicleType: String, source: DataTable): Double = {
+      vehicleType match {
+        case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+        case _=> 0.0
+      }
+    }
+  }
+
 
   override def configure(): Unit = {
 
@@ -98,6 +107,8 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     compoundScoreComponentMapBinder.addBinding(Sustainability_PM).toInstance(pmEmissionsSustainabilityComponent)
 
     compoundScoreComponentMapBinder.addBinding(CostBenefitAnalysis).toInstance(costBenefitAnalysisComponent)
+
+    compoundScoreComponentMapBinder.addBinding(MotorizedVehicleMilesTraveled_total).toInstance(motorizedVehicleMilesTraveledComponent)
 
     bind[CompetitionServices].toInstance(competitionServices)
 

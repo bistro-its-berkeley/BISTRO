@@ -63,6 +63,8 @@ case class CompetitionServices(beamServices: BeamServices, networkCoordinator: N
 
   final val SUBMISSION_STATS_PATH: Path = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, s"$SUMMARY_STATS_NAME.csv")
 
+  final val SUBMISSION_STATS_Vehicle_PATH: Path = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, s"$SUMMARY_STATS_Vehicle_NAME.csv")
+
   final val VIZ_OUTPUT_ROOT = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, "competition", "viz")
 
   lazy val fuelTypes: TrieMap[FuelType, BeamFuelData] =
@@ -123,6 +125,8 @@ object CompetitionServices {
   final val BAU_ROOT_NAME: String = "bau"
 
   final val SUMMARY_STATS_NAME: String = "summaryStats"
+
+  final val SUMMARY_STATS_Vehicle_NAME: String = "summaryVehicleStats"
 
   final val FIXED_DATA_ROOT_NAME: String = "fixed-data"
 

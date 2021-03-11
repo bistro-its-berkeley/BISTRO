@@ -294,6 +294,7 @@ trait CompetitionHelper extends BeamHelper {
 
     // Score submission
     val submissionScore: BigDecimal = mainEvaluator.scoreSubmission()
+    val submissionVehicleScore: BigDecimal = mainEvaluator.scoreVehicleSubmission()
 
     // BEGIN Post-processing here...
 
@@ -307,7 +308,9 @@ trait CompetitionHelper extends BeamHelper {
     runStateMonitor.setIterationState(runStateMonitor.numberOfIterations - 1, IterationStateTemplates.SUCCESS)
 
     // Register Score in the runState, and update the state of the whole run
-    runStateMonitor.setScore(submissionScore.doubleValue())
+    //Fixed for VMT
+    //runStateMonitor.setScore(submissionScore.doubleValue())
+    runStateMonitor.setScore(submissionScore.doubleValue()++submissionVehicleScore.doubleValue())
     runStateMonitor.setProgress(1)
 
     // Register Final Score here

@@ -4,6 +4,7 @@ import java.nio.file.{Path, Paths}
 
 import beam.competition.evaluation.component.ScoreComponent.ScoreComponentWeightIdentifier
 import beam.competition.evaluation.component.ScoreComponent.ScoreComponentWeightIdentifier.{CostBenefitAnalysis, Sustainability_GHG, Sustainability_PM}
+import beam.competition.evaluation.component.ScoreComponent.ScoreComponentWeightIdentifier.{MotorizedVehicleMilesTraveled_total}
 import beam.competition.evaluation.component.{AccessibilityScoreComputation, CompoundScoreComponent, NormalizedScoreComponent}
 import beam.competition.inputs.framework.InputReader.loadDblDataTable
 import beam.competition.run.CompetitionServices
@@ -34,6 +35,8 @@ case class SubmissionEvaluator @Inject()(simpleStatFields: Set[ScoreComponentWei
   private lazy val bauDataTable: DataTable = SubmissionEvaluator.loadDataTable("bauDf", competitionServices.BAU_STATS_PATH, submissionScoreMSAOverNumberOfIters)
 
   private lazy val submissionDataTable: DataTable = SubmissionEvaluator.loadDataTable("submissionDf", competitionServices.SUBMISSION_STATS_PATH, submissionScoreMSAOverNumberOfIters)
+
+  private lazy val submissionVehicleDataTable: DataTable = SubmissionEvaluator.loadVehicleDataTable("submissionVehicleDf", competitionServices.SUBMISSION_STATS_Vehicle_PATH, submissionScoreMSAOverNumberOfIters)
 
 
   private def getAccessibilityScoreComponent(modeType: String, poiType: String): NormalizedScoreComponent = {
@@ -88,6 +91,18 @@ case class SubmissionEvaluator @Inject()(simpleStatFields: Set[ScoreComponentWei
     result
   }
 
+  def scoreVehicleSubmission(): BigDecimal = {
+    val allScoringFunctions = compoundStatFields(MotorizedVehicleMilesTraveled_total)
+    val result = allScoringFunctions
+      .foldLeft(Option.empty[X])((a, fn) => {
+        fn.evaluate(bauDataTable,submissionVehicleDataTable)
+        a + summaryTable.addRow(fn)
+      }) / (allScoringFunctions.size+4)
+
+    summaryTable.addRow("Submission Score", "", "", "", "", result.toString)
+    result
+  }
+
 
   def getRawScoreSummaryMap: Map[String, java.lang.Double] = {
     summaryTable.getScoreSummaryMap
@@ -134,10 +149,39 @@ object SubmissionEvaluator {
     }
   }
 
+  def summaryVehicleStatsMSA(dataTableName: String, summaryStats: DataTable, submissionScoreMSAOverNumberOfIters: Int): DataTable = {
+
+    if (submissionScoreMSAOverNumberOfIters > 0) {
+      //*20 is for VMT as we have 20 values in 1 iter for
+      val msaIters = Math.min(submissionScoreMSAOverNumberOfIters, summaryStats.rowCount)*20
+      val columns = scala.collection.mutable.ArrayBuffer.empty[DataColumn[Double]]
+
+      summaryStats.columns.foreach { col =>
+        val average: Double = summaryStats.takeRight(msaIters).map(x => x.get(col.name).get).reduce(_.toString.toDouble + _.toString.toDouble).toString.toDouble / (msaIters/20)
+        val doubleCol = new DataColumn[Double](col.name, List(average))
+        columns += doubleCol
+      }
+
+      val dataTable = DataTable(dataTableName, columns)
+      dataTable.get
+    } else {
+      summaryStats
+    }
+  }
+
+
+
+
   private def loadDataTable(dataTableName: String, statsPath: Path, submissionScoreMSAOverNumberOfIters: Int): DataTable = {
     val fields: Map[String, Double.type] = Source.fromFile(statsPath.toString).getLines().next().split(",").map { x => x -> Double }.toMap
     val summaryStats = loadDblDataTable(fields, statsPath, dataTableName)
     SubmissionEvaluator.summaryStatsMSA(dataTableName, summaryStats, submissionScoreMSAOverNumberOfIters)
+  }
+
+  private def loadVehicleDataTable(dataTableName: String, statsPath: Path, submissionScoreMSAOverNumberOfIters: Int): DataTable = {
+    val fields: Map[String, Double.type] = Source.fromFile(statsPath.toString).getLines().next().split(",").map { x => x -> Double }.toMap
+    val summaryStats = loadDblDataTable(fields, statsPath, dataTableName)
+    SubmissionEvaluator.summaryVehicleStatsMSA(dataTableName, summaryStats, submissionScoreMSAOverNumberOfIters)
   }
 
 
