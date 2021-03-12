@@ -80,7 +80,8 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
   val motorizedVehicleMilesTraveledComponent: CompoundScoreComponent = new CompoundScoreComponent(MotorizedVehicleMilesTraveled_total,getMapTypeStrings(competitionServices.vehicleTypes))(competitionServices) {
     override def transformation(vehicleType: String, source: DataTable): Double = {
       vehicleType match {
-        case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+        case vt if vt.contains("BUS") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last   }.getOrElse(0.0)
+        case vt if vt.contains("CAR") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last   }.getOrElse(0.0)
         case _=> 0.0
       }
     }
