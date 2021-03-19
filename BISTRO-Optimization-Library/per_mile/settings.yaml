@@ -36,6 +36,10 @@ NETWORK_PATH: "/home/ubuntu/BISTRO/HaochongXia-OPT/fixed_data/network.csv"
 #Results standardization file, used for optimization only - not RS -
 STANDARDS: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/per_mile_stds.csv"
 
+#Results standardization file, used for sustainability_PM
+vehicleTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/vehicleTypes.csv"
+beamFuelTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/beamFuelTypes.csv"
+
 
 ################# OPTIMIZATION SETTINGS #######################
 

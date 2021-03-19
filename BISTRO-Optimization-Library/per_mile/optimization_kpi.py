@@ -3,7 +3,9 @@
 optim_KPI = {
 	"averageVehicleDelayPerPassengerTrip":2*0.5/10,
 	"sustainability_GHG":2*0.5/10,
+	"sustainability_PM":2*0.5/10,
 	"averageTravelCostBurden_Work":4*0.5/10,
 	"averageTravelCostBurden_Secondary":4*0.5/10,
-	"TollRevenue":-4.0/10
+	"TollRevenue":-4.0/10,
+	"VMT":2*0.5/10
 }

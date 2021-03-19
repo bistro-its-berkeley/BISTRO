@@ -186,10 +186,10 @@ def clean_output(output_dir):
                 os.remove(file_path)
 
     # Remove excess competition files
-    if os.path.exists(competition_folder + "/submission-inputs"):
-        shutil.rmtree(competition_folder + "/submission-inputs")
-    if os.path.exists(competition_folder + "/submissionScores.csv"):
-        os.remove(competition_folder + "/submissionScores.csv")
+    # if os.path.exists(competition_folder + "/submission-inputs"):
+        # shutil.rmtree(competition_folder + "/submission-inputs")
+    # if os.path.exists(competition_folder + "/submissionScores.csv"):
+        # os.remove(competition_folder + "/submissionScores.csv")
     if os.path.exists(competition_folder + "/validation-errors.out"):
         os.remove(competition_folder + "/validation-errors.out")
 
@@ -223,6 +223,8 @@ def clean_output(output_dir):
 def get_score(output_dir):
     standards = load_standards()
     raw_scores = read_raw_scores(output_dir)
+    VMT=read_VMT_and_PM25(output_dir)
+    raw_scores={**raw_scores, **VMT}
     return compute_weighted_scores(raw_scores, standards)
 
 
@@ -233,7 +235,13 @@ def compute_weighted_scores(raw_scores, standards):
 
     for k in optim_KPI:
         total_score += optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
-
+        submission_score_path=os.path.join(output_dir, *SCORES_PATH)
+    #update weighted with VMT 
+    submission_score = csv.reader(open(submission_score_path)) # Here your csv file
+    submission_score = list(submission_score)
+    submission_score[-1][-1]=total_score
+    writer = csv.writer(open(submission_score_path, 'w'))
+    writer.writerows(submission_score)
     return total_score
 
 
@@ -251,9 +259,56 @@ def read_raw_scores(output_dir):
     dic['TollRevenue'] = read_toll_revenue(output_dir)
     return dic
 
+def read_VMT_and_PM25(output_dir):
+    path = only_subdir(only_subdir(output_dir))
+    path = os.path.join(path, "summaryVehicleStats.csv")
+    dic = {}
+    beamFuelTypes=CONFIG["beamFuelTypes"]
+    beamFuelTypes_dict={}
+    with open(beamFuelTypes) as csvfile:
+        df = pd.read_csv(csvfile)
+        fuelTypeId_list=list(df["fuelTypeId"])
+        pm25PerVMT_list=list(df["pm25PerVMT"])
+        for i in range(len(fuelTypeId_list)):
+            beamFuelTypes_dict[fuelTypeId_list[i]]=float(pm25PerVMT_list[i])
+    vehicleTypes=CONFIG["vehicleTypes"]
+    vehicleTypes_dict={}
+    with open(vehicleTypes) as csvfile:
+        df = pd.read_csv(csvfile)
+        vehicleTypeId_list=list(df["vehicleTypeId"])
+        primaryFuelType_list=list(df["primaryFuelType"])
+        for i in range(len(vehicleTypeId_list)):
+            vehicleTypes_dict[vehicleTypeId_list[i]]=primaryFuelType_list[i]
+
+    with open(path) as csvfile:
+        df = pd.read_csv(csvfile)
+        iter_list=list(df["iteration"])
+        last_iter=iter_list[-1]
+        dic[trans_dict["VMT"]]=0
+        VMT_list=list(df["vehicleMilesTraveled"])
+        vehicleType_list=list(df["vehicleType"])
+        for i in range(len(iter_list),-1,-1):
+            if iter_list[i]!=last_iter:
+                break
+            else:
+                dic[trans_dict["VMT"]]+= VMT_list[i]
+                vehicletype=vehicleType_list[i]
+                fueltype=vehicleTypes_dict[vehicletype]
+                pm25PerVMT=float(beamFuelTypes_dict[fueltype])
+                dic[trans_dict['Sustainability: Total grams PM 2.5 Emitted']]+=pm25PerVMT*VMT_list[i]
+    #TODO:modify the submissionscore.csv add VMT modify PM2.5 change final score
+    submission_score_path=os.path.join(output_dir, *SCORES_PATH)
+    submission_score = csv.reader(open(submission_score_path)) # Here your csv file
+    submission_score = list(submission_score)
+    for i in range(len(submission_score)):
+        if submission_score[i][0]=='Sustainability: Total grams PM 2.5 Emitted':
+            submission_score[i][4]=str(dic[trans_dict['Sustainability: Total grams PM 2.5 Emitted']])
+    submission_score.insert(1, [trans_dict["VMT"],"0","0","0","0",str(dic[trans_dict["VMT"]])])
+    writer = csv.writer(open(submission_score_path, 'w'))
+    writer.writerows(submission_score)
+    return dic
 
 def read_toll_revenue(output_dir):
-
     output_dir = only_subdir(only_subdir(output_dir))
     f = gzip.open(os.path.join(output_dir,'outputEvents.xml.gz'), 'rb')
     print("Loading events")
