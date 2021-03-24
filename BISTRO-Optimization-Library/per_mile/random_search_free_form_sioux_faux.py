@@ -20,7 +20,7 @@ from hyperopt import hp
 from hyperopt.mongoexp import MongoTrials
 from hyperopt import fmin
 from hyperopt import tpe
-from optimizer_per_mile_freeform_cl_sf import *
+from optimizer_per_mile_freeform_cl import *
 
 #Logging and settings import
 import csv

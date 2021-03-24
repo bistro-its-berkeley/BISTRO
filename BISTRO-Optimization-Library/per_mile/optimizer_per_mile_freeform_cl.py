@@ -135,6 +135,7 @@ def objective(params):
     print("SCORE :", score)
     logger.info("Score is "+ str(score))
     output_dir = only_subdir(only_subdir(output_dir))
+    logger.info("after_Output_dir: "+output_dir)
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
     # Clean output folder
@@ -221,27 +222,37 @@ def clean_output(output_dir):
                     os.remove(folder_path + "/" + file)
 
 def get_score(output_dir):
+    # logger.info("load_standards")
     standards = load_standards()
+    # logger.info("raw_scores")
     raw_scores = read_raw_scores(output_dir)
+    # logger.info("read_VMT_and_PM25")
     VMT=read_VMT_and_PM25(output_dir)
     raw_scores={**raw_scores, **VMT}
-    return compute_weighted_scores(raw_scores, standards)
+    # logger.info("compute_weighted_scores")
+    return compute_weighted_scores(raw_scores, standards,output_dir)
 
 
 #KPI is hard coded for now
-def compute_weighted_scores(raw_scores, standards):
+def compute_weighted_scores(raw_scores, standards,output_dir):
     
     total_score = 0
 
     for k in optim_KPI:
         total_score += optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
-        submission_score_path=os.path.join(output_dir, *SCORES_PATH)
+        if k=="VMT":
+            VMTscore=optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
+    # logger.info("compute_weighted_scores_before_VMT")
     #update weighted with VMT 
+    path = only_subdir(only_subdir(output_dir))
+    submission_score_path = os.path.join(path, "competition/submissionScores.csv")
     submission_score = csv.reader(open(submission_score_path)) # Here your csv file
     submission_score = list(submission_score)
-    submission_score[-1][-1]=total_score
+    submission_score[-1][-1]=str(total_score)
+    submission_score[1][-1]=str(VMTscore)
     writer = csv.writer(open(submission_score_path, 'w'))
     writer.writerows(submission_score)
+    # logger.info("compute_weighted_scores_after_VMT")
     return total_score
 
 
@@ -257,6 +268,8 @@ def read_raw_scores(output_dir):
             dic[trans_dict[name]] = list(df[name])[-1]
 
     dic['TollRevenue'] = read_toll_revenue(output_dir)
+    # logger.info("TollRevenue")
+    # logger.info(dic['TollRevenue'])
     return dic
 
 def read_VMT_and_PM25(output_dir):
@@ -265,6 +278,7 @@ def read_VMT_and_PM25(output_dir):
     dic = {}
     beamFuelTypes=CONFIG["beamFuelTypes"]
     beamFuelTypes_dict={}
+    # logger.info("read_VMT_and_PM25_before_prep")
     with open(beamFuelTypes) as csvfile:
         df = pd.read_csv(csvfile)
         fuelTypeId_list=list(df["fuelTypeId"])
@@ -279,33 +293,58 @@ def read_VMT_and_PM25(output_dir):
         primaryFuelType_list=list(df["primaryFuelType"])
         for i in range(len(vehicleTypeId_list)):
             vehicleTypes_dict[vehicleTypeId_list[i]]=primaryFuelType_list[i]
+    # logger.info("read_VMT_and_PM25_after_prep")
 
     with open(path) as csvfile:
+        # logger.info("read_VMT_and_PM25_after_prep_on")
         df = pd.read_csv(csvfile)
         iter_list=list(df["iteration"])
         last_iter=iter_list[-1]
         dic[trans_dict["VMT"]]=0
+        dic['sustainability_PM']=0
         VMT_list=list(df["vehicleMilesTraveled"])
         vehicleType_list=list(df["vehicleType"])
-        for i in range(len(iter_list),-1,-1):
+        # logger.info("read_VMT_and_PM25_after_prep_on_before_iter")
+        for i in range(len(iter_list)-1,-1,-1):
             if iter_list[i]!=last_iter:
+                # logger.info("read_VMT_and_PM25_after_prep_on_before_iter_break")
                 break
             else:
-                dic[trans_dict["VMT"]]+= VMT_list[i]
+                if float(VMT_list[i])==0:
+                    continue
+                # logger.info("float(VMT_list[i])")
+                # logger.info(float(VMT_list[i]))
+                dic[trans_dict["VMT"]]+= float(VMT_list[i])
                 vehicletype=vehicleType_list[i]
-                fueltype=vehicleTypes_dict[vehicletype]
-                pm25PerVMT=float(beamFuelTypes_dict[fueltype])
-                dic[trans_dict['Sustainability: Total grams PM 2.5 Emitted']]+=pm25PerVMT*VMT_list[i]
+                # logger.info("vehicletype")
+                # logger.info(vehicletype)
+                if vehicletype=="CAR-TYPE-DEFAULT":
+                    fueltype='gasoline'
+                else:
+                    fueltype=vehicleTypes_dict[vehicletype]
+                # logger.info("fueltype")
+                # logger.info(fueltype)
+                if fueltype=="Food":
+                    pm25PerVMT=0
+                else:
+                    pm25PerVMT=float(beamFuelTypes_dict[fueltype])
+                # logger.info(pm25PerVMT)
+                dic['sustainability_PM']+=pm25PerVMT*float(VMT_list[i])
+                # logger.info("dic['sustainability_PM']")
+                # logger.info(dic['sustainability_PM'])
+    # logger.info("read_VMT_and_PM25_before_write")
     #TODO:modify the submissionscore.csv add VMT modify PM2.5 change final score
-    submission_score_path=os.path.join(output_dir, *SCORES_PATH)
+    path = only_subdir(only_subdir(output_dir))
+    submission_score_path = os.path.join(path, "competition/submissionScores.csv")
     submission_score = csv.reader(open(submission_score_path)) # Here your csv file
     submission_score = list(submission_score)
     for i in range(len(submission_score)):
         if submission_score[i][0]=='Sustainability: Total grams PM 2.5 Emitted':
             submission_score[i][4]=str(dic[trans_dict['Sustainability: Total grams PM 2.5 Emitted']])
-    submission_score.insert(1, [trans_dict["VMT"],"0","0","0","0",str(dic[trans_dict["VMT"]])])
+    submission_score.insert(1, [trans_dict["VMT"],"0","0","0",str(dic[trans_dict["VMT"]]),"0"])
     writer = csv.writer(open(submission_score_path, 'w'))
     writer.writerows(submission_score)
+    # logger.info("read_VMT_and_PM25_after_write")
     return dic
 
 def read_toll_revenue(output_dir):

@@ -1,0 +1,55 @@
+INFO (convert_to_input_per_mile_freeform): written circle params to file
+INFO (convert_to_input_per_mile_freeform): written circle params to file
+INFO (convert_to_input_per_mile_freeform): written circle params to file
+INFO (convert_to_input_per_mile_freeform): written circle params to file
+INFO (convert_to_input_per_mile_freeform): written circle params to file
+INFO (optimizer_per_mile_freeform_cl): Output_dir: /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/VMT11/6054d967dc44f5ecafb01b87/output/d5f21e31-31a1-4b49-95be-ba10846a2c9d
+INFO (optimizer_per_mile_freeform_cl): Input_dir: /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/VMT11/6054d967dc44f5ecafb01b87/submission-inputs/35db41ec-6705-4c6d-8400-91f42ba6e32f
+INFO (optimizer_per_mile_freeform_cl): !!! execute simulator cmd: docker run -it -v /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/VMT11/6054d967dc44f5ecafb01b87/output/d5f21e31-31a1-4b49-95be-ba10846a2c9d:/output -v /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/VMT11/6054d967dc44f5ecafb01b87/submission-inputs/35db41ec-6705-4c6d-8400-91f42ba6e32f:/submission-inputs -v /home/ubuntu/BISTRO/fixed-data:/fixed-data:rw beammodel/beam-competition:0.0.3-SNAPSHOT --scenario sioux_faux --sample-size 15k --iters 1 --config /fixed-data/sioux_faux/sioux_faux-15k_debugging.conf > log.txt
+INFO (optimizer_per_mile_freeform_cl): BISTRO finished
+INFO (optimizer_per_mile_freeform_cl): load_standards
+INFO (optimizer_per_mile_freeform_cl): raw_scores
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_before_prep
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_after_prep
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_after_prep_on
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_after_prep_on_before_iter
+INFO (optimizer_per_mile_freeform_cl): float(VMT_list[i])
+INFO (optimizer_per_mile_freeform_cl): 57288.78633516774
+INFO (optimizer_per_mile_freeform_cl): vehicletype
+INFO (optimizer_per_mile_freeform_cl): CAR-TYPE-DEFAULT
+INFO (optimizer_per_mile_freeform_cl): fueltype
+INFO (optimizer_per_mile_freeform_cl): gasoline
+INFO (optimizer_per_mile_freeform_cl): 0.0017160860000000001
+INFO (optimizer_per_mile_freeform_cl): dic['sustainability_PM']
+INFO (optimizer_per_mile_freeform_cl): 98.31248418677266
+INFO (optimizer_per_mile_freeform_cl): float(VMT_list[i])
+INFO (optimizer_per_mile_freeform_cl): 659.68431397793
+INFO (optimizer_per_mile_freeform_cl): vehicletype
+INFO (optimizer_per_mile_freeform_cl): BEV
+INFO (optimizer_per_mile_freeform_cl): fueltype
+INFO (optimizer_per_mile_freeform_cl): electricity
+INFO (optimizer_per_mile_freeform_cl): -99999999.9
+INFO (optimizer_per_mile_freeform_cl): dic['sustainability_PM']
+INFO (optimizer_per_mile_freeform_cl): -65968431233.512085
+INFO (optimizer_per_mile_freeform_cl): float(VMT_list[i])
+INFO (optimizer_per_mile_freeform_cl): 390.9495401602677
+INFO (optimizer_per_mile_freeform_cl): vehicletype
+INFO (optimizer_per_mile_freeform_cl): PHEV
+INFO (optimizer_per_mile_freeform_cl): fueltype
+INFO (optimizer_per_mile_freeform_cl): electricity
+INFO (optimizer_per_mile_freeform_cl): -99999999.9
+INFO (optimizer_per_mile_freeform_cl): dic['sustainability_PM']
+INFO (optimizer_per_mile_freeform_cl): -105063385210.44391
+INFO (optimizer_per_mile_freeform_cl): float(VMT_list[i])
+INFO (optimizer_per_mile_freeform_cl): 2653.9704322808875
+INFO (optimizer_per_mile_freeform_cl): vehicletype
+INFO (optimizer_per_mile_freeform_cl): BUS-DEFAULT
+INFO (optimizer_per_mile_freeform_cl): fueltype
+INFO (optimizer_per_mile_freeform_cl): diesel
+INFO (optimizer_per_mile_freeform_cl): 0.0025936648
+INFO (optimizer_per_mile_freeform_cl): dic['sustainability_PM']
+INFO (optimizer_per_mile_freeform_cl): -105063385203.5604
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_after_prep_on_before_iter_break
+INFO (optimizer_per_mile_freeform_cl): read_VMT_and_PM25_before_write
+INFO (hyperopt.mongoexp): job exception: [Errno 2] No such file or directory: '/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/VMT11/6054d967dc44f5ecafb01b87/output/d5f21e31-31a1-4b49-95be-ba10846a2c9d/competition/submissionScores.csv'

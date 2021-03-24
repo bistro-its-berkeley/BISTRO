@@ -47,7 +47,7 @@ beamFuelTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/beamFuelTypes.csv"
 SAMPLE_SIZE: "15k"
 
 #Number of iterations per sample. 30 is usually enough to converge
-SIMULATION_ITERS: 30
+SIMULATION_ITERS: 2
 
 #Number of optimization samples to get 
 NUMBER_OF_SAMPLES: 1
