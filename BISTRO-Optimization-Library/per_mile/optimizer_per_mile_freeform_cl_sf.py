@@ -183,7 +183,7 @@ def clean_output(output_dir):
 
     # Remove excess root folder files
     file_list = [f for f in listdir(path) if isfile(join(path, f))]
-    keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
+    keep_files = ["summaryVehicleStats.csv","outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
     for file in file_list:
         if file not in keep_files:
             if os.path.exists(path + "/" + file):
@@ -246,6 +246,8 @@ def compute_weighted_scores(raw_scores, standards,output_dir):
         total_score += optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
         if k=="VMT":
             VMTscore=optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
+        if k=="sustainability_PM":
+            PMscore=optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
     # logger.info("compute_weighted_scores_before_VMT")
     #update weighted with VMT 
     path = only_subdir(only_subdir(output_dir))
@@ -254,6 +256,7 @@ def compute_weighted_scores(raw_scores, standards,output_dir):
     submission_score = list(submission_score)
     submission_score[-1][-1]=str(total_score)
     submission_score[1][-1]=str(VMTscore)
+    submission_score[8][-1]=str(VMTscore)
     writer = csv.writer(open(submission_score_path, 'w'))
     writer.writerows(submission_score)
     # logger.info("compute_weighted_scores_after_VMT")
