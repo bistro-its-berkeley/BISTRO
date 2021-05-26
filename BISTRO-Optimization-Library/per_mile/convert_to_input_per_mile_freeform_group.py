@@ -46,8 +46,8 @@ ctoll=[ None for _ in range(20) ]
 cradius=[ None for _ in range(20) ]
 
 
-def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
-    # print(CONFIG["NETWORK_PATH"])
+def convert_to_input(sample, input_dir, output_dir, network_path=CONFIG["NETWORK_PATH"]):
+    print(CONFIG["NETWORK_PATH"])
     vehicle_fleet = []
     frequency_adjustment = []
     mode_incentive = []
@@ -60,15 +60,15 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
         # print("value type is "+str(type(value)))
         # logger.info("value type is "+str(type(value)))
         if key.startswith('c'):
-            link_price=processC(key, value, network_path)
+            link_price=processC(key, value, network_path, output_dir)
             for item in link_price:
                 if item[0] not in road_pricing:
                     road_pricing[item[0]]=item[1:]
                 else:
-                    road_pricing[item[0]][0]=float(road_pricing[item[0]][0])+float(item[1])
+                    road_pricing[item[0]][0]=max(float(road_pricing[item[0]][0]), float(item[1]))
             #logger.info("processC end\n")
         else:
-            print("EROOR: UNKWOWN KEY; EXITING")
+            print("ERROR: UNKNOWN KEY; EXITING")
             exit(0);
     road_pricing_list=[]
     for item in road_pricing.items() :
@@ -104,7 +104,7 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
     mass_fare_d.to_csv(input_dir + '/MassTransitFares.csv', sep=',', index=False)
     
 
-def processC(key, value, network_path):
+def processC(key, value, network_path, output_dir):
     #logger.info("processC start "+str(value))
     global centerx, centery, ctoll, cradius
     if key.startswith('centerx'):
@@ -123,7 +123,7 @@ def processC(key, value, network_path):
     else:
         #print(key[-1]+"th Parameters for this run: \nCenterX"+key[-1]+": " + str(centerx[int(key[-1])]) + "\nCenterY"+key[-1]+": " + str(centery[int(key[-1])]) + "\nPrice"+key[-1]+": " + str(ctoll[int(key[-1])]) + "\nRadius"+key[-1]+": " + str(cradius[int(key[-1])]))
         #logger.info("get_circle_links should start\n")
-        links = get_circle_links(centerx[int(key[-1])], centery[int(key[-1])], cradius[int(key[-1])], ctoll[int(key[-1])], network_path,int(key[-1]))
+        links = get_circle_links(output_dir, centerx[int(key[-1])], centery[int(key[-1])], cradius[int(key[-1])], ctoll[int(key[-1])], network_path,int(key[-1]))
         #logger.info("get_circle_links ends\n")
         return links
 
@@ -137,12 +137,14 @@ def load_network(filepath_network):
         return
 
 
-def get_circle_links(x, y, r, p, filepath_network,number):
+def get_circle_links(output_dir, x, y, r, p, filepath_network,number):
     timeRange = '[:]'
     #logger.info("get_circle_links start\n")
+    # print("get circle output_dir:", output_dir)
+    # output_dir = only_subdir(only_subdir(output_dir))
 
     #Save parameters
-    file = open("circle_params.txt","a")
+    file = open(f"{output_dir}/circle_params.txt","a")
     print('writing to circle_params')
     file.write("x"+str(number)+":" + str(x) + ",y"+str(number)+":" + str(y) + ",r"+str(number)+":"+str(r) + ",p"+str(number)+":" + str(p)+",")
     file.close()

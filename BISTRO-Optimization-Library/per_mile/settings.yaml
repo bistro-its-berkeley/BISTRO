@@ -12,13 +12,18 @@
 # README file to properly install and configure BISTRO, Hyperopt
 # and Mongodb
 
+################# RANDOM SEARCH SETTINGS #######################
+# GROUP_NUMBER: 6
+
 ###################### BASIC CONFIGURATION #####################
 
 #BISTRO Installation directory
 BEAM_PATH: "/home/ubuntu/BISTRO/"
+# BEAM_PATH: "/global/scratch/chenjia_lu/BISTRO/"
 
 #Hyperopt installation path - Default : ~/.local/bin
 HYPEROPT_PATH: "/home/ubuntu/.local/bin/"
+# HYPEROPT_PATH: "/global/home/users/chenjia_lu/.conda/envs/BISTRO/lib/"
 
 #Experiment key: each experiment must have a unique identification
 #key. It can be any string that you MUST define here:
@@ -28,17 +33,22 @@ UNIQUE_KEY: "random_debug0"
 
 #Samples output folder
 RESULTS_PATH: "/home/ubuntu/EXP_RESULTS/"
+# RESULTS_PATH: "/global/scratch/chenjia_lu/EXP_RESULTS/"
 
 #Folder containing Sioux Fall's network.csv file
 NETWORK_PATH: "/home/ubuntu/BISTRO/HaochongXia-OPT/fixed_data/network.csv"
 # NETWORK_PATH: "/home/ubuntu/BISTRO/fixed-data/sf_light/network.csv"
+# NETWORK_PATH: "/global/scratch/chenjia_lu/BISTRO/fixed-data/sf_light/network.csv"
 
+#TODO: set the path of the three files- STANDARDS vehicleTypes beamFuelTypes
 #Results standardization file, used for optimization only - not RS -
-STANDARDS: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/per_mile_stds.csv"
-
+# STANDARDS: "/global/scratch/chenjia_lu/BISTRO/BISTRO-Optimization-Library/per_mile/random_search/per_mile_stds.csv"
+STANDARDS: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/per_mile_stds_rs.csv"
 #Results standardization file, used for sustainability_PM
 vehicleTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/vehicleTypes.csv"
 beamFuelTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/beamFuelTypes.csv"
+# vehicleTypes: "/global/scratch/chenjia_lu/BISTRO/BISTRO-Optimization-Library/per_mile/random_search/vehicleTypes.csv"
+# beamFuelTypes: "/global/scratch/chenjia_lu/BISTRO/BISTRO-Optimization-Library/per_mile/random_search/beamFuelTypes.csv"
 
 
 ################# OPTIMIZATION SETTINGS #######################
@@ -47,7 +57,7 @@ beamFuelTypes: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/beamFuelTypes.csv"
 SAMPLE_SIZE: "15k"
 
 #Number of iterations per sample. 30 is usually enough to converge
-SIMULATION_ITERS: 2
+SIMULATION_ITERS: 30
 
 #Number of optimization samples to get 
 NUMBER_OF_SAMPLES: 1

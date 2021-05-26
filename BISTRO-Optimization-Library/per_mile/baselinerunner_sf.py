@@ -70,9 +70,9 @@ TOLL_REVENUE = "TollRevenue"
 SUBMISSION = "Submission Score"
 
 #Beam parameters
-DOCKER_IMAGE = "beammodel/bistro:0.0.4.4-SNAPSHOT"
+DOCKER_IMAGE = "beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT"
 CMD_TEMPLATE = "--config {0}"
-CONFIG_PATH = "/fixed-data/sf_light/urbansim-50k_Cal2_simpleNet.conf"
+CONFIG_PATH = "/fixed-data/sf_light/urbansim-25k_trial_27.conf"
 SCENARIO_NAME = "sf_light"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"

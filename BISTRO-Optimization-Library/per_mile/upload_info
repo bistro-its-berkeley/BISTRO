@@ -1,0 +1,4 @@
+07:19:25,375 __main__ INFO Output_dir: /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/16/5feab4de32e0981e9de9c21f/output/d8016e32-a1b5-4e91-be9c-c7108b75536b/sioux_faux/sioux_faux-15k__2020-12-29_04-53-35
+07:19:25,376 __main__ INFO Fixed_data: /home/ubuntu/BISTRO/fixed-data
+07:19:25,376 __main__ INFO Upload parameters are/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/output/16/5feab4de32e0981e9de9c21f/output/d8016e32-a1b5-4e91-be9c-c7108b75536b/sioux_faux/sioux_faux-15k__2020-12-29_04-53-35/home/ubuntu/BISTRO/fixed-datasioux_faux15k30sioux_faux_15k_freeform_optimal
+07:59:03,897 __main__ INFO upload to db as name sioux_faux_15k_freeform_optimal and simulation_id is f4c0a90c-7802-11eb-947d-06b502d4a7f7

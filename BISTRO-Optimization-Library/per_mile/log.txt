@@ -1,0 +1,570 @@
+Warning : Ignoring intialisation of Message Broker as required Environment Variables are not present
+23:33:02.855 INFO  beam.competition.run.RunCompetition$ - 
+23:33:03.000 INFO  beam.competition.run.RunCompetition$ - Starting beam on branch master at commit HEAD.
+23:33:03.095 INFO  beam.competition.run.RunCompetition$ - Processing configs for [sioux_faux-15k] simulation.
+23:33:03.097 INFO  beam.competition.run.RunCompetition$ - Config '/fixed-data/sioux_faux/sioux_faux-15k.conf' copied to '/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/beam.conf'.
+23:33:03.098 INFO  beam.competition.run.RunCompetition$ - Config '/fixed-data/common/akka.conf' copied to '/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/akka.conf'.
+23:33:03.098 INFO  beam.competition.run.RunCompetition$ - Config '/fixed-data/common/matsim.conf' copied to '/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/matsim.conf'.
+23:33:04.056 INFO  b.r.r.FrequencyAdjustingNetworkCoordinator - Initializing router by reading network from: /fixed-data/sioux_faux/r5/hackathon/network.dat
+23:33:25.350 INFO  b.r.r.FrequencyAdjustingNetworkCoordinator - Initializing router by reading network from: /fixed-data/sioux_faux/r5/hackathon/network.dat
+23:34:28.278 INFO  beam.competition.run.RunCompetition$ - Load scenario using beam/xml executed in 63037 ms
+23:34:30.508 INFO  beam.utils.NetworkHelperImpl - Total number of links is 5812 and MaxLinkId is 5811.
+23:34:30.511 INFO  beam.utils.NetworkHelperImpl - NetworkHelperImpl init executed in 40 ms
+23:34:30.512 INFO  beam.sim.LoggingEventsManager - Created class org.matsim.core.events.EventsManagerImpl with hashcode: 1077938655
+23:34:31.044 INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+23:34:31.505 INFO  beam.router.osm.TollCalculator - tollsByLinkId size: 616
+23:34:31.505 INFO  beam.router.osm.TollCalculator - tollsByWayId size: 0
+23:34:31.511 INFO  b.a.RideHailUtilizationCollector - Created RideHailUtilizationCollector with hashcode: 1887542184
+23:34:31.625 WARN  beam.competition.run.RunCompetition$ - 
+Scenario population size: 15001
+Scenario vehicles size: 0
+Scenario lanes size: 0
+BeamScenario households size: 6226
+BeamScenario privateVehicles size: 20356
+BeamScenario vehicleTypes size: 8
+BeamScenario modIncentives size 0
+
+23:34:34.595 ERROR b.c.inputs.framework.InputProcessor - Invalid file, RoadPricing found in input directory!
+23:34:34.634 INFO  b.s.p.DefaultPopulationAdjustment - Modes excluded:
+23:34:34.691 INFO  b.s.p.DefaultPopulationAdjustment - car -> 3675
+23:34:35.080 INFO  beam.competition.run.RunCompetition$ - Vehicles assigned to households : CAR-TYPE-DEFAULT (20356)
+23:34:35.141 INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[753075166] `akka://ClusterSystem/user/router/router-worker` is ready
+23:34:35.141 INFO  beam.router.r5.R5RoutingWorker - Num of available processors: 32. Will use: 30
+23:34:37.086 INFO  beam.sim.BeamSim - Renaming file - output_facilities.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputFacilities.xml.gz
+23:34:37.087 INFO  beam.sim.BeamSim - Renaming file - output_counts.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputCounts.xml.gz
+23:34:37.087 INFO  beam.sim.BeamSim - Renaming file - output_lanes.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputLanes.xml.gz
+23:34:37.087 INFO  beam.sim.BeamSim - Renaming file - output_households.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputHouseholds.xml.gz
+23:34:37.087 INFO  beam.sim.BeamSim - Renaming file - output_vehicles.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputVehicles.xml.gz
+23:34:37.087 INFO  beam.sim.BeamSim - Renaming file - output_network.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputNetwork.xml.gz
+23:34:37.088 INFO  beam.sim.BeamSim - Renaming file - output_personAttributes.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputPersonAttributes.xml.gz
+23:34:37.088 INFO  beam.sim.BeamSim - Renaming file - output_plans.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputPlans.xml.gz
+23:34:37.088 INFO  beam.sim.BeamSim - Renaming file - output_config.xml to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputConfig.xml
+23:34:37.095 INFO  beam.sim.BeamSim - dumpMatsimStuffAtTheBeginningOfSimulation in the beginning of simulation executed in 1304 ms
+23:34:38.513 INFO  b.a.RideHailUtilizationCollector - There were 0 ride-hail rides for iteration 0
+23:34:38.550 INFO  b.a.RideHailUtilizationCollector - There were 0 ride-hail rides for iteration 0
+23:34:38.871 INFO  beam.sim.BeamMobsim - Starting Iteration
+23:34:38.871 INFO  beam.sim.BeamMobsim - Preparing new Iteration (Start)
+23:34:38.872 INFO  beam.sim.LoggingEventsManager - Running dedicated blocking handler...
+23:34:39.984 INFO  hsqldb.db.HSQLDB4AD417742A.ENGINE - dataFileCache open start
+23:34:40.983 INFO  beam.sim.BeamMobsimIteration - QuadTreeBounds with X: [678308.519463; 687377.121479], Y: [4818895.632974, 4830338.222152]. boundingBoxBuffer: 10000
+23:34:40.984 INFO  beam.sim.BeamMobsimIteration - envelopeInUTM before expansion: Env[668143.1672599609 : 697482.0514865122, 4808555.903655934 : 4842298.067318849]
+23:34:40.984 INFO  beam.sim.BeamMobsimIteration - envelopeInUTM after expansion: Env[668143.1672599609 : 697482.0514865122, 4808555.903655934 : 4842298.067318849]
+23:34:41.006 INFO  beam.sim.BeamMobsimIteration - Running BEAM Mobsim
+23:34:41.007 INFO  beam.sim.BeamMobsimIteration - Preparing new Iteration (End)
+23:34:41.007 INFO  beam.sim.BeamMobsimIteration - Starting Agentsim
+23:34:41.007 INFO  b.a.scheduler.BeamAgentScheduler - starting scheduler at iteration 0
+23:34:41.124 WARN  b.a.a.r.RideHailDepotParkingManager - unable to read contents of provided parking file /test/input/beamville/ride-hail-parking.csv, got Unable to load parking configuration file with path /test/input/beamville/ride-hail-parking.csv.
+org.matsim.core.utils.io.UncheckedIOException: java.io.FileNotFoundException: /test/input/beamville/ride-hail-parking.csv.
+23:34:41.124 INFO  b.a.a.r.RideHailDepotParkingManager - generating ubiquitous ride hail parking
+23:34:41.210 INFO  b.a.i.parking.ParkingZoneFileUtils$ - generated 255 parking zones,one for each TAZ in /fixed-data/sioux_faux/taz-centers.csv, with 255 million stalls (255000000) in system
+23:34:42.759 INFO  b.a.i.parking.ParkingZoneFileUtils$ - loaded 19173 rows as parking zones from /fixed-data/sioux_faux/taz-parking-default.csv, with 37430 billion stalls (37430639967210) in system
+23:34:43.123 WARN  b.a.a.h.HouseholdFleetManager - [1] No handler for Success
+23:34:43.123 WARN  b.a.a.h.HouseholdFleetManager - [2] No handler for Success
+23:34:43.123 WARN  b.a.a.h.HouseholdFleetManager - [4] No handler for Success
+23:34:43.125 WARN  b.a.a.h.HouseholdFleetManager - [8] No handler for Success
+23:34:43.148 WARN  b.a.a.h.HouseholdFleetManager - [16] No handler for Success
+23:34:43.188 WARN  b.a.a.h.HouseholdFleetManager - [32] No handler for Success
+23:34:43.238 WARN  b.a.a.h.HouseholdFleetManager - [64] No handler for Success
+23:34:43.292 WARN  b.a.a.h.HouseholdFleetManager - [128] No handler for Success
+23:34:43.334 INFO  beam.sim.RideHailFleetInitializer$ - Fleet data with 2355 entries is written to '/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.rideHailFleet.csv.gz'
+23:34:43.398 WARN  b.a.a.h.HouseholdFleetManager - [256] No handler for Success
+23:34:43.487 INFO  beam.agentsim.agents.Population - Initialized 6226 households
+23:34:43.574 WARN  b.a.a.h.HouseholdFleetManager - [512] No handler for Success
+23:34:43.957 INFO  beam.router.TransitInitializer - [1] Initialized transit trips in 2945 ms. Keys: 255, Values: 255
+23:34:43.957 WARN  b.a.a.h.HouseholdFleetManager - [1024] No handler for Success
+23:34:44.258 WARN  b.a.a.h.HouseholdFleetManager - [2048] No handler for Success
+23:34:44.391 INFO  b.a.agents.ridehail.RideHailManager - Initialized 2355 ride hailing shifts
+23:34:44.490 INFO  beam.agentsim.agents.TransitSystem - Transit schedule has been initialized
+23:34:44.493 INFO  b.a.a.r.a.DefaultRideHailResourceAllocationManager - Using DefaultRepositioningManager as RepositioningManager
+23:34:44.495 INFO  b.a.agents.ridehail.RideHailManager - Initialized 2036 ride hailing agents
+23:34:44.671 WARN  b.a.a.h.HouseholdFleetManager - [4096] No handler for Success
+23:34:45.362 WARN  b.a.a.h.HouseholdFleetManager - [8192] No handler for Success
+23:34:47.232 WARN  b.a.a.h.HouseholdFleetManager - [16384] No handler for Success
+23:34:47.981 INFO  b.a.scheduler.BeamAgentScheduler - Hour 0.5 completed. 1.2(GB)
+23:34:47.982 INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.0 completed. 1.2(GB)
+23:34:47.984 INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.5 completed. 1.2(GB)
+23:34:47.985 INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.0 completed. 1.2(GB)
+23:34:47.993 INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.5 completed. 1.2(GB)
+23:34:47.993 INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.0 completed. 1.2(GB)
+23:34:47.994 INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.5 completed. 1.2(GB)
+23:34:47.996 INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.0 completed. 1.2(GB)
+23:34:47.997 INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.5 completed. 1.2(GB)
+23:34:48.002 INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.0 completed. 1.2(GB)
+23:34:48.078 INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.5 completed. 1.2(GB)
+23:34:48.149 INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.0 completed. 1.2(GB)
+23:34:48.248 INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.5 completed. 1.2(GB)
+23:34:49.760 INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.0 completed. 0.4(GB)
+23:34:53.560 INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.5 completed. 0.6(GB)
+23:34:58.523 INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.0 completed. 1.6(GB)
+23:35:06.885 INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.5 completed. 3.1(GB)
+23:35:11.512 INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.0 completed. 1.6(GB)
+23:35:13.845 INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.5 completed. 6.5(GB)
+23:35:15.855 INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.0 completed. 3.4(GB)
+23:35:16.121 WARN  b.a.a.h.HouseholdFleetManager - [1] I can't release vehicle 5689-1 because I have it already
+23:35:16.126 WARN  b.a.a.h.HouseholdFleetManager - [2] I can't release vehicle 5689-0 because I have it already
+23:35:16.693 WARN  b.a.a.h.HouseholdFleetManager - [4] I can't release vehicle 1025-2 because I have it already
+23:35:17.190 WARN  b.a.a.h.HouseholdFleetManager - [8] I can't release vehicle 94-0 because I have it already
+23:35:17.268 INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.5 completed. 5.5(GB)
+23:35:18.375 WARN  b.a.a.h.HouseholdFleetManager - [16] I can't release vehicle 2105-2 because I have it already
+23:35:18.856 INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.0 completed. 8.5(GB)
+23:35:19.702 WARN  b.a.a.h.HouseholdFleetManager - [32] I can't release vehicle 1914-3 because I have it already
+23:35:20.721 INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.5 completed. 3.4(GB)
+23:35:21.193 WARN  b.a.a.h.HouseholdFleetManager - [64] I can't release vehicle 2551-3 because I have it already
+23:35:21.573 INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.0 completed. 5.1(GB)
+23:35:22.726 INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.5 completed. 7.8(GB)
+23:35:23.502 WARN  b.a.a.h.HouseholdFleetManager - [128] I can't release vehicle 452-3 because I have it already
+23:35:23.876 INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.0 completed. 2.1(GB)
+23:35:25.235 INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.5 completed. 4.9(GB)
+23:35:26.140 INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.0 completed. 7.4(GB)
+23:35:27.409 WARN  b.a.a.h.HouseholdFleetManager - [256] I can't release vehicle 4271-0 because I have it already
+23:35:27.559 INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.5 completed. 2.1(GB)
+23:35:28.500 INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.0 completed. 4.3(GB)
+23:35:29.299 INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.5 completed. 6.2(GB)
+23:35:30.217 INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.0 completed. 8.1(GB)
+23:35:31.879 INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.5 completed. 1.5(GB)
+23:35:34.173 INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.0 completed. 6.7(GB)
+23:35:36.369 INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.5 completed. 3.4(GB)
+23:35:38.869 INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.0 completed. 11.2(GB)
+23:35:39.894 INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.5 completed. 3.6(GB)
+23:35:40.302 INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.0 completed. 4.7(GB)
+23:35:40.380 WARN  b.a.a.h.HouseholdFleetManager - [512] I can't release vehicle 4553-1 because I have it already
+23:35:40.634 INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.5 completed. 5.4(GB)
+23:35:41.068 INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.0 completed. 6.1(GB)
+23:35:41.196 INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.5 completed. 6.5(GB)
+23:35:41.260 INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.0 completed. 6.6(GB)
+23:35:41.275 INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.5 completed. 6.6(GB)
+23:35:41.281 INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.0 completed. 6.6(GB)
+23:35:41.283 INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.5 completed. 6.6(GB)
+23:35:41.284 INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.0 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.5 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.0 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.5 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.0 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.5 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.0 completed. 6.6(GB)
+23:35:41.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.5 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.0 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.5 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.0 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.5 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.0 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.5 completed. 6.6(GB)
+23:35:41.286 INFO  b.a.scheduler.BeamAgentScheduler - Hour 30.0 completed. 6.6(GB)
+23:35:41.287 INFO  b.a.scheduler.BeamAgentScheduler - Stopping BeamAgentScheduler @ tick 108001. Iteration 0 executed in 60 seconds
+23:35:41.288 INFO  beam.sim.BeamMobsimIteration - Scheduler is finished.
+23:35:41.288 INFO  beam.sim.BeamMobsimIteration - Ending Agentsim
+23:35:41.288 INFO  beam.sim.BeamMobsimIteration - Processing Agentsim Events (Start)
+23:35:41.433 INFO  beam.sim.BeamMobsim - Agentsim finished.
+23:35:41.434 INFO  beam.sim.LoggingEventsManager - Set `isFinished` to true
+23:35:41.435 INFO  beam.sim.LoggingEventsManager - Starting to wait dedicatedHandler future to finish...
+23:35:41.552 INFO  b.a.scheduler.BeamAgentScheduler - aroundPostStop. Stopping all scheduled tasks...
+23:35:41.552 INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (1306 / 16627) or 8%
+23:35:41.552 INFO  b.a.agents.ridehail.RideHailManager - postStop
+23:35:41.552 INFO  b.a.agents.ridehail.RideHailManager - requestedRideHail: 15543
+23:35:41.552 INFO  b.a.agents.ridehail.RideHailManager - servedRideHail: 15543
+23:35:41.552 INFO  b.a.agents.ridehail.RideHailManager - ratio: 1.0
+23:35:41.755 INFO  beam.sim.LoggingEventsManager - Stopped dedicated handler(handleBlocking). Took 321 ms to process after stop
+23:35:41.755 INFO  beam.sim.LoggingEventsManager - dedicatedHandler future finished.
+23:35:41.756 INFO  beam.sim.LoggingEventsManager - finishProcessing executed in 322 ms
+23:35:41.756 INFO  beam.sim.LoggingEventsManager - Overall processed events: 1739227
+23:35:41.756 INFO  beam.sim.BeamMobsim - Events drained.
+23:35:41.756 INFO  beam.sim.BeamMobsim - Processing Agentsim Events (End)
+23:35:47.287 INFO  b.a.RideHailUtilizationCollector - 
+nonEmptyRides: 1084
+totalRides: 2168
+movedPassengers: 1084
+numOfPassengersToTheNumberOfRides: Map(1 -> 1084, 0 -> 1084)
+numberOfRidesServedByNumberOfVehicles: Vector((1,301), (2,126), (3,57), (4,21), (5,18), (6,14), (7,2), (8,5), (9,2), (10,3))
+rideHailChoices: 1084
+rideHailInAlternatives: 15543
+totalModeChoices: 43087
+23:35:47.338 INFO  b.a.RideHailUtilizationCollector - movedWithoutPassenger: 0
+movedWithPassengers: 2168
+movedVehicleIds(distinct): 549
+23:35:47.359 INFO  b.p.j.AgentSimToPhysSimPlanConverter - CACC disabled
+23:35:47.375 INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim Start
+23:35:47.403 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 5 completed. 
+23:35:47.427 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 6 completed. 
+23:35:47.465 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 7 completed. 
+23:35:47.893 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 8 completed. 
+23:35:48.750 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 9 completed. 
+23:35:49.164 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 10 completed. 
+23:35:49.560 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 11 completed. 
+23:35:49.915 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 12 completed. 
+23:35:50.208 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 13 completed. 
+23:35:50.477 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 14 completed. 
+23:35:50.627 INFO  b.a.p.GraphsStatsAgentSimEventsListener - modesAbsoluteError: -0.874055376331608
+23:35:50.628 INFO  b.a.p.GraphsStatsAgentSimEventsListener - modesRMSPError: -3.2658973310490826
+23:35:50.709 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 15 completed. 
+23:35:50.988 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 16 completed. 
+23:35:51.350 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 17 completed. 
+23:35:52.180 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 18 completed. 
+23:35:52.567 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 19 completed. 
+23:35:52.804 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 20 completed. 
+23:35:52.961 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 21 completed. 
+23:35:53.019 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 22 completed. 
+23:35:53.028 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 23 completed. 
+23:35:53.077 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 24 completed. 
+23:35:53.084 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 25 completed. 
+23:35:53.089 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 26 completed. 
+23:35:53.106 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 27 completed. 
+23:35:53.112 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 28 completed. 
+23:35:53.120 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 29 completed. 
+23:35:53.125 INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim End
+23:35:53.175 INFO  b.utils.TravelTimeCalculatorHelper - GetLinkIdToTravelTimeArray for 5812 links with maxHour = 30 executed in 48 ms
+23:35:53.205 ERROR b.p.j.AgentSimToPhysSimPlanConverter - Iteration 0 had 2338 link speed bins (of 174360) with speed smaller than 0.5.
+23:35:53.208 INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[753075166], Path: `akka://ClusterSystem/user/router/router-worker` UpdateTravelTimeLocal. Set new travel time
+23:35:53.208 INFO  b.p.j.AgentSimToPhysSimPlanConverter - PhysSim for iteration 0 took 5852 ms
+23:35:57.255 INFO  b.a.a.r.RideHailIterationsStatsCollector - 1806 rideHail vehicles (out of 2355) were never moved and 0 vehicles were moved without a passenger, during whole day.
+23:35:57.257 INFO  beam.router.RouteHistory - Overall cache hits 16358/33254 (49%)
+23:35:57.262 INFO  beam.sim.BeamSim - Iteration 0 - average number of plans per agent: 1.0
+23:35:57.295 INFO  beam.sim.BeamSim - All person activities (except the last one) have non-negative end times.
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_walk.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramWalk.png
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram.txt to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogram.txt
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_all.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramAll.png
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_ride_hail.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramRideHail.png
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.experienced_plans_scores.txt.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.experiencedPlansScores.txt.gz
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_walk_transit.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramWalkTransit.png
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_drive_transit.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramDriveTransit.png
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.experienced_plans.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.experiencedPlans.xml.gz
+23:35:57.298 INFO  beam.sim.BeamSim - Renaming file - 0.legHistogram_car.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.legHistogramCar.png
+23:35:57.299 INFO  beam.sim.BeamSim - Ending Iteration
+23:35:57.501 INFO  beam.analysis.AnalysisProcessor$ - [1] Running python script: src/main/python/events_analysis/analyze_events.py with args WrappedArray(/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.0/0.events.csv.gz)
+23:35:57.546 ERROR beam.analysis.AnalysisProcessor$ - [1] Process Handler Stderr for Python Script: src/main/python/events_analysis/analyze_events.py: python: can't open file 'src/main/python/events_analysis/analyze_events.py': [Errno 2] No such file or directory
+Process Handler Stdout for Python Script: src/main/python/events_analysis/analyze_events.py: python: can't open file 'src/main/python/events_analysis/analyze_events.py': [Errno 2] No such file or directory
+23:35:58.374 INFO  b.c.e.IterationScoreComponentPlottingListener - -4.228398399942446081818181818181818
+23:35:59.089 INFO  b.a.RideHailUtilizationCollector - There were 2168 ride-hail rides for iteration 1
+23:35:59.254 INFO  b.a.RideHailUtilizationCollector - There were 0 ride-hail rides for iteration 1
+23:35:59.919 INFO  beam.sim.BeamMobsim - Starting Iteration
+23:35:59.919 INFO  beam.sim.BeamMobsim - Preparing new Iteration (Start)
+23:35:59.919 INFO  beam.sim.LoggingEventsManager - Running dedicated blocking handler...
+23:36:00.263 INFO  beam.sim.BeamMobsimIteration - QuadTreeBounds with X: [678308.519463; 687377.121479], Y: [4818895.632974, 4830338.222152]. boundingBoxBuffer: 10000
+23:36:00.263 INFO  beam.sim.BeamMobsimIteration - envelopeInUTM before expansion: Env[668143.1672599609 : 697482.0514865122, 4808555.903655934 : 4842298.067318849]
+23:36:00.263 INFO  beam.sim.BeamMobsimIteration - envelopeInUTM after expansion: Env[668143.1672599609 : 697482.0514865122, 4808555.903655934 : 4842298.067318849]
+23:36:00.265 INFO  beam.sim.BeamMobsimIteration - Running BEAM Mobsim
+23:36:00.265 INFO  beam.sim.BeamMobsimIteration - Preparing new Iteration (End)
+23:36:00.265 INFO  beam.sim.BeamMobsimIteration - Starting Agentsim
+23:36:00.265 INFO  b.a.scheduler.BeamAgentScheduler - starting scheduler at iteration 1
+23:36:00.353 WARN  b.a.a.r.RideHailDepotParkingManager - unable to read contents of provided parking file /test/input/beamville/ride-hail-parking.csv, got Unable to load parking configuration file with path /test/input/beamville/ride-hail-parking.csv.
+org.matsim.core.utils.io.UncheckedIOException: java.io.FileNotFoundException: /test/input/beamville/ride-hail-parking.csv.
+23:36:00.354 INFO  b.a.a.r.RideHailDepotParkingManager - generating ubiquitous ride hail parking
+23:36:00.365 INFO  b.a.i.parking.ParkingZoneFileUtils$ - generated 255 parking zones,one for each TAZ in /fixed-data/sioux_faux/taz-centers.csv, with 255 million stalls (255000000) in system
+23:36:00.743 INFO  b.a.i.parking.ParkingZoneFileUtils$ - loaded 19173 rows as parking zones from /fixed-data/sioux_faux/taz-parking-default.csv, with 37430 billion stalls (37430639967210) in system
+23:36:00.751 INFO  beam.sim.RideHailFleetInitializer$ - Fleet data with 2355 entries is written to '/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.rideHailFleet.csv.gz'
+23:36:00.754 WARN  b.a.a.h.HouseholdFleetManager - [1] No handler for Success
+23:36:00.754 WARN  b.a.a.h.HouseholdFleetManager - [2] No handler for Success
+23:36:00.755 WARN  b.a.a.h.HouseholdFleetManager - [4] No handler for Success
+23:36:00.757 WARN  b.a.a.h.HouseholdFleetManager - [8] No handler for Success
+23:36:00.759 WARN  b.a.a.h.HouseholdFleetManager - [16] No handler for Success
+23:36:00.762 WARN  b.a.a.h.HouseholdFleetManager - [32] No handler for Success
+23:36:00.772 WARN  b.a.a.h.HouseholdFleetManager - [64] No handler for Success
+23:36:00.790 WARN  b.a.a.h.HouseholdFleetManager - [128] No handler for Success
+23:36:00.803 INFO  beam.router.TransitInitializer - [1] Initialized transit trips in 539 ms. Keys: 255, Values: 255
+23:36:00.828 WARN  b.a.a.h.HouseholdFleetManager - [256] No handler for Success
+23:36:00.896 WARN  b.a.a.h.HouseholdFleetManager - [512] No handler for Success
+23:36:00.942 INFO  beam.agentsim.agents.Population - Initialized 6226 households
+23:36:01.001 WARN  b.a.a.h.HouseholdFleetManager - [1024] No handler for Success
+23:36:01.191 WARN  b.a.a.h.HouseholdFleetManager - [2048] No handler for Success
+23:36:01.216 INFO  b.a.agents.ridehail.RideHailManager - Initialized 2355 ride hailing shifts
+23:36:01.313 INFO  beam.agentsim.agents.TransitSystem - Transit schedule has been initialized
+23:36:01.491 INFO  b.a.a.r.a.DefaultRideHailResourceAllocationManager - Using DefaultRepositioningManager as RepositioningManager
+23:36:01.531 WARN  b.a.a.h.HouseholdFleetManager - [4096] No handler for Success
+23:36:01.575 INFO  b.a.agents.ridehail.RideHailManager - Initialized 2036 ride hailing agents
+23:36:02.123 WARN  b.a.a.h.HouseholdFleetManager - [8192] No handler for Success
+23:36:03.505 WARN  b.a.a.h.HouseholdFleetManager - [16384] No handler for Success
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 0.5 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.0 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 1.5 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.0 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 2.5 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.0 completed. 6.6(GB)
+23:36:04.241 INFO  b.a.scheduler.BeamAgentScheduler - Hour 3.5 completed. 6.6(GB)
+23:36:04.242 INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.0 completed. 6.6(GB)
+23:36:04.242 INFO  b.a.scheduler.BeamAgentScheduler - Hour 4.5 completed. 6.6(GB)
+23:36:04.243 INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.0 completed. 6.6(GB)
+23:36:04.248 INFO  b.a.scheduler.BeamAgentScheduler - Hour 5.5 completed. 6.6(GB)
+23:36:04.260 INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.0 completed. 6.6(GB)
+23:36:04.285 INFO  b.a.scheduler.BeamAgentScheduler - Hour 6.5 completed. 6.7(GB)
+23:36:04.372 INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.0 completed. 6.8(GB)
+23:36:05.070 INFO  b.a.scheduler.BeamAgentScheduler - Hour 7.5 completed. 7.5(GB)
+23:36:07.022 INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.0 completed. 10.2(GB)
+23:36:10.215 INFO  b.a.scheduler.BeamAgentScheduler - Hour 8.5 completed. 4.4(GB)
+23:36:11.976 INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.0 completed. 7.8(GB)
+23:36:13.121 INFO  b.a.scheduler.BeamAgentScheduler - Hour 9.5 completed. 10.0(GB)
+23:36:14.284 INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.0 completed. 1.6(GB)
+23:36:14.476 WARN  b.a.a.h.HouseholdFleetManager - [1] I can't release vehicle 5689-0 because I have it already
+23:36:14.477 WARN  b.a.a.h.HouseholdFleetManager - [2] I can't release vehicle 5689-1 because I have it already
+23:36:14.683 WARN  b.a.a.h.HouseholdFleetManager - [4] I can't release vehicle 1025-2 because I have it already
+23:36:14.941 WARN  b.a.a.h.HouseholdFleetManager - [8] I can't release vehicle 94-0 because I have it already
+23:36:14.981 INFO  b.a.scheduler.BeamAgentScheduler - Hour 10.5 completed. 2.8(GB)
+23:36:15.489 WARN  b.a.a.h.HouseholdFleetManager - [16] I can't release vehicle 220-3 because I have it already
+23:36:16.095 INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.0 completed. 4.3(GB)
+23:36:16.892 WARN  b.a.a.h.HouseholdFleetManager - [32] I can't release vehicle 3923-0 because I have it already
+23:36:16.990 INFO  b.a.scheduler.BeamAgentScheduler - Hour 11.5 completed. 5.7(GB)
+23:36:17.580 INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.0 completed. 6.7(GB)
+23:36:17.965 WARN  b.a.a.h.HouseholdFleetManager - [64] I can't release vehicle 1991-1 because I have it already
+23:36:18.239 INFO  b.a.scheduler.BeamAgentScheduler - Hour 12.5 completed. 7.9(GB)
+23:36:18.888 INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.0 completed. 9.0(GB)
+23:36:19.655 INFO  b.a.scheduler.BeamAgentScheduler - Hour 13.5 completed. 10.3(GB)
+23:36:20.308 WARN  b.a.a.h.HouseholdFleetManager - [128] I can't release vehicle 2927-1 because I have it already
+23:36:20.400 INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.0 completed. 11.7(GB)
+23:36:21.509 INFO  b.a.scheduler.BeamAgentScheduler - Hour 14.5 completed. 3.5(GB)
+23:36:22.324 INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.0 completed. 4.9(GB)
+23:36:23.046 INFO  b.a.scheduler.BeamAgentScheduler - Hour 15.5 completed. 5.8(GB)
+23:36:23.782 INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.0 completed. 6.9(GB)
+23:36:24.432 INFO  b.a.scheduler.BeamAgentScheduler - Hour 16.5 completed. 8.2(GB)
+23:36:25.299 WARN  b.a.a.h.HouseholdFleetManager - [256] I can't release vehicle 4992-4 because I have it already
+23:36:25.546 INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.0 completed. 10.7(GB)
+23:36:26.875 INFO  b.a.scheduler.BeamAgentScheduler - Hour 17.5 completed. 4.0(GB)
+23:36:28.293 INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.0 completed. 7.5(GB)
+23:36:28.961 INFO  b.a.scheduler.BeamAgentScheduler - Hour 18.5 completed. 9.3(GB)
+23:36:29.383 INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.0 completed. 10.4(GB)
+23:36:29.645 INFO  b.a.scheduler.BeamAgentScheduler - Hour 19.5 completed. 11.1(GB)
+23:36:29.842 INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.0 completed. 11.8(GB)
+23:36:30.153 INFO  b.a.scheduler.BeamAgentScheduler - Hour 20.5 completed. 2.1(GB)
+23:36:30.230 INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.0 completed. 2.2(GB)
+23:36:30.267 INFO  b.a.scheduler.BeamAgentScheduler - Hour 21.5 completed. 2.2(GB)
+23:36:30.295 INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.0 completed. 2.2(GB)
+23:36:30.302 INFO  b.a.scheduler.BeamAgentScheduler - Hour 22.5 completed. 2.2(GB)
+23:36:30.309 INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.0 completed. 2.2(GB)
+23:36:30.312 INFO  b.a.scheduler.BeamAgentScheduler - Hour 23.5 completed. 2.2(GB)
+23:36:30.313 INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.0 completed. 2.2(GB)
+23:36:30.313 INFO  b.a.scheduler.BeamAgentScheduler - Hour 24.5 completed. 2.2(GB)
+23:36:30.313 INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.0 completed. 2.2(GB)
+23:36:30.314 INFO  b.a.scheduler.BeamAgentScheduler - Hour 25.5 completed. 2.2(GB)
+23:36:30.314 INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.0 completed. 2.2(GB)
+23:36:30.314 INFO  b.a.scheduler.BeamAgentScheduler - Hour 26.5 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.0 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 27.5 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.0 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 28.5 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.0 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 29.5 completed. 2.2(GB)
+23:36:30.315 INFO  b.a.scheduler.BeamAgentScheduler - Hour 30.0 completed. 2.2(GB)
+23:36:30.316 INFO  b.a.scheduler.BeamAgentScheduler - Stopping BeamAgentScheduler @ tick 108001. Iteration 1 executed in 30 seconds
+23:36:30.316 INFO  beam.sim.BeamMobsimIteration - Scheduler is finished.
+23:36:30.316 INFO  beam.sim.BeamMobsimIteration - Ending Agentsim
+23:36:30.316 INFO  beam.sim.BeamMobsimIteration - Processing Agentsim Events (Start)
+23:36:30.376 INFO  beam.sim.BeamMobsim - Agentsim finished.
+23:36:30.376 INFO  beam.sim.LoggingEventsManager - Set `isFinished` to true
+23:36:30.376 INFO  beam.sim.LoggingEventsManager - Starting to wait dedicatedHandler future to finish...
+23:36:30.464 INFO  b.a.agents.ridehail.RideHailManager - route request cache hits (742 / 3557) or 21%
+23:36:30.464 INFO  b.a.agents.ridehail.RideHailManager - postStop
+23:36:30.464 INFO  b.a.agents.ridehail.RideHailManager - requestedRideHail: 2505
+23:36:30.464 INFO  b.a.agents.ridehail.RideHailManager - servedRideHail: 2505
+23:36:30.464 INFO  b.a.agents.ridehail.RideHailManager - ratio: 1.0
+23:36:30.464 INFO  b.a.scheduler.BeamAgentScheduler - aroundPostStop. Stopping all scheduled tasks...
+23:36:31.760 INFO  beam.sim.LoggingEventsManager - Stopped dedicated handler(handleBlocking). Took 1384 ms to process after stop
+23:36:31.760 INFO  beam.sim.LoggingEventsManager - dedicatedHandler future finished.
+23:36:31.760 INFO  beam.sim.LoggingEventsManager - finishProcessing executed in 1384 ms
+23:36:31.760 INFO  beam.sim.LoggingEventsManager - Overall processed events: 1719709
+23:36:31.760 INFO  beam.sim.BeamMobsim - Events drained.
+23:36:31.760 INFO  beam.sim.BeamMobsim - Processing Agentsim Events (End)
+23:36:36.595 INFO  b.a.RideHailUtilizationCollector - 
+nonEmptyRides: 1052
+totalRides: 2104
+movedPassengers: 1052
+numOfPassengersToTheNumberOfRides: Map(1 -> 1052, 0 -> 1052)
+numberOfRidesServedByNumberOfVehicles: Vector((1,307), (2,132), (3,56), (4,23), (5,13), (6,8), (7,9), (8,1), (9,3), (10,1))
+rideHailChoices: 1052
+rideHailInAlternatives: 2505
+totalModeChoices: 42980
+23:36:36.619 INFO  b.a.RideHailUtilizationCollector - movedWithoutPassenger: 0
+movedWithPassengers: 2104
+movedVehicleIds(distinct): 553
+23:36:36.637 INFO  b.p.j.AgentSimToPhysSimPlanConverter - CACC disabled
+23:36:36.652 INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim Start
+23:36:36.669 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 5 completed. 
+23:36:36.672 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 6 completed. 
+23:36:36.678 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 7 completed. 
+23:36:36.922 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 8 completed. 
+23:36:37.798 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 9 completed. 
+23:36:38.257 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 10 completed. 
+23:36:38.541 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 11 completed. 
+23:36:38.753 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 12 completed. 
+23:36:38.987 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 13 completed. 
+23:36:39.179 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 14 completed. 
+23:36:39.350 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 15 completed. 
+23:36:39.434 INFO  b.a.p.GraphsStatsAgentSimEventsListener - modesAbsoluteError: -0.876150767798976
+23:36:39.435 INFO  b.a.p.GraphsStatsAgentSimEventsListener - modesRMSPError: -3.3204830624966246
+23:36:39.517 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 16 completed. 
+23:36:39.745 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 17 completed. 
+23:36:40.262 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 18 completed. 
+23:36:40.454 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 19 completed. 
+23:36:40.490 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 20 completed. 
+23:36:40.513 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 21 completed. 
+23:36:40.532 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 22 completed. 
+23:36:40.567 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 23 completed. 
+23:36:40.587 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 24 completed. 
+23:36:40.604 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 25 completed. 
+23:36:40.650 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 26 completed. 
+23:36:40.683 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 27 completed. 
+23:36:40.704 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 28 completed. 
+23:36:40.719 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 29 completed. 
+23:36:40.745 INFO  b.p.jdeqsim.JDEQSimMemoryFootprint - Hour 30 completed. 
+23:36:40.745 INFO  b.p.j.AgentSimToPhysSimPlanConverter - JDEQSim End
+23:36:40.762 INFO  b.utils.TravelTimeCalculatorHelper - GetLinkIdToTravelTimeArray for 5812 links with maxHour = 30 executed in 17 ms
+23:36:40.768 ERROR b.p.j.AgentSimToPhysSimPlanConverter - Iteration 1 had 4207 link speed bins (of 174360) with speed smaller than 0.5.
+23:36:40.773 INFO  b.p.j.AgentSimToPhysSimPlanConverter - PhysSim for iteration 1 took 4137 ms
+23:36:40.778 INFO  beam.router.r5.R5RoutingWorker - R5RoutingWorker_v2[753075166], Path: `akka://ClusterSystem/user/router/router-worker` UpdateTravelTimeLocal. Set new travel time
+23:36:45.650 INFO  b.a.a.r.RideHailIterationsStatsCollector - 1802 rideHail vehicles (out of 2355) were never moved and 0 vehicles were moved without a passenger, during whole day.
+23:36:45.650 INFO  beam.router.RouteHistory - Overall cache hits 4173/7114 (59%)
+23:36:45.654 INFO  beam.sim.BeamSim - Iteration 1 - average number of plans per agent: 1.1997867
+23:36:45.694 INFO  beam.sim.BeamSim - All person activities (except the last one) have non-negative end times.
+23:36:45.696 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_walk_transit.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramWalkTransit.png
+23:36:45.696 INFO  beam.sim.BeamSim - Renaming file - 1.experienced_plans.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.experiencedPlans.xml.gz
+23:36:45.696 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_ride_hail.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramRideHail.png
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_walk.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramWalk.png
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_all.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramAll.png
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.experienced_plans_scores.txt.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.experiencedPlansScores.txt.gz
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_car.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramCar.png
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram.txt to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogram.txt
+23:36:45.697 INFO  beam.sim.BeamSim - Renaming file - 1.legHistogram_drive_transit.png to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.legHistogramDriveTransit.png
+23:36:45.697 INFO  beam.sim.BeamSim - Ending Iteration
+23:36:45.884 INFO  beam.analysis.AnalysisProcessor$ - [1] Running python script: src/main/python/events_analysis/analyze_events.py with args WrappedArray(/output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/ITERS/it.1/1.events.csv.gz)
+23:36:45.917 ERROR beam.analysis.AnalysisProcessor$ - [1] Process Handler Stderr for Python Script: src/main/python/events_analysis/analyze_events.py: python: can't open file 'src/main/python/events_analysis/analyze_events.py': [Errno 2] No such file or directory
+Process Handler Stdout for Python Script: src/main/python/events_analysis/analyze_events.py: python: can't open file 'src/main/python/events_analysis/analyze_events.py': [Errno 2] No such file or directory
+Done copying gtfs to tmp-dataTraceback (most recent call last):  File "accessibility/modify_gtfs_for_submission.py", line 167, in <module>    final = pd.concat(route_data, axis=0)  File "/usr/local/lib/python3.6/site-packages/pandas/core/reshape/concat.py", line 228, in concat    copy=copy, sort=sort)  File "/usr/local/lib/python3.6/site-packages/pandas/core/reshape/concat.py", line 262, in __init__    raise ValueError('No objects to concatenate')ValueError: No objects to concatenateGTFS text file header whitespace check completed. Took 0.01 seconds--------------------------------Processing GTFS feed: tmp4e266gm8The unique agency id: sioux_area_metro was generated using the name of the agency in the agency.txt file.Unique agency id operation complete. Took 0.01 secondsUnique GTFS feed id operation complete. Took 0.00 secondsNo GTFS feed stops were found to be outside the bounding box coordinatestmp4e266gm8 GTFS feed stops: coordinates are in northwest hemisphere. Latitude = North (90); Longitude = West (-90).Appended route type to stopsAppended route type to stop_times--------------------------------Added descriptive definitions to stops, routes, stop_times, and trips tablesSuccessfully converted ['departure_time'] to seconds past midnight and appended new columns to stop_times. Took 0.08 seconds1 GTFS feed file(s) successfully read as dataframes:     tmp4e266gm8     Took 0.29 secondsUsing calendar to extract service_ids to select trips.1 service_ids were extracted from calendar255 trip(s) 66.93 percent of 381 total trip records were found in calendar for GTFS feed(s): ['tmp4e266gm8']NOTE: If you expected more trips to have been extracted and your GTFS feed(s) have a calendar_dates file, consider utilizing the calendar_dates_lookup parameter in order to add additional trips based on information inside of calendar_dates. This should only be done if you know the corresponding GTFS feed is using calendar_dates instead of calendar to specify service_ids. When in doubt do not use the calendar_dates_lookup parameter.255 of 381 total trips were extracted representing calendar day: monday. Took 0.02 secondsNote: Processing may take a long time depending on the number of records. Total unique trips to assess: 255Starting departure stop time interpolation...Departure time records missing from trips following monday schedule: 7,722 (81.99 percent of 9,418 total records)Interpolating...Departure stop time interpolation complete. Took 0.45 secondsDifference between stop times has been successfully calculated. Took 0.12 secondsStop times from 07:00:00 to 10:00:00 successfully selected 2,018 records out of 9,418 total records (21.43 percent of total). Took 0.00 secondsStarting transformation process for 70 total trips...stop time table transformation to Pandana format edge table completed. Took 0.32 secondsTime conversion completed: seconds converted to minutes.384 of 392 records selected from stops. Took 0.00 secondsstop time table transformation to Pandana format node table completed. Took 0.01 secondsroute type successfully joined to transit edges. Took 0.04 secondsroute id successfully joined to transit edges. Took 0.01 secondsSuccessfully created transit network. Took 0.99 secondsRequesting network data within bounding box from Overpass API in 1 request(s)Posting to http://www.overpass-api.de/api/interpreter with timeout=180, "{'data': '[out:json][timeout:180];(way["highway"]["highway"!~"motor|proposed|construction|abandoned|platform|raceway"]["foot"!~"no"]["pedestrians"!~"no"](43.46543800,-96.84073200,43.61636600,-96.65113400);>;);out;'}"Traceback (most recent call last):  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn    (self._dns_host, self.port), self.timeout, **extra_kw)  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):  File "/usr/local/lib/python3.6/socket.py", line 745, in getaddrinfo    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):socket.gaierror: [Errno -3] Temporary failure in name resolutionDuring handling of the above exception, another exception occurred:Traceback (most recent call last):  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen    chunked=chunked)  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request    conn.request(method, url, **httplib_request_kw)  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request    self._send_request(method, url, body, headers, encode_chunked)  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request    self.endheaders(body, encode_chunked=encode_chunked)  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders    self._send_output(message_body, encode_chunked=encode_chunked)  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output    self.send(msg)  File "/usr/local/lib/python3.6/http/client.py", line 964, in send    self.connect()  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect    conn = self._new_conn()  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn    self, "Failed to establish a new connection: %s" % e)urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ff760b4ceb8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolutionDuring handling of the above exception, another exception occurred:Traceback (most recent call last):  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send    timeout=timeout  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen    _stacktrace=sys.exc_info()[2])  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment    raise MaxRetryError(_pool, url, error or ResponseError(cause))urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.overpass-api.de', port=80): Max retries exceeded with url: /api/interpreter (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff760b4ceb8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))During handling of the above exception, another exception occurred:Traceback (most recent call last):  File "accessibility/accessibility_analysis.py", line 103, in <module>    r5_subpath=r5_subpath)  File "/accessibility/transit_accessibility.py", line 33, in __init__    self.ua_net = self._load_or_create_net()  File "/accessibility/transit_accessibility.py", line 85, in _load_or_create_net    remove_lcn=True)  File "/usr/local/lib/python3.6/site-packages/urbanaccess/osm/load.py", line 81, in ua_network_from_bbox    max_query_area_size=max_query_area_size)  File "/usr/local/lib/python3.6/site-packages/osmnet/load.py", line 854, in network_from_bbox    custom_osm_filter=custom_osm_filter)  File "/usr/local/lib/python3.6/site-packages/osmnet/load.py", line 658, in ways_in_bbox    custom_osm_filter=custom_osm_filter))  File "/usr/local/lib/python3.6/site-packages/osmnet/load.py", line 164, in osm_net_download    timeout=timeout)  File "/usr/local/lib/python3.6/site-packages/osmnet/load.py", line 232, in overpass_request    response = requests.post(url, data=data, timeout=timeout)  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post    return request('post', url, data=data, json=json, **kwargs)  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request    return session.request(method=method, url=url, **kwargs)  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request    resp = self.send(prep, **send_kwargs)  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send    r = adapter.send(request, **kwargs)  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send    raise ConnectionError(e, request=request)requests.exceptions.ConnectionError: HTTPConnectionPool(host='www.overpass-api.de', port=80): Max retries exceeded with url: /api/interpreter (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff760b4ceb8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))23:37:21.018 ERROR o.m.c.c.MatsimRuntimeModifications - Getting uncaught Exception in Thread main
+org.matsim.core.utils.io.UncheckedIOException: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:149)
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:95)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.readAccessibilityOutputFile(AccessibilityScoreComputation.scala:48)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.computeAccessibilityForTravelTimes(AccessibilityScoreComputation.scala:43)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.runAccessibilityComputation(AccessibilityScoreComputation.scala:107)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.accessibilityScores(SubmissionEvaluator.scala:47)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.scoreSubmission(SubmissionEvaluator.scala:81)
+	at beam.competition.evaluation.IterationScoreComponentPlottingListener.notifyIterationEnds(IterationScoreComponentPlottingListener.scala:27)
+	at org.matsim.core.controler.ControlerListenerManagerImpl.fireControlerIterationEndsEvent(ControlerListenerManagerImpl.java:168)
+	at org.matsim.core.controler.AbstractController$5.run(AbstractController.java:161)
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:224)
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157)
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:114)
+	at org.matsim.core.controler.AbstractController.access$000(AbstractController.java:28)
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:48)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:31)
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92)
+	at org.matsim.core.controler.NewControler.run(NewControler.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.inject.internal.DelegatingInvocationHandler.invoke(DelegatingInvocationHandler.java:50)
+	at com.sun.proxy.$Proxy18.run(Unknown Source)
+	at beam.sim.BeamHelper.run(BeamHelper.scala:690)
+	at beam.sim.BeamHelper.run$(BeamHelper.scala:689)
+	at beam.competition.run.RunCompetition$.run(RunCompetition.scala:4)
+	at beam.sim.BeamHelper.runBeam(BeamHelper.scala:565)
+	at beam.sim.BeamHelper.runBeam$(BeamHelper.scala:543)
+	at beam.competition.run.RunCompetition$.runBeam(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig(CompetitionHelper.scala:293)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig$(CompetitionHelper.scala:238)
+	at beam.competition.run.RunCompetition$.runCompetitionWithConfig(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetition(CompetitionHelper.scala:234)
+	at beam.competition.run.CompetitionHelper.runCompetition$(CompetitionHelper.scala:223)
+	at beam.competition.run.RunCompetition$.runCompetition(RunCompetition.scala:4)
+	at beam.competition.run.RunCompetition$.main(RunCompetition.scala:8)
+	at beam.competition.run.RunCompetition.main(RunCompetition.scala)
+Caused by: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	... 39 common frames omitted
+23:37:21.019 ERROR o.m.c.c.MatsimRuntimeModifications - ERROR --- This is an unexpected shutdown!
+23:37:21.019 ERROR o.m.c.c.MatsimRuntimeModifications - Shutdown possibly caused by the following Exception:
+org.matsim.core.utils.io.UncheckedIOException: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:149)
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:95)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.readAccessibilityOutputFile(AccessibilityScoreComputation.scala:48)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.computeAccessibilityForTravelTimes(AccessibilityScoreComputation.scala:43)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.runAccessibilityComputation(AccessibilityScoreComputation.scala:107)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.accessibilityScores(SubmissionEvaluator.scala:47)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.scoreSubmission(SubmissionEvaluator.scala:81)
+	at beam.competition.evaluation.IterationScoreComponentPlottingListener.notifyIterationEnds(IterationScoreComponentPlottingListener.scala:27)
+	at org.matsim.core.controler.ControlerListenerManagerImpl.fireControlerIterationEndsEvent(ControlerListenerManagerImpl.java:168)
+	at org.matsim.core.controler.AbstractController$5.run(AbstractController.java:161)
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:224)
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157)
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:114)
+	at org.matsim.core.controler.AbstractController.access$000(AbstractController.java:28)
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:48)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:31)
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92)
+	at org.matsim.core.controler.NewControler.run(NewControler.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.inject.internal.DelegatingInvocationHandler.invoke(DelegatingInvocationHandler.java:50)
+	at com.sun.proxy.$Proxy18.run(Unknown Source)
+	at beam.sim.BeamHelper.run(BeamHelper.scala:690)
+	at beam.sim.BeamHelper.run$(BeamHelper.scala:689)
+	at beam.competition.run.RunCompetition$.run(RunCompetition.scala:4)
+	at beam.sim.BeamHelper.runBeam(BeamHelper.scala:565)
+	at beam.sim.BeamHelper.runBeam$(BeamHelper.scala:543)
+	at beam.competition.run.RunCompetition$.runBeam(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig(CompetitionHelper.scala:293)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig$(CompetitionHelper.scala:238)
+	at beam.competition.run.RunCompetition$.runCompetitionWithConfig(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetition(CompetitionHelper.scala:234)
+	at beam.competition.run.CompetitionHelper.runCompetition$(CompetitionHelper.scala:223)
+	at beam.competition.run.RunCompetition$.runCompetition(RunCompetition.scala:4)
+	at beam.competition.run.RunCompetition$.main(RunCompetition.scala:8)
+	at beam.competition.run.RunCompetition.main(RunCompetition.scala)
+Caused by: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	... 39 common frames omitted
+23:37:21.019 INFO  beam.sim.BeamSim - Generating html page to compare graphs (across all iterations)
+23:37:21.160 INFO  beam.sim.BeamSim - Actor system shut down
+23:37:21.161 INFO  beam.sim.BeamSim - Renaming file - outputPersonAttributes.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputPersonAttributes.xml.gz
+23:37:21.161 INFO  beam.sim.BeamSim - Renaming file - outputNetwork.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputNetwork.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputConfig.xml to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputConfig.xml
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputCounts.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputCounts.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputHouseholds.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputHouseholds.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputLanes.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputLanes.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputFacilities.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputFacilities.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputVehicles.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputVehicles.xml.gz
+23:37:21.163 INFO  beam.sim.BeamSim - Renaming file - outputPlans.xml.gz to follow camel case notation : /output/sioux_faux/sioux_faux-15k__2021-05-01_23-33-02/outputPlans.xml.gz
+23:37:21.169 ERROR o.m.c.c.MatsimRuntimeModifications - ERROR --- MATSim unexpectedly terminated. Please check the output or the logfile with warnings and errors for hints.
+23:37:21.169 ERROR o.m.c.c.MatsimRuntimeModifications - ERROR --- results should not be used for further analysis.
+23:37:21.169 ERROR o.m.c.c.MatsimRuntimeModifications - ERROR --- This was an unexpected shutdown! See the log file for a possible reason.
+Exception in thread "main" org.matsim.core.utils.io.UncheckedIOException: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:149)
+	at org.matsim.core.utils.io.IOUtils.getBufferedReader(IOUtils.java:95)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.readAccessibilityOutputFile(AccessibilityScoreComputation.scala:48)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.computeAccessibilityForTravelTimes(AccessibilityScoreComputation.scala:43)
+	at beam.competition.evaluation.component.AccessibilityScoreComputation.runAccessibilityComputation(AccessibilityScoreComputation.scala:107)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.accessibilityScores(SubmissionEvaluator.scala:47)
+	at beam.competition.evaluation.evaluator.SubmissionEvaluator.scoreSubmission(SubmissionEvaluator.scala:81)
+	at beam.competition.evaluation.IterationScoreComponentPlottingListener.notifyIterationEnds(IterationScoreComponentPlottingListener.scala:27)
+	at org.matsim.core.controler.ControlerListenerManagerImpl.fireControlerIterationEndsEvent(ControlerListenerManagerImpl.java:168)
+	at org.matsim.core.controler.AbstractController$5.run(AbstractController.java:161)
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:224)
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157)
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:114)
+	at org.matsim.core.controler.AbstractController.access$000(AbstractController.java:28)
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:48)
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:31)
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92)
+	at org.matsim.core.controler.NewControler.run(NewControler.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.inject.internal.DelegatingInvocationHandler.invoke(DelegatingInvocationHandler.java:50)
+	at com.sun.proxy.$Proxy18.run(Unknown Source)
+	at beam.sim.BeamHelper.run(BeamHelper.scala:690)
+	at beam.sim.BeamHelper.run$(BeamHelper.scala:689)
+	at beam.competition.run.RunCompetition$.run(RunCompetition.scala:4)
+	at beam.sim.BeamHelper.runBeam(BeamHelper.scala:565)
+	at beam.sim.BeamHelper.runBeam$(BeamHelper.scala:543)
+	at beam.competition.run.RunCompetition$.runBeam(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig(CompetitionHelper.scala:293)
+	at beam.competition.run.CompetitionHelper.runCompetitionWithConfig$(CompetitionHelper.scala:238)
+	at beam.competition.run.RunCompetition$.runCompetitionWithConfig(RunCompetition.scala:4)
+	at beam.competition.run.CompetitionHelper.runCompetition(CompetitionHelper.scala:234)
+	at beam.competition.run.CompetitionHelper.runCompetition$(CompetitionHelper.scala:223)
+	at beam.competition.run.RunCompetition$.runCompetition(RunCompetition.scala:4)
+	at beam.competition.run.RunCompetition$.main(RunCompetition.scala:8)
+	at beam.competition.run.RunCompetition.main(RunCompetition.scala)
+Caused by: java.io.FileNotFoundException: /tmp-data/bau_accessibility_output.csv
+	... 39 more
+Post Processing / Cleanup complete

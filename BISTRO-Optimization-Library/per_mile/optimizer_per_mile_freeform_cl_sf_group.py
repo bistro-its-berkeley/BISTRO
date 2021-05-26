@@ -4,6 +4,7 @@ import shutil
 import sys
 from os import listdir
 from os.path import isfile, join
+from shutil import copyfile
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 hyperopt_path = os.path.abspath(os.path.dirname(__file__));
@@ -12,8 +13,8 @@ sys.path.append(os.path.abspath("../../"))
 sys.path.append(os.path.abspath("../../../"))
 sys.path.append(os.path.abspath("../../../../"))
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
-from utilities.simulation_to_db import parse_and_store_data_to_db
+logging.basicConfig(filename='rslog_opt',level=logging.INFO)
+
 try:
     from optimization_utils import *
 
@@ -28,7 +29,7 @@ import gzip
 import yaml
 import pandas as pd
 import csv
-from convert_to_input_per_mile_freeform import *
+from convert_to_input_per_mile_freeform_group import *
 from hyperopt import STATUS_OK
 from optimization_kpi import optim_KPI
 
@@ -44,7 +45,6 @@ sys.path.append(CONFIG["BEAM_PATH"])
 
 #Score translations
 trans_dict = {
-
     'Iteration':'Iteration',
 
     'Accessibility: number of secondary locations accessible by car within 15 minutes':'driveSecondaryAccessibility',
@@ -76,18 +76,24 @@ SUBMISSION = "Submission Score"
 
 #Beam parameters
 # DOCKER_IMAGE = "beammodel/bistro:0.0.4.4-SNAPSHOT"
-DOCKER_IMAGE ="beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT"
+# DOCKER_IMAGE = "beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT"
+# DOCKER_IMAGE = "/global/scratch/chenjia_lu/beam-competition_0.0.4.2-noacc-SNAPSHOT.sif"
+DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
 # DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
 CMD_TEMPLATE = "--config {0}"
 # CONFIG_PATH = "/fixed-data/sf_light/urbansim-50k_Cal2_simpleNet.conf"
-CONFIG_PATH ="/fixed-data/sf_light/urbansim-25k_trial_65.conf"
+# CONFIG_PATH ="/fixed-data/sf_light/sf_light-25k.conf"
 # CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
-SCENARIO_NAME = "sf_light"
+# CONFIG_PATH = "/global/scratch/chenjia_lu/BISTRO/fixed-data/sf_light/urbansim-25k_trial_65.conf"
+CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
+# CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k_debugging.conf"
+# SCENARIO_NAME = "sf_light"
+SCENARIO_NAME = "sioux_faux"
 # SCENARIO_NAME = "sioux_faux"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"
 BEAM_PATH = CONFIG["BEAM_PATH"]
-
+# print(BEAM_PATH)
 OUT_PATH = CONFIG["RESULTS_PATH"]
 
 
@@ -99,15 +105,21 @@ logger = logging.getLogger(__name__)
 def objective(params):
     """Objective function for Calling the Simulator"""
     # Keep track of evals
-
+    # group_number = "g" + str(CONFIG["GROUP_NUMBER"])
+    
+    group_number = "g" + str(sys.argv[1])
+    
     start = timer()
 
-    print(os.getcwd())
+    print('Current directory: ', os.getcwd())
 
+    # Create input directory
     input_suffix = uuid.uuid4()
+    print('input suffix: ', input_suffix)
+    input_dir = os.path.abspath(f"./randomsearch/submission-inputs/{group_number}/{input_suffix}")
 
-    input_dir = os.path.abspath(f"./submission-inputs/{input_suffix}")
-    if not os.path.isdir('/submission-inputs'):
+    # input_dir = os.path.abspath(f"./submission-inputs/{input_suffix}")
+    if not os.path.isdir('./submission-inputs'):
         os.system("rm -f ./submission-inputs")
     if not os.path.exists('./submission-inputs'):
         os.system('mkdir ./submission-inputs')
@@ -120,57 +132,100 @@ def objective(params):
     n_sim_iters = CONFIG["SIMULATION_ITERS"]
     docker_cmd = CMD_TEMPLATE.format(CONFIG_PATH)
 
-    # Write params to input submission csv files
-    convert_to_input(params, input_dir)
-
+    # Create output directory
     output_suffix = uuid.uuid4()
-    output_dir = os.path.abspath(f"./output/{output_suffix}")
+    print('Output suffix: ', output_suffix)
+    
+    output_group = os.path.abspath(f"./randomsearch/output/{group_number}")
+    if not os.path.exists(output_group):
+        os.system(f'mkdir {output_group}')
+    
+    output_dir = os.path.abspath(f"{output_group}/{output_suffix}")
+
+    if not os.path.exists(output_dir):
+        os.system(f'mkdir {output_dir}')
+
     logger.info("Output_dir: "+output_dir)
     logger.info("Input_dir: "+input_dir)
+    
+    # Write params to input submission csv files
+    print("output dir:", output_dir)
+    convert_to_input(params, input_dir, output_dir)
+
+    # Run simulation
+    # tmpdir = "/global/scratch/chenjia_lu/tmp"
+    # tmpdir_cmd = f'export SINGULARITY_TMPDIR="{tmpdir}"'
+
+    # cachedir = "/global/scratch/chenjia_lu/s_cache"
+    # cachedir_cmd = f'export SINGULARITY_CACHEDIR="{cachedir}"'
+
+    # fixed_dir = "/global/scratch/chenjia_lu/BISTRO/fixed-data"
 
     cmd = f"docker run -it -v {output_dir}:/output -v {input_dir}:/submission-inputs -v {BEAM_PATH}fixed-data:/fixed-data:rw {DOCKER_IMAGE} {docker_cmd}"
     cmd = cmd + " > log.txt"
     logger.info("!!! execute simulator cmd: %s" % cmd)
-    print("Running system command : " + cmd)
+    print("Running system command : ", cmd)
+
+    # os.chdir('/')
+    current_dir = os.getcwd()
+
+    logger.info("Moved to root: %s" % current_dir)
+    print("Moved to root: ", current_dir)
+
+    # os.system(tmpdir_cmd)
+    # os.system(cachedir_cmd)
+
     os.system(cmd)
-    print("BISTRO finished")
-    logger.info("BISTRO finished")
+
+    # os.chdir('/global/scratch/chenjia_lu/BISTRO/BISTRO-Optimization-Library/per_mile/random_search')
+    # current_dir = os.getcwd()
+
+    # logger.info("Moved to BISTRO: %s" % current_dir)
+    # print("Moved to BISTRO:", current_dir )
     
+    logger.info("BISTRO finished")
+    print("BISTRO finished")
+    
+    #write VMT and PM25
+    print("get score:", output_dir)
     score = get_score(output_dir)
-    print("SCORE :", score)
-    logger.info("Score is "+ str(score))
-    output_dir = only_subdir(only_subdir(output_dir))
+    
+    # Aggregate files for analysis
+    aggregate_output(output_dir, group_number, output_suffix)
+
+    #clean output
+    output_dir = os.path.abspath(f"{output_dir}/sioux_faux")
+    output_dir = only_subdir(output_dir)
+    # output_dir = only_subdir(only_subdir(output_dir))
     shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
     # Clean output folder
     logger.info("cleaning start")
+    print('cleaning start')
     clean_output(output_dir)
     logger.info("clean output finished")
+    print('cleaning finished')
 
-    # Upload data
-    fixed_data = os.path.abspath(f"{BEAM_PATH}fixed-data")
-    logger.info("fixed_data path is "+fixed_data)
-    # name='sioux_faux_upload_test'
-    # logger.info("Upload parameters are"+str(output_dir)+str(fixed_data)+str(SCENARIO_NAME)+str(sample_size)+str(n_sim_iters)+str(name))
-    # parse_and_store_data_to_db(output_dir, fixed_data, SCENARIO_NAME, sample_size, n_sim_iters, 
-    #                        name=name) #can update name
-    # logger.info("upload to db as name "+name)
+    # logger.info("Score is "+ str(score))
+    # print("SCORE :", score)
+    # output_dir = only_subdir(only_subdir(output_dir))
+    # shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
 
-    paths = (input_dir, output_dir)
+    # paths = (input_dir, output_dir)
 
-    loss = score
+    # loss = score
 
-    run_time = timer() - start
+    # run_time = timer() - start
 
-    print(loss)
-    logger.info("loss is "+ str(loss))
-    file = open("loss.txt","a")
-    file.write(str(loss))
-    file.close()
-    # Dictionary with information for evaluation
-    return {'loss': loss, 'params': params, 
-            'train_time': run_time, 'status': STATUS_OK, 'paths': paths}
-
+    # print(loss)
+    # logger.info("loss is "+ str(loss))
+    # file = open("loss.txt","a")
+    # file.write(str(loss))
+    # file.close()
+    # # Dictionary with information for evaluation
+    # return {'loss': loss, 'params': params, 
+    #         'train_time': run_time, 'status': STATUS_OK, 'paths': paths}
+    return 0
 
 
 def clean_output(output_dir):
@@ -183,7 +238,11 @@ def clean_output(output_dir):
 
     # Remove excess root folder files
     file_list = [f for f in listdir(path) if isfile(join(path, f))]
-    keep_files = ["summaryVehicleStats.csv","outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
+    keep_files = ["modeChoice.csv",
+     "modeChoice.png",
+     "summaryStats.csv",
+     "summaryVehicleStats.csv"]
+     
     for file in file_list:
         if file not in keep_files:
             if os.path.exists(path + "/" + file):
@@ -191,16 +250,12 @@ def clean_output(output_dir):
                 os.remove(file_path)
 
     # Remove excess competition files
-    # if os.path.exists(competition_folder + "/submission-inputs"):
-        # shutil.rmtree(competition_folder + "/submission-inputs")
-    # if os.path.exists(competition_folder + "/submissionScores.csv"):
-        # os.remove(competition_folder + "/submissionScores.csv")
     if os.path.exists(competition_folder + "/validation-errors.out"):
         os.remove(competition_folder + "/validation-errors.out")
 
     # Remove files in competition/viz folder
     viz_folder = competition_folder + "/viz"
-    file_list = [f for f in listdir(path) if isfile(join(viz_folder, f))]
+    file_list = [f for f in listdir(viz_folder) if isfile(join(viz_folder, f))]
     keep_files = ["link_stats.csv"]
     for file in file_list:
         if file not in keep_files:
@@ -208,22 +263,92 @@ def clean_output(output_dir):
                 file_path = viz_folder + "/" + file
                 os.remove(file_path)
 
-    # Remove summary stats directory
-    if os.path.exists(summary_folder):
-        shutil.rmtree(summary_folder)
+    # Remove summary stats files
+    file_list = [f for f in listdir(summary_folder) if isfile(join(summary_folder, f))]
+    for file in file_list:
+        if os.path.exists(summary_folder + "/" + file):
+            os.remove(summary_folder + "/" + file)
+    
+    # Remove summary stats directories
+    folder_list = os.listdir(summary_folder)
+    keep_folders = ["numberOfVehicles", "rawScores"]
+    for folder in folder_list:
+        if folder not in keep_folders:
+            shutil.rmtree(summary_folder + "/" + folder)
 
     # Remove excess iter files
     iter_list = os.listdir(iters_folder)
-    keep_files = ["modeChoice.csv", "averageTravelTimes.csv", "experiencedPlans.xml.gz"]
+    # keep_files = ["events.xml.gz", "modeChoice.csv", "modeChoice.png"]
     for folder in iter_list:
         folder_path = iters_folder + "/" + folder
         if os.path.exists(folder_path + "/tripHistogram"):
             shutil.rmtree(folder_path + "/tripHistogram")
+        if os.path.exists(folder_path + "/graphs"):
+            shutil.rmtree(folder_path + "/graphs")
+            
         file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
         for file in file_list:
-            if file.endswith('events.xml.gz') == False:
-                if file not in keep_files:
-                    os.remove(folder_path + "/" + file)
+            if file.endswith('events.xml.gz') == False and file.endswith('modeChoice.csv') == False and file.endswith('modeChoice.png') == False:
+                os.remove(folder_path + "/" + file)
+
+def aggregate_output(output_dir, group_number, output_suffix):
+    agg_output = os.path.abspath(f"./randomsearch_agg_output")
+    if not os.path.exists(agg_output):
+        os.system(f'mkdir {agg_output}')
+    
+    agg_output = os.path.abspath(f"./randomsearch_agg_output/{group_number}")
+    if not os.path.exists(agg_output):
+        os.system(f'mkdir {agg_output}')
+    
+    # Copy circle_params
+    if not os.path.exists(f'{agg_output}/circle_params'):
+        os.system(f'mkdir {agg_output}/circle_params')
+    if os.path.exists(f"{output_dir}/circle_params.txt"):
+        copyfile(f"{output_dir}/circle_params.txt", f"{agg_output}/circle_params/circle_params_{output_suffix}.txt")
+    
+    # output_dir = only_subdir(only_subdir(output_dir))
+    output_dir = os.path.abspath(f"{output_dir}/sioux_faux")
+    output_dir = only_subdir(output_dir)
+    
+    # output_dir = str(output_dir)
+    # shutil.copy(os.path.join(output_dir, *SCORES_PATH), input_dir)
+    competition_folder = f"{output_dir}/competition"
+       
+    # Copy Submission scores from competition folder
+    logger.info("start copy submission score")
+    if not os.path.exists(f'{agg_output}/submissionScores'):
+        os.system(f'mkdir {agg_output}/submissionScores')
+
+    if os.path.exists(f"{competition_folder}/submissionScores.csv"):
+        copyfile(competition_folder + "/submissionScores.csv", f"{agg_output}/submissionScores/submissionScores_{output_suffix}.csv")
+    logger.info("end copy submission score")
+
+    # Copy rawScores.csv from competition folder
+    logger.info("start copy rawScores.csv")
+    if not os.path.exists(f'{agg_output}/rawScores'):
+        os.system(f'mkdir {agg_output}/rawScores')
+
+    if os.path.exists(f"{competition_folder}/rawScores.csv"):
+        copyfile(competition_folder + "/rawScores.csv", f"{agg_output}/rawScores/rawScores_{output_suffix}.csv")
+    logger.info("end copy raw scores.")
+    
+    
+    # Copy modeChoice from root folder
+    logger.info("start copy realized modeChoice")
+    if not os.path.exists(f'{agg_output}/modeChoice'):
+        os.system(f'mkdir {agg_output}/modeChoice')
+        
+    root_dir = str(output_dir)
+    if os.path.exists(root_dir + "/realizedModeChoice.csv"):
+        copyfile(root_dir + "/realizedModeChoice.csv", f"{agg_output}/modeChoice/realizedModeChoice_{output_suffix}.csv")
+    if os.path.exists(root_dir + "/realizedModeChoice.png"):
+        copyfile(root_dir + "/realizedModeChoice.png", f"{agg_output}/modeChoice/realizedModeChoice_{output_suffix}.png")
+    if os.path.exists(root_dir + "/modeChoice.csv"):
+        copyfile(root_dir + "/modeChoice.csv", f"{agg_output}/modeChoice/modeChoice_{output_suffix}.csv")
+    if os.path.exists(root_dir + "/modeChoice.png"):
+        copyfile(root_dir + "/modeChoice.png", f"{agg_output}/modeChoice/modeChoice_{output_suffix}.png")
+    
+    logger.info("end copy realized modeChoice")
 
 def get_score(output_dir):
     # logger.info("load_standards")
@@ -241,7 +366,7 @@ def get_score(output_dir):
 def compute_weighted_scores(raw_scores, standards,output_dir):
     
     total_score = 0
-
+    logger.info("Compute weighted scores: %s" % optim_KPI)
     for k in optim_KPI:
         total_score += optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
         if k=="VMT":
@@ -250,7 +375,10 @@ def compute_weighted_scores(raw_scores, standards,output_dir):
             PMscore=optim_KPI[k]*(raw_scores[k] - standards[k][0])/standards[k][1]
     # logger.info("compute_weighted_scores_before_VMT")
     #update weighted with VMT 
-    path = only_subdir(only_subdir(output_dir))
+    # path = only_subdir(only_subdir(output_dir))
+    path = os.path.abspath(f"{output_dir}/sioux_faux")
+    path = only_subdir(path)
+    
     submission_score_path = os.path.join(path, "competition/submissionScores.csv")
     submission_score = csv.reader(open(submission_score_path)) # Here your csv file
     submission_score = list(submission_score)
@@ -264,14 +392,19 @@ def compute_weighted_scores(raw_scores, standards,output_dir):
 
 
 def read_raw_scores(output_dir):
-    path = only_subdir(only_subdir(output_dir))
+    # path = only_subdir(only_subdir(output_dir))
+    path = os.path.abspath(f"{output_dir}/sioux_faux")
+    path = only_subdir(path)
+    print('path is',path)
     path = os.path.join(path, "competition/rawScores.csv")
+    print('path is',path)
     dic = {}
 
     with open(path) as csvfile:
         df = pd.read_csv(csvfile)
         kpi_names = list(df.columns)
         for name in kpi_names:
+            print(name)
             dic[trans_dict[name]] = list(df[name])[-1]
 
     dic['TollRevenue'] = read_toll_revenue(output_dir)
@@ -280,7 +413,10 @@ def read_raw_scores(output_dir):
     return dic
 
 def read_VMT_and_PM25(output_dir):
-    path = only_subdir(only_subdir(output_dir))
+    # path = only_subdir(only_subdir(output_dir))
+    path = os.path.abspath(f"{output_dir}/sioux_faux")
+    path = only_subdir(path)
+    
     path = os.path.join(path, "summaryVehicleStats.csv")
     dic = {}
     beamFuelTypes=CONFIG["beamFuelTypes"]
@@ -340,8 +476,12 @@ def read_VMT_and_PM25(output_dir):
                 # logger.info("dic['sustainability_PM']")
                 # logger.info(dic['sustainability_PM'])
     # logger.info("read_VMT_and_PM25_before_write")
-    #TODO:modify the submissionscore.csv add VMT modify PM2.5 change final score
-    path = only_subdir(only_subdir(output_dir))
+    
+    #modify the submissionscore.csv add VMT modify PM2.5 change final score
+    # path = only_subdir(only_subdir(output_dir))
+    path = os.path.abspath(f"{output_dir}/sioux_faux")
+    path = only_subdir(path)
+    
     submission_score_path = os.path.join(path, "competition/submissionScores.csv")
     submission_score = csv.reader(open(submission_score_path)) # Here your csv file
     submission_score = list(submission_score)
@@ -355,7 +495,10 @@ def read_VMT_and_PM25(output_dir):
     return dic
 
 def read_toll_revenue(output_dir):
-    output_dir = only_subdir(only_subdir(output_dir))
+    # output_dir = only_subdir(only_subdir(output_dir))
+    output_dir = os.path.abspath(f"{output_dir}/sioux_faux")
+    output_dir = only_subdir(output_dir)
+    
     f = gzip.open(os.path.join(output_dir,'outputEvents.xml.gz'), 'rb')
     print("Loading events")
     doc = xmltodict.parse(f.read())

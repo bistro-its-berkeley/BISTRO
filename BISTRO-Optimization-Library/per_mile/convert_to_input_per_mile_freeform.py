@@ -47,6 +47,7 @@ cradius=[ None for _ in range(20) ]
 
 
 def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
+    logger.info("writting input to "+input_dir)
     print(CONFIG["NETWORK_PATH"])
     vehicle_fleet = []
     frequency_adjustment = []
@@ -65,10 +66,12 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
                 if item[0] not in road_pricing:
                     road_pricing[item[0]]=item[1:]
                 else:
-                    road_pricing[item[0]][0]=float(road_pricing[item[0]][0])+float(item[1])
+                    # road_pricing[item[0]][0]=float(road_pricing[item[0]][0])+float(item[1])
+                    road_pricing[item[0]][0]=max(float(road_pricing[item[0]][0]),float(item[1]))
             #logger.info("processC end\n")
         else:
             print("EROOR: UNKWOWN KEY; EXITING")
+            logger.info("EROOR: UNKWOWN KEY; EXITING")
             exit(0);
     road_pricing_list=[]
     for item in road_pricing.items() :
@@ -96,7 +99,7 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
     mode_incentive_d = pd.DataFrame(mode_incentive, columns=mode_incentive_columns)
     mass_fare_d = pd.DataFrame(mass_fare, columns=mass_fare_columns)
     road_pricing_d = pd.DataFrame(road_pricing_list, columns=road_pricing_columns)
-
+    logger.info(road_pricing_d)
     road_pricing_d.to_csv(input_dir + '/RoadPricing.csv', sep=',', index=False)
     vehicle_fleet_d.to_csv(input_dir+'/VehicleFleetMix.csv', sep=',', index=False)
     frequency_adjustment_d.to_csv(input_dir + '/FrequencyAdjustment.csv', sep=',', index=False)
