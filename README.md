@@ -252,7 +252,18 @@ Automating Model Search for Large Scale Machine Learning,https://amplab.cs.berke
   - budget-update: specifies the updating rule for number of iterations in BEAM. The default rule is iteration = iteration * 2
   - MAX_EVALS: specifies the initial number of trials to evaluate. 
   - portion: dropout rate for trials. 
-  
+
+## Running cordon experiments on AWS
+    cd /home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/debugging/
+    (change the UNIQUE_KEY in settings)
+    sudo su
+    python3 bayesian_xxx.py
+    
+    (open another terminal)
+    cd (folder to store the output)
+    hyperopt-mongo-worker --mongo=localhost:27017/wh_db_circle --poll-interval=1
+    
+    
 
 ## Contributing
 
