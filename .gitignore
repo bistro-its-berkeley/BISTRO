@@ -406,3 +406,6 @@ log-path_IS_UNDEFINED/
 !/fixed-data/sf_light/urbansim/100k/buildings.csv.gz
 !/fixed-data/sf_light/urbansim/100k/units.csv.gz
 !/fixed-data/sf_light/urbansim/100k/parcels.csv.gz
+
+# ignore output folder for space saving
+/output/
