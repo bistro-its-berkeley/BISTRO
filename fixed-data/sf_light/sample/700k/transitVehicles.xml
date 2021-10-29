@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicleDefinitions
+        xmlns="http://www.matsim.org/files/dtd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.matsim.org/files/dtd http://www.matsim.org/files/dtd/vehicleDefinitions_v1.0.xsd">
+
+    <!-- default vehicle types (used as fall back, if no type available) -->
+
+    <vehicleType id="BUS-DEFAULT">
+        <capacity>
+            <seats persons="37"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="12.1"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.00056"/><!-- 4.2 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="RAIL-DEFAULT">
+        <capacity>
+            <seats persons="801"/>
+            <standingRoom persons="2052"/>
+        </capacity>
+        <length meter="129.6"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0058804"/><!-- 0.4 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="FERRY-DEFAULT">
+        <capacity>
+            <seats persons="149"/>
+            <standingRoom persons="0"/>
+        </capacity>
+        <length meter="26"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0196"/><!-- 0.12 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="SUBWAY-DEFAULT">
+        <capacity>
+            <seats persons="336"/>
+            <standingRoom persons="864"/>
+        </capacity>
+        <length meter="129.6"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.013"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="CABLE_CAR-DEFAULT">
+        <capacity>
+            <seats persons="29"/>
+            <standingRoom persons="31"/>
+        </capacity>
+        <length meter="8.4"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.00031"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="TRAM-DEFAULT">
+        <capacity>
+            <seats persons="58"/>
+            <standingRoom persons="19"/>
+        </capacity>
+        <length meter="14"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.001"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <!-- Agency specific vehicle types -->
+
+    <vehicleType id="BUS-AC">
+        <capacity>
+            <seats persons="37"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="12.1"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.00056"/><!-- 4.2 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-AY">
+        <capacity>
+            <seats persons="33"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="10.7"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000547"/><!-- 4.3 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="SUBWAY-BA">
+        <capacity>
+            <seats persons="336"/>
+            <standingRoom persons="864"/>
+        </capacity>
+        <length meter="129.6"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.013"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="RAIL-AM">
+        <capacity>
+            <seats persons="801"/>
+            <standingRoom persons="2052"/>
+        </capacity>
+        <length meter="129.6"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0058804"/><!-- 0.4 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-CC">
+        <capacity>
+            <seats persons="41"/>
+            <standingRoom persons="32 "/>
+        </capacity>
+        <length meter="12.192"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.0005230881244"/><!-- 4.5 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="TRAIN-CE">
+        <capacity>
+            <seats persons="650 "/>
+            <standingRoom persons="210 "/>
+        </capacity>
+        <length meter="155"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0058804"/><!-- 0.4 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-CM">
+        <capacity>
+            <seats persons="33"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="10.7"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000547"/><!-- 4.3 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="TRAIN-CT">
+        <capacity>
+            <seats persons="650"/>
+            <standingRoom persons="220"/>
+        </capacity>
+        <length meter="126"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0058804"/><!-- 0.4 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-CT">
+        <capacity>
+            <seats persons="36"/>
+            <standingRoom persons="45"/>
+        </capacity>
+        <length meter="12.19"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000488"/><!-- 4.82 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-DE">
+        <capacity>
+            <seats persons="41"/>
+            <standingRoom persons="32"/>
+        </capacity>
+        <length meter="12.2"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.000523"/><!-- 4.5 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-FS">
+        <capacity>
+            <seats persons="36"/>
+            <standingRoom persons="45"/>
+        </capacity>
+        <length meter="12.19"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000488"/><!-- 4.82 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="FERRY-HF">
+        <capacity>
+            <seats persons="149  "/>
+            <standingRoom persons="0"/>
+        </capacity>
+        <length meter="26"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0196"/><!-- 0.12 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-GG">
+        <capacity>
+            <seats persons="36"/>
+            <standingRoom persons="45"/>
+        </capacity>
+        <length meter="12.19"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000488"/><!-- 4.82 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-MA">
+        <capacity>
+            <seats persons="34"/>
+            <standingRoom persons="14"/>
+        </capacity>
+        <length meter="9.4"/>
+        <engineInformation>
+            <fuelType>gasoline</fuelType>
+            <gasConsumption literPerMeter="0.000362"/><!-- 6.49 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-MS">
+        <capacity>
+            <seats persons="42"/>
+            <standingRoom persons="13"/>
+        </capacity>
+        <length meter="12.5"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.00125"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-PE">
+        <capacity>
+            <seats persons="33"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="10.7"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000547"/><!-- 4.3 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-RV">
+        <capacity>
+            <seats persons="19"/>
+            <standingRoom persons="6"/>
+        </capacity>
+        <length meter="7.32"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.0003137171"/><!-- 7.5mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-VTA">
+        <capacity>
+            <seats persons="41"/>
+            <standingRoom persons="32"/>
+        </capacity>
+        <length meter="12.2"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.000523"/><!-- 4.5 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-SF">
+        <capacity>
+            <seats persons="69"/>
+            <standingRoom persons="51"/>
+        </capacity>
+        <length meter="18.6"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0008647589"/><!-- 2.72 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="CABLE_CAR-SF">
+        <capacity>
+            <seats persons="29"/>
+            <standingRoom persons="31"/>
+        </capacity>
+        <length meter="8.4"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.00031"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="TRAM-SF">
+        <capacity>
+            <seats persons="58"/>
+            <standingRoom persons="19"/>
+        </capacity>
+        <length meter="14"/>
+        <engineInformation>
+            <fuelType>electricity</fuelType>
+            <gasConsumption literPerMeter="0.001"/><!-- in kWh/m -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-SM">
+        <capacity>
+            <seats persons="39"/>
+            <standingRoom persons="35"/>
+        </capacity>
+        <length meter="12.80"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0004962"/><!-- 4.74 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-SO">
+        <capacity>
+            <seats persons="43"/>
+            <standingRoom persons="34"/>
+        </capacity>
+        <length meter="12.5"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.000597313"/><!-- 3.93787 -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-SR">
+        <capacity>
+            <seats persons="36"/>
+            <standingRoom persons="45"/>
+        </capacity>
+        <length meter="12.19"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000488"/><!-- 4.82 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-ST">
+        <capacity>
+            <seats persons="58"/>
+            <standingRoom persons="31"/>
+        </capacity>
+        <length meter="13.76"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000735"/><!-- 3.20 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-VC">
+        <capacity>
+            <seats persons="30"/>
+            <standingRoom persons="10"/>
+        </capacity>
+        <length meter="10.668"/>
+        <engineInformation>
+            <fuelType>biodiesel</fuelType>
+            <gasConsumption literPerMeter="0.0006915366091"/><!-- 3.4 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-VN">
+        <capacity>
+            <seats persons="33"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="10.7"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000547"/><!-- 4.3 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-WC">
+        <capacity>
+            <seats persons="39"/>
+            <standingRoom persons="34"/>
+        </capacity>
+        <length meter="12.2"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.0004126568798"/><!-- 5.74 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+    <vehicleType id="BUS-WH">
+        <capacity>
+            <seats persons="33"/>
+            <standingRoom persons="20"/>
+        </capacity>
+        <length meter="10.7"/>
+        <engineInformation>
+            <fuelType>diesel</fuelType>
+            <gasConsumption literPerMeter="0.000547"/><!-- 4.3 mpg -->
+        </engineInformation>
+    </vehicleType>
+
+</vehicleDefinitions>
