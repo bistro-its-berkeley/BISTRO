@@ -11,7 +11,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
   var numberOfIterations: Int = _
   var runState: RunState = _
 
-  var redisManager: RedisManager = new RedisManager()
+//  var redisManager: RedisManager = new RedisManager()
 
   /**
     * @constructor instantiates the evaluation state
@@ -28,7 +28,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def instantiateRunState(): Unit = {
     runState = new RunState(this.config)
-    syncStateWithRedis()
+//    syncStateWithRedis()
     //debug();
   }
 
@@ -49,7 +49,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def setCurrentIteration(iteration: Int): Unit = {
     runState.current_iteration = iteration
-    syncStateWithRedis()
+//    syncStateWithRedis()
   }
 
   /**
@@ -57,7 +57,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def setState(state: String): Unit = {
     runState.state = state
-    syncStateWithRedis()
+//    syncStateWithRedis()
   }
 
   /**
@@ -72,11 +72,11 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def setProgress(progress: Double): Unit = {
     runState.progress = progress
-    syncStateWithRedis()
+//    syncStateWithRedis()
 
     if (progress > 0) {
       setState(RunStateTemplates.IN_PROGRESS)
-      syncStateWithRedis()
+//      syncStateWithRedis()
     }
   }
 
@@ -85,7 +85,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def setIterationState(iterationIdx: Int, state: String): Unit = {
     runState.iterations(iterationIdx).state = state
-    syncStateWithRedis()
+//    syncStateWithRedis()
   }
 
   /**
@@ -93,7 +93,7 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     */
   def setIterationProgress(iterationIdx: Int, progress: Double): Unit = {
     runState.iterations(iterationIdx).progress = progress
-    syncStateWithRedis()
+//    syncStateWithRedis()
   }
 
   /**
@@ -122,11 +122,11 @@ case class RunStateMonitor(s3OutputLoc: Option[String]=None) {
     * Syncs the evaluation state with Redis after picking up the
     * expected keys, etc from the correct Environment variables.
     */
-  def syncStateWithRedis(forceUpdate: Boolean = false): Unit = {
-    redisManager.syncRunStateWithRedis(
-      serializeState(),
-      forceUpdate
-    )
-  }
+//  def syncStateWithRedis(forceUpdate: Boolean = false): Unit = {
+//    redisManager.syncRunStateWithRedis(
+//      serializeState(),
+//      forceUpdate
+//    )
+//  }
 
 }
