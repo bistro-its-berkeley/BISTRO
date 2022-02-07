@@ -274,7 +274,7 @@ trait CompetitionHelper extends BeamHelper {
     val eventsManager = injector.getInstance(classOf[EventsManager])
     eventsManager.addHandler(new SimStateReportingEventsListener(beamServices, runStateMonitor))
 
-    val childInjector = injector.createChildInjector(new SubmissionEvaluatorModule())
+    val childInjector = injector.createChildInjector(new SubmissionEvaluatorModule(CompetitionServices))
 
     val mainEvaluator = childInjector.instance[SubmissionEvaluatorFactory].getEvaluatorForIteration(competitionServices.lastIteration)
 
@@ -321,7 +321,7 @@ trait CompetitionHelper extends BeamHelper {
     // uploadCompetitionResultsToS3(competitionServices)
 
     runStateMonitor.setState(RunStateTemplates.SUCCESS)
-    runStateMonitor.syncStateWithRedis(forceUpdate = true)
+//    runStateMonitor.syncStateWithRedis(forceUpdate = true)
     Console.println(runStateMonitor.serializeState())
     Console.err.print("\n")
 

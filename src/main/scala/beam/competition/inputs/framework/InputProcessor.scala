@@ -74,7 +74,7 @@ case class InputProcessor()(implicit val competitionServices: CompetitionService
       case "MassTransitFares" => processInput(MassTransitFaresInputDataHelper())
       case "FrequencyAdjustment" => processInput(FrequencyAdjustmentInputDataHelper())
       // RoadPricing not permitted yet
-      //      case "RoadPricing" => processInput(RoadPricingInputDataHelper())
+      case "RoadPricing" => processInput(RoadPricingInputDataHelper(competitionServices))
       case "VehicleFleetMix" => processInput(VehicleFleetMixInputDataHelper())
       case ".DS_Store" => logger.debug(".DS_Store found in submission-input directory, ignoring.")
       case anyOtherName: String => logger.error(s"Invalid file, $anyOtherName found in input directory!")

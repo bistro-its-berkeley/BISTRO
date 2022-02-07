@@ -1,37 +1,44 @@
 import com.amazonaws.services.lambda.model.InvocationType
-import jp.classmethod.aws.gradle.lambda.AWSLambdaInvokeTask
+import jp.classmethod.aws.reboot.gradle.lambda.AWSLambdaInvokeTask
 
 buildscript {
     repositories {
-        jcenter()
+        //jcenter()
         mavenLocal()
         mavenCentral()
-
-        maven { url "https://jitpack.io" }
+        gradlePluginPortal()
+        //maven { url "https://jitpack.io" }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath group: 'kr.motd.gradle', name: 'sphinx-gradle-plugin', version: '1.0.3.Final'
-        classpath "jp.classmethod.aws:gradle-aws-plugin:0.35"
+        classpath "jp.classmethod.aws.reboot:gradle-aws-plugin-reboot:0.45"
+        //classpath "jp.classmethod.aws:gradle-aws-plugin:0.35"
         classpath "com.github.viswaramamoorthy:gradle-util-plugins:0.1.0-RELEASE"
         classpath 'cz.alenkacz:gradle-scalafmt:1.7.0'
-        classpath 'com.bmuschko:gradle-docker-plugin:3.6.1'
+        classpath 'com.bmuschko:gradle-docker-plugin:6.6.1' //update from 3.6.1
         classpath 'org.json4s:json4s-core_2.9.1-1:3.1.0'
-        classpath 'com.github.debasishg:scala-redis:3.9'
-        classpath 'com.github.seratch:awscala:0.7.2'
+        //classpath 'com.github.debasishg:scala-redis:3.9'
+        classpath 'com.github.seratch:awscala_2.13:0.8.5'
     }
 }
 
 plugins {
-    id "net.ltgt.apt" version "0.5"
+    id "net.ltgt.apt" version "0.21" // downgrade from 0.5
 //    id "org.scoverage" version "2.5.0"
     id "de.undercouch.download" version "3.2.0"
+    //new:
+    id "org.scoverage" version "5.0.0"
+    id 'maven-publish'
+    id "me.champeau.gradle.jmh" version "0.5.3"
+    id 'com.bmuschko.docker-java-application' version '6.6.1'
+    id "cz.alenkacz.gradle.scalafmt" version "1.16.2"
 }
 
 // Plugins
 apply plugin: 'java'
 apply plugin: 'scala'
-apply plugin: 'maven'
+//apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'kr.motd.sphinx'
 apply plugin: 'application'
@@ -42,7 +49,7 @@ apply plugin: 'com.bmuschko.docker-java-application'
 // Project info
 
 group 'beam'
-version '0.0.4.2-SNAPSHOT'
+version '0.0.4.5-SNAPSHOT'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -70,27 +77,43 @@ if (project.hasProperty('env')) {
 
 allprojects {
     repositories {
-        maven { url "http://download.osgeo.org/webdav/geotools" }
+        mavenLocal()
+        maven { url "https://download.osgeo.org/webdav/geotools" }
         maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
         maven { url "https://central.maven.org/maven2" }
         maven { url "https://repo.maven.apache.org/maven2" }
-        maven { url "http://dl.bintray.com/matsim/matsim" }
+        //maven { url "http://dl.bintray.com/matsim/matsim" }
+        maven { url "https://repo.matsim.org/repository/matsim" }
         maven { url "https://maven.conveyal.com/" }
         maven { url "https://repo1.maven.org/maven2" }
-        maven { url "http://download.java.net/maven/2/" }
-        maven { url "http://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
-        maven { url "http://dl.bintray.com/andimarek/graphql-java" }
-        maven { url "http://maven.geo-solutions.it" }
-        maven { url "http://dl.bintray.com/scalaz/releases" }
-        maven { url "http://nexus.onebusaway.org/content/groups/public/" }
+        maven { url "https://download.java.net/maven/2/" }
+        maven { url "https://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
+        maven { url "https://dl.bintray.com/andimarek/graphql-java" }
+        maven { url "https://maven.geo-solutions.it" }
+        maven { url "https://dl.bintray.com/scalaz/releases" }
+        maven { url "https://nexus.onebusaway.org/content/groups/public/" }
         maven { url "https://dl.bintray.com/cibotech/public" }
         mavenCentral()
-        jcenter()
+        //jcenter()
         maven { url "https://jitpack.io" }
-        mavenLocal()
+
     }
 }
 
+configurations {
+    scalaCompilerPlugin
+}
+
+
+//configurations.all {
+//    resolutionStrategy {
+////       we need this in order to get Elki library working fine.
+//        force 'it.unimi.dsi:fastutil:8.5.4'
+//        force 'org.apache.logging.log4j:log4j-core:2.15.0'
+//        force 'org.apache.logging.log4j:log4j-api:2.15.0'
+//    }
+//    exclude group: "log4j", module: "log4j"
+//}
 
 dependencies {
 
@@ -99,65 +122,91 @@ dependencies {
     /////////////////////////////////
 
     // CORE Scala //
-    compile "org.scala-lang:scala-library:${scalaBinaryVersion}.7"
-    compile group: 'org.scala-lang.modules', name: "scala-xml_${scalaBinaryVersion}", version: '1.0.6'
+    implementation "org.scala-lang:scala-library:${scalaBinaryVersion}.13" //udpated
+    implementation group: 'org.scala-lang.modules', name: "scala-xml_${scalaBinaryVersion}", version: '1.0.6'
 
     // Needed for using repl
-    compile "org.scala-lang:scala-compiler:2.12.7"
+    implementation "org.scala-lang:scala-compiler:2.12.13" //updated
 
     // BEAM
-    compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge-SNAPSHOT'
+    //compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge-SNAPSHOT'
     // compile project(":beam")
     // compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge_modify-SNAPSHOT'
+    implementation group: 'beam', name: 'beam', version: '0.8.6'
 
     // Validation
-    compile group: "com.wix", name: "accord-core_${scalaBinaryVersion}", version: "0.7.3"
-    compile group: "com.wix", name: "accord-scalatest_${scalaBinaryVersion}", version: "0.7.3"
+    implementation group: "com.wix", name: "accord-core_${scalaBinaryVersion}", version: "0.7.3"
+    implementation group: "com.wix", name: "accord-scalatest_${scalaBinaryVersion}", version: "0.7.3"
 
     // DataFrames
-    compile "com.github.martincooper:scala-datatable_${scalaBinaryVersion}:0.8.0"
+    implementation "com.github.martincooper:scala-datatable_${scalaBinaryVersion}:0.8.0"
 
     // CSV
-    compile "com.github.tototoshi:scala-csv_${scalaBinaryVersion}:1.3.5"
+    implementation "com.github.tototoshi:scala-csv_${scalaBinaryVersion}:1.3.5"
 
     // Pretty-print tables
-    compile group: "com.github.wookietreiber", name: "scala-cli-tools_${scalaBinaryVersion}", version: "0.3.1"
+    implementation group: "com.github.wookietreiber", name: "scala-cli-tools_${scalaBinaryVersion}", version: "0.3.1"
 
     // 3rd Party Scala
-    compile "com.github.scopt:scopt_${scalaBinaryVersion}:3.7.0"
+    implementation "com.github.scopt:scopt_${scalaBinaryVersion}:3.7.0"
 
     // Geojson
-    compile group: 'de.grundid.opendatalab', name: 'geojson-jackson', version: '1.8.1'
+    implementation group: 'de.grundid.opendatalab', name: 'geojson-jackson', version: '1.8.1'
 
     //Scala-Redis
-    compile "com.github.debasishg:scala-redis:3.9"
+    //implementation "com.github.debasishg:scala-redis:3.9"
 
     //AWS Scala
-    compile "com.github.seratch:awscala:0.7.2"
+    implementation "com.github.seratch:awscala_2.12:0.8.5"
 
-    compile group: 'org.codehaus.janino', name: 'janino', version: '3.0.7'
+    implementation group: 'org.codehaus.janino', name: 'janino', version: '3.0.7'
 
     //better-files
-    compile "com.github.pathikrit:better-files:3.6.0"
+    implementation "com.github.pathikrit:better-files_2.12:3.9.1"
 
     // evilplot
-    compile "com.cibo:evilplot_${scalaBinaryVersion}:0.6.3"
-
+//    implementation "com.cibo:evilplot_${scalaBinaryVersion}:0.8.1"
+    //implementation 'io.github.cibotech:evilplot_2.12:0.8.1'
     ////////////////////////////////
     // Test compile dependencies
-    ///////////////////////////////// 
+    /////////////////////////////////
 
-    testCompile group: 'org.scalatest', name: "scalatest_${scalaBinaryVersion}", version: '3.0.5'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile group: 'org.mockito', name: 'mockito-inline', version: '2.+'
-    testCompile group: "org.mockito", name: "mockito-core", version: "2.+"
-    testCompile group: 'org.scalacheck', name: 'scalacheck_2.12', version: '1.14+'
+    //testImplementation group: 'org.scalatest', name: "scalatest_${scalaBinaryVersion}", version: '3.0.5'
+    //testImplementation group: 'junit', name: 'junit', version: '4.12'
+    //testImplementation group: 'org.mockito', name: 'mockito-inline', version: '2.+'
+    //testImplementation group: "org.mockito", name: "mockito-core", version: "2.+"
+    //testImplementation group: 'org.scalacheck', name: 'scalacheck_2.12', version: '1.14+'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.8'
+    testImplementation group: 'org.mockito', name: 'mockito-inline', version: '2.27.0'
+    testImplementation group: "org.mockito", name: "mockito-core", version: "2.+"
 
     // Coverage
 //    scoverage "org.scoverage:scalac-scoverage-plugin_${scalaBinaryVersion}:1.3.1", "org.scoverage:scalac-scoverage-runtime_${scalaBinaryVersion}:1.3.1"
 
 
 }
+
+afterEvaluate {
+    configurations.all {
+        if (name.startsWith("incrementalScalaAnalysis")) {
+            extendsFrom = []
+        }
+    }
+}
+//new from BEAM:
+//configurations.all {
+//    resolutionStrategy {
+//        eachDependency { DependencyResolveDetails dependencyResolveDetails ->
+//            final requestedDependency = dependencyResolveDetails.requested
+//            if (requestedDependency.name != 'beam-utilities') {
+//                force 'javax.media:jai_core:1.1.3'
+//            }
+//        }
+//    }
+//    exclude group: 'javax.media', module: 'jai_codec'
+//    exclude group: 'javax.media', module: 'jai_imageio'
+//}
 
 def getGitHash = { ->
     def stdout = new ByteArrayOutputStream()
@@ -179,14 +228,14 @@ docker {
         baseImage = 'beammodel/beam-competition:accessibility-0.0.2'
         maintainer = 'Kirill Mitin "mitin.kirill.ol@gmail.com"'
         ports = [9090]
-        tag = "beammodel/beam-competition:$version"
-        exec {
-            defaultCommand 'server'
-            entryPoint '/docker_entrypoint.sh'
-        }
+        images = ['beammodel/bistro:0.0.4.5-SNAPSHOT']
+//        exec {
+//            defaultCommand 'server'
+//            entryPoint '/docker_entrypoint.sh'
+//        }
     }
 }
-dockerCopyDistResources {
+dockerSyncBuildContext {
     from('fixed-data/') {
         into('fixed-data/')
     }
@@ -202,7 +251,21 @@ dockerCopyDistResources {
     from file('docker_entrypoint.sh')
 }
 
-dockerDistTar {
+//dockerDistTar {
+//    instruction 'RUN apt-get update && apt-get install -y redis-server && pip install boto3 lxml dask seaborn'
+//    addFile 'docker_entrypoint.sh', '/docker_entrypoint.sh'
+//    addFile 'submission-inputs/', 'submission-inputs/'
+//    addFile 'fixed-data/', 'fixed-data/'
+//    addFile 'accessibility/', 'accessibility/'
+//    addFile 'src/main/python/post_processing/', 'src/main/python/post_processing/'
+//    environmentVariable('GIT_HEAD', getGitHash())
+//}
+
+import com.bmuschko.gradle.docker.tasks.image.Dockerfile
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+import com.bmuschko.gradle.docker.tasks.image.DockerTagImage
+
+task createDockerfile(type: Dockerfile, dependsOn: dockerSyncBuildContext) {
     instruction 'RUN apt-get update && apt-get install -y redis-server && pip install boto3 lxml dask seaborn'
     addFile 'docker_entrypoint.sh', '/docker_entrypoint.sh'
     addFile 'submission-inputs/', 'submission-inputs/'
@@ -210,9 +273,10 @@ dockerDistTar {
     addFile 'accessibility/', 'accessibility/'
     addFile 'src/main/python/post_processing/', 'src/main/python/post_processing/'
     environmentVariable('GIT_HEAD', getGitHash())
+// from BEAM
+    runCommand('chmod +x /app/docker_entrypoint.sh')
+    entryPoint('/app/docker_entrypoint.sh')
 }
-
-
 
 
 task gradleBenchmark(type: Exec) {
@@ -307,7 +371,7 @@ task deleteSiouxFauxNetwork {
 //////////////////////////////////////////////////////////////////////
 
 apply plugin: "base"
-apply plugin: "jp.classmethod.aws.lambda"
+apply plugin: "jp.classmethod.aws.reboot.lambda"
 
 aws {
     profileName = "competition"
