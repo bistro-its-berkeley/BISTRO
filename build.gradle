@@ -94,7 +94,6 @@ allprojects {
         maven { url "https://download.java.net/maven/2/" }
         maven { url "https://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
         maven { url "https://maven.geo-solutions.it" }
-        //maven { url "https://dl.bintray.com/scalaz/releases" }
         maven {
             url "http://nexus.onebusaway.org/content/groups/public/"
             allowInsecureProtocol = true
