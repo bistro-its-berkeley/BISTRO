@@ -185,8 +185,6 @@ dependencies {
     implementation 'com.typesafe.scala-logging:scala-logging_2.12:3.9.0'
     implementation 'com.typesafe:config:1.4.0'
     implementation 'com.google.inject:guice:4.1.0'
-    //implementation 'com.google.inject.extensions', name: 'guice-assistedinject', version: '4.1.0'
-    //implementation 'com.google.inject.extensions', name: 'guice-multibindings', version: '4.1.0'
     implementation 'org.jfree:jfreechart:1.0.14'
     implementation(group: 'com.github.wrashid.matsim', name: 'matsim', version: '0.10.1-beam-15') {
         exclude group: 'log4j', module: 'log4j'
