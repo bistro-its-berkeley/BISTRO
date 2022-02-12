@@ -14,7 +14,7 @@ import org.matsim.api.core.v01.Id
 
 import scala.collection.concurrent.TrieMap
 
-case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionServices) extends AbstractModule with ScalaModule {
+class SubmissionEvaluatorModule(implicit competitionServices: CompetitionServices) extends AbstractModule with ScalaModule {
 
   import SubmissionEvaluatorModule.getMapTypeStrings
 
