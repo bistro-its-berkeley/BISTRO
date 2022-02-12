@@ -89,19 +89,16 @@ allprojects {
         maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
         maven { url "https://central.maven.org/maven2" }
         maven { url "https://repo.maven.apache.org/maven2" }
-        //maven { url "http://dl.bintray.com/matsim/matsim" }
         maven { url "https://repo.matsim.org/repository/matsim" }
         maven { url "https://maven.conveyal.com/" }
         maven { url "https://download.java.net/maven/2/" }
         maven { url "https://people.apache.org/repo/m1-ibiblio-rsync-repository/org.apache.axis2/" }
-        //maven { url "https://dl.bintray.com/andimarek/graphql-java" }
         maven { url "https://maven.geo-solutions.it" }
         //maven { url "https://dl.bintray.com/scalaz/releases" }
         maven {
             url "http://nexus.onebusaway.org/content/groups/public/"
             allowInsecureProtocol = true
         }
-        //maven { url "https://dl.bintray.com/cibotech/public" }
         //jcenter()
         maven { url "https://jitpack.io" }
         mavenCentral().content {
