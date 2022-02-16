@@ -214,7 +214,7 @@ trait CompetitionHelper extends BeamHelper {
 
   private def warmStart(beamConfig: BeamConfig, matsimConfig: MatsimConfig): Unit = {
     val maxHour = TimeUnit.SECONDS.toHours(matsimConfig.travelTimeCalculator().getMaxTime).toInt
-    val beamWarmStart = BeamWarmStart(beamConfig)
+    val beamWarmStart = BeamWarmStart(beamConfig, maxHour)
 
   }
 
@@ -241,7 +241,7 @@ trait CompetitionHelper extends BeamHelper {
 
     val beamExecutionConfig = setupBeamWithConfig(config)
     val networkCoordinator: NetworkCoordinator = buildNetworkCoordinator(beamExecutionConfig.beamConfig)
-    val (scenario, beamScenario): (MutableScenario, BeamScenario) = buildBeamServicesAndScenario(beamExecutionConfig.beamConfig, beamExecutionConfig.matsimConfig)
+    val (scenario, beamScenario, plansMerged): (MutableScenario, BeamScenario, Boolean) = buildBeamServicesAndScenario(beamExecutionConfig.beamConfig, beamExecutionConfig.matsimConfig)
     val injector: inject.Injector = buildInjector(config,beamExecutionConfig.beamConfig,scenario,beamScenario)
     val logStart = {
       val populationSize = scenario.getPopulation.getPersons.size()
@@ -294,7 +294,7 @@ trait CompetitionHelper extends BeamHelper {
     println("THE OUTPUT DIRECTORY IS:")
     print(beamExecutionConfig.outputDirectory)
 
-    runBeam(beamServices, scenario, beamScenario, beamExecutionConfig.outputDirectory)
+    runBeam(beamServices, scenario, beamScenario, beamExecutionConfig.outputDirectory, plansMerged)
 
     // Score submission
     val submissionScore: BigDecimal = mainEvaluator.scoreSubmission()
@@ -325,7 +325,7 @@ trait CompetitionHelper extends BeamHelper {
     // uploadCompetitionResultsToS3(competitionServices)
 
     runStateMonitor.setState(RunStateTemplates.SUCCESS)
-    runStateMonitor.syncStateWithRedis(forceUpdate = true)
+    //runStateMonitor.syncStateWithRedis(forceUpdate = true)
     Console.println(runStateMonitor.serializeState())
     Console.err.print("\n")
 
