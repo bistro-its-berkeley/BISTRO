@@ -84,6 +84,11 @@ allprojects {
                 excludeModule("javax.media", "jai_core")
             }
         }
+        // Used for graphql-java and matsim.contrib.decongestion specific versions -
+        maven {
+            url "http://beam-bintray-needed-releases.s3-website.us-east-2.amazonaws.com/"
+            allowInsecureProtocol = true
+        }
         maven { url "https://repo.osgeo.org/repository/release/" }
         maven { url "https://download.osgeo.org/webdav/geotools" }
         maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
