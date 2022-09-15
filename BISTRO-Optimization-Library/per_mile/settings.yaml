@@ -1,0 +1,89 @@
+################################################################
+#                                                              #
+#            BISTRO TPE OPTIMIZER/RS SETTINGS                  #
+#                                                              #
+#    This file contains all parameters for BISTRO scenarios    #
+#                        evaluation                            #
+#                                                              #
+#                                                              #
+################################################################
+
+# Before running any optimization, please refer to this folder's
+# README file to properly install and configure BISTRO, Hyperopt
+# and Mongodb
+
+###################### BASIC CONFIGURATION #####################
+
+#BISTRO Installation directory
+BEAM_PATH: "/home/ubuntu/BISTRO/"
+
+#Hyperopt installation path - Default : ~/.local/bin
+HYPEROPT_PATH: "/home/ubuntu/.local/bin/"
+
+#Experiment key: each experiment must have a unique identification
+#key. It can be any string that you MUST define here:
+UNIQUE_KEY: "random_debug0"
+
+################## EXPERIMENT I-O FOLDERS ######################
+
+#Samples output folder
+RESULTS_PATH: "/home/ubuntu/EXP_RESULTS/"
+
+#Folder containing Sioux Fall's network.csv file
+NETWORK_PATH: "/home/ubuntu/BISTRO/HaochongXia-OPT/fixed_data/network.csv"
+# NETWORK_PATH: "/home/ubuntu/BISTRO/fixed-data/sf_light/network.csv"
+
+#Results standardization file, used for optimization only - not RS -
+# standardization param for the submission scores
+STANDARDS: "/home/ubuntu/BISTRO/HaochongXia-OPT/per_mile/per_mile_stds.csv"
+
+
+################# OPTIMIZATION SETTINGS #######################
+
+#Number of individual agents in the simulation; currently only 15k works
+SAMPLE_SIZE: "50k"
+
+#Number of iterations per sample. 30 is usually enough to converge
+SIMULATION_ITERS: 20
+
+#Number of optimization samples to get 
+NUMBER_OF_SAMPLES: 1
+
+#This file contains the the definition of the optimization KPI
+OPTIMIZATION_KPI_FILE: "optimization_kpi.py"
+
+#Maxmimum price per mile (in $) that can be applied as toll
+MAX_PRICE_PER_MILE: 2.5 # 10
+
+#Minimum price per mile (in $) that can be applied as toll
+MIN_PRICE_PER_MILE: 0.25
+
+# Upper and lower bounds for the trial cordon 
+MAX_RADIUS: 4000 # meters
+MIN_RADIUS: 500 # meters
+
+# Manually setting the number of cordons for now
+# later this should be built-in to the random search script as three experiments
+NUM_CORDONS: 3 # [1, 2, 3]
+
+# Upper and lower bounds for defining VERY LOW income thresholds
+MIN_INCOME_THRESH_VERY_LOW: 30000
+MAX_INCOME_THRESH_VERY_LOW: 100000
+
+# Upper and lower bounds for defining LOW income thresholds
+MIN_INCOME_THRESH_LOW: 50000
+MAX_INCOME_THRESH_LOW: 200000
+
+# Sampling interval for LOW and VERY LOW income thresholds
+INCOME_THREH_INTERVAL: 10000
+
+# Upper and lower bounds for defining TNC subsidies 
+MIN_TNC_SUBSIDY: 0
+MAX_TNC_SUBSIDY: 20
+
+# Upper and lower bounds for defining TRANSIT subsidies 
+MIN_TRANSIT_SUBSIDY: 0
+MAX_TRANSIT_SUBSIDY: 10
+
+# Sampling interval for TNC and TRANSIT income thresholds
+SUBSIDY_INTERVAL: 1
