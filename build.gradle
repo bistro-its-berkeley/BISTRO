@@ -49,7 +49,7 @@ apply plugin: 'com.bmuschko.docker-java-application'
 // Project info
 
 group 'beam'
-version '0.0.4.5-SNAPSHOT'
+version '0.0.4.5.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -142,7 +142,7 @@ dependencies {
     //compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge-SNAPSHOT'
     // compile project(":beam")
     // compile 'com.github.lbnl-ucb-sti:beam:competitions-pin_dev_merge_modify-SNAPSHOT'
-    implementation group: 'beam', name: 'beam', version: '0.8.6'
+    implementation group: 'beam', name: 'beam', version: '0.8.6.13'
 
     // Validation
     implementation group: "com.wix", name: "accord-core_${scalaBinaryVersion}", version: "0.7.3"
@@ -240,7 +240,8 @@ docker {
         baseImage = 'beammodel/beam-competition:accessibility-0.0.2'
         maintainer = 'Kirill Mitin "mitin.kirill.ol@gmail.com"'
         ports = [9090]
-        images = ['beammodel/bistro:0.0.4.5-SNAPSHOT']
+        images = ['beammodel/bistro:0.0.4.5.1-SNAPSHOT']
+	mainClassName = "beam.competition.run.RunCompetition"
 //        exec {
 //            defaultCommand 'server'
 //            entryPoint '/docker_entrypoint.sh'
