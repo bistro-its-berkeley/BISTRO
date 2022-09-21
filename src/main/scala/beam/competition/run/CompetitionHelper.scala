@@ -285,7 +285,7 @@ trait CompetitionHelper extends BeamHelper {
 
 
 
-    MiscUtils.moveInputs(Paths.get(CompetitionServices.INPUT_ROOT),
+    MiscUtils.moveInputs(Paths.get("/",CompetitionServices.INPUT_ROOT),
       competitionServices.INPUT_DEST)
 
     InputProcessor().processInputs()
