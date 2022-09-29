@@ -87,3 +87,8 @@ MAX_TRANSIT_SUBSIDY: 10
 
 # Sampling interval for TNC and TRANSIT income thresholds
 SUBSIDY_INTERVAL: 1
+
+# KPI's to record
+KPI_LIST: ["averageVehicleDelayPerPassengerTrip", "averageTravelCostBurden_Work","busCrowding","netPublicRevenue","sustainability_GHG",'sustainability_PM',"TollRevenue"]
+
+# Objective function type

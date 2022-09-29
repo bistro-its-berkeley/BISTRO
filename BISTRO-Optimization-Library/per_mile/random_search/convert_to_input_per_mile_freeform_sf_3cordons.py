@@ -16,9 +16,10 @@ try:
 except:
     from utilities.optimization_utils import *
 
-CONFIG = {}
-with open(os.path.join(hyperopt_path,"settings.yaml")) as stream:
-    CONFIG = yaml.safe_load(stream)
+# PUT IN SEARCH OBJECT:
+# CONFIG = {}
+# with open(os.path.join(hyperopt_path,"settings.yaml")) as stream:
+#     CONFIG = yaml.safe_load(stream)
 
 #from shapely.geometry import Point
 #from shapely.geometry.polygon import Polygon
@@ -38,19 +39,25 @@ road_pricing_columns = ['linkId','toll','timeRange']
 # ctoll=[ None for _ in range(5) ]
 # cradius=[ None for _ in range(5) ]
 
-centerx = [None for _ in range(20)]
-centery = [None for _ in range(20)]
-ctoll = [None for _ in range(20)]
-cradius = [None for _ in range(20)]
+# INITIALIZE PARAM LISTS
+num = 20
+centerx = [None for _ in range(num)]
+centery = [None for _ in range(num)]
+ctoll = [None for _ in range(num)]
+cradius = [None for _ in range(num)]
+
+incomeThresh = [None for _ in range(num)]
+modes = [None for _ in range(num)]
+subsidies = [None for _ in range(num)]
 
 
-def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
-    print(CONFIG["NETWORK_PATH"])
+def convert_to_input(sample, input_dir, network_path):
+    print(network_path)
 
     mode_incentive = []
     mass_fare = []
-    # [[linkId,price,timeRange],[]]
     road_pricing = {}
+
 
     for key in sample:
         value = sample[key]
@@ -58,38 +65,35 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
         # print("value type is "+str(type(value)))
         # logger.info("value type is "+str(type(value)))
         if key.startswith('c'):
+            ## process cordons:
             link_price = processC(key, value, network_path)
             for item in link_price:
+                ## TODO: speed up - simply check for duplicates and then add?
                 if item[0] not in road_pricing:
                     road_pricing[item[0]]=item[1:]
                 else:
-                    road_pricing[item[0]][0]=float(road_pricing[item[0]][0])+float(item[1])
+                    # IF LINK IS ALREADY PART OF A CORDON
+                    # both tolls apply:
+                    #road_pricing[item[0]][0]=float(road_pricing[item[0]][0])+float(item[1])
+                    # min toll applies:
+                    road_pricing[item[0]][0] = min(float(road_pricing[item[0]][0]), float(item[1]))
             #logger.info("processC end\n")
-        else:
+        # elif key.startswith('i'):
+        #     print("EROOR: UNKWOWN KEY; EXITING")
+        #     exit(0);
+        elif key.startswith('subsidyModes'):
+        ## process subsidies
+            subs = processSubsidy(value,key[-1],sample)
+            for s in subs:
+                mode_incentive.append(s)
 
-            ## TODO: adjust to include incentive and thresholds
 
-            print("EROOR: UNKWOWN KEY; EXITING")
-            exit(0);
-            
+    # convert road pricing dict to list:
+    # TODO: make it a list from the beginning..
     road_pricing_list=[]
-
     for item in road_pricing.items() :
         road_pricing_list.append([item[0]] + item[1])
 
-    # road_pricing = []
-    # for key in sample:
-    #     value = sample[key]
-    #     print("key type is "+str(type(key)))
-    #     print("value type is "+str(type(value)))
-    #     logger.info("value type is "+str(type(value)))
-    
-    #     if key.startswith('c'):
-    #         road_pricing = road_pricing + processC(key, value, network_path)
-    #         #logger.info("processC end\n")
-    #     else:
-    #         print("EROOR: UNKWOWN KEY; EXITING")
-    #         exit(0);
 
     
     mode_incentive_d = pd.DataFrame(mode_incentive, columns=mode_incentive_columns)
@@ -99,6 +103,25 @@ def convert_to_input(sample, input_dir, network_path=CONFIG["NETWORK_PATH"]):
     mode_incentive_d.to_csv(input_dir + '/ModeIncentives.csv', sep=',', index=False)
     mass_fare_d.to_csv(input_dir + '/MassTransitFares.csv', sep=',', index=False)
     road_pricing_d.to_csv(input_dir + '/RoadPricing.csv', sep=',', index=False)
+
+def processSubsidy(subMode, subNum, this_sample):
+    ## TODO: generalize to allow age groups:
+    ageGroup = '[:]'
+
+    subsidy_list = []
+    found = True
+    threshNum = 0
+    lb=0
+    while found:
+        if "incomeTresh{}".format(threshNum) in this_sample.keys():
+            incomeGroup = '[{}:{}]'.format(lb,this_sample["incomeTresh{}".format(threshNum)])
+            lb = "incomeTresh{}".format(threshNum)
+            subsidy_list.append([subMode, ageGroup, incomeGroup,float("subsidyVal_mode{}_level{}".format(subNum,threshNum))])
+            threshNum += 1
+        else:
+            found = False
+    return subsidy_list
+
 
 def processC(key, value, network_path):
     #logger.info("processC start "+str(value))
@@ -135,7 +158,6 @@ def load_network(filepath_network):
 
 def get_circle_links(x, y, r, p, filepath_network,number):
     timeRange = '[:]'
-    #logger.info("get_circle_links start\n")
 
     #Save parameters
     file = open("circle_params.txt","a")
@@ -156,7 +178,6 @@ def get_circle_links(x, y, r, p, filepath_network,number):
             dto = ((x - toLocationX)**2 + (y - toLocationY)**2)**0.5
             price = str(round(float(linkLength)*float(p)/1600, 2))
 
-            
             if dfrom < r or dto < r: 
                 changes.append([linkId,price,timeRange])
 

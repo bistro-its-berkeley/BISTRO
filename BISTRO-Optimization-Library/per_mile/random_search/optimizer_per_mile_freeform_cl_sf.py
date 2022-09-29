@@ -29,7 +29,6 @@ import yaml
 import pandas as pd
 import csv
 from convert_to_input_per_mile_freeform import *
-from hyperopt import STATUS_OK
 from optimization_kpi import optim_KPI
 
 #Load config
@@ -43,6 +42,7 @@ sys.path.append(CONFIG["BEAM_PATH"])
 
 
 #Score translations
+# TODO: UPDATE SO KPIs to record is a param
 trans_dict = {
 
     'Iteration':'Iteration',
@@ -54,49 +54,42 @@ trans_dict = {
 
     'Congestion: average vehicle delay per passenger trip':'averageVehicleDelayPerPassengerTrip',
     'Congestion: total vehicle miles traveled':'motorizedVehicleMilesTraveled_total',
-    'Equity: average travel cost burden -  secondary':'averageTravelCostBurden_Secondary',
+    #'Equity: average travel cost burden -  secondary':'averageTravelCostBurden_Secondary',
     'Equity: average travel cost burden - work':'averageTravelCostBurden_Work',
     'Level of service: average bus crowding experienced':'busCrowding',
-    'Level of service: costs and benefits':'costBenefitAnalysis',
+    'Level of service: costs and benefits':'netPublicRevenue',
 
     'Sustainability: Total grams GHGe Emissions':'sustainability_GHG',
     'Sustainability: Total grams PM 2.5 Emitted':'sustainability_PM',
-    'TollRevenue':'TollRevenue',
-    'VMT':'VMT'
+    'Total Road Pricing Revenue':'TollRevenue'
 }
+
 
 AVG_DELAY = "averageVehicleDelayPerPassengerTrip"
 WORK_BURDEN = "averageTravelCostBurden_Work"
-SECOND_BURDEN = "averageTravelCostBurden_Secondary"
+# SECOND_BURDEN = "averageTravelCostBurden_Secondary"
 BUS_CROWDING = "busCrowding"
-COSTS_BENEFITS = "costBenefitAnalysis"
+COSTS_BENEFITS = "netPublicRevenue"
 GHG = "sustainability_GHG"
+PM = 'sustainability_PM'
 TOLL_REVENUE = "TollRevenue"
+VMT = 'motorizedVehicleMilesTraveled_total'
 SUBMISSION = "Submission Score"
 
 #Beam parameters
-# DOCKER_IMAGE = "beammodel/bistro:0.0.4.4-SNAPSHOT"
-DOCKER_IMAGE ="beammodel/beam-competition:0.0.4.2-noacc-SNAPSHOT"
-# DOCKER_IMAGE = "beammodel/beam-competition:0.0.3-SNAPSHOT"
+DOCKER_IMAGE ="beammodel/bistro:0.0.4.5.1-SNAPSHOT"
 CMD_TEMPLATE = "--config {0}"
-# CONFIG_PATH = "/fixed-data/sf_light/urbansim-50k_Cal2_simpleNet.conf"
-CONFIG_PATH ="/fixed-data/sf_light/sf_light-25k.conf"
-# CONFIG_PATH = "/fixed-data/sioux_faux/sioux_faux-15k.conf"
+CONFIG_PATH ="/fixed-data/sf_light/sf_light-50k_final.conf"
 SCENARIO_NAME = "sf_light"
-# SCENARIO_NAME = "sioux_faux"
 SCORES_PATH = ("competition", "submissionScores.csv")
 DIR_DELIM = "-"
 BEAM_PATH = CONFIG["BEAM_PATH"]
-
 OUT_PATH = CONFIG["RESULTS_PATH"]
-
 
 logger = logging.getLogger(__name__)
 
 
-
-
-def objective(params):
+def run_BISTRO(params, network_path,keep_files):
     """Objective function for Calling the Simulator"""
     # Keep track of evals
 
@@ -116,26 +109,27 @@ def objective(params):
         os.system('chmod -R 777 ./submission-inputs')
 
     # Run simulator, return a score
-    sample_size = CONFIG["SAMPLE_SIZE"]
-    n_sim_iters = CONFIG["SIMULATION_ITERS"]
+    # sample_size = CONFIG["SAMPLE_SIZE"]
+    # n_sim_iters = CONFIG["SIMULATION_ITERS"]
     docker_cmd = CMD_TEMPLATE.format(CONFIG_PATH)
 
     # Write params to input submission csv files
-    convert_to_input(params, input_dir)
+    convert_to_input(params, input_dir,network_path)
 
     output_suffix = uuid.uuid4()
     output_dir = os.path.abspath(f"./output/{output_suffix}")
     logger.info("Output_dir: "+output_dir)
     logger.info("Input_dir: "+input_dir)
 
-    cmd = f"docker run -it -v {output_dir}:/output -v {input_dir}:/submission-inputs -v {BEAM_PATH}fixed-data:/fixed-data:rw {DOCKER_IMAGE} {docker_cmd}"
+    cmd = f"sudo docker run -it -v {output_dir}:/app/output:rw -v {input_dir}:/submission-inputs:ro -v {BEAM_PATH}fixed-data:/fixed-data:rw {DOCKER_IMAGE} {docker_cmd}"
     cmd = cmd + " > log.txt"
     logger.info("!!! execute simulator cmd: %s" % cmd)
     print("Running system command : " + cmd)
     os.system(cmd)
     print("BISTRO finished")
     logger.info("BISTRO finished")
-    
+
+    kpi_scores = get_kpis(output_dir)
     score = get_score(output_dir)
     print("SCORE :", score)
     logger.info("Score is "+ str(score))
@@ -144,7 +138,7 @@ def objective(params):
 
     # Clean output folder
     logger.info("cleaning start")
-    clean_output(output_dir)
+    clean_output(output_dir, keep_files)
     logger.info("clean output finished")
 
     # Upload data
@@ -167,12 +161,14 @@ def objective(params):
     file.close()
 
     # Dictionary with information for evaluation
-    return {'loss': loss, 'params': params, 
-            'train_time': run_time, 'status': STATUS_OK, 'paths': paths}
+    # TODO: ADD MODE SPLITS TO OUTPUT
+    # TODO: UPDATE OBJECTIVE FUNCTION
+    return {'objective': loss, 'params': params,
+            'run_time': run_time, 'paths': paths,'kpi_scores':kpi_scores}
 
 
 
-def clean_output(output_dir):
+def clean_output(output_dir,keep_files):
     path = str(output_dir)
 
     # Set folder paths
@@ -182,7 +178,8 @@ def clean_output(output_dir):
 
     # Remove excess root folder files
     file_list = [f for f in listdir(path) if isfile(join(path, f))]
-    keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
+
+    #keep_files = ["outputEvents.xml.gz", "realizedModeChoice.csv", "summaryStats.csv", "outputHouseholds.xml.gz", "outputNetwork.xml.gz"]
     for file in file_list:
         if file not in keep_files:
             if os.path.exists(path + "/" + file):
@@ -213,14 +210,21 @@ def clean_output(output_dir):
 
     # Remove excess iter files
     iter_list = os.listdir(iters_folder)
-    keep_files = ["modeChoice.csv", "averageTravelTimes.csv", "experiencedPlans.xml.gz"]
+    keep_files = [ "averageTravelTimes.csv","events.csv.gz","ridehailRides.csv.gz","linkstats.csv.gz"]
     for folder in iter_list:
         folder_path = iters_folder + "/" + folder
-        if os.path.exists(folder_path + "/tripHistogram"):
-            shutil.rmtree(folder_path + "/tripHistogram")
-        file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
-        for file in file_list:
-            if file.endswith('events.xml.gz') == False:
+        if folder != "it.{}".format(CONFIG['SIMULATION_ITERS']):
+            if os.path.exists(folder_path + "/tripHistogram"):
+                shutil.rmtree(folder_path + "/tripHistogram")
+            file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
+            for file in file_list:
+                os.remove(folder_path + "/" + file)
+        else:
+            if os.path.exists(folder_path + "/tripHistogram"):
+                shutil.rmtree(folder_path + "/tripHistogram")
+            file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
+            for file in file_list:
+                os.remove(folder_path + "/" + file)
                 if file not in keep_files:
                     os.remove(folder_path + "/" + file)
 
@@ -278,3 +282,8 @@ def load_standards(file = CONFIG["STANDARDS"]):
         for row in reader:
             params[row[0]] = (float(row[1]), float(row[2]))
     return params
+
+def only_subdir(path):
+    subdir, = os.listdir(path)  # Validates only returned element
+    path = os.path.join(path, subdir)
+    return path
