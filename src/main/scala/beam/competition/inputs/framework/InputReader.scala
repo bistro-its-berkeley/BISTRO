@@ -44,7 +44,8 @@ object InputReader {
 
   def loadDblDataTable(fields: Map[String, Object], path: Path, name: String): DataTable = {
     val reader = CSVReader.open(path.toString)
-    val dblFields = fields.map { case (k, _) => k -> Double }
+    val dblFields = fields.map { case (k, _) => if(k=="vehicleType") k -> StringCol else k -> Double }
+
     InputReader.readDataTableForFields(dblFields, reader, name)
   }
 

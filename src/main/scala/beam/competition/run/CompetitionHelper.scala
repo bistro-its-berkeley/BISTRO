@@ -31,6 +31,8 @@ import org.matsim.core.scenario.MutableScenario
 import scala.collection.JavaConverters._
 import scala.language.higherKinds
 
+import java.time.LocalDateTime
+
 case class Arguments(
                       scenario: Option[String] = None,
                       subScenario: Option[String] = None,
@@ -294,18 +296,32 @@ trait CompetitionHelper extends BeamHelper {
     println("THE OUTPUT DIRECTORY IS:")
     print(beamExecutionConfig.outputDirectory)
 
+    val startRunTime: LocalDateTime = LocalDateTime.now()
+    println(startRunTime.toString())
+
     runBeam(beamServices, scenario, beamScenario, beamExecutionConfig.outputDirectory, plansMerged)
+
+    println("FINISHED RUN BEAM")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
 
     // Score submission
     val submissionScore: BigDecimal = mainEvaluator.scoreSubmission()
 
+    println("FINISHED SUB SCORE CALC")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
+
     // BEGIN Post-processing here...
 
     // Visualization conversion to csv
-    val linkStatConverter = LinkStatCsvSpatialConversion(competitionServices)
-    linkStatConverter.runConversion()
-    val populationConverter = PopulationCsvSpatialConversion(competitionServices)
-    populationConverter.runConversion()
+    // val linkStatConverter = LinkStatCsvSpatialConversion(competitionServices)
+    // linkStatConverter.runConversion()
+    println("FINISHED LINKSTAT CONVERTER")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
+
+    // val populationConverter = PopulationCsvSpatialConversion(competitionServices)
+    // populationConverter.runConversion()
+    println("FINISHED POP CONVERTER")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
 
     //Mark the last iteration in runState as COMPLETE
     runStateMonitor.setIterationState(runStateMonitor.numberOfIterations - 1, IterationStateTemplates.SUCCESS)
@@ -317,6 +333,8 @@ trait CompetitionHelper extends BeamHelper {
     // Register Final Score here
     mainEvaluator.outputSummary()
     submissionScore.setScale(2, BigDecimal.RoundingMode.HALF_UP)
+    println("FINISHED RUN STATE MONITOR THINGS")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
 
     // Upload data to S3
 //    OutputProcessor.runPostProcessing(Paths.get(competitionServices.SUBMISSION_OUTPUT_ROOT_NAME).toString, runStateMonitor.numberOfIterations - 1, runStateMonitor.s3OutputLoc, competitionServices.SAMPLE_NAME)
@@ -331,6 +349,7 @@ trait CompetitionHelper extends BeamHelper {
 
     Console.err.print(
       s"\n\n -------- Submission score: ${numberFormatter.format(submissionScore)} -------------- \n")
+    println(LocalDateTime.now().toString(), startRunTime.toString())
 
     Console.flush()
   }
