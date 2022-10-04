@@ -51,17 +51,19 @@ case class CompetitionServices(beamServices: BeamServices, networkCoordinator: N
     )
   }"}
 
-  final val SCORING_WEIGHTS_PATH = Paths.get(FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "scoringWeights.csv")
+  final val SCORING_WEIGHTS_PATH = Paths.get("/",FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "scoringWeights.csv")
 
-  final val STANDARDIZATION_PARAMETER_FILENAME = Paths.get(FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "standardizationParameters.csv")
+  final val STANDARDIZATION_PARAMETER_FILENAME = Paths.get("/",FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "standardizationParameters.csv")
 
-  final val BAU_ROOT_PATH: Path = Paths.get(FIXED_DATA_ROOT_NAME, SIMULATION_NAME, BAU_ROOT_NAME)
+  final val BAU_ROOT_PATH: Path = Paths.get("/",FIXED_DATA_ROOT_NAME, SIMULATION_NAME, BAU_ROOT_NAME)
 
-  final val INPUT_DEST: Path = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, COMPETITION_ROOT, INPUT_ROOT)
+  final val INPUT_DEST: Path = Paths.get("/",SUBMISSION_OUTPUT_ROOT_NAME, COMPETITION_ROOT, INPUT_ROOT)
 
   final val BAU_STATS_PATH: Path = Paths.get(BAU_ROOT_PATH.toString, "stats", s"$SUMMARY_STATS_NAME-$SAMPLE_NAME.csv")
 
   final val SUBMISSION_STATS_PATH: Path = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, s"$SUMMARY_STATS_NAME.csv")
+
+  final val SUBMISSION_VEHICLE_STATS_PATH: Path = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, s"$SUMMARY_VEHICLE_STATS_NAME.csv")
 
   final val VIZ_OUTPUT_ROOT = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, "competition", "viz")
 
@@ -73,8 +75,8 @@ case class CompetitionServices(beamServices: BeamServices, networkCoordinator: N
       readBeamVehicleTypeFile(beamConfig.beam.agentsim.agents.vehicles.vehicleTypesFilePath).toSeq: _*
     )
 
-  final val VEHICLE_COSTS: Map[Id[BeamVehicleType], VehicleCostData] = readBeamVehicleCostsFile(Paths.get(FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "vehicleCosts.csv").toString)
-
+  final val VEHICLE_COSTS: Map[Id[BeamVehicleType], VehicleCostData] = readBeamVehicleCostsFile(Paths.get("/",FIXED_DATA_ROOT_NAME, SIMULATION_NAME, "vehicleCosts.csv").toString)
+  
   final val OUTPUT_DIRECTORY: String = Paths.get(SUBMISSION_OUTPUT_ROOT_NAME, CompetitionServices.COMPETITION_ROOT).toString
 
   val gtfsFeeds: ArrayBuffer[GTFSFeed] = getAllGTFSFiles(beamConfig.beam.routing.r5.directory).map(file => GTFSFeed.fromFile(file.toString))
@@ -123,6 +125,8 @@ object CompetitionServices {
   final val BAU_ROOT_NAME: String = "bau"
 
   final val SUMMARY_STATS_NAME: String = "summaryStats"
+
+  final val SUMMARY_VEHICLE_STATS_NAME: String = "summaryVehicleStats"
 
   final val FIXED_DATA_ROOT_NAME: String = "fixed-data"
 

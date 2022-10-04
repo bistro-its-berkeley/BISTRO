@@ -17,7 +17,7 @@ case class RoadPricingInput(linkId: Id[Link], toll: Double, timeRange: CensusRan
 }
 
 // If there are overlapping times on the same link, then add amounts during those times.
-case class RoadPricingInputDataHelper(implicit val competitionServices: CompetitionServices) extends InputDataHelper[RoadPricingInput] {
+class RoadPricingInputDataHelper(implicit val competitionServices: CompetitionServices) extends InputDataHelper[RoadPricingInput] {
 
   val networkLinks: mutable.Map[Id[Link], _ <: Link] = JavaConverters.mapAsScalaMap(competitionServices.beamServices.asInstanceOf[BeamServicesImpl].injector.getInstance(classOf[Network]).getLinks)
 

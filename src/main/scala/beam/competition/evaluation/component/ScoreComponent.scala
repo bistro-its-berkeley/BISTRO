@@ -1,3 +1,4 @@
+
 package beam.competition.evaluation.component
 
 import beam.competition.evaluation.component
@@ -157,6 +158,10 @@ object ScoreComponent {
 
     case object Sustainability_PM extends ScoreComponentWeightIdentifier {
       override val longName: String = "Sustainability: Total grams PM 2.5 Emitted"
+    }
+
+    case object TollRevenue extends ScoreComponentWeightIdentifier {
+    	override val longName: String = "Total Road Pricing Revenue"
     }
 
   }

@@ -14,7 +14,7 @@ import org.matsim.api.core.v01.Id
 
 import scala.collection.concurrent.TrieMap
 
-case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionServices) extends AbstractModule with ScalaModule {
+class SubmissionEvaluatorModule(implicit competitionServices: CompetitionServices) extends AbstractModule with ScalaModule {
 
   import SubmissionEvaluatorModule.getMapTypeStrings
 
@@ -36,10 +36,13 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
 
     override def transformation(vehicleType: String, source: DataTable): Double = {
       vehicleType match {
-        case vt if vt.contains("BUS") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Diesel).pm25PerVMT  }.getOrElse(0.0)
-        case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+        case vt if vt.contains("BUS") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix("Diesel")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Diesel).pm25PerVMT  }.getOrElse(0.0)
+        case vt if vt.startsWith("Car")|| vt.endsWith("Car") || vt=="BEV" || vt=="PHEV" => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix("Gasoline")).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
+
+        //case vt if vt.equals("Car") => source.columns.get(MotorizedVehicleMilesTraveled.withColumnPrefix(vt)).map { x => x.toDataColumn[Double].get.data.last * competitionServices.fuelTypes(FuelType.Gasoline).pm25PerVMT  }.getOrElse(0.0)
         case _=> 0.0
       }
+
     }
   }
 
@@ -97,6 +100,7 @@ case class SubmissionEvaluatorModule(implicit competitionServices: CompetitionSe
     // FIXME: fix motorized vehicle miles traveled SAF 9/19
     // simpleScoreComponentSetBinder.addBinding.toInstance(MotorizedVehicleMilesTraveled_total)
     simpleScoreComponentSetBinder.addBinding.toInstance(AverageVehicleDelayPerPassengerTrip)
+    simpleScoreComponentSetBinder.addBinding.toInstance(TollRevenue)
 
     // Bind compound score components here
     val compoundScoreComponentMapBinder = ScalaMapBinder.newMapBinder[ScoreComponentWeightIdentifier, CompoundScoreComponent](binder)
@@ -123,4 +127,5 @@ object SubmissionEvaluatorModule {
   def getMapTypeStrings[T](mapTypes: TrieMap[Id[T], T]): Set[String] = mapTypes.keys.map {
     _.toString
   }.toSet
+
 }

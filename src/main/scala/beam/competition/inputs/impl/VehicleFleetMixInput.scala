@@ -11,6 +11,8 @@ import org.matsim.api.core.v01.Id
 
 import scala.collection.JavaConverters
 
+import java.nio.file.{Paths, Files}
+
 case class VehicleFleetMixInput(agencyId: String, routeId: String, vehicleTypeId: Id[BeamVehicleType]) extends Input {
   override val id: String = s"$agencyId-$routeId"
 }
