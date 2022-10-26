@@ -1,0 +1,85 @@
+################################################################
+#                                                              #
+#            BISTRO TPE OPTIMIZER/RS SETTINGS                  #
+#                                                              #
+#    This file contains all parameters for BISTRO scenarios    #
+#                        evaluation                            #
+#                                                              #
+#                                                              #
+################################################################
+
+# Before running any optimization, please refer to this folder's
+# README file to properly install and configure BISTRO, Hyperopt
+# and Mongodb
+
+###################### BASIC CONFIGURATION #####################
+
+#BISTRO Installation directory
+BEAM_PATH: "/home/ubuntu/BISTRO/"
+
+
+################## EXPERIMENT I-O FOLDERS ######################
+
+#Samples output folder
+RESULTS_PATH: "/home/ubuntu/RS/"
+
+#Folder containing Sioux Fall's network.csv file
+NETWORK_PATH: "/home/ubuntu/BISTRO/BISTRO-Optimization-Library/per_mile/random_search/network_sf_3857_v2.csv"
+
+#Results standardization file, used for optimization only - not RS -
+# standardization param for the submission scores
+STANDARDS: "rs_standards.csv"
+
+
+################# OPTIMIZATION SETTINGS #######################
+
+#Number of individual agents in the simulation
+SAMPLE_SIZE: "1k"
+
+#Last iteration of run
+LAST_ITERATION: 20
+
+#Maxmimum price per mile (in $) that can be applied as toll
+MAX_PRICE_PER_MILE: 2 # 10
+
+#Minimum price per mile (in $) that can be applied as toll
+MIN_PRICE_PER_MILE: 0.01
+
+# Upper and lower bounds for the trial cordon 
+MAX_RADIUS: 4000 # meters
+MIN_RADIUS: 500 # meters
+
+# List x,y coordinates of centers of cordon search spaces
+CORDON_CENTERS: [[-13629234.999116288, 4546248.731626279],[-13626639.261281533, 4550349.175273786],[-13633881.839333337, 4541056.829664177]]
+
+# List radii of cordon search spaces
+CORDON_RADII: [2411.4568215553545,2411.4568215553545,3607.5806132652624]
+
+# Incentive modes
+ICENTIVE_MODES: []
+
+# Number of incentive levels (determines the number of thresholds)
+NUM_LEVELS: 0
+
+# Upper and lower bounds for defining VERY LOW income thresholds
+MIN_INCOME_THRESH: [30000,50000]
+MAX_INCOME_THRESH: [100000,200000]
+
+# Sampling interval for LOW and VERY LOW income thresholds
+INCOME_THRESH_INTERVAL: 10000
+
+# Upper and lower bounds for defining TNC subsidies 
+MIN_TNC_SUBSIDY: 0
+MAX_TNC_SUBSIDY: 20
+
+# Upper and lower bounds for defining TRANSIT subsidies 
+MIN_TRANSIT_SUBSIDY: 0
+MAX_TRANSIT_SUBSIDY: 10
+
+# Sampling interval for TNC and TRANSIT income thresholds
+SUBSIDY_INTERVAL: 1
+
+# KPI's to record
+KPI_LIST: ["MotorizedVehicleMilesTraveled_total","averageVehicleDelayPerPassengerTrip", "averageTravelCostBurden_Work","busCrowding","netPublicRevenue","sustainability_GHG",'sustainability_PM',"TollRevenue"]
+
+# Objective function type
